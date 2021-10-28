@@ -29,6 +29,7 @@ if(global.gamemode == 5)
 
 			break;	
 			case "Save/Quit":
+				
 				global.gamemode = 0;
 				SaveGame();
 				

@@ -14,5 +14,6 @@ if(global.startType == 0){
 	if(i >= iMax){rungame = true;}
 }
 else if(global.startType == 1){
+	
 	rungame = true;
 }

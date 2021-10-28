@@ -17,7 +17,11 @@ draw_rectangle(x1,y1,x1+(x2-x1)*(percent/(4800*4320)),y2,0);
 
 if(rungame){
 	draw_set_halign(fa_left);
+	
+	
+	
 	room_goto(OverWorld);
+	
 
 }
 

@@ -38,8 +38,8 @@ function SaveGame()
 		status: global.status,
 		KP: global.KP,
 		worldTime: global.worldTime,
-		days: objTimeSystem.days,
-		inventory: objInventory.inventory
+		days: objTimeSystem.days
+	
 
 
 
@@ -47,19 +47,25 @@ function SaveGame()
 
 	}
 	array_push(_saveData, _saveEntity);
-	/*
-	for(var i = 0; i < ds_list_size(objInventory.inventory); i += 1)
+	//show_debug_message(objInventory.inventory[|0])
+	var _saveEntity =
 	{
-		var _saveEntity =
-		{
-			type: 2,//Inventory
-			ID: i,
-			NUM: objInventory.inventory[|i].amount,
-			DROP: objInventory.inventory[|i]
-		}
-		array_push(_saveData, _saveEntity);
+		type: 2,//Inventory
+		inventory0: objInventory.inventory[|0],
+		inventory1: objInventory.inventory[|1],
+		inventory2: objInventory.inventory[|2],
+		inventory3: objInventory.inventory[|3],
+		inventory4: objInventory.inventory[|4],
+		inventory5: objInventory.inventory[|5],
+		inventory6: objInventory.inventory[|6],
+		inventory7: objInventory.inventory[|7],
+		inventory8: objInventory.inventory[|8]
+		
+
 	}
-	*/
+	array_push(_saveData, _saveEntity);
+	
+	
 
 	with(objItem)
 	{
@@ -170,18 +176,29 @@ function LoadGame()
 				global.worldTime = _loadEntity.worldTime;
 				global.equip = _loadEntity.equip;
 				objTimeSystem.days = _loadEntity.days;
-				objInventory.inventory = _loadEntity.inventory;
+				
 				
 				
 			}
-			/*
+			
 			if(_loadEntity.type == 2)
 			{
 				
-				//addInventory(_loadEntity.ID,_loadEntity.NUM,_loadEntity.DROP,objInventory.inventory);
-				
+				with(objInventory){
+					if(_loadEntity.inventory0 != pointer_null){inventory[|0] = _loadEntity.inventory0;}
+					if(_loadEntity.inventory1 != pointer_null){inventory[|1] = _loadEntity.inventory1;}
+					if(_loadEntity.inventory2 != pointer_null){inventory[|2] = _loadEntity.inventory2;}
+					if(_loadEntity.inventory3 != pointer_null){inventory[|3] = _loadEntity.inventory3;}
+					if(_loadEntity.inventory4 != pointer_null){inventory[|4] = _loadEntity.inventory4;}
+					if(_loadEntity.inventory5 != pointer_null){inventory[|5] = _loadEntity.inventory5;}
+					if(_loadEntity.inventory6 != pointer_null){inventory[|6] = _loadEntity.inventory6;}
+					if(_loadEntity.inventory7 != pointer_null){inventory[|7] = _loadEntity.inventory7;}
+					if(_loadEntity.inventory8 != pointer_null){inventory[|8] = _loadEntity.inventory8;}
+					show_debug_message(inventory[|0])
+					show_debug_message(ds_list_size(inventory))
+				}
 			}	
-			*/
+			
 			
 			if(_loadEntity.type == 3)
 			{

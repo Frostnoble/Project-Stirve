@@ -54,8 +54,9 @@ if(global.startType == 0){
 }
 else if(global.startType == 1){
 	if(!done){
+		
 		LoadGame();
-		//show_debug_message("Loaded")
+		
 	}
 	done = true;
 	audio_play_sound(musTest, 1, true);
