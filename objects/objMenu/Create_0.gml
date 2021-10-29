@@ -5,6 +5,9 @@ draw_y = 0;
 has_save = false;
 rowlength = 3;
 global.startType = -1;
+fadedone = false;
+a = 1;
+fade = 1;
 
 options = ds_list_create();
 ds_list_add(options, "New Game","Continue","Options", "Quit");

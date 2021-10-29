@@ -25,6 +25,9 @@ if(global.gamemode == 5)
 				instance_destroy();
 				
 			break;	
+			case "Research":
+			
+			break;	
 			case "Options":
 
 			break;	

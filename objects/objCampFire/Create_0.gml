@@ -24,6 +24,4 @@ new CookedMeat(),
 new FriedMush(),
 new FriedFishS(),
 new FriedFishM(),
-new FriedFishL(),
-new ClayBowl(),
-new ClayBowlWaterPure());
+new FriedFishL());

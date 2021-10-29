@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-depth = room_height - y + 1
+depth = room_height - y + 100
 
 addedRecipes = ds_list_create();
 ds_list_add(addedRecipes, new RawClay());

@@ -3,7 +3,7 @@
 
 
 
-if(global.gamemode == 1)
+if(global.gamemode == 1 && candraw)
 {
 
 	//Draw Menu
@@ -66,34 +66,33 @@ if(global.gamemode == 1)
 	}
 
 
-	//Draw Recipes in a list
-	for(var i = 0; i < ds_list_size(recipes); i += 1)
+	//Draw listCanCraft in a list
+	for(var i = 0; i < ds_list_size(listCanCraft); i += 1)
 	{
 		var xx = 8;
 		var yy = draw_y + 6 + (i * 9);
 		if(yy <= 140 && yy >= 4)
 		{
-			if(recipes[|i].KP_lock > 0)
+			if(listCanCraft[|i].KP_lock > 0)
 			{
-				if(canCraft(recipes[| i],objInventory.inventory))
+				if(canCraft(listCanCraft[| i],objInventory.inventory))
 				{
-					draw_text_color(xx, yy - 2,string(recipes[|i].name),c_black,c_black,c_black,c_black,1)
-					draw_text_color(xx, yy - 2,"??????????",c_black,c_black,c_black,c_black,0.5)
+					draw_text_color(xx, yy - 2,"??????????",c_black,c_black,c_black,c_black,1)
 				}
 				else
 				{
-					draw_text_color(xx, yy - 2,string(recipes[|i].name),c_gray,c_gray,c_gray,c_gray,1)
-					draw_text_color(xx, yy - 2,"??????????",c_gray,c_gray,c_gray,c_gray,0.5)
+					
+					draw_text_color(xx, yy - 2,"??????????",c_gray,c_gray,c_gray,c_gray,1)
 				}
 				
 			}
-			else if(canCraft(recipes[| i],objInventory.inventory))
+			else if(canCraft(listCanCraft[| i],objInventory.inventory))
 			{
-				draw_text(xx, yy - 2,string(recipes[|i].name));
+				draw_text(xx, yy - 2,string(listCanCraft[|i].name));
 			}
 			else
 			{
-				draw_text_color(xx, yy - 2,string(recipes[|i].name),c_gray,c_gray,c_gray,c_gray,1)
+				draw_text_color(xx, yy - 2,string(listCanCraft[|i].name),c_gray,c_gray,c_gray,c_gray,1)
 			}
 			
 		}
@@ -101,11 +100,11 @@ if(global.gamemode == 1)
 	}
 
 	//Draw Selected one
-	for(var i = 0; i < ds_list_size(recipes); i += 1)
+	for(var i = 0; i < ds_list_size(listCanCraft); i += 1)
 	{
 	var xx = 8;
 	var yy = draw_y + 6 + (i * 9);
-		if(selected == recipes[| i])
+		if(selected == listCanCraft[| i])
 		{
 			draw_sprite(sprSelectorMenu,0,3,yy);
 			
@@ -117,27 +116,27 @@ if(global.gamemode == 1)
 	if(!flipmode)
 	{
 		//Draw image and text
-		for(var i = 0; i < ds_list_size(recipes); i += 1)
+		for(var i = 0; i < ds_list_size(listCanCraft); i += 1)
 		{
 			var xx = 8;
 			var yy = draw_y + 6 + (i * 9);
-			if(selected == recipes[| i])
+			if(selected == listCanCraft[| i])
 			{
 			
-				if(recipes[|i].KP_lock > 0)
+				if(listCanCraft[|i].KP_lock > 0)
 				{
 					
 					draw_sprite_stretched(sprUnknown,0,114,10, 32, 32);
-					draw_text_transformed(106,50,"Spend " + string(recipes[|i].KP_lock) + "KP to\nlearn this\ncrafting\nrecipe?",0.5,0.5,0)
+					draw_text_transformed(106,50,"Spend " + string(listCanCraft[|i].KP_lock) + "KP to\nlearn this\ncrafting\nrecipe?",0.5,0.5,0)
 					draw_text_transformed(106,70,"Current KP: "+ string(global.KP),0.25,0.25,0)
 				}
 				else
 				{
-					//draw_sprite(sprItems,recipes[|i].image_id,120,10);
+					//draw_sprite(sprItems,listCanCraft[|i].image_id,120,10);
 					draw_text_transformed(106, 72,"Press " +chr(34) + "Select" + chr(34) + "\nfor ingredients.",0.4,0.4,0)
-					draw_sprite_stretched(sprItems,recipes[|i].image_id,114,10, 32, 32);
-					draw_text_transformed(106,50,string(recipes[|i].desc),0.5,0.5,0) 
-					//draw_text(106,35,string(recipes[|i].desc));
+					draw_sprite_stretched(sprItems,listCanCraft[|i].image_id,114,10, 32, 32);
+					draw_text_transformed(106,50,string(listCanCraft[|i].desc),0.5,0.5,0) 
+					//draw_text(106,35,string(listCanCraft[|i].desc));
 				}
 			}
 		
@@ -146,11 +145,11 @@ if(global.gamemode == 1)
 	}
 	else
 	{
-		for(var i = 0; i < ds_list_size(recipes); i += 1)
+		for(var i = 0; i < ds_list_size(listCanCraft); i += 1)
 		{
-			if(selected == recipes[| i])
+			if(selected == listCanCraft[| i])
 			{
-				if(recipes[|i].KP_lock > 0)
+				if(listCanCraft[|i].KP_lock > 0)
 				{
 					flipmode = false;
 				}
