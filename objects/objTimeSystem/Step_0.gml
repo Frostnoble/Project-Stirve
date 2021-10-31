@@ -119,8 +119,7 @@ if(MILhours2 == 2 && minutes2 == 0 && seconds2 == 0)
 		sprite_index = sprBoiExtra;
 		image_index = 1
 		frame = 1;
-		x = other.x;
-		y = other.y-4;
+		
 		
 
 	}	

@@ -20,9 +20,10 @@ ds_list_add(addedRecipes,
 new StoneAxe(),
 new StoneSpade(),
 new StonePickaxe(),
+new StoneHoe(),
+new FishingRod(),
 new RawClayBowl(),
 new WoodenChest(),
 new DryingRack(),
-new StoneStove(),
-new FishingRod(),
-new StoneHoe());
+new StoneStove());
+

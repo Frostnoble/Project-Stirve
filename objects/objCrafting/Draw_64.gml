@@ -77,12 +77,12 @@ if(global.gamemode == 1 && candraw)
 			{
 				if(canCraft(listCanCraft[| i],objInventory.inventory))
 				{
-					draw_text_color(xx, yy - 2,"??????????",c_black,c_black,c_black,c_black,1)
+					draw_text_color(xx, yy - 2,"**Unknown**",c_black,c_black,c_black,c_black,1)
 				}
 				else
 				{
 					
-					draw_text_color(xx, yy - 2,"??????????",c_gray,c_gray,c_gray,c_gray,1)
+					draw_text_color(xx, yy - 2,"**Unknown**",c_gray,c_gray,c_gray,c_gray,1)
 				}
 				
 			}

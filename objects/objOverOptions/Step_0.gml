@@ -9,10 +9,12 @@ if(global.gamemode == 5)
 	if(keyboard_check_pressed(vk_down) &&  i < ds_list_size(options)-1)
 	{
 		selected = options[| i+1];
+		audio_play_sound(sfxMenu,10,false);
 	}
 	if(keyboard_check_pressed(vk_up) &&  i > 0)
 	{
 		selected = options[| i-1];
+		audio_play_sound(sfxMenu,10,false);
 	}
 
 
