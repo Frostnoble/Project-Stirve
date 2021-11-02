@@ -135,7 +135,7 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 		{
 			
 			instance_create_layer(global.inFront_x,global.inFront_y,"Instances",global.equip.Spawn);
-			show_debug_message(string(global.equip.amount) +" "+ string(global.equip.name));
+			
 			removeInventory(global.equip.image_id,1,objInventory.inventory);
 			
 			alarm[0] = global.equip.hitlag;

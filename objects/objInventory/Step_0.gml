@@ -17,25 +17,25 @@ if(global.gamemode == 2){
 	if(keyboard_check_pressed(vk_right) && ds_list_find_value(inventory, i+1)){
 
 	global.equip = inventory[| i+1];
-	show_debug_message("Right");
+	
 
 	}
 	if(keyboard_check_pressed(vk_left) && ds_list_find_value(inventory, i-1)){
 
 	global.equip = inventory[| i-1];
-	show_debug_message("Left");
+	
 
 	}
 	if(keyboard_check_pressed(vk_down) && ds_list_find_value(inventory, i+3)){
 
 	global.equip = inventory[| i+3];
-	show_debug_message("Down");
+	
 
 	}
 	if(keyboard_check_pressed(vk_up) && ds_list_find_value(inventory, i-3)){
 
 	global.equip = inventory[| i-3];
-	show_debug_message("Up");
+	
 
 	}
 

@@ -62,7 +62,7 @@ function removeInventory(ID,num,inventory)
 			inventory[| i].amount = inventory[| i].amount - num
 			if(inventory[| i].amount <= 0)
 			{
-				show_debug_message("Hi");
+				
 				inventory[| i].amount = 1;
 				ds_list_delete(inventory,i);
 			}

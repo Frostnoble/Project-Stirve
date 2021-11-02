@@ -24,6 +24,7 @@ if(global.gamemode == 5)
 		
 			case "Crafting":
 				global.gamemode = 1;
+		
 				instance_destroy();
 				
 			break;	

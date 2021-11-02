@@ -5,10 +5,11 @@ draw_y = 0;
 rowlength = 3;
 draw_x2 = 208;
 draw_y2 = 0;
-show_debug_message("Craft")
+
 recipes = ds_list_create();
 ds_list_add(recipes, new Rope(), new FireStarter(), new WorkStation(), new GrassBed(), new FenceWood(), new FenceWoodDoor(), new GrassSeed());
 selected = recipes[| 0];
+
 
 
 flipmode = false;

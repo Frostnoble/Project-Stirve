@@ -23,7 +23,8 @@ new StonePickaxe(),
 new StoneHoe(),
 new FishingRod(),
 new RawClayBowl(),
+new UnFiredBrick(),
 new WoodenChest(),
 new DryingRack(),
-new StoneStove());
+new Kiln());
 

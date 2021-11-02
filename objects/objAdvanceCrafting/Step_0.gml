@@ -9,11 +9,12 @@ if(position_meeting(global.inFront_x, global.inFront_y,objCampFire))
 {
 	objCrafting.recipes = objCampFire.addedRecipes;
 	
+	
 }
 
-else if(position_meeting(global.inFront_x, global.inFront_y,objStoneStove))
+else if(position_meeting(global.inFront_x, global.inFront_y,objKiln))
 {
-	objCrafting.recipes = objStoneStove.addedRecipes;
+	objCrafting.recipes = objKiln.addedRecipes;
 	
 }
 else if(position_meeting(global.inFront_x, global.inFront_y,objWorkStation))

@@ -97,8 +97,15 @@ function SaveGame()
 			y: y,
 			depth: depth,
 			image_index: image_index,
-			storage: storage
-
+			storage0: storage[|0],
+			storage1: storage[|1],
+			storage2: storage[|2],
+			storage3: storage[|3],
+			storage4: storage[|4],
+			storage5: storage[|5],
+			storage6: storage[|6],
+			storage7: storage[|7],
+			storage8: storage[|8]
 			
 		}
 		array_push(_saveData, _saveEntity);
@@ -194,8 +201,7 @@ function LoadGame()
 					if(_loadEntity.inventory6 != pointer_null){inventory[|6] = _loadEntity.inventory6;}
 					if(_loadEntity.inventory7 != pointer_null){inventory[|7] = _loadEntity.inventory7;}
 					if(_loadEntity.inventory8 != pointer_null){inventory[|8] = _loadEntity.inventory8;}
-					show_debug_message(inventory[|0])
-					show_debug_message(ds_list_size(inventory))
+
 				}
 			}	
 			
@@ -219,7 +225,15 @@ function LoadGame()
 				with(instance_create_layer(_loadEntity.x, _loadEntity.y, "Instances", asset_get_index(_loadEntity.obj)))
 				{
 					image_index = _loadEntity.image_index;
-					storage = _loadEntity.storage;
+					if(_loadEntity.storage0 != pointer_null){storage[|0] = _loadEntity.storage0;}
+					if(_loadEntity.storage1 != pointer_null){storage[|1] = _loadEntity.storage1;}
+					if(_loadEntity.storage2 != pointer_null){storage[|2] = _loadEntity.storage2;}
+					if(_loadEntity.storage3 != pointer_null){storage[|3] = _loadEntity.storage3;}
+					if(_loadEntity.storage4 != pointer_null){storage[|4] = _loadEntity.storage4;}
+					if(_loadEntity.storage5 != pointer_null){storage[|5] = _loadEntity.storage5;}
+					if(_loadEntity.storage6 != pointer_null){storage[|6] = _loadEntity.storage6;}
+					if(_loadEntity.storage7 != pointer_null){storage[|7] = _loadEntity.storage7;}
+					if(_loadEntity.storage8 != pointer_null){storage[|8] = _loadEntity.storage8;}
 					
 				}
 			

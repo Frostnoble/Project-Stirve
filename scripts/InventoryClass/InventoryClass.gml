@@ -360,7 +360,7 @@ function StoneSpade () : Item () constructor {
 	attackPow = 2;
 	cuttingPow = 1;
 	smashingPow = 2;
-	hitlag = 100;
+	hitlag = 20;
 	tool_id = objStoneSpade;
 	KP_lock = 0;
 	yeald = 1;
@@ -737,19 +737,19 @@ function FenceWoodDoor () : Item () constructor {
 	canSpread = false;
 }
 
-function StoneStove () : Item () constructor {
-	name = "StoneStove";
+function Kiln () : Item () constructor {
+	name = "Kiln";
 	image_id = 38;
 	amount = 1;
 	type = 2;
 	hitlag = 100;
 	tool_id = 0;
-	Spawn = objStoneStove;
+	Spawn = objKiln;
 	crafting = ds_map_create();
-	KP_lock = 10;
+	KP_lock = 100;
 	yeald = 1;
-	ds_map_add(crafting, new Stone(), 50)
-	ds_map_add(crafting, new FireStarter(), 2)
+	ds_map_add(crafting, new Brick(), 50)
+	ds_map_add(crafting, new FireStarter(), 1)
 	desc = "Cook even\nbetter things\nwith this.";
 	canDry = false;
 	canSpread = false;
@@ -947,6 +947,39 @@ function Spear () : Item () constructor {
 	hitlag = 100;
 	tool_id = objSpear;
 	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function UnFiredBrick() : Item () constructor {
+	name = "UnFiredBrick";
+	image_id = 49;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 15;
+	yeald = 1;
+	ds_map_add(crafting, new RawClay(), 2)
+	desc = "Needs to be\nfired to be\nused.";
+	canDry = false;
+	canSpread = false;
+}
+
+function Brick() : Item () constructor {
+	name = "Brick";
+	image_id = 50;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 10;
+	yeald = 1;
+	ds_map_add(crafting, new UnFiredBrick(), 1)
+	ds_map_add(crafting, new Sand(), 1)
+	desc = "Needs to be\nfired to be\nused.";
 	canDry = false;
 	canSpread = false;
 }

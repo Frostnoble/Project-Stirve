@@ -29,6 +29,11 @@ if(global.gamemode == 1 && global.gamemode != 3){
 	var i = ds_list_find_index(listCanCraft, selected);
 	var size = ds_list_size(listCanCraft);
 
+	if(i > ds_list_size(listCanCraft) || i < 0)
+	{
+		selected = listCanCraft[| 0];
+	}
+
 	if(keyboard_check_pressed(vk_down) && ds_list_find_value(listCanCraft, i+1))
 	{
 		selected = listCanCraft[| i+1];

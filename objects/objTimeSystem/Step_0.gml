@@ -42,7 +42,7 @@ if(objPlayer.steps >= 40)
 //Body Consumes food and water
 if(minutes2 == 20 && seconds2 == 25)
 {
-	show_debug_message("Right");
+	
 	global.HUNGER -= 5;
 	global.WATER -= 3;
 	if(global.HUNGER < 0){global.HUNGER = 0;}
