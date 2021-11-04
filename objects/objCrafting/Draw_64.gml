@@ -73,7 +73,7 @@ if(global.gamemode == 1 && candraw)
 		var yy = draw_y + 6 + (i * 9);
 		if(yy <= 140 && yy >= 4)
 		{
-			if(listCanCraft[|i].KP_lock > 0)
+			if(ds_map_find_value(global.unlocked, listCanCraft[| i].image_id) > 0)
 			{
 				if(canCraft(listCanCraft[| i],objInventory.inventory))
 				{
@@ -123,11 +123,11 @@ if(global.gamemode == 1 && candraw)
 			if(selected == listCanCraft[| i])
 			{
 			
-				if(listCanCraft[|i].KP_lock > 0)
+				if(ds_map_find_value(global.unlocked, listCanCraft[| i].image_id) > 0)
 				{
 					
 					draw_sprite_stretched(sprUnknown,0,114,10, 32, 32);
-					draw_text_transformed(106,50,"Spend " + string(listCanCraft[|i].KP_lock) + "KP to\nlearn this\ncrafting\nrecipe?",0.5,0.5,0)
+					draw_text_transformed(106,50,"Spend " + string(ds_map_find_value(global.unlocked, listCanCraft[| i].image_id)) + "KP to\nlearn this\ncrafting\nrecipe?",0.5,0.5,0)
 					draw_text_transformed(106,70,"Current KP: "+ string(global.KP),0.25,0.25,0)
 				}
 				else
@@ -149,7 +149,7 @@ if(global.gamemode == 1 && candraw)
 		{
 			if(selected == listCanCraft[| i])
 			{
-				if(listCanCraft[|i].KP_lock > 0)
+				if(ds_map_find_value(global.unlocked, listCanCraft[| i].image_id) > 0)
 				{
 					flipmode = false;
 				}

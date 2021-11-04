@@ -49,6 +49,42 @@ if(global.startType == 0){
 		done = true;
 		audio_play_sound(musTest, 1, true);
 		ds_grid_destroy(global.world);
+		
+		
+		global.unlocked = ds_map_create();
+		ds_map_add(global.unlocked,5,0) //Cooked Meat
+		ds_map_add(global.unlocked,7,0) //Rope
+		ds_map_add(global.unlocked,8,5) //FireStarter
+		ds_map_add(global.unlocked,9,10) //WorkStation
+		ds_map_add(global.unlocked,10,0) //StoneAxe
+		ds_map_add(global.unlocked,12,10) //GrassSeed
+		ds_map_add(global.unlocked,14,0) //FriedMush
+		ds_map_add(global.unlocked,18,0) //StoneSpade
+		ds_map_add(global.unlocked,21,0) //RawClay
+		ds_map_add(global.unlocked,22,0) //StonePick
+		ds_map_add(global.unlocked,23,15) //UnFiredBowl
+		ds_map_add(global.unlocked,24,12) //RedBowl
+		ds_map_add(global.unlocked,25,0) //SaltWater
+		ds_map_add(global.unlocked,26,0) //PureWater
+		ds_map_add(global.unlocked,29,15) //WoodenChest
+		ds_map_add(global.unlocked,30,20) //GrassBed
+		ds_map_add(global.unlocked,31,0) //FishingRod
+		ds_map_add(global.unlocked,32,0) //SmallFish
+		ds_map_add(global.unlocked,33,0) //AverageFish
+		ds_map_add(global.unlocked,34,0) //LargeFish
+		ds_map_add(global.unlocked,35,0) //FriedFish
+		ds_map_add(global.unlocked,36,5) //WoodenFence
+		ds_map_add(global.unlocked,37,5) //FenceDoor
+		ds_map_add(global.unlocked,38,100) //Kiln
+		ds_map_add(global.unlocked,42,25) //DryingRack
+		ds_map_add(global.unlocked,44,0) //FishSoup
+		ds_map_add(global.unlocked,45,0) //SchroomSoup
+		ds_map_add(global.unlocked,46,0) //StoneHoe
+		ds_map_add(global.unlocked,48,20) //Spear
+		ds_map_add(global.unlocked,49,15) //UnFiredBrick
+		ds_map_add(global.unlocked,50,10) //Brick
+		ds_map_add(global.unlocked,51,5) //WoodenBowl
+		
 	}
 
 }

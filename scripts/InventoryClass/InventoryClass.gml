@@ -407,7 +407,7 @@ function RawClay () : Item () constructor {
 	crafting = ds_map_create();
 	KP_lock = 0;
 	yeald = 1;
-	ds_map_add(crafting, new Soil(), 5)
+	ds_map_add(crafting, new Soil(), 3)
 	desc = "A basic material\nfor building\nthings.";
 	canDry = false;
 	canSpread = false;
@@ -920,8 +920,8 @@ function Berries() : Item () constructor {
 	image_id = 47
 	amount = 1;
 	type = 3;
-	hungerFill = 10;
-	waterFill = 0;
+	hungerFill = 2;
+	waterFill = 1;
 	fatigueFill = 0;
 	effect = new Normal();
 	hitlag = 100;
@@ -952,7 +952,7 @@ function Spear () : Item () constructor {
 }
 
 function UnFiredBrick() : Item () constructor {
-	name = "UnFiredBrick";
+	name = "ClayBrick";
 	image_id = 49;
 	amount = 1;
 	type = 0;
@@ -968,7 +968,7 @@ function UnFiredBrick() : Item () constructor {
 }
 
 function Brick() : Item () constructor {
-	name = "Brick";
+	name = "RedBrick";
 	image_id = 50;
 	amount = 1;
 	type = 0;
@@ -982,4 +982,40 @@ function Brick() : Item () constructor {
 	desc = "Needs to be\nfired to be\nused.";
 	canDry = false;
 	canSpread = false;
+}
+
+function WoodenBowl () : Item () constructor {
+	name = "WoodenBowl";
+	image_id = 51;
+	amount = 1;
+	type = 1;
+	hitlag = 1;
+	tool_id = objBottleWood;
+	crafting = ds_map_create();
+	yeald = 1;
+	ds_map_add(crafting, new Wood(), 4)
+	desc = "Can scoop up\nthings like water.\nCan't be used/nfor cooking.";
+	canDry = false;
+	canSpread = false;
+}
+
+function WoodBowlWater () : Item () constructor {
+	name = "BadWater";
+	image_id = 52;
+	amount = 1;
+	type = 3;
+	hungerFill = 0;
+	waterFill = 30;
+	fatigueFill = -10;
+	hitlag = 20;
+	tool_id = 0;
+	effect = new Sick();
+	crafting = ds_map_create();
+	yeald = 1;
+	ds_map_add(crafting, new  WoodenBowl(), 1)
+	desc = "Gross Salt\nwater, can this\n be cleaned?";
+
+	canDry = false;
+	canSpread = false;
+
 }

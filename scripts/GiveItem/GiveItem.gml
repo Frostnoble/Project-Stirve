@@ -81,7 +81,11 @@ function GiveItem(item_drop)
 		case "Berries":
 			pitchRandomizer(sfxHeal,10,false);
 		break;
-			
+		
+		case "BadWater":
+			pitchRandomizer(sfxDrink,10,false);
+			addInventory(51,1,new WoodenBowl(),objInventory.inventory)
+		break;
 	}
 
 

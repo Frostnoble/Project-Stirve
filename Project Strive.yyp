@@ -19,6 +19,7 @@
     {"id":{"name":"sprBerryBush","path":"sprites/sprBerryBush/sprBerryBush.yy",},"order":10,},
     {"id":{"name":"InventoryClass","path":"scripts/InventoryClass/InventoryClass.yy",},"order":1,},
     {"id":{"name":"sprPickAxe","path":"sprites/sprPickAxe/sprPickAxe.yy",},"order":6,},
+    {"id":{"name":"objBottleWood","path":"objects/objBottleWood/objBottleWood.yy",},"order":9,},
     {"id":{"name":"objPond","path":"objects/objPond/objPond.yy",},"order":10,},
     {"id":{"name":"objCrafting","path":"objects/objCrafting/objCrafting.yy",},"order":3,},
     {"id":{"name":"sprAxe","path":"sprites/sprAxe/sprAxe.yy",},"order":5,},

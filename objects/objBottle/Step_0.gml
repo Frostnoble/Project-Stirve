@@ -4,6 +4,8 @@
 
 if(position_meeting(global.inFront_x, global.inFront_y,objWater))
 {
+
+	
 	ID = 25;
 	DROP = new ClayBowlWater();
 	NUM = 1;
@@ -15,11 +17,11 @@ if(position_meeting(global.inFront_x, global.inFront_y,objWater))
 		//global.equip = objInventory.inventory[|0];
 		if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)
 		{
-			global.equip = new PlaceHolder();
+			global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 				
 		}
 		pitchRandomizer(sfxSplash,10,false);
-	    instance_destroy();
+		instance_destroy();
 		
 	}
 	else
@@ -36,16 +38,18 @@ if(position_meeting(global.inFront_x, global.inFront_y,objWater))
 				
 				if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)
 				{
-				global.equip = new PlaceHolder();
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 				
 				}			
 				
 				
 				pitchRandomizer(sfxSplash,10,false);
-			    instance_destroy();
+				instance_destroy();
 			}
 		}
 	}
+	
+	
 
 }
 else

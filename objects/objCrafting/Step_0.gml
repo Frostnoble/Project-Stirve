@@ -46,16 +46,16 @@ if(global.gamemode == 1 && global.gamemode != 3){
 
 	if(keyboard_check_pressed(A_Key))
 	{
-		if(listCanCraft[|i].KP_lock == 0)
+		if(ds_map_find_value(global.unlocked, listCanCraft[| i].image_id) == 0)
 		{
 			Crafting(listCanCraft[| i],objInventory.inventory);
 		}
 		else
 		{
-			if(global.KP >= listCanCraft[| i].KP_lock)
+			if(global.KP >= ds_map_find_value(global.unlocked, listCanCraft[| i].image_id))
 			{
-				global.KP = global.KP - listCanCraft[| i].KP_lock;
-				listCanCraft[| i].KP_lock = 0;
+				global.KP = global.KP - ds_map_find_value(global.unlocked, listCanCraft[| i].image_id);
+				ds_map_set(global.unlocked, listCanCraft[| i].image_id, 0)
 				
 			}
 		

@@ -38,7 +38,8 @@ function SaveGame()
 		status: global.status,
 		KP: global.KP,
 		worldTime: global.worldTime,
-		days: objTimeSystem.days
+		days: objTimeSystem.days,
+		unlock: global.unlocked
 	
 
 
@@ -183,6 +184,7 @@ function LoadGame()
 				global.worldTime = _loadEntity.worldTime;
 				global.equip = _loadEntity.equip;
 				objTimeSystem.days = _loadEntity.days;
+				global.unlocked = _loadEntity.unlock;
 				
 				
 				
