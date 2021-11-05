@@ -5,8 +5,7 @@ Render();
 
 if(keyboard_check_pressed(vk_enter))
 {
-	audio_stop_sound(musTest);
-	room_restart();
+	instance_create_layer(objPlayer.x,objPlayer.y+16,"Instances", objwolf);
 }
 
 if(keyboard_check_pressed(ord("S")))

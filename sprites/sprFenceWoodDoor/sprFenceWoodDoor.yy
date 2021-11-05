@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1b374451-7df1-4924-b19c-bde049ab7c3b","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1b374451-7df1-4924-b19c-bde049ab7c3b","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"LayerId":{"name":"42b5c195-5ffd-4312-841c-32543be734e0","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFenceWoodDoor","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","name":"1b374451-7df1-4924-b19c-bde049ab7c3b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e5ed3c2e-9fc0-4e70-8761-3cd3775216f8","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e5ed3c2e-9fc0-4e70-8761-3cd3775216f8","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"LayerId":{"name":"42b5c195-5ffd-4312-841c-32543be734e0","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprFenceWoodDoor","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","name":"e5ed3c2e-9fc0-4e70-8761-3cd3775216f8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"70526b67-81b1-4fba-a8df-875702e8f72e","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"70526b67-81b1-4fba-a8df-875702e8f72e","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"LayerId":{"name":"65c07bdd-2628-49d6-b1ba-8943207ab223","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprFenceWoodDoor","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","name":"70526b67-81b1-4fba-a8df-875702e8f72e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"dda4c87a-86fd-499d-a25e-f65f16e9941c","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"dda4c87a-86fd-499d-a25e-f65f16e9941c","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"LayerId":{"name":"65c07bdd-2628-49d6-b1ba-8943207ab223","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprFenceWoodDoor","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","name":"dda4c87a-86fd-499d-a25e-f65f16e9941c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sprFenceWoodDoor","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"14c5dc9e-7d6b-4ae8-ac17-25467909505a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1b374451-7df1-4924-b19c-bde049ab7c3b","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"cbc6290f-cfce-4b34-ba9e-a8f2d86db3f6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e5ed3c2e-9fc0-4e70-8761-3cd3775216f8","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3c7b4edd-3cd9-481d-84af-aa5d94e5fa76","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"70526b67-81b1-4fba-a8df-875702e8f72e","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"61cd46a8-eb23-46c8-b538-61eeb7c9887c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dda4c87a-86fd-499d-a25e-f65f16e9941c","path":"sprites/sprFenceWoodDoor/sprFenceWoodDoor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -69,7 +69,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"42b5c195-5ffd-4312-841c-32543be734e0","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"65c07bdd-2628-49d6-b1ba-8943207ab223","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

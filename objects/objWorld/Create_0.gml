@@ -13,7 +13,6 @@ objTree,
 objTreeSmol,
 objSapling,
 objCampFire,
-objClayJar,
 objGrassBed,
 objWorkStation,
 objWaterPond,
@@ -23,6 +22,7 @@ objFenceWoodDoor,
 objBerryBush,
 objBush,
 objSmallBush,
+objRabbit,
 objPlayer)
 
 
