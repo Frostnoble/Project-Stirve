@@ -24,7 +24,7 @@ if(!hit)
 				y+= spd;
 			break;
 		}
-		show_debug_message("Ouch")
+		//show_debug_message("Ouch")
 		image_speed = 1;
 		alarm[1] = 30;
 		alarm[2] = 2;

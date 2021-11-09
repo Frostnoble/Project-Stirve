@@ -9,8 +9,7 @@ MILhours2 = floor(((global.worldTime / (1800)) mod 24)+1);
 hours2 = floor(((global.worldTime / (1800)) mod 12)+1);
 days2 = floor(((global.worldTime / (43200)) mod 43200));
 
-gotime =  string(days2) + ":" + string(MILhours2) + "["+string(hours2)+"]"+  ":" +string(minutes2)
-//show_debug_message(gotime);
+
 
 if(global.gamemode == 1 || global.gamemode == 2 || global.gamemode == 5){global.pause = true;}else{global.pause = false;}
 

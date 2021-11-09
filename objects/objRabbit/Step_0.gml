@@ -13,7 +13,7 @@ if(xTarg == x and yTarg == y){
  
 	if(point_distance(x,y,objPlayer.x,objPlayer.y) < 64)
 	{
-		if(HP != 2)
+		if(HP != MHP)
 		{
 			direction = point_direction(x,y,objPlayer.x,objPlayer.y) + 180;
 			this_angle = round(direction/90)*90;
@@ -56,6 +56,12 @@ if(xTarg == x and yTarg == y){
 			else if(!place_meeting(x,yTarg,objColl)){xTarg = x}
 			else{xTarg = x; yTarg = y}
 		}
+		if(place_meeting(xTarg,yTarg,objFenceWoodDoor)){
+			if(!place_meeting(xTarg,y,objFenceWoodDoor)){yTarg = y}
+			else if(!place_meeting(x,yTarg,objFenceWoodDoor)){xTarg = x}
+			else{xTarg = x; yTarg = y}
+		}
+		
 
 	}
 }else{
@@ -94,14 +100,18 @@ if(place_meeting(x,y,global.equip.tool_id) && global.equip.type == 1 && !stunned
 var _inst = instance_place(x, y, objGrass);
 if (_inst != noone && irandom(100) <= 50)
 {
-    if(HP < 2){HP++;}else{HP = 2;}
+    if(HP < MHP){HP++;}else{HP = MHP;}
 	stunned = true;
 	waittime -= 10;
 	alarm[0] = 90;
     instance_destroy(_inst);
 }
 
-
+if(place_meeting(xTarg,yTarg,objPlayer)){
+	if(!place_meeting(xTarg,y,objPlayer)){yTarg = y}
+	else if(!place_meeting(x,yTarg,objPlayer)){xTarg = x}
+	else{xTarg = x; yTarg = y}
+}
 
 if(HP <= 0)
 {

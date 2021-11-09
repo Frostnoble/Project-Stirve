@@ -29,7 +29,6 @@ function SaveGame()
 	var _saveEntity =
 	{
 		type: 1,//Status and time
-		equip: global.equip,
 		HEALTH: global.HEALTH,
 		FATIGUE: global.FATIGUE,
 		WATER: global.WATER,
@@ -39,7 +38,8 @@ function SaveGame()
 		KP: global.KP,
 		worldTime: global.worldTime,
 		days: objTimeSystem.days,
-		unlock: global.unlocked
+		unlocked: ds_map_write(global.unlocked)
+
 	
 
 
@@ -112,6 +112,7 @@ function SaveGame()
 		array_push(_saveData, _saveEntity);
 	
 	}
+	
 
 
 	
@@ -182,11 +183,12 @@ function LoadGame()
 				global.KP = _loadEntity.KP;
 				
 				global.worldTime = _loadEntity.worldTime;
-				global.equip = _loadEntity.equip;
+
 				objTimeSystem.days = _loadEntity.days;
-				global.unlocked = _loadEntity.unlock;
+				global.unlocked = ds_map_create;
+				ds_map_read(global.unlocked,_loadEntity.unlocked);
 				
-				
+
 				
 			}
 			

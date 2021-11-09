@@ -1000,7 +1000,7 @@ function WoodenBowl () : Item () constructor {
 }
 
 function WoodBowlWater () : Item () constructor {
-	name = "BadWater";
+	name = "SaltWater";
 	image_id = 52;
 	amount = 1;
 	type = 3;
@@ -1014,6 +1014,28 @@ function WoodBowlWater () : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new  WoodenBowl(), 1)
 	desc = "Gross Salt\nwater, can this\n be cleaned?";
+
+	canDry = false;
+	canSpread = false;
+
+}
+
+function WoodBowlWaterPure () : Item () constructor {
+	name = "PureWater";
+	image_id = 53;
+	amount = 1;
+	type = 3;
+	hungerFill = 0;
+	waterFill = 80;
+	fatigueFill = 0;
+	hitlag = 20;
+	tool_id = 0;
+	effect = new Normal();
+	//crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	//ds_map_add(crafting, new ClayBowlWater(), 1)
+	desc = "Fresh water\n that's safe\nto drink.";
 
 	canDry = false;
 	canSpread = false;

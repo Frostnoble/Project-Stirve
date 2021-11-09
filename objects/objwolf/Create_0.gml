@@ -5,6 +5,7 @@ dir = 0
 spd = 2;
 waittime = 10;
 HP = 5;
+MHP = 5;
 KP = 25;
 depth = room_height - y
 

@@ -13,7 +13,7 @@ if(xTarg == x and yTarg == y and !attacking){
  
 	if(point_distance(x,y,objPlayer.x,objPlayer.y) < 64)
 	{
-		if(HP != 5)
+		if(HP != MHP)
 		{
 			direction = point_direction(x,y,objPlayer.x,objPlayer.y); //Move Towards
 			this_angle = round(direction/90)*90;
@@ -56,6 +56,15 @@ if(xTarg == x and yTarg == y and !attacking){
 			else if(!place_meeting(x,yTarg,objColl)){xTarg = x}
 			else{xTarg = x; yTarg = y}
 		}
+		if(place_meeting(xTarg,yTarg,objFenceWoodDoor)){
+			if(!place_meeting(xTarg,y,objFenceWoodDoor)){yTarg = y}
+			else if(!place_meeting(x,yTarg,objFenceWoodDoor)){xTarg = x}
+			else{xTarg = x; yTarg = y}
+		}
+		
+
+		
+		
 
 
 	}
@@ -91,7 +100,7 @@ if(place_meeting(x,y,global.equip.tool_id) && global.equip.type == 1 && !stunned
 	alarm[1] = 300;
 }
 
-if(place_meeting(xTarg,yTarg,objPlayer) && !stunned && !attacking && HP != 5){
+if(place_meeting(xTarg,yTarg,objPlayer) && !stunned  && HP != 5){
 	xTarg = x; 
 	yTarg = y;
 	pitchRandomizer(sfxHurt,10,false);
@@ -100,14 +109,19 @@ if(place_meeting(xTarg,yTarg,objPlayer) && !stunned && !attacking && HP != 5){
 	alarm[2] = 30;
 }
 
+if(place_meeting(xTarg,yTarg,objPlayer) && !attacking){
+	if(!place_meeting(xTarg,y,objPlayer)){yTarg = y}
+	else if(!place_meeting(x,yTarg,objPlayer)){xTarg = x}
+	else{xTarg = x; yTarg = y}
+}
+
 
 
 var _inst = instance_place(wolfinFront_x ,wolfinFront_y, objRabbit);
 if (_inst != noone && irandom(100) <= 50)
 {
-    if(HP < 5){HP++;}else{HP = 5;}
+    if(HP < MHP){HP++;}else{HP = MHP;}
 	attacking = true;
-	waittime -= 10;
 	alarm[2] = 30;
     with(_inst){HP -= 5;}
 }

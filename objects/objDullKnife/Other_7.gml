@@ -3,5 +3,5 @@
 objPlayer.sprite_index = sprBoi;
 objPlayer.attackFrame = false;
 
-show_debug_message(string(x) + " " + string(y))
+//show_debug_message(string(x) + " " + string(y))
 instance_destroy();

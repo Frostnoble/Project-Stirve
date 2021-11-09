@@ -4,7 +4,7 @@ function Render(){
 
 	if(global.saving)
 	{
-		show_debug_message("Waiting")
+		//show_debug_message("Waiting")
 		instance_activate_all();
 	}
 	else

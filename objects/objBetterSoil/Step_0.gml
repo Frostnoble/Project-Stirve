@@ -46,7 +46,7 @@ if(global.worldTime >= timeTillGrow && timeTillGrow != 0)
 		{
 			x_spawn = choose(x - 16,x + 16, x)
 			y_spawn = choose(y - 16,y + 16, y)
-			show_debug_message("What?")
+			//show_debug_message("What?")
 			haveGrow++;
 			if(haveGrow >= 8){break;}
 			

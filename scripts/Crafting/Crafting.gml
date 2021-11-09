@@ -53,7 +53,7 @@ if(check == ds_map_size(product.crafting))
 {
 	
 	
-	show_debug_message(product.amount);
+	//show_debug_message(product.amount);
 	//show_debug_message("GOOD");
 	
 	//remove items

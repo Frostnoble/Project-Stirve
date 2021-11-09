@@ -11,7 +11,7 @@ with (objPlayer)
 {
 	attackFrame = true;
 	sprite_index = sprBoiAttack;
-	show_debug_message(dir)
+	//show_debug_message(dir)
 	image_index = dir;
 	
 	

@@ -2,87 +2,92 @@
 
 function GiveItem(item_drop)
 {
-	switch (item_drop.name)
+	switch (item_drop.image_id)
 	{
-		case "RawMeat":
+		case 4: //RawMeat
 			pitchRandomizer(sfxSick,10,false);
 			addInventory(6,1,new Bone(),objInventory.inventory);
 		break;
 			
-		case "Cooked Meat":
+		case 5: //CookedMeat
 			pitchRandomizer(sfxHeal,10,false);
 			addInventory(6,1,new Bone(),objInventory.inventory);
 		break;
 			
-		case "Fried Mush":
+		case 14://Fried Mush
 			pitchRandomizer(sfxHeal,10,false);
 		break;
 				
-		case "Mushroom":
+		case 15://Mushroom
 			pitchRandomizer(sfxHeal,10,false);
 		break;
 						
-		case "PoisonMush":
+		case 16://Poimush
 			pitchRandomizer(sfxSick,10,false);
 		break;
 						
-		case "BlueMush":
+		case 17://bluemush
 			pitchRandomizer(sfxSick,10,false);	
 		break;
 						
-		case "SaltWater":
+		case 25://saltwater Clay
 			pitchRandomizer(sfxDrink,10,false);
 			addInventory(24,1,new ClayBowl(),objInventory.inventory)
 		break;
 						
-		case "PureWater":
+		case 26://purewater clay
 			pitchRandomizer(sfxDrink,10,false);
 			addInventory(24,1,new ClayBowl(),objInventory.inventory)
 		break;
 						
-		case "SmallFish":
+		case 32://small fish
 			pitchRandomizer(sfxHeal,10,false);
 			addInventory(6,1,new Bone(),objInventory.inventory);
 		break;
 						
-		case "AverageFish":
+		case 33://Average fish
 			pitchRandomizer(sfxHeal,10,false);
 			addInventory(6,2,new Bone(),objInventory.inventory);
 		break;
 						
-		case "LargeFish":
+		case 34://large fish
 			pitchRandomizer(sfxHeal,10,false);
 			addInventory(6,3,new Bone(),objInventory.inventory);
 		break;
 						
-		case "FriedFish":
+		case 35://FriedFish
 			pitchRandomizer(sfxHeal,10,false);
 			addInventory(6,2,new Bone(),objInventory.inventory);
 		break;
 			
-		case "RottenFood":
+		case 41://Rottenfood
 			pitchRandomizer(sfxSick,10,false);	
 		break;
 						
-		case "BeastJerky":
+		case 43://BeastJerky
 			pitchRandomizer(sfxHeal,10,false);	
 		break;
 						
-		case "FishSoup":
+		case 44://FishSoup
 			pitchRandomizer(sfxDrink,10,false);
 			addInventory(24,1,new ClayBowl(),objInventory.inventory)	
 		break;
 						
-		case "SchroomSoup":
+		case 45://MushSoup
 			pitchRandomizer(sfxDrink,10,false);
 			addInventory(24,1,new ClayBowl(),objInventory.inventory)
 		break;
 						
-		case "Berries":
+		case 47://Berries
 			pitchRandomizer(sfxHeal,10,false);
 		break;
 		
-		case "BadWater":
+		case 52://Saltwater Wood
+			pitchRandomizer(sfxDrink,10,false);
+			addInventory(51,1,new WoodenBowl(),objInventory.inventory)
+		break;
+		
+		case 53://PureWater Wood
 			pitchRandomizer(sfxDrink,10,false);
 			addInventory(51,1,new WoodenBowl(),objInventory.inventory)
 		break;

@@ -21,7 +21,7 @@ if(objPlayer.move_dir == 270)
 	image_yscale=-1;
 }
 
-show_debug_message(objPlayer.move_dir)
+//show_debug_message(objPlayer.move_dir)
 
 
 //image_xscale = sign(objPlayer.move_dir)
@@ -29,7 +29,7 @@ with (objPlayer)
 {
 	attackFrame = true;
 	sprite_index = sprBoiAttack;
-	show_debug_message(dir)
+	//show_debug_message(dir)
 	image_index = dir;
 	
 	
