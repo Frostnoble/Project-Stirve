@@ -202,8 +202,8 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 		
 
 		
-		
-			if(place_meeting(xTarg,yTarg,objColl)){
+			
+			if(place_meeting(xTarg,yTarg,objColl) && !global.GoThrough){
 				if(!place_meeting(xTarg,y,objColl)){yTarg = y}
 				else if(!place_meeting(x,yTarg,objColl)){xTarg = x}
 				else{xTarg = x; yTarg = y}

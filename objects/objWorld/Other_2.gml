@@ -9,7 +9,7 @@ surface_resize(application_surface, 160, 144);
 
 global.gamemode = 0;
 global.TempoWater = 0;
-
+global.GoThrough = false;
 global.saving = false;
 global.pause = false;
 

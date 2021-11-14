@@ -15,6 +15,12 @@ if(keyboard_check_pressed(vk_enter))
 	room_goto(myroom)
 }
 
+if(keyboard_check_pressed(ord("T")))
+{
+	instance_create_layer(global.inFront_x,global.inFront_y, "Instances", objJunkHouse)
+	
+}
+
 if(keyboard_check_pressed(ord("S")))
 {
 	
