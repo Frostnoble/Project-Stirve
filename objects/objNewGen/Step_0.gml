@@ -85,6 +85,12 @@ if(global.startType == 0){
 		ds_map_add(global.unlocked,49,15) //UnFiredBrick
 		ds_map_add(global.unlocked,50,10) //Brick
 		ds_map_add(global.unlocked,51,5) //WoodenBowl
+		ds_map_add(global.unlocked,52,0) //WoodenBowlWater
+		ds_map_add(global.unlocked,54,30) //FieldStove
+		ds_map_add(global.unlocked,55,5) //Bowl of Fat
+		ds_map_add(global.unlocked,56,5) //Bowl of Oil
+		ds_map_add(global.unlocked,57,0) //Grilled Meat
+		ds_map_add(global.unlocked,58,0) //Grilled Fish
 		
 	}
 
@@ -93,7 +99,7 @@ else if(global.startType == 1){
 	if(!done){
 		
 		LoadGame();
-		
+		global.equip = objInventory.inventory[|0];
 	}
 	done = true;
 	audio_play_sound(musTest, 1, true);

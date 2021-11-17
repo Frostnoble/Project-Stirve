@@ -27,5 +27,6 @@ new RawClayBowl(),
 new UnFiredBrick(),
 new WoodenChest(),
 new DryingRack(),
+new FieldStove(),
 new Kiln());
 

@@ -3,6 +3,16 @@
 
 KeyGet();
 
+if(keyboard_check_pressed(ord("G")))
+{
+
+	addInventory(54,1,new FieldStove(),objInventory.inventory);
+	addInventory(4,1,new RawMeat(),objInventory.inventory);
+	addInventory(34,2,new LargeFish(),objInventory.inventory);
+	addInventory(24,1,new ClayBowl(),objInventory.inventory);
+}
+
+
 global.inFront_x = round((objPlayer.x+lengthdir_x(TILE_W*objPlayer.spd,objPlayer.move_dir)) / 16) * 16;
 global.inFront_y = round((objPlayer.y+lengthdir_y(TILE_H*objPlayer.spd,objPlayer.move_dir)) / 16) * 16;
 

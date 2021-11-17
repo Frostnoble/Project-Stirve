@@ -12,6 +12,13 @@ if(position_meeting(global.inFront_x, global.inFront_y,objCampFire))
 	
 }
 
+if(position_meeting(global.inFront_x, global.inFront_y,objFieldStove))
+{
+	objCrafting.recipes = objFieldStove.addedRecipes;
+	
+	
+}
+
 else if(position_meeting(global.inFront_x, global.inFront_y,objKiln))
 {
 	objCrafting.recipes = objKiln.addedRecipes;

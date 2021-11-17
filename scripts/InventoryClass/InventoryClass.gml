@@ -1041,3 +1041,155 @@ function WoodBowlWaterPure () : Item () constructor {
 	canSpread = false;
 
 }
+
+function FieldStove() : Item () constructor {
+	name = "FieldStove";
+	image_id = 54;
+	amount = 1;
+	type = 2;
+	hitlag = 100;
+	tool_id = 0;
+	Spawn = objFieldStove;
+	crafting = ds_map_create();
+	KP_lock = 30;
+	yeald = 1;
+	ds_map_add(crafting, new Stone(), 30)
+	ds_map_add(crafting, new FireStarter(), 1)
+	desc = "Place this on\nthe ground to\ncreate a\nFieldStove.";
+	canDry = false;
+	canSpread = false;
+}
+
+function ClayBowlAnimalFat() : Item () constructor {
+	name = "AnimalFat";
+	image_id = 55;
+	amount = 1;
+	type = 0;
+	hitlag = 20;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 10;
+	yeald = 1;
+	ds_map_add(crafting, new ClayBowl(), 1)
+	ds_map_add(crafting, new RawMeat(), 1)
+	desc = "Can be used\nfor many\nthings.";
+	canDry = false;
+	canSpread = false;
+
+}
+
+function ClayBowlOil() : Item () constructor {
+	name = "Bowl of Oil";
+	image_id = 56;
+	amount = 1;
+	type = 0;
+	hitlag = 20;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 15;
+	yeald = 1;
+	ds_map_add(crafting, new ClayBowlAnimalFat(), 1)
+	desc = "Oil used for\ncooking and\nother things.";
+	canDry = false;
+	canSpread = false;
+
+}
+
+function GrilledMeat () : Item () constructor {
+	name = "GrilledMeat";
+	image_id = 57;
+	amount = 1;
+	type = 3;
+	hungerFill = 55;
+	waterFill = 0;
+	fatigueFill = 10;
+	effect = new Normal();
+	hitlag = 100;
+	tool_id = 0;
+	hitlag = 100;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	foodLevel = 1;
+	ds_map_add(crafting, new RawMeat(), 1)
+	ds_map_add(crafting, new ClayBowlOil(), 1)
+	desc = "This is\nactually pretty\ngood.";
+
+		//==========================
+	canDry = false;
+	canSpread = false;
+	
+}
+
+function GrilledFishS () : Item () constructor {
+	name = "GrilledFish";
+	image_id = 58;
+	amount = 1;
+	type = 3;
+	hungerFill = 25;
+	waterFill = 0;
+	fatigueFill = 5;
+	effect = new Normal();
+	hitlag = 100;
+	tool_id = 0;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new SmallFish(), 1)
+	ds_map_add(crafting, new ClayBowlOil(), 1)
+	KP_lock = 0;
+	yeald = 1;
+	foodLevel = 1;
+	desc = "Grilled fish\n,watch out\nfor bones.";
+
+	canDry = false;
+	canSpread = false;
+	
+}
+
+function GrilledFishM () : Item () constructor {
+	name = "GrilledFish";
+	image_id = 58;
+	amount = 1;
+	type = 3;
+	hungerFill = 25;
+	waterFill = 0;
+	fatigueFill = 5;
+	effect = new Normal();
+	hitlag = 100;
+	tool_id = 0;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new AverageFish(), 1)
+	ds_map_add(crafting, new ClayBowlOil(), 1)
+	KP_lock = 0;
+	yeald = 2;
+	foodLevel = 1;
+	desc = "Grilled fish\n,watch out\nfor bones.";
+
+	canDry = false;
+	canSpread = false;
+	
+}
+
+
+function GrilledFishL () : Item () constructor {
+	name = "GrilledFish";
+	image_id = 58;
+	amount = 1;
+	type = 3;
+	hungerFill = 25;
+	waterFill = 0;
+	fatigueFill = 5;
+	effect = new Normal();
+	hitlag = 100;
+	tool_id = 0;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new LargeFish(), 1)
+	ds_map_add(crafting, new ClayBowlOil(), 1)
+	KP_lock = 0;
+	yeald = 3;
+	foodLevel = 1;
+	desc = "Grilled fish\n,watch out\nfor bones.";
+
+	canDry = false;
+	canSpread = false;
+	
+}

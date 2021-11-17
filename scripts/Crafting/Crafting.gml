@@ -64,6 +64,7 @@ if(check == ds_map_size(product.crafting))
 			if((inventory[| j].name == ingredients[i].name) && (inventory[| j].amount >= cost[i]))
 			{
 				var num = cost[i];
+				
 				removeInventory(inventory[| j].image_id,num,inventory);
 				check++;
 			}
@@ -71,7 +72,9 @@ if(check == ds_map_size(product.crafting))
 		}
 
 	}
+	
 	addInventory(product.image_id,product.yeald,product,inventory);
+	ReturnItem(product.image_id);
 	
 	
 }

@@ -3,23 +3,7 @@
 
 Render();
 
-if(keyboard_check_pressed(vk_enter))
-{
-	myroom = room_add();
-	//room_set_width(myroom, 160);
-	//room_set_height(myroom, 144);
-	//room_set_persistent(myroom, false);
-	room_assign(myroom, TreeFort);
-	room_instance_add(myroom, 80, 80, objPlayer);
 
-	room_goto(myroom)
-}
-
-if(keyboard_check_pressed(ord("T")))
-{
-	instance_create_layer(global.inFront_x,global.inFront_y, "Instances", objJunkHouse)
-	
-}
 
 if(keyboard_check_pressed(ord("S")))
 {
@@ -32,6 +16,8 @@ if(keyboard_check_pressed(ord("L")))
 
 	LoadGame();
 }
+
+
 
 if(keyboard_check(vk_right) || keyboard_check(vk_left) || keyboard_check(vk_up) || keyboard_check(vk_down))
 {

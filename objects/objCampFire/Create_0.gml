@@ -25,6 +25,4 @@ new FriedMush(),
 new FriedFishS(),
 new FriedFishM(),
 new FriedFishL(),
-new Brick(),
-new FishSoup(),
-new SchroomSoup());
+new Brick());

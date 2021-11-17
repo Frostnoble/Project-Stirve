@@ -91,6 +91,16 @@ function GiveItem(item_drop)
 			pitchRandomizer(sfxDrink,10,false);
 			addInventory(51,1,new WoodenBowl(),objInventory.inventory)
 		break;
+		
+		case 57://GrilledMeat
+			pitchRandomizer(sfxHeal,10,false);
+			addInventory(6,1,new Bone(),objInventory.inventory);
+		break;
+		
+		case 58://GrilledFish
+			pitchRandomizer(sfxHeal,10,false);
+			addInventory(6,1,new Bone(),objInventory.inventory);
+		break;
 	}
 
 
