@@ -10,6 +10,7 @@ if(keyboard_check_pressed(ord("G")))
 	addInventory(4,1,new RawMeat(),objInventory.inventory);
 	addInventory(34,2,new LargeFish(),objInventory.inventory);
 	addInventory(24,1,new ClayBowl(),objInventory.inventory);
+	addInventory(28,3,new ClayPot(),objInventory.inventory);
 }
 
 
@@ -79,7 +80,7 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 		if(global.equip.amount > 0) //Drop
 		{
 
-			if(place_empty(global.inFront_x,global.inFront_y) || place_meeting(global.inFront_x,global.inFront_y,objDryingRack) || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil))// so shit's no stuck in trees for something
+			if(place_empty(global.inFront_x,global.inFront_y)|| place_meeting(global.inFront_x,global.inFront_y,objPot) || place_meeting(global.inFront_x,global.inFront_y,objDryingRack) || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil))// so shit's no stuck in trees for something
 			{
 				canHit = false;
 				alarm[0] = global.equip.hitlag;

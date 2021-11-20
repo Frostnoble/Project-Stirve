@@ -67,6 +67,8 @@ if(global.startType == 0){
 		ds_map_add(global.unlocked,24,12) //RedBowl
 		ds_map_add(global.unlocked,25,0) //SaltWater
 		ds_map_add(global.unlocked,26,0) //PureWater
+		ds_map_add(global.unlocked,27,5) //UnfiredPot
+		ds_map_add(global.unlocked,28,10) //ClayPot
 		ds_map_add(global.unlocked,29,15) //WoodenChest
 		ds_map_add(global.unlocked,30,20) //GrassBed
 		ds_map_add(global.unlocked,31,0) //FishingRod

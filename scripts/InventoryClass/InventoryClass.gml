@@ -510,6 +510,41 @@ function ClayBowlWaterPure () : Item () constructor {
 
 }
 
+function RawClayPot () : Item () constructor {
+	name = "UnFiredPot";
+	image_id = 27;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 10;
+	yeald = 1;
+	ds_map_add(crafting, new RawClay(), 10)
+	desc = "Needs to be\nfired to be\nused.";
+	canDry = false;
+	canSpread = false;
+}
+
+function ClayPot() : Item () constructor {
+	name = "RedPot";
+	image_id = 28;
+	amount = 1;
+	type = 2;
+	hitlag = 100;
+	tool_id = 0;
+	Spawn = objPot;
+	crafting = ds_map_create();
+	KP_lock = 15;
+	yeald = 1;
+	ds_map_add(crafting, new RawClayPot(), 1)
+	desc = "Can hold up\nto 9 items\nfor you.";
+	canDry = false;
+	canSpread = false;
+}
+
+
+
 function WoodenChest () : Item () constructor {
 	name = "WoodenChest";
 	image_id = 29;

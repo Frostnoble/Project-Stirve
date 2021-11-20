@@ -1,9 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 pitchRandomizer(sfxPlace,10,false);
-depth = room_height - y
 HP = 10;
 Hitable = true;
+
+depth = room_height - y
+
+image_speed = 0;
 
 wobbling = false;
 wobble = 0;
@@ -14,20 +17,16 @@ wobble_speed = 2; // valid value range: 0 - 13 (decimals are ok)
 wobble_intensity = 1; // the distance multiplier (decimals are ok)
 
 
+liquid = 0;
+maxhold = 5;
+currenthold = 0;
 
-addedRecipes = ds_list_create();
-ds_list_add(addedRecipes,
-new StoneAxe(),
-new StoneSpade(),
-new StonePickaxe(),
-new StoneHoe(),
-new WoodenBowl(),
-new FishingRod(),
-new RawClayBowl(),
-new RawClayPot(),
-new UnFiredBrick(),
-new WoodenChest(),
-new DryingRack(),
-new FieldStove(),
-new Kiln());
+
+modetype = true;
+
+rowlength = 3;
+
+
+draw_x = 208;
+draw_y = 0;
 

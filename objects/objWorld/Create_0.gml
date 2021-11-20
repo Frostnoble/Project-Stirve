@@ -15,6 +15,7 @@ objSapling,
 objCampFire,
 objGrassBed,
 objWorkStation,
+objFieldStove,
 objWaterPond,
 objKiln,
 objFenceWood,
@@ -23,6 +24,7 @@ objBerryBush,
 objBush,
 objSmallBush,
 objRabbit,
+objwolf,
 objPlayer)
 
 
