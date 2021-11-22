@@ -24,3 +24,14 @@ x_offset = sin(wobble) * wobble_intensity;
 
 // draw sprite with the x_offset value added relatively
 draw_sprite(sprite_index, image_index, x + x_offset, y);
+
+if(sprite_index = sprItems){draw_self();}
+
+if(currenthold != 0)
+{
+	draw_set_colour(c_white);
+	draw_set_font(font_add_sprite_ext(sprNumbers, "0123456789", true, 0));
+	draw_text(x,y,string(currenthold))
+	draw_set_colour(c_black);
+	draw_set_font(Gameboy);
+}

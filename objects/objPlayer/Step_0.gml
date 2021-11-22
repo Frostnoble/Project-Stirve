@@ -13,6 +13,14 @@ if(keyboard_check_pressed(ord("G")))
 	addInventory(28,3,new ClayPot(),objInventory.inventory);
 }
 
+if(keyboard_check(ord("K")))
+{
+	global.HEALTH = global.HEALTH - 10;
+	
+}
+
+
+
 
 global.inFront_x = round((objPlayer.x+lengthdir_x(TILE_W*objPlayer.spd,objPlayer.move_dir)) / 16) * 16;
 global.inFront_y = round((objPlayer.y+lengthdir_y(TILE_H*objPlayer.spd,objPlayer.move_dir)) / 16) * 16;
@@ -75,12 +83,12 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 	}
 	
 	
-		if(keyboard_check_pressed(Select_Key) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && canHit = true && ds_list_size(objInventory.inventory) > 0)
+	if(keyboard_check_pressed(Select_Key) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && canHit = true && ds_list_size(objInventory.inventory) > 0)
 	{
 		if(global.equip.amount > 0) //Drop
 		{
 
-			if(place_empty(global.inFront_x,global.inFront_y)|| place_meeting(global.inFront_x,global.inFront_y,objPot) || place_meeting(global.inFront_x,global.inFront_y,objDryingRack) || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil))// so shit's no stuck in trees for something
+			if(place_empty(global.inFront_x,global.inFront_y) || DropCheckerPot() || place_meeting(global.inFront_x,global.inFront_y,objDryingRack) || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil))// so shit's no stuck in trees for something
 			{
 				canHit = false;
 				alarm[0] = global.equip.hitlag;
@@ -96,9 +104,9 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 	
 				if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)
 				{
-				global.equip = new PlaceHolder();
+					global.equip = new PlaceHolder();
 				
-			}
+				}
 		
 				
 			}
@@ -230,7 +238,7 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 	
 }
 
-depth = room_height - y
+if(!global.death){depth = room_height - y}
 
 if(!attackFrame)
 {

@@ -63,13 +63,15 @@ else if((minutes2 == 20 || minutes2 == 40 || minutes2 == 0) && seconds2 == 25)
 }
 
 //Death
-if(global.HEALTH <= 0)
+if(global.HEALTH <= 0 && !global.death)
 {
-//game_end()
+	
+	instance_create_layer(0, room_height, "Instances", objDeath)
+	
 
 }
 
-
+//show_debug_message(global.HEALTH)
 
 
 

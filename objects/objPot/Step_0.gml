@@ -24,6 +24,8 @@ if(HP <= 0)
 }
 
 
+
+
 item = instance_position(x,y,objItem);
 
 if(currenthold == 0){image_index = 0;}
@@ -32,40 +34,174 @@ if (item != noone)
 {
 	if(currenthold == 0)
 	{
-		if(item.DROP.image_id == 26) //PureWater Clay
+		switch(item.DROP.image_id)
 		{
-			if(currenthold < maxhold){currenthold++;}
-			image_index = 2;
-			liquid = "PureWater";
-			addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
-			show_debug_message("Splash Pure")
-			global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
-		
-		}else if(item.DROP.image_id == 25)// SaltWater Clay
-		{
-			if(currenthold < maxhold){currenthold++;}
-			image_index = 1;
-			liquid = "SaltWater";
-			addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
-			show_debug_message("Splash Salt")
-			global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+			case 26: //PureWater Clay
+			
+				if(currenthold < maxhold){currenthold++;}
+				image_index = 2;
+				liquid = "PureWater";
+				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+				show_debug_message("Splash Pure")
+				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+			break;
+			
+			case 25: // SaltWater Clay
+			
+				if(currenthold < maxhold){currenthold++;}
+				image_index = 1;
+				liquid = "SaltWater";
+				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+				show_debug_message("Splash Salt")
+				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+			break;
+			
+			case 53: //PureWater Wood
+			
+				if(currenthold < maxhold){currenthold++;}
+				image_index = 2;
+				liquid = "PureWater";
+				addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
+				show_debug_message("Splash Pure")
+				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+			break;
+			
+			case 52: // SaltWater Wood
+			
+				if(currenthold < maxhold){currenthold++;}
+				image_index = 1;
+				liquid = "SaltWater";
+				addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
+				show_debug_message("Splash Salt")
+				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+			break;
+			
+			case 55: //Fat Clay
+			
+				if(currenthold < maxhold){currenthold++;}
+				image_index = 3;
+				liquid = "AnimalFat";
+				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+				show_debug_message("Splash Fat")
+				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+			break;
+			
+			case 56: //Oil Clay
+			
+				if(currenthold < maxhold){currenthold++;}
+				image_index = 4;
+				liquid = "Oil";
+				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+				show_debug_message("Splash Oil")
+				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+			break;
 		}
+
 	
 		instance_destroy(item);
 	}
-	else
+	else if(currenthold != maxhold)
 	{
+		if(liquid == "SaltWater")
+		{
+			switch(item.DROP.image_id)
+			{
+	 			case 25: // SaltWater Clay
+			
+					currenthold++;
+					addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+					instance_destroy(item);
+				break;
+				
+				case 52: // SaltWater Wood
+			
+					currenthold++;
+					addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+					instance_destroy(item);
+				break;
+				
+				default:
+					item.x = objPlayer.x;
+					item.y = objPlayer.y;
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+				break;
+
+			}
+		}
 		if(liquid == "PureWater")
 		{
-		
-		
+			switch(item.DROP.image_id)
+			{
+				case 26: //PureWater Clay
+			
+					currenthold++;
+					addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+					instance_destroy(item);
+				break;
+				
+				case 53: //PureWater Wood
+			
+					currenthold++;
+					addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+					instance_destroy(item);
+				break;
+				
+				default:
+					item.x = objPlayer.x;
+					item.y = objPlayer.y;
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+				break;
+
+			}
 		}
-		else if(liquid == "SaltWater")
+		if(liquid == "AnimalFat")
 		{
-		
-		
+			switch(item.DROP.image_id)
+			{
+				case 55: //Fat Clay
+			
+					currenthold++;
+					addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+					instance_destroy(item);
+				break;
+				
+				default:
+					item.x = objPlayer.x;
+					item.y = objPlayer.y;
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+				break;				
+
+			}
+		}
+		if(liquid == "Oil")
+		{
+			switch(item.DROP.image_id)
+			{
+				case 56: //Oil Clay
+			
+					currenthold++;
+					addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+					instance_destroy(item);
+				break;
+				
+				default:
+					item.x = objPlayer.x;
+					item.y = objPlayer.y;
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+				break;
+
+			}	
+			
 		}
 	
+		
 	}
+
 	
 }

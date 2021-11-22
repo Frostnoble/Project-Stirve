@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Placeables",
-    "path": "folders/Objects/Placeables.yy",
+    "name": "Pots",
+    "path": "folders/Objects/Placeables/Pots.yy",
   },
   "resourceVersion": "1.0",
   "name": "objPot",
