@@ -19,13 +19,19 @@ function Render(){
 		instance_deactivate_object(objCampFire);
 		instance_deactivate_object(objWorkStation);
 		instance_deactivate_object(objRabbit);
+		instance_deactivate_object(objwolf);
+		instance_deactivate_object(objPot);
 		instance_deactivate_object(objWater);
 		//instance_deactivate_object(objPond);
 		instance_deactivate_object(objWaterPond);
 		instance_deactivate_object(objSmallBush);
 		instance_deactivate_object(objBush);
 		instance_deactivate_object(objBerryBush);
-	
+		instance_deactivate_object(objKiln);
+		instance_deactivate_object(objFieldStove);
+		instance_deactivate_object(objGrassBed);
+		
+		
 		var xview = camera_get_view_x(view_camera[0]);
 		var yview = camera_get_view_y(view_camera[0]);
 		var wview = camera_get_view_width(view_camera[0]);

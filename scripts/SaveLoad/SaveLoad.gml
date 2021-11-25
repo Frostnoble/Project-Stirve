@@ -113,7 +113,24 @@ function SaveGame()
 	
 	}
 	
-
+	with(objPot)
+	{
+		var _saveEntity = 
+		{
+			type: 5,
+			obj: object_get_name(object_index),
+			x: x,
+			y: y,
+			depth: depth,
+			image_index: image_index,
+			liquid: liquid,
+			maxhold: maxhold,
+			currenthold: currenthold
+			
+		}
+		array_push(_saveData, _saveEntity);
+	
+	}
 
 	
 	
@@ -243,6 +260,18 @@ function LoadGame()
 			
 			}
 			
+			if(_loadEntity.type == 5)
+			{
+				with(instance_create_layer(_loadEntity.x, _loadEntity.y, "Instances", asset_get_index(_loadEntity.obj)))
+				{
+					image_index = _loadEntity.image_index;
+					liquid = _loadEntity.liquid;
+					maxhold = _loadEntity.maxhold;
+					currenthold = _loadEntity.currenthold;
+					
+				}
+			
+			}
 
 		}
 	}

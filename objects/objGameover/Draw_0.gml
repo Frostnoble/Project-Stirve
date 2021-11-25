@@ -26,11 +26,13 @@ if(!fadedone){
 
 if(timer > 100)
 {
-	
-	image_alpha += 0.01;
+	if(y != 0){y = y + 0.5;}
+	a = clamp(a + (0.02),0,1);
+	image_alpha = (floor( a / 0.25 ) * 0.25);
 	if(image_alpha == 1)
 	{
 	
 	
 	}
 }
+

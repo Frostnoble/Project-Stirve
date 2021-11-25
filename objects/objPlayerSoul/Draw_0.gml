@@ -7,8 +7,19 @@ if(timer > 100 && !startfade)
     image_alpha -= 0.05;//change this to affect the fading speed
     if(image_alpha < 0)
 	{
+		with(objPlayer)
+		{
+			depth = room_height - y
+			sprite_index = sprBoi;
+		
+		}
+		global.death = false;
+		global.pause = false;
+		
 		room_goto(Gameover);
-		show_debug_message("GameOver")
+		instance_destroy(objDeath);
+		instance_destroy();
+		
 	}
 }
 

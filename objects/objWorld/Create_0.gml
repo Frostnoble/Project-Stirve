@@ -25,6 +25,7 @@ objBush,
 objSmallBush,
 objRabbit,
 objwolf,
+objPot,
 objPlayer)
 
 

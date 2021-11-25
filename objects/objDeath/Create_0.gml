@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+instance_destroy(objwolf);
+instance_destroy(objRabbit);
 global.gamemode = 3;
 global.death = true;
 global.pause = true;
