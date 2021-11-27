@@ -53,9 +53,14 @@ if(global.FATIGUE > 100){global.FATIGUE = 100;}
 
 //Health
 if((minutes2 == 20 || minutes2 == 40 || minutes2 == 0) && seconds2 == 25 && (global.HUNGER == 0 || global.WATER == 0 || global.FATIGUE == 100))
-{
-	pitchRandomizer(sfxHurt,10,false);
-	if(global.HEALTH - 5 < 0){global.HEALTH = 0}else{global.HEALTH -= 5}
+{	
+	if(!global.inv)
+	{
+		pitchRandomizer(sfxHurt,10,false);
+		if(global.HEALTH - 5 < 0){global.HEALTH = 0}else{global.HEALTH -= 5}
+		objPlayer.hurtFrames = 30;
+	}
+
 }
 else if((minutes2 == 20 || minutes2 == 40 || minutes2 == 0) && seconds2 == 25)
 {

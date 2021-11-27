@@ -15,11 +15,20 @@ if(keyboard_check_pressed(ord("G")))
 
 if(keyboard_check(ord("K")))
 {
-	global.HEALTH = global.HEALTH - 10;
+
+	hurtPlayer(10);
+
 	
 }
 
-
+if(hurtFrames > 0)
+{
+	global.inv = true;
+	hurtFrames--;
+}else
+{
+	global.inv = false;
+}
 
 
 global.inFront_x = round((objPlayer.x+lengthdir_x(TILE_W*objPlayer.spd,objPlayer.move_dir)) / 16) * 16;

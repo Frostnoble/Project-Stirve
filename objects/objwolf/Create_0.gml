@@ -8,7 +8,7 @@ HP = 5;
 MHP = 5;
 KP = 25;
 depth = room_height - y
-
+strike = -1.5;
 xTarg = xstart
 yTarg = ystart
 

@@ -128,5 +128,8 @@ function pitchRandomizer(sound,priority,loop)
 	var snd = audio_play_sound(sound,priority,loop)
 	var pitch = random_range( 0.8, 1.2)
 	audio_sound_pitch( snd, pitch)
+	
 }
+
+
 

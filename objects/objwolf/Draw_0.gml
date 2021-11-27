@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 var y_offset;
+var x_offset;
 
 // has wobbling been initiated?
 if wobbling {
@@ -22,7 +23,37 @@ if wobble > round(wobble_length) * (pi*2) {
 // "wobble_intensity" dictates how many extra
 // pixels it will wobble on a horizontal axis
 y_offset = sin(wobble) * wobble_intensity;
+x_offset = 0;
+
+if(attacking)
+{
+	strike += 0.5
+	if(strike <= 1.5)
+	{
+	
+		if(wolfinFront_x > x) //Right
+		{
+			x_offset = abs(cos(strike))*8;
+		}else if(wolfinFront_x < x) //Left
+		{
+			x_offset = -abs(cos(strike))*8;
+		}else if(wolfinFront_y > y) //Up
+		{
+			y_offset = abs(cos(strike))*8;
+		}else if(wolfinFront_y < y) //Down
+		{
+			y_offset = -abs(cos(strike))*8;
+		}
+	}
+	
+	
+	
+}
+
+
 
 // draw sprite with the x_offset value added relatively
-draw_sprite(sprite_index, image_index, x, y + y_offset);
+draw_sprite(sprite_index, image_index, x + x_offset, y + y_offset);
+
+
 

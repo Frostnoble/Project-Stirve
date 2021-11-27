@@ -91,7 +91,9 @@ wolfinFront_y = round((y+lengthdir_y(TILE_H*spd,move_dir)) / 16) * 16;
 
 if(place_meeting(x,y,global.equip.tool_id) && global.equip.type == 1 && !stunned){
     pitchRandomizer(sfxHurtBeast,10,false);
+	
 	HP = HP - global.equip.attackPow;
+	pitchRandomizer(sfxGrowl,10,false);
 	wobbling = true;
 	stunned = true;
 	waittime -= 10;
@@ -103,10 +105,16 @@ if(place_meeting(x,y,global.equip.tool_id) && global.equip.type == 1 && !stunned
 if(place_meeting(xTarg,yTarg,objPlayer) && !stunned  && HP != 5){
 	xTarg = x; 
 	yTarg = y;
-	pitchRandomizer(sfxHurt,10,false);
-	if(global.HEALTH - 5 < 0){global.HEALTH = 0}else{global.HEALTH -= 5}
+	
+	if(!global.inv)
+	{
+		pitchRandomizer(sfxHurt,10,false);
+		if(global.HEALTH - 5 < 0){global.HEALTH = 0}else{global.HEALTH -= 5}
+		objPlayer.hurtFrames = 30;
+	}
+	
 	attacking = true;
-	alarm[2] = 30;
+	alarm[2] = 35;
 }
 
 if(place_meeting(xTarg,yTarg,objPlayer) && !attacking){

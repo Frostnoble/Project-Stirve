@@ -9,6 +9,8 @@ yTarg = ystart
 canHit = true;
 steps = 0;
 totalsteps = 0;
+hurtFrames = 0;
+
 
 move_xinput = 0;
 move_yinput = 0;
@@ -20,4 +22,4 @@ attackFrame = false;
 
 global.light_times = "Day";
 global.stepsSincePressed = 0;
-
+global.inv = false;
