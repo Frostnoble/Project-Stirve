@@ -29,7 +29,10 @@ if(global.gamemode == 5)
 				
 			break;	
 			case "Research":
-			
+				
+				global.gamemode = 6;
+		
+				instance_destroy();
 			break;	
 			case "Options":
 

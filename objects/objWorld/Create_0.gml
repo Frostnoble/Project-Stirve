@@ -36,4 +36,5 @@ objPlayer)
 2 = inventory
 3 = sleeping
 4 = Swapping
+6 = Research
 */

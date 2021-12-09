@@ -2,6 +2,7 @@
 // You can write your code in this editor
 instance_destroy(objwolf);
 instance_destroy(objRabbit);
+instance_destroy(objBear);
 global.gamemode = 3;
 global.death = true;
 global.pause = true;

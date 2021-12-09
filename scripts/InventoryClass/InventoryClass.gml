@@ -14,6 +14,7 @@ function Item () constructor {
 	name = "";
 	image_id = 0;
 	hitlag = 100;
+	crafting = ds_map_create();
 	
 }
 
@@ -115,6 +116,8 @@ function CookedMeat () : Item () constructor {
 	foodLevel = 1;
 	ds_map_add(crafting, new RawMeat(), 1)
 	desc = "Finally, food\nthat isn't\nraw!";
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 4)
 
 		//==========================
 	canDry = true;
@@ -153,6 +156,8 @@ function Rope () : Item () constructor {
 	desc = "A thick handy\nrope.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 3)
 }
 
 
@@ -172,6 +177,8 @@ function FireStarter () : Item () constructor {
 	desc = "Place this on\nthe ground to\ncreate a\nCampFire.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,7)
 }
 
 function WorkStation () : Item () constructor {
@@ -190,6 +197,8 @@ function WorkStation () : Item () constructor {
 	desc = "This bench\nwill greatly\nincreasethe\nitems you\ncan craft.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,7)
 }
 
 function StoneAxe () : Item () constructor {
@@ -211,6 +220,8 @@ function StoneAxe () : Item () constructor {
 	desc = "An axe made\nof stone, don't\nexpect much\nfrom it";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,7,1)
 }
 
 function PlaceHolder () : Item () constructor {
@@ -243,6 +254,8 @@ function GrassSeed() : Item () constructor {
 	desc = "Place this on\nthe ground to\nplant new\ngrass.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 3)
 
 }
 
@@ -282,6 +295,8 @@ function FriedMush () : Item () constructor {
 
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 15)
 	
 }
 
@@ -371,6 +386,8 @@ function StoneSpade () : Item () constructor {
 	desc = "A spade that's\nused for\ndigging up\nstuff.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,7,1)
 }
 
 function Sand () : Item () constructor {
@@ -411,6 +428,8 @@ function RawClay () : Item () constructor {
 	desc = "A basic material\nfor building\nthings.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 20)
 }
 
 function StonePickaxe () : Item () constructor {
@@ -432,6 +451,8 @@ function StonePickaxe () : Item () constructor {
 	desc = "A pickace that\nsmashes stones\nto bits.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,7,1)
 }
 
 function RawClayBowl () : Item () constructor {
@@ -448,6 +469,8 @@ function RawClayBowl () : Item () constructor {
 	desc = "Needs to be\nfired to be\nused.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 21)
 }
 
 function ClayBowl () : Item () constructor {
@@ -464,6 +487,8 @@ function ClayBowl () : Item () constructor {
 	desc = "Can scoop up\nthings like water.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 23)
 }
 
 function ClayBowlWater () : Item () constructor {
@@ -486,6 +511,7 @@ function ClayBowlWater () : Item () constructor {
 	canDry = false;
 	canSpread = false;
 
+
 }
 
 function ClayBowlWaterPure () : Item () constructor {
@@ -507,6 +533,8 @@ function ClayBowlWaterPure () : Item () constructor {
 
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 5)
 
 }
 
@@ -524,6 +552,8 @@ function RawClayPot () : Item () constructor {
 	desc = "Needs to be\nfired to be\nused.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 21)
 }
 
 function ClayPot() : Item () constructor {
@@ -541,6 +571,8 @@ function ClayPot() : Item () constructor {
 	desc = "Can hold up\nto 9 items\nfor you.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 27)
 }
 
 
@@ -561,6 +593,8 @@ function WoodenChest () : Item () constructor {
 	desc = "Can hold up\nto 9 items\nfor you.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,1)
 }
 
 function GrassBed () : Item () constructor {
@@ -580,6 +614,8 @@ function GrassBed () : Item () constructor {
 	desc = "Interact with\nthis to\nsleep.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,7,3)
 }
 
 function FishingRod () : Item () constructor {
@@ -600,6 +636,8 @@ function FishingRod () : Item () constructor {
 	desc = "A pickace that\nsmashes stones\nto bits.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,7)
 }
 
 function SmallFish () : Item () constructor {
@@ -688,6 +726,8 @@ function FriedFishS () : Item () constructor {
 
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 32)
 	
 }
 
@@ -711,6 +751,8 @@ function FriedFishM () : Item () constructor {
 
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 33)
 	
 }
 
@@ -735,6 +777,8 @@ function FriedFishL () : Item () constructor {
 
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 34)
 	
 }
 
@@ -753,6 +797,8 @@ function FenceWood () : Item () constructor {
 	desc = "Fencing that\ncan protect you\n and your\nthings.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0)
 }
 
 function FenceWoodDoor () : Item () constructor {
@@ -770,6 +816,8 @@ function FenceWoodDoor () : Item () constructor {
 	desc = "Fencing that\ncan protect you\n and your\nthings.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0)
 }
 
 function Kiln () : Item () constructor {
@@ -788,6 +836,8 @@ function Kiln () : Item () constructor {
 	desc = "Cook even\nbetter things\nwith this.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 50,8)
 }
 
 function BeastPelt () : Item () constructor {
@@ -857,6 +907,8 @@ function DryingRack () : Item () constructor {
 	desc = "Place items\non this to\ndry them.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,7)
 }
 
 function BeastJerky () : Item () constructor {
@@ -901,6 +953,8 @@ function FishSoup () : Item () constructor {
 
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 6,26,35)
 	
 }
 
@@ -926,7 +980,8 @@ function SchroomSoup () : Item () constructor {
 
 	canDry = false;
 	canSpread = false;
-	
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 6,26,14)
 }
 
 function StoneHoe () : Item () constructor {
@@ -948,6 +1003,8 @@ function StoneHoe () : Item () constructor {
 	desc = "Can make\ndirt patches\nfor growing plants.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,7,1)
 }
 
 function Berries() : Item () constructor {
@@ -1000,6 +1057,8 @@ function UnFiredBrick() : Item () constructor {
 	desc = "Needs to be\nfired to be\nused.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 21)
 }
 
 function Brick() : Item () constructor {
@@ -1017,6 +1076,8 @@ function Brick() : Item () constructor {
 	desc = "Needs to be\nfired to be\nused.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 49,19)
 }
 
 function WoodenBowl () : Item () constructor {
@@ -1032,6 +1093,8 @@ function WoodenBowl () : Item () constructor {
 	desc = "Can scoop up\nthings like water.\nCan't be used/nfor cooking.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0)
 }
 
 function WoodBowlWater () : Item () constructor {
@@ -1093,6 +1156,8 @@ function FieldStove() : Item () constructor {
 	desc = "Place this on\nthe ground to\ncreate a\nFieldStove.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 1,8)
 }
 
 function ClayBowlAnimalFat() : Item () constructor {
@@ -1110,6 +1175,8 @@ function ClayBowlAnimalFat() : Item () constructor {
 	desc = "Can be used\nfor many\nthings.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 24, 4)
 
 }
 
@@ -1127,6 +1194,8 @@ function ClayBowlOil() : Item () constructor {
 	desc = "Oil used for\ncooking and\nother things.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 55)
 
 }
 
@@ -1153,6 +1222,8 @@ function GrilledMeat () : Item () constructor {
 		//==========================
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 56, 4)
 	
 }
 
@@ -1177,7 +1248,8 @@ function GrilledFishS () : Item () constructor {
 
 	canDry = false;
 	canSpread = false;
-	
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 56, 32)
 }
 
 function GrilledFishM () : Item () constructor {
@@ -1201,7 +1273,8 @@ function GrilledFishM () : Item () constructor {
 
 	canDry = false;
 	canSpread = false;
-	
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 56, 33)
 }
 
 
@@ -1226,5 +1299,7 @@ function GrilledFishL () : Item () constructor {
 
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 56, 34)
 	
 }

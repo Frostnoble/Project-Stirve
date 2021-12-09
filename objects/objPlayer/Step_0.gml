@@ -21,6 +21,14 @@ if(keyboard_check(ord("K")))
 	
 }
 
+if(keyboard_check_pressed(ord("B")))
+{
+
+	instance_create_layer(x,y + 48, "Instances", objBear);
+
+	
+}
+
 if(hurtFrames > 0)
 {
 	global.inv = true;
