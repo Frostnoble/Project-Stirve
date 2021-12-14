@@ -6,11 +6,8 @@ KeyGet();
 if(keyboard_check_pressed(ord("G")))
 {
 
-	addInventory(54,1,new FieldStove(),objInventory.inventory);
-	addInventory(4,1,new RawMeat(),objInventory.inventory);
-	addInventory(34,2,new LargeFish(),objInventory.inventory);
-	addInventory(24,1,new ClayBowl(),objInventory.inventory);
-	addInventory(28,3,new ClayPot(),objInventory.inventory);
+	addInventory(48,1,new Spear(),objInventory.inventory);
+
 }
 
 if(keyboard_check(ord("K")))

@@ -123,7 +123,7 @@ function CookedMeat () : Item () constructor {
 	canDry = true;
 	DryName = new BeastJerky();
 	DryImage_id = 43;
-	DryTime = timeToFrames(0,1,0);
+	DryTime = timeToFrames(1,0,0);
 	DryMult = 3;
 	canSpread = false;
 	

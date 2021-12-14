@@ -11,9 +11,9 @@ if(xTarg == x and yTarg == y and !attacking){
 	move_xinput = 0;
 	move_yinput = 0;
  
-	if(point_distance(x,y,objPlayer.x,objPlayer.y) < 64)
+	if(point_distance(x,y,objPlayer.x,objPlayer.y))
 	{
-		if(HP != MHP)
+		if(HP < MHP)
 		{
 			direction = point_direction(x,y,objPlayer.x,objPlayer.y); //Move Towards
 			this_angle = round(direction/90)*90;
@@ -157,7 +157,23 @@ if (_inst != noone)
     with(_inst){HP -= 65;}
 }
 
+var _inst = instance_place(bearinFront_x ,bearinFront_y, objTree);
+if (_inst != noone)
+{
+    if(HP < MHP){HP++;}else{HP = MHP;}
+	attacking = true;
+	alarm[2] = 30;
+    with(_inst){HP -= 65;}
+}
 
+var _inst = instance_place(bearinFront_x ,bearinFront_y, objTreeSmol);
+if (_inst != noone && attacking)
+{
+    if(HP < MHP){HP++;}else{HP = MHP;}
+	attacking = true;
+	alarm[2] = 30;
+    with(_inst){HP -= 65;}
+}
 
 
 
