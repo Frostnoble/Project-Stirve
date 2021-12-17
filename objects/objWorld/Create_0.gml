@@ -28,7 +28,7 @@ objwolf,
 objPot,
 objPlayer)
 
-
+depth = -max;
 
 /*
 0 = Overworld walking

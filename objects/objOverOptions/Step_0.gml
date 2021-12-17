@@ -35,7 +35,9 @@ if(global.gamemode == 5)
 				instance_destroy();
 			break;	
 			case "Options":
-
+				global.gamemode = 7;
+		
+				instance_destroy();
 			break;	
 			case "Save/Quit":
 				
