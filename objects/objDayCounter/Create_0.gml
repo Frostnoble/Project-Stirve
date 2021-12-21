@@ -3,7 +3,7 @@
 sleeptype = 0;
 step = 0;
 progress = 1;
-
-
+SpawnNewRabbit();
+SpawnNewWolf();
 
 global.gamemode = 3;

@@ -90,3 +90,8 @@ if(global.gamemode == 6){
 		}
 	}
 }
+else{
+	res_selector = objInventory.inventory[| 0];
+	seemode = false;
+	ds_list_clear(Possible);
+}

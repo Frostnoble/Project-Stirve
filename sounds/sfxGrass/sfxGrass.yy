@@ -7,8 +7,8 @@
   "type": 0,
   "bitDepth": 0,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "ag_SFX",
+    "path": "audiogroups/ag_SFX",
   },
   "soundFile": "sfxGrass.wav",
   "duration": 0.17517,

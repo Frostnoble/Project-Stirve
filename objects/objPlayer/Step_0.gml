@@ -43,7 +43,7 @@ global.inFront_y = round((objPlayer.y+lengthdir_y(TILE_H*objPlayer.spd,objPlayer
 global.inFront_x_More = round((objPlayer.x+lengthdir_x(TILE_W*2*objPlayer.spd,objPlayer.move_dir)) / 16) * 16;
 global.inFront_y_More = round((objPlayer.y+lengthdir_y(TILE_H*2*objPlayer.spd,objPlayer.move_dir)) / 16) * 16;
 
-if(keyboard_check_pressed(Start_Key) && global.gamemode != 1  && global.gamemode != 4 && global.gamemode != 3)
+if(keyboard_check_pressed(Start_Key) && global.gamemode != 1  && global.gamemode != 4 && global.gamemode != 3  && global.gamemode != 5 && global.gamemode != 6 && global.gamemode != 7)
 {
 	
 	if(global.gamemode != 2 ){global.gamemode = 2}else{global.gamemode = 0}

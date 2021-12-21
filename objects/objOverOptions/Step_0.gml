@@ -23,16 +23,14 @@ if(global.gamemode == 5)
 		switch(selected){
 		
 			case "Crafting":
-				global.gamemode = 1;
-		
-				instance_destroy();
+				if(ds_list_size(objInventory.inventory)){global.gamemode = 1; instance_destroy();}
 				
 			break;	
 			case "Research":
+				if(ds_list_size(objInventory.inventory)){global.gamemode = 6; instance_destroy();}
 				
-				global.gamemode = 6;
 		
-				instance_destroy();
+				
 			break;	
 			case "Options":
 				global.gamemode = 7;

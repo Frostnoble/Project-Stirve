@@ -7,11 +7,11 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "ag_SFX",
+    "path": "audiogroups/ag_SFX",
   },
   "soundFile": "sfxHeal.wav",
-  "duration": 0.536848,
+  "duration": 0.583469,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",

@@ -74,6 +74,7 @@
     {"id":{"name":"sprPoof","path":"sprites/sprPoof/sprPoof.yy",},"order":0,},
     {"id":{"name":"sprBoiDeath","path":"sprites/sprBoiDeath/sprBoiDeath.yy",},"order":3,},
     {"id":{"name":"sprSmallGrass_Eve","path":"sprites/sprSmallGrass_Eve/sprSmallGrass_Eve.yy",},"order":4,},
+    {"id":{"name":"SpawnNew","path":"scripts/SpawnNew/SpawnNew.yy",},"order":17,},
     {"id":{"name":"sprWater","path":"sprites/sprWater/sprWater.yy",},"order":4,},
     {"id":{"name":"sprShovel","path":"sprites/sprShovel/sprShovel.yy",},"order":7,},
     {"id":{"name":"sprBoiSoul","path":"sprites/sprBoiSoul/sprBoiSoul.yy",},"order":4,},
@@ -259,6 +260,8 @@
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
+    {"targets":-1,"resourceVersion":"1.3","name":"ag_Music","resourceType":"GMAudioGroup",},
+    {"targets":-1,"resourceVersion":"1.3","name":"ag_SFX","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},

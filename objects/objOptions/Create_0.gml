@@ -11,3 +11,6 @@ opmode = 1; //1 = FullScreen Toggle, 2 = Music Volume, 3 = SFX Volume
 options = ds_list_create();
 ds_list_add(options, "FullScreen","MusicCon","SoundCon","Quit");
 selected = options[| 0];
+timer = 0;
+
+depth = -max;
