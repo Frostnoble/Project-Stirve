@@ -10,18 +10,27 @@ if(keyboard_check_pressed(ord("G")))
 
 }
 
-if(keyboard_check(ord("K")))
+
+if(keyboard_check_pressed(ord("R")))
 {
 
-	hurtPlayer(10);
+	if(instance_exists(objRainGen))
+	{
+		instance_destroy(objRainGen);
+	}
+	else{instance_create_layer(0,0, "Instances", objRainGen);}
 
 	
 }
 
-if(keyboard_check_pressed(ord("B")))
+if(keyboard_check_pressed(ord("S")))
 {
 
-	instance_create_layer(x,y + 48, "Instances", objBear);
+	if(instance_exists(objStormGen))
+	{
+		instance_destroy(objStormGen);
+	}
+	else{instance_create_layer(0,0, "Instances", objStormGen);}
 
 	
 }

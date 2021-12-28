@@ -14,7 +14,7 @@ function SpawnNewRabbit(){
 		}
 		else
 		{
-			SpawnNewRabbit()();
+			SpawnNewRabbit();
 		}
 		
 	}

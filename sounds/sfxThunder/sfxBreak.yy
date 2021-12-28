@@ -7,8 +7,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "ag_SFX",
-    "path": "audiogroups/ag_SFX",
+    "name": "audiogroup_default",
+    "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfxBreak.wav",
   "duration": 0.536848,

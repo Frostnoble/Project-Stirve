@@ -3,6 +3,9 @@
 instance_destroy(objwolf);
 instance_destroy(objRabbit);
 instance_destroy(objBear);
+instance_destroy(objStorm);
+instance_destroy(objRainGen);
+instance_destroy(objStormGen);
 global.gamemode = 3;
 global.death = true;
 global.pause = true;

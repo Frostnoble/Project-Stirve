@@ -7,17 +7,17 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "ag_SFX",
-    "path": "audiogroups/ag_SFX",
+    "name": "audiogroup_default",
+    "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfxBreak.wav",
-  "duration": 0.536848,
+  "soundFile": "sfxHitTree.wav",
+  "duration": 0.118481,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sfxBreak",
+  "name": "sfxHitTree",
   "tags": [],
   "resourceType": "GMSound",
 }
