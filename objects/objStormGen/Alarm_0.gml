@@ -16,9 +16,9 @@ if(position_empty(x_spawn,y_spawn))
 	instance_create_layer(x_spawn,y_spawn, "Instances", objSplash);
 }
 
-if(timer == 300)
+if(timer == irandom_range(100,16000))
 {
 	pitchRandomizer(sfxThunder,10,false);
-	instance_create_layer(objPlayer.x, objPlayer.y, "Instances", objStorm);
+	instance_create_layer(x_spawn,y_spawn, "Instances", objStorm);
 	timer = 0;
 }

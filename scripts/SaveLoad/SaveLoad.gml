@@ -38,7 +38,8 @@ function SaveGame()
 		KP: global.KP,
 		worldTime: global.worldTime,
 		days: objTimeSystem.days,
-		unlocked: ds_map_write(global.unlocked)
+		unlocked: ds_map_write(global.unlocked),
+		weather: global.weather
 
 	
 
@@ -204,6 +205,7 @@ function LoadGame()
 				objTimeSystem.days = _loadEntity.days;
 				global.unlocked = ds_map_create;
 				ds_map_read(global.unlocked,_loadEntity.unlocked);
+				global.weather = _loadEntity.weather; 
 				
 
 				

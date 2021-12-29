@@ -66,17 +66,31 @@ if (progress == 0){
 if(step == 4)
 {
 
-with(objPlayer)
-{
-sprite_index = sprBoi;
-image_index = 0;
+	with(objPlayer)
+	{
+		sprite_index = sprBoi;
+		image_index = 0;
 
 	
-}
+	}
 
-
-global.gamemode = 0;
-instance_destroy();	
+	switch(global.weather)
+	{
+		case 0: //Clear
+			if(instance_exists(objRainGen)){instance_destroy(objRainGen)}
+			if(instance_exists(objStormGen)){instance_destroy(objStormGen)}
+		break;
+		case 1: //Rain
+			if(instance_exists(objStormGen)){instance_destroy(objStormGen)}
+			else{instance_create_layer(0,0, "Instances", objRainGen);}
+		break;
+		case 2: //Storm
+			if(instance_exists(objRainGen)){instance_destroy(objRainGen)}
+			else{instance_create_layer(0,0, "Instances", objStormGen);}
+		break;	
+	}
+	global.gamemode = 0;
+	instance_destroy();	
 }
 
 /*

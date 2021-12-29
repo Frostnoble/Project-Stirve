@@ -168,7 +168,14 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 
 			canHit = false;
 			instance_create_layer(global.inFront_x + 8,global.inFront_y + 8,"Instances",global.equip.tool_id);
-			if(global.FATIGUE + 1 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 1;}
+			if(global.weather == 1 || global.weather == 2)
+			{
+				if(global.FATIGUE + 2 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 2;}
+			}else
+			{
+				if(global.FATIGUE + 1 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 1;}
+			}
+			
 			alarm[0] = global.equip.hitlag;
 
 		}

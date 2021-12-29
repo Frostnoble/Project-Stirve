@@ -23,7 +23,12 @@ if(HP <= 0)
 	instance_destroy();
 }
 
-
+if((global.weather == 1 || global.weather == 2) && currenthold == 0)
+{
+	image_index = 2;
+	liquid = "PureWater";
+	currenthold = maxhold;
+}
 
 
 item = instance_position(x,y,objItem);
@@ -42,7 +47,7 @@ if (item != noone)
 				image_index = 2;
 				liquid = "PureWater";
 				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
-				show_debug_message("Splash Pure")
+
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
 			
@@ -52,7 +57,7 @@ if (item != noone)
 				image_index = 1;
 				liquid = "SaltWater";
 				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
-				show_debug_message("Splash Salt")
+
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
 			
@@ -62,7 +67,7 @@ if (item != noone)
 				image_index = 2;
 				liquid = "PureWater";
 				addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
-				show_debug_message("Splash Pure")
+				
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
 			
@@ -72,7 +77,7 @@ if (item != noone)
 				image_index = 1;
 				liquid = "SaltWater";
 				addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
-				show_debug_message("Splash Salt")
+
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
 			
@@ -82,7 +87,7 @@ if (item != noone)
 				image_index = 3;
 				liquid = "AnimalFat";
 				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
-				show_debug_message("Splash Fat")
+
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
 			
@@ -92,7 +97,7 @@ if (item != noone)
 				image_index = 4;
 				liquid = "Oil";
 				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
-				show_debug_message("Splash Oil")
+
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
 		}

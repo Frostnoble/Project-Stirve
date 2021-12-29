@@ -94,6 +94,8 @@ if(global.startType == 0){
 		ds_map_add(global.unlocked,57,0) //Grilled Meat
 		ds_map_add(global.unlocked,58,0) //Grilled Fish
 		audio_master_gain(1);
+		
+		global.weather = 0;
 	}
 
 }
@@ -102,6 +104,21 @@ else if(global.startType == 1){
 		
 		LoadGame();
 		global.equip = objInventory.inventory[|0];
+		switch(global.weather)
+		{
+			case 0: //Clear
+				if(instance_exists(objRainGen)){instance_destroy(objRainGen)}
+				if(instance_exists(objStormGen)){instance_destroy(objStormGen)}
+			break;
+			case 1: //Rain
+				if(instance_exists(objStormGen)){instance_destroy(objStormGen)}
+				else{instance_create_layer(0,0, "Instances", objRainGen);}
+			break;
+			case 2: //Storm
+				if(instance_exists(objRainGen)){instance_destroy(objRainGen)}
+				else{instance_create_layer(0,0, "Instances", objStormGen);}
+			break;	
+		}
 	}
 	done = true;
 	audio_play_sound(musTest, 1, true);
