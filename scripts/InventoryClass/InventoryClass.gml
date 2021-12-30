@@ -1303,3 +1303,77 @@ function GrilledFishL () : Item () constructor {
 	ds_list_add(craftHelper, 56, 34)
 	
 }
+
+function Seaweed () : Item () constructor {
+	name = "SeaWeed";
+	image_id = 60;
+	amount = 1;
+	type = 3;
+	hungerFill = 5;
+	waterFill = 5;
+	fatigueFill = 0;
+	effect = new Normal();
+	hitlag = 100;
+	tool_id = 0;
+	hitlag = 100;
+	crafting = ds_map_create();
+	foodLevel = 1;
+
+	//==========================
+	canDry = true;
+	DryName = new DriedSeaWeed();
+	DryImage_id = 62;
+	DryTime = timeToFrames(0,8,0);
+	DryMult = 1;
+	canSpread = false;
+	
+}
+
+function SeaShell () : Item () constructor {
+	name = "SeaShell";
+	image_id = 61;
+	amount = 1;
+	type = 0;
+	tool_id = 0;
+	hitlag = 100;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function DriedSeaWeed () : Item () constructor {
+	name = "DriedSeaWeed";
+	image_id = 62;
+	amount = 1;
+	type = 3;
+	hungerFill = 10;
+	waterFill = 0;
+	fatigueFill = 0;
+	effect = new Normal();
+	hitlag = 100;
+	tool_id = 0;
+	hitlag = 100;
+	foodLevel = 1;
+	crafting = ds_map_create();
+
+	canDry = false;
+	canSpread = false;
+	
+}
+
+function BeastTunic() : Item () constructor {
+	name = "BeastTunic";
+	image_id = 63;
+	amount = 1;
+	type = 4;
+	hitlag = 100;
+	tool_id = objBeastTunic;
+	
+	crafting = ds_map_create();
+	ds_map_add(crafting, new BeastPelt(), 5)
+	ds_map_add(crafting, new Rope(), 2)
+	KP_lock = 20;
+	desc = "Basic clothing\nthat raises\ndefence.";
+	canDry = false;
+	canSpread = false;
+}

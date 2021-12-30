@@ -39,7 +39,8 @@ function SaveGame()
 		worldTime: global.worldTime,
 		days: objTimeSystem.days,
 		unlocked: ds_map_write(global.unlocked),
-		weather: global.weather
+		weather: global.weather,
+		WearTunic: global.WearTunic
 
 	
 
@@ -206,6 +207,7 @@ function LoadGame()
 				global.unlocked = ds_map_create;
 				ds_map_read(global.unlocked,_loadEntity.unlocked);
 				global.weather = _loadEntity.weather; 
+				global.WearTunic = _loadEntity.WearTunic; 
 				
 
 				

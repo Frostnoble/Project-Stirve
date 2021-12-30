@@ -6,7 +6,7 @@ KeyGet();
 if(keyboard_check_pressed(ord("G")))
 {
 
-	addInventory(48,1,new Spear(),objInventory.inventory);
+	addInventory(63,1,new BeastTunic(),objInventory.inventory);
 
 }
 
@@ -214,6 +214,22 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 				global.equip = new PlaceHolder();
 				
 			}
+		}
+		
+		if(global.equip.type == 4) //Clothing
+		{
+			if(global.equip.image_id == 63) // BeastTunic
+			{
+			
+				if(!global.WearTunic){instance_create_layer(0,0,"Instances",objBeastTunic); global.WearTunic = true;}
+				else{instance_destroy(objBeastTunic); global.WearTunic = false;}
+			
+			}
+			
+			
+
+		
+
 		}
 	}
 

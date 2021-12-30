@@ -5,7 +5,7 @@ movekeys = [vk_right,vk_up,vk_left,vk_down]
 spd = 1
 xTarg = xstart
 yTarg = ystart
-
+defence = 0;
 canHit = true;
 steps = 0;
 totalsteps = 0;

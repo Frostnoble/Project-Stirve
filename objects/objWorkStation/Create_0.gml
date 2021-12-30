@@ -29,5 +29,6 @@ new UnFiredBrick(),
 new WoodenChest(),
 new DryingRack(),
 new FieldStove(),
+new BeastTunic(),
 new Kiln());
 

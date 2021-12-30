@@ -4,7 +4,7 @@ Render();
 KeyGet();
 
 
-if(!stunned)
+if(!stunned && global.gamemode = 0)
 {
 
 if(xTarg == x and yTarg == y and !attacking){
@@ -102,10 +102,10 @@ if(place_meeting(xTarg,yTarg,objPlayer) && !stunned){
 	xTarg = x; 
 	yTarg = y;
 	
-	if(!global.inv)
+	if(!global.inv && objPlayer.defence < 65)
 	{
 		pitchRandomizer(sfxHurt,10,false);
-		if(global.HEALTH - 65 < 0){global.HEALTH = 0}else{global.HEALTH -= 65}
+		if(global.HEALTH - 65 + objPlayer.defence < 0){global.HEALTH = 0}else{global.HEALTH -= 65 + objPlayer.defence}
 		objPlayer.hurtFrames = 30;
 	}
 	

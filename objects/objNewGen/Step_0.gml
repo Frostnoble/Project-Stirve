@@ -23,9 +23,16 @@ if(global.startType == 0){
 			var y_spawn = (j * 16);
 			//show_debug_message(string(x_spawn) +" "+ string(y_spawn));
 			//INSIDE FOREST
+			
+			var lay_id = layer_get_id("Tileset");
+			var map_id = layer_tilemap_get_id(lay_id);
+			var checktile = tilemap_get_at_pixel(map_id, x_spawn, y_spawn);
+			var index = global.world[# i, j];
+			if((index >= 10 && index <= 20) && checktile == 1){spawnDrop(60,new Seaweed(),1,x_spawn,y_spawn);}
+			if((index >= 30 && index <= 40) && checktile == 1){spawnDrop(61,new SeaShell(),1,x_spawn,y_spawn);}
 			if((x_spawn > 150 && x_spawn < room_width -150) && (y_spawn > 150 && y_spawn < room_height -150) && place_empty(x_spawn,y_spawn)){
 			
-				var index = global.world[# i, j]
+				
 			
 
 				///show_debug_message(index);
@@ -45,6 +52,8 @@ if(global.startType == 0){
 				//instance_deactivate_all(true);
 				//show_debug_message(index);
 			}
+		
+			
 		}
 		//show_debug_message("DONE")
 		done = true;
@@ -93,9 +102,11 @@ if(global.startType == 0){
 		ds_map_add(global.unlocked,56,5) //Bowl of Oil
 		ds_map_add(global.unlocked,57,0) //Grilled Meat
 		ds_map_add(global.unlocked,58,0) //Grilled Fish
+		ds_map_add(global.unlocked,63,20) //BeastTunic
 		audio_master_gain(1);
 		
 		global.weather = 0;
+		global.WearTunic = false;
 	}
 
 }

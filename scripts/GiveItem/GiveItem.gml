@@ -100,6 +100,13 @@ function GiveItem(item_drop)
 		case 58://GrilledFish
 			pitchRandomizer(sfxHeal,10,false);
 			addInventory(6,1,new Bone(),objInventory.inventory);
+			
+		case 60://SeaWeed
+			pitchRandomizer(sfxHeal,10,false);
+		break;
+		
+		case 62://Dried SeaWeed
+			pitchRandomizer(sfxHeal,10,false);
 		break;
 	}
 

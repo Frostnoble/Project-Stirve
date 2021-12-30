@@ -15,7 +15,7 @@ if(global.gamemode == 1 || global.gamemode == 2 || global.gamemode == 5){global.
 
 objCrafting.recipes = RemoveDuplicate(objCrafting.recipes);
 
-if(!global.pause)
+if(!global.pause || global.gamemode == 0)
 {
 	if(fastfoward_I)
 	{
@@ -33,7 +33,13 @@ if(objPlayer.steps >= 40)
 	objPlayer.steps = 0 
 	if(global.status.name != "Cozy")
 	{
-		global.FATIGUE +=1;
+		if(global.weather == 1 || global.weather == 2)
+		{
+			if(global.FATIGUE + 2 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 2;}
+		}else
+		{
+			if(global.FATIGUE + 1 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 1;}
+		}
 	}
 	
 	

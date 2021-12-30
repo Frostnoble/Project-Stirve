@@ -4,7 +4,7 @@ Render();
 KeyGet();
 
 
-if(!stunned)
+if(!stunned && global.gamemode = 0)
 {
 
 if(xTarg == x and yTarg == y){
