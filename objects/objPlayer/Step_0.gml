@@ -7,7 +7,7 @@ if(keyboard_check_pressed(ord("G")))
 {
 
 	addInventory(63,1,new BeastTunic(),objInventory.inventory);
-
+	addInventory(64,1,new BeastHat(),objInventory.inventory);
 }
 
 
@@ -219,17 +219,45 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 		if(global.equip.type == 4) //Clothing
 		{
 			if(global.equip.image_id == 63) // BeastTunic
-			{
-			
-				if(!global.WearTunic){instance_create_layer(0,0,"Instances",objBeastTunic); global.WearTunic = true;}
-				else{instance_destroy(objBeastTunic); global.WearTunic = false;}
+			{	
+				if(!global.WearTunic)
+				{
+					global.equip.equiped = true;
+					with(instance_create_layer(0,0,"Instances",objBeastTunic))
+					{
+						val = global.equip;
+					}
+					global.WearTunic = true;
+				}
+				else
+				{
+					global.equip.equiped = false;
+					instance_destroy(objBeastTunic); global.WearTunic = false;
+				}
 			
 			}
-			
-			
-
+		}
 		
-
+		if(global.equip.type == 5) //Hats
+		{
+			if(global.equip.image_id == 64) // BeastHat
+			{	
+				if(!global.WearHat)
+				{
+					global.equip.equiped = true;
+					with(instance_create_layer(0,0,"Instances",objBeastHat))
+					{
+						val = global.equip;
+					}
+					global.WearHat = true;
+				}
+				else
+				{
+					global.equip.equiped = false;
+					instance_destroy(objBeastHat); global.WearHat = false;
+				}
+			
+			}
 		}
 	}
 

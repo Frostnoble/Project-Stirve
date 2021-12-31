@@ -29,7 +29,7 @@
     "path": "folders/Objects/Tools.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objBeastTunic",
+  "name": "objBeastHat",
   "tags": [],
   "resourceType": "GMObject",
 }

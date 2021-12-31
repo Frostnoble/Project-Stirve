@@ -840,7 +840,7 @@ function Kiln () : Item () constructor {
 	ds_list_add(craftHelper, 50,8)
 }
 
-function BeastPelt () : Item () constructor {
+function BeastPelt() : Item () constructor {
 	name = "BeastPelt";
 	image_id = 39;
 	amount = 1;
@@ -1368,7 +1368,7 @@ function BeastTunic() : Item () constructor {
 	type = 4;
 	hitlag = 100;
 	tool_id = objBeastTunic;
-	
+	equiped = false;
 	crafting = ds_map_create();
 	ds_map_add(crafting, new BeastPelt(), 5)
 	ds_map_add(crafting, new Rope(), 2)
@@ -1376,4 +1376,25 @@ function BeastTunic() : Item () constructor {
 	desc = "Basic clothing\nthat raises\ndefence.";
 	canDry = false;
 	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 39, 7)
+}
+
+function BeastHat() : Item () constructor {
+	name = "BeastHat";
+	image_id = 64;
+	amount = 1;
+	type = 5;
+	hitlag = 100;
+	tool_id = objBeastHat;
+	equiped = false;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new BeastPelt(), 3)
+	ds_map_add(crafting, new Rope(), 1)
+	KP_lock = 20;
+	desc = "Basic hat\nthat raises\ndefence.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 39, 7)
 }

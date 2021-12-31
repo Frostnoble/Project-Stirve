@@ -27,8 +27,12 @@ for(var i = 0; i < ds_list_size(inventory); i += 1)
 	var yy = draw_y + (i div rowlength) * 18 + 3 +84;
 	if (inventory[| i] != -1)
 	{
-	
+		if((inventory[| i].type == 4 || inventory[| i].type == 5) && inventory[| i].equiped)
+		{
+			draw_sprite(sprSlotDark,0,xx,yy);
+		}
 		draw_sprite(sprItems,inventory[| i].image_id,xx+1,yy+1);
+
 		if(inventory[| i].amount != 1)
 		{
 			draw_set_colour(c_white);

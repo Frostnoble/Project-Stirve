@@ -46,7 +46,9 @@ new ClayBowlOil(),
 new GrilledMeat(),
 new GrilledFishS(),
 new GrilledFishM(),
-new GrilledFishL()];
+new GrilledFishL(),
+new BeastTunic(),
+new BeastHat()];
 
 seemode = false;
 

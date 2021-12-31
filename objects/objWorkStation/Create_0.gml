@@ -30,5 +30,6 @@ new WoodenChest(),
 new DryingRack(),
 new FieldStove(),
 new BeastTunic(),
+new BeastHat(),
 new Kiln());
 

@@ -33,7 +33,7 @@ if(objPlayer.steps >= 40)
 	objPlayer.steps = 0 
 	if(global.status.name != "Cozy")
 	{
-		if(global.weather == 1 || global.weather == 2)
+		if((global.weather == 1 || global.weather == 2) && !global.WearHat)
 		{
 			if(global.FATIGUE + 2 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 2;}
 		}else
