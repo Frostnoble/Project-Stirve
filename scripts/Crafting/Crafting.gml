@@ -11,7 +11,7 @@ for(var i = 0; i < ds_map_size(product.crafting); i += 1)
 {
 	//show_debug_message("LETS GO");
 	
-	if(ds_list_size(objInventory.inventory) < INVENT_SLOT){
+	if(ds_list_size(objInventory.inventory) < INVENT_SLOT  || checkInventory(product,objInventory.inventory)){
 		for(var j = 0; j < ds_list_size(inventory); j += 1)
 		{
 			//show_debug_message(inventory[| j].name+" "+ingredients[i].name);

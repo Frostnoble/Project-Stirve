@@ -17,7 +17,7 @@ if(checktile == 1 && !gotitem)
 
 	}
 	
-	if(ds_list_size(objInventory.inventory) < INVENT_SLOT)
+	if(ds_list_size(objInventory.inventory) < INVENT_SLOT || checkInventory(DROP,objInventory.inventory))
 	{
 		
 		addInventory(ID,NUM,DROP,objInventory.inventory);
@@ -53,7 +53,7 @@ if(checktile == 2 && !gotitem)
 
 	}	
 	
-	if(ds_list_size(objInventory.inventory) < INVENT_SLOT)
+	if(ds_list_size(objInventory.inventory) < INVENT_SLOT || checkInventory(DROP,objInventory.inventory))
 	{
 		
 		addInventory(ID,NUM,DROP,objInventory.inventory);

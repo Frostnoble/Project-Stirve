@@ -1,13 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
 pitchRandomizer(sfxPlace,10,false);
-depth = room_height - y + 10
+depth = room_height - y + 32
 readyToGo = 0;
 trans = false;
 timeTillGrow = 0;
 
 Hitable = true;
 
+UP = false;
+DOWN = false;
+LEFT = false;
+RIGHT = false;
 
 haveGrow = 0;
 

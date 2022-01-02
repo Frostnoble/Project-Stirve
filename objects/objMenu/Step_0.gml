@@ -28,8 +28,11 @@ if(keyboard_check_pressed(A_Key) && global.gamemode == 0)
 			
 		break;	
 		case "Continue":
-			room_goto(Loading);
-			global.startType = 1;
+			if(file_exists("savedgame.save"))
+			{
+				room_goto(Loading);
+				global.startType = 1;
+			}
 		break;	
 		case "Options":
 			global.gamemode = 7;

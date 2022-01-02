@@ -10,7 +10,19 @@ if(place_meeting(x,y,global.equip.tool_id) && keyboard_check_pressed(A_Key) && o
 
 if((global.inFront_x == x && global.inFront_y == y) && keyboard_check_pressed(B_Key))
 {
-	if(global.gamemode != 4 ){global.gamemode = 4}else{global.gamemode = 0}
+	if(global.gamemode != 4 )
+	{
+		global.gamemode = 4;
+	}
+	else
+	{
+		global.gamemode = 0;
+		if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)
+		{
+			global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+			
+		}	
+	}
 	storage_selector = objInventory.inventory[| 0];
 	if(image_index != 1 ){image_index = 1}else{image_index = 0}
 
@@ -81,8 +93,8 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 
 
 		}
-		
-		if(keyboard_check_pressed(A_Key) && ds_list_size(storage) < 9 && ds_list_size(storage) >= 0)
+		show_debug_message(storage_selector)
+		if(keyboard_check_pressed(A_Key) && (ds_list_size(storage) < 9 || checkInventory(storage_selector,storage)) && ds_list_size(storage) >= 0)
 		{
 			
 			NUM = storage_selector.amount;
@@ -128,7 +140,7 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 		
 		
 		
-		if(keyboard_check_pressed(A_Key) && ds_list_size(objInventory.inventory) < 9 && ds_list_size(objInventory.inventory) >= 0)
+		if(keyboard_check_pressed(A_Key) && (ds_list_size(objInventory.inventory) < 9 || checkInventory(storage_selector,objInventory.inventory)) && ds_list_size(objInventory.inventory) >= 0)
 		{
 			NUM = storage_selector.amount;
 			removeInventory(storage_selector.image_id,storage_selector.amount,storage);
@@ -136,6 +148,8 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 			
 			addInventory(storage_selector.image_id,storage_selector.amount * NUM,storage_selector,objInventory.inventory);
 			storage_selector = storage[| 0];
+			
+
 			
 		}
 	}

@@ -1252,7 +1252,7 @@ function GrilledFishS () : Item () constructor {
 	ds_list_add(craftHelper, 56, 32)
 }
 
-function GrilledFishM () : Item () constructor {
+function GrilledFishM() : Item () constructor {
 	name = "GrilledFish";
 	image_id = 58;
 	amount = 1;
@@ -1302,6 +1302,24 @@ function GrilledFishL () : Item () constructor {
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 56, 34)
 	
+}
+
+function TreeBark() : Item () constructor {
+	name = "TreeBark";
+	image_id = 59;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 2;
+	ds_map_add(crafting, new Wood(), 1)
+	desc = "The bark\nof a tree.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0)
 }
 
 function Seaweed () : Item () constructor {
@@ -1369,6 +1387,7 @@ function BeastTunic() : Item () constructor {
 	hitlag = 100;
 	tool_id = objBeastTunic;
 	equiped = false;
+	yeald = 1;
 	crafting = ds_map_create();
 	ds_map_add(crafting, new BeastPelt(), 5)
 	ds_map_add(crafting, new Rope(), 2)
@@ -1388,6 +1407,7 @@ function BeastHat() : Item () constructor {
 	hitlag = 100;
 	tool_id = objBeastHat;
 	equiped = false;
+	yeald = 1;
 	crafting = ds_map_create();
 	ds_map_add(crafting, new BeastPelt(), 3)
 	ds_map_add(crafting, new Rope(), 1)
@@ -1397,4 +1417,22 @@ function BeastHat() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 39, 7)
+}
+
+function Ash() : Item () constructor {
+	name = "Ash";
+	image_id = 65;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new Wood(), 5)
+	desc = "The burning\nremains\nof wood.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0)
 }

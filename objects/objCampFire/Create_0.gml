@@ -26,4 +26,5 @@ new FriedFishS(),
 new FriedFishM(),
 new FriedFishL(),
 new Brick(),
+new Ash(),
 new ClayBowlWaterPure());

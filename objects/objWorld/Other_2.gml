@@ -9,8 +9,22 @@ audio_group_load(ag_Music);
 audio_group_load(ag_SFX);
 global.music_Volume = 0.5;
 global.sfx_Volume = 0.5;
+global.fullscreen = false;
+if(file_exists("savedworld.save")){LoadGameWorld();}
 audio_group_set_gain(ag_Music,global.music_Volume,0);
 audio_group_set_gain(ag_SFX,global.sfx_Volume,0);
+
+if(global.fullscreen == false)
+{
+	window_set_fullscreen(false);
+	
+				
+}
+else
+{
+	window_set_fullscreen(true);
+	
+}
 global.gamemode = 0;
 global.death = false;
 global.TempoWater = 0;

@@ -22,7 +22,7 @@ if(!has_save)
 		if(yy <= 140 && yy >= 4)
 		{
 
-
+			
 			draw_text(xx, yy - 2,options[|i]);
 
 			

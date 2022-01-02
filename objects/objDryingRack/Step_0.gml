@@ -30,45 +30,52 @@ item = instance_position(x,y,objItem);
 
 if (item != noone)
 {
+	show_debug_message(string(timeTillDry) + " " + string(global.worldTime))
 	if(!trans && item.DROP.canDry)
 	{
 		timeTillDry = global.worldTime + item.DROP.DryTime;
 		trans = true;
 	}
 	
+	if(global.worldTime >= timeTillDry && item.DROP.canDry)
+	{
+		item = instance_position(x,y,objItem);
+
+		if (item != noone)
+		{
+			with(instance_create_layer(x, y, "Instances", objDrop))
+			{
+
+				ID = other.item.DROP.DryImage_id;
+				NUM = other.item.NUM * other.item.DROP.DryMult;
+				DROP = other.item.DROP.DryName;
+			}
+			instance_destroy(item);
+		
+		}
+		else
+		{
+			timeTillDry = 0;
+			trans = false;
+
+		}
+		timeTillDry = 0;
+		trans = false;
+
+
+	}	
+	
+	
+	
+	
 }
 else
 {
 	timeTillDry = 0;
-}
-
-if(global.worldTime >= timeTillDry)
-{
-	item = instance_position(x,y,objItem);
-
-	if (item != noone)
-	{
-		with(instance_create_layer(x, y, "Instances", objDrop))
-		{
-
-			ID = other.item.DROP.DryImage_id;
-			NUM = other.item.NUM * other.item.DROP.DryMult;
-			DROP = other.item.DROP.DryName;
-		}
-		instance_destroy(item);
-		
-	}
-	else
-	{
-		timeTillDry = 0;
-		trans = false;
-
-	}
-	timeTillDry = 0;
 	trans = false;
-
-
 }
+
+
 
 
 

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprBetterSoil",
-    "path": "sprites/sprBetterSoil/sprBetterSoil.yy",
+    "name": "sprBetterSoil2",
+    "path": "sprites/sprBetterSoil2/sprBetterSoil2.yy",
   },
   "solid": false,
   "visible": true,

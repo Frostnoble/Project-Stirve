@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 KeyGet();
-
+UP = false;
+DOWN = false;
+LEFT = false;
+RIGHT = false;
 
 item = instance_position(x,y,objItem);
 
@@ -87,7 +90,94 @@ if(global.worldTime >= timeTillGrow && timeTillGrow != 0)
 
 
 
+if(place_meeting(x, y - 16, objBetterSoil))
+{
+	UP = true;
+}
+if(place_meeting(x, y + 16, objBetterSoil))
+{
+	DOWN = true;
+}
 
+if(place_meeting(x - 16, y, objBetterSoil))
+{
+	LEFT = true;
+}
+
+if(place_meeting(x + 16, y, objBetterSoil))
+{
+	RIGHT = true;
+}
+
+
+
+
+//AutoTile
+
+if(UP && DOWN && LEFT && RIGHT)
+{
+	image_index = 8;
+}
+if(UP && !DOWN && LEFT && RIGHT)
+{
+	image_index = 11;
+}
+if(UP && DOWN && !LEFT && RIGHT)
+{
+	image_index = 10;
+}
+if(UP && DOWN && LEFT && !RIGHT)
+{
+	image_index = 9;
+}
+if(!UP && !DOWN && LEFT && RIGHT)
+{
+	image_index = 2;
+}
+if(UP && DOWN && !LEFT && !RIGHT)
+{
+	image_index = 1;
+}
+if(!UP && DOWN && LEFT && !RIGHT)
+{
+	image_index = 4;
+}
+if(UP && !DOWN && !LEFT && RIGHT)
+{
+	image_index = 5;
+}
+if(!UP && DOWN && !LEFT && RIGHT)
+{
+	image_index = 3;
+}
+if(UP && !DOWN && LEFT && !RIGHT)
+{
+	image_index = 6;
+}
+if(!UP && DOWN && LEFT && RIGHT)
+{
+	image_index = 7;
+}
+if(!UP && !DOWN && LEFT && !RIGHT)
+{
+	image_index = 13;
+}
+if(!UP && DOWN && !LEFT && !RIGHT)
+{
+	image_index = 12;
+}
+if(!UP && !DOWN && !LEFT && RIGHT)
+{
+	image_index = 14;
+}
+if(UP && !DOWN && !LEFT && !RIGHT)
+{
+	image_index = 15;
+}
+if(!UP && !DOWN && !LEFT && !RIGHT)
+{
+	image_index = 0;
+}
 
 
 

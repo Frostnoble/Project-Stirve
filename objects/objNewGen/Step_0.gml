@@ -102,6 +102,7 @@ if(global.startType == 0){
 		ds_map_add(global.unlocked,56,5) //Bowl of Oil
 		ds_map_add(global.unlocked,57,0) //Grilled Meat
 		ds_map_add(global.unlocked,58,0) //Grilled Fish
+		ds_map_add(global.unlocked,59,0) //TreeBark
 		ds_map_add(global.unlocked,63,20) //BeastTunic
 		ds_map_add(global.unlocked,64,20) //BeastHat
 		audio_master_gain(1);

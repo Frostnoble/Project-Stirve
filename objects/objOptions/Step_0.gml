@@ -27,13 +27,13 @@ if(global.gamemode == 7){
 			if(window_get_fullscreen())
 			{
 				window_set_fullscreen(false);
-				
+				global.fullscreen = false;
 				
 			}
 			else
 			{
 				window_set_fullscreen(true);
-				
+				global.fullscreen = true;
 			}
 		}
 		
@@ -81,6 +81,7 @@ if(global.gamemode == 7){
 	
 	if (room == Menu && keyboard_check_pressed(B_Key))
 	{
+		SaveGameWorld();
 		timer = 0;
 		global.gamemode = 0;
 	}

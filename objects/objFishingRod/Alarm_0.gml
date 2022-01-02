@@ -24,7 +24,7 @@ with(instance_create_layer(objPlayer.x, objPlayer.y, "Instances", objItemGot)){
 
 }
 	
-if(ds_list_size(objInventory.inventory) < INVENT_SLOT)
+if(ds_list_size(objInventory.inventory) < INVENT_SLOT || checkInventory(DROP,objInventory.inventory))
 {
 		
 	addInventory(ID,NUM,DROP,objInventory.inventory);

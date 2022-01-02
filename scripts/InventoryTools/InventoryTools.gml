@@ -79,3 +79,17 @@ function clearInventory()
 		inventory = ds_list_create();
 	}
 }
+
+function checkInventory(drop,inventory)
+{
+	
+	for(var i = 0; i < ds_list_size(inventory); i += 1)
+	{
+		if(inventory[| i].image_id == drop.image_id)
+		{
+			return true;
+		}
+	}
+	return false;
+
+}
