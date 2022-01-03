@@ -12,9 +12,9 @@ if(place_meeting(x,y,global.equip.tool_id) && keyboard_check_pressed(A_Key) && o
 		addInventory(47,irandom_range(5,10),new Berries(),objInventory.inventory);
 
 		with(instance_create_layer(objPlayer.x, objPlayer.y, "Instances", objItemGot)){
-		IDG = 47;
-
+			IDG = 47;
 		}
+
 		instance_create_layer(x, y, "Instances", objBush)
 		instance_destroy();
 

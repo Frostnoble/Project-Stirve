@@ -13,6 +13,10 @@ if(place_meeting(x,y,objPlayer) && PICKUP = true)
 		with(instance_create_layer(objPlayer.x, objPlayer.y, "Instances", objItemGot)){
 			IDG = other.ID;
 		}
+		with(instance_create_layer(0, 0, "Instances", objItemName)){
+			item = other.DROP.name;
+		}
+		
 	    instance_destroy();
 	}
 	else
@@ -27,6 +31,9 @@ if(place_meeting(x,y,objPlayer) && PICKUP = true)
 				addInventory(ID,NUM,DROP,objInventory.inventory);
 				with(instance_create_layer(objPlayer.x, objPlayer.y, "Instances", objItemGot)){
 					IDG = other.ID;
+				}
+				with(instance_create_layer(0, 0, "Instances", objItemName)){
+					item = other.DROP.name;
 				}
 				//global.equip = objInventory.inventory[|0];
 			    instance_destroy();

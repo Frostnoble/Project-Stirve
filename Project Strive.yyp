@@ -124,6 +124,7 @@
     {"id":{"name":"sprFenceWood","path":"sprites/sprFenceWood/sprFenceWood.yy",},"order":2,},
     {"id":{"name":"objDeath","path":"objects/objDeath/objDeath.yy",},"order":15,},
     {"id":{"name":"objPlayerSoul","path":"objects/objPlayerSoul/objPlayerSoul.yy",},"order":1,},
+    {"id":{"name":"objItemName","path":"objects/objItemName/objItemName.yy",},"order":21,},
     {"id":{"name":"sprKiln","path":"sprites/sprKiln/sprKiln.yy",},"order":5,},
     {"id":{"name":"sprWoodenChest_Day","path":"sprites/sprWoodenChest_Day/sprWoodenChest_Day.yy",},"order":7,},
     {"id":{"name":"objBetterSoil","path":"objects/objBetterSoil/objBetterSoil.yy",},"order":12,},
