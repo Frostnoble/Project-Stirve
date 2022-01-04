@@ -108,7 +108,14 @@ function GiveItem(item_drop)
 		case 62://Dried SeaWeed
 			pitchRandomizer(sfxHeal,10,false);
 		break;
+		
+		case 66://Honey
+			pitchRandomizer(sfxHeal,10,false);
+		break;
+		
+		
 	}
+	
 
 
 }

@@ -42,8 +42,10 @@ if(global.startType == 0){
 				if(index <= 590 && index >= 580){instance_create_layer(x_spawn,y_spawn, "Instances", objRock);}
 				if(index <= 14 && index >= 11){instance_create_layer(x_spawn,y_spawn, "Instances", objBush);}
 				if(index <= 17 && index >= 15){instance_create_layer(x_spawn,y_spawn, "Instances", objBerryBush);}
+				if(index <= 23 && index >= 21){instance_create_layer(x_spawn,y_spawn, "Instances", objTreeHive);}
+				if(index <= 26 && index >= 25){instance_create_layer(x_spawn,y_spawn, "Instances", objTreeHiveFull);}
 				if(index == 15){instance_create_layer(x_spawn,y_spawn, "Instances", objRabbit);}
-				if(index >= 10 && index <= 11){instance_create_layer(x_spawn,y_spawn, "Instances", objwolf);}
+				if(index == 11){instance_create_layer(x_spawn,y_spawn, "Instances", objwolf);}
 				if(index == 9){instance_create_layer(x_spawn,y_spawn, "Instances", objPond);}
 				if(index == 4){spawnDrop(1,new Stone(),1,x_spawn,y_spawn);}
 				if(index == 1){spawnDrop(15,new Mushroom(),1,x_spawn,y_spawn);}

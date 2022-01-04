@@ -1436,3 +1436,24 @@ function Ash() : Item () constructor {
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0)
 }
+
+function Honey() : Item () constructor {
+	name = "Honey";
+	image_id = 66
+	amount = 1;
+	type = 3;
+	hungerFill = 10;
+	waterFill = 0;
+	fatigueFill = 10;
+	effect = new Normal();
+	hitlag = 100;
+	tool_id = 0;
+	hitlag = 100;
+	crafting = ds_map_create();
+	foodLevel = 1;
+
+	canDry = false;
+	canSpread = false;
+
+	
+}
