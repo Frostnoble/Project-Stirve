@@ -96,7 +96,7 @@ function canCraft(product,inventory){
 
 		for(var j = 0; j < ds_list_size(inventory); j += 1)
 		{
-			if((inventory[| j].name == ingredients[i].name) && (inventory[| j].amount >= cost[i]))
+			if((inventory[| j].image_id == ingredients[i].image_id) && (inventory[| j].amount >= cost[i]))
 			{
 				check++;	
 			}

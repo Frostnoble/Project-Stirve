@@ -1080,7 +1080,7 @@ function Brick() : Item () constructor {
 	ds_list_add(craftHelper, 49,19)
 }
 
-function WoodenBowl () : Item () constructor {
+function WoodenBowl() : Item () constructor {
 	name = "WoodenBowl";
 	image_id = 51;
 	amount = 1;
@@ -1457,3 +1457,53 @@ function Honey() : Item () constructor {
 
 	
 }
+
+function WoodBowlJuice() : Item () constructor {
+	name = "Juice";
+	image_id = 67;
+	amount = 1;
+	type = 3;
+	hungerFill = 5;
+	waterFill = 20;
+	fatigueFill = 10;
+	effect = new Normal();
+	hitlag = 20;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 10;
+	yeald = 1;
+	ds_map_add(crafting, new WoodBowlWaterPure(), 1)
+	ds_map_add(crafting, new Berries(), 5)
+	desc = "Can be used\nfor many\nthings.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 53, 47)
+
+}
+
+
+function ClayBowlJuice() : Item () constructor {
+	name = "Juice";
+	image_id = 68;
+	amount = 1;
+	type = 3;
+	hungerFill = 5;
+	waterFill = 20;
+	fatigueFill = 10;
+	effect = new Normal();
+	hitlag = 20;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 10;
+	yeald = 1;
+	ds_map_add(crafting, new ClayBowlWaterPure(), 1)
+	ds_map_add(crafting, new Berries(), 5)
+	desc = "Can be used\nfor many\nthings.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 26, 47)
+
+}
+

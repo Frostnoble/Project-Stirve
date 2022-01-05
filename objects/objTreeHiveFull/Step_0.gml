@@ -15,9 +15,28 @@ if(place_meeting(x,y,global.equip.tool_id) && keyboard_check_pressed(A_Key) && o
 			IDG = 66;
 		}
 
-		instance_create_layer(x, y, "Instances", objTreeHive)
-		instance_destroy();
-
+		
+		
+		//SpawnBees
+		if(place_meeting(x,y+16,objCampFire))
+		{
+			instance_create_layer(x, y, "Instances", objTreeHive)
+			instance_destroy();
+		}
+		else
+		{
+			pitchRandomizer(sfxBuzzing,10,false);
+			for(i = 0; i <= irandom(4)+1; i++)
+			{
+			
+				x_pos = x + choose(-32,-16,0,16,32);
+				y_pos = y + choose(-32,-16,0,16,32);
+				instance_create_layer(x_pos, y_pos, "Instances", objBee)
+			}
+			instance_create_layer(x, y, "Instances", objTreeHive)
+			instance_destroy();
+		}
+		
 	}
 }
 

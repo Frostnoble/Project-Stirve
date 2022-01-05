@@ -100,6 +100,26 @@ if (item != noone)
 
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
+			
+			case 67: //Juice Wood
+			
+				if(currenthold < maxhold){currenthold++;}
+				image_index = 5;
+				liquid = "Juice";
+				addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
+				
+				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+			break;
+			
+			case 68: // Juice Clay
+			
+				if(currenthold < maxhold){currenthold++;}
+				image_index = 5;
+				liquid = "Juice";
+				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+
+				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+			break;
 		}
 
 	
@@ -203,6 +223,34 @@ if (item != noone)
 
 			}	
 			
+		}
+		if(liquid == "Juice")
+		{
+			switch(item.DROP.image_id)
+			{
+				case 26: //Juice Clay
+			
+					currenthold++;
+					addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+					instance_destroy(item);
+				break;
+				
+				case 53: //Juice Wood
+			
+					currenthold++;
+					addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+					instance_destroy(item);
+				break;
+				
+				default:
+					item.x = objPlayer.x;
+					item.y = objPlayer.y;
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+				break;
+
+			}
 		}
 	
 		

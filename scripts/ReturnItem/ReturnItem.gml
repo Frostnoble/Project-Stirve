@@ -11,6 +11,7 @@ function ReturnItem(image_id)
 		case 58://GrilledFish
 			addInventory(24,1,new ClayBowl(),objInventory.inventory)
 		break;
+
 	}
 
 

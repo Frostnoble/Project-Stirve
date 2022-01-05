@@ -88,7 +88,7 @@ if(global.gamemode == 6)
 				var yy = draw_y + 6 + (i * 9);
 				if(yy <= 140 && yy >= 4)
 				{
-
+					
 					draw_text(xx, yy - 2,string(Possible[|i].name));
 			
 

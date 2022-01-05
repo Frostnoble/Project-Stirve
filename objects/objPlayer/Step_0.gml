@@ -8,6 +8,7 @@ if(keyboard_check_pressed(ord("G")))
 
 	addInventory(63,1,new BeastTunic(),objInventory.inventory);
 	addInventory(64,1,new BeastHat(),objInventory.inventory);
+	addInventory(26,1,new ClayBowlWaterPure(),objInventory.inventory);
 }
 
 

@@ -25,7 +25,10 @@ objBush,
 objSmallBush,
 objRabbit,
 objwolf,
+objBee,
 objPot,
+objTreeHive,
+objTreeHiveFull,
 objSplash,
 objPlayer)
 
@@ -72,6 +75,8 @@ new GrilledFishL(),
 new TreeBark(),
 new BeastTunic(),
 new BeastHat(),
+new WoodBowlJuice(),
+new ClayBowlJuice(),
 new Ash()];
 
 

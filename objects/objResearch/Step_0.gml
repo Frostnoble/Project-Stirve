@@ -75,12 +75,14 @@ if(global.gamemode == 6){
 		if(keyboard_check_pressed(vk_down) && ds_list_find_value(Possible, i+1))
 		{
 			selected = Possible[| i+1];
+
 		}
 		if(keyboard_check_pressed(vk_up) && ds_list_find_value(Possible, i-1))
 		{
 			selected = Possible[| i-1];
+
 		}
-	
+
 	
 	
 		if(keyboard_check_pressed(Select_Key))
