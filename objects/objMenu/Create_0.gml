@@ -11,7 +11,15 @@ fade = 1;
 
 options = ds_list_create();
 ds_list_add(options, "New Game","Continue","Options", "Quit");
-selected = options[| 0];
+if(file_exists("savedgame.save"))
+{
+	selected = options[| 1];
+}
+else
+{
+	selected = options[| 0];		
+}
+
 
 charSize = 0
 for(var i = 0; i < ds_list_size(options); i++){

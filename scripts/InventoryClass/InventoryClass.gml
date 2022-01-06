@@ -319,6 +319,7 @@ function Mushroom () : Item () constructor {
 
 	canDry = false;
 	canSpread = true;
+	cantype = 0;
 	//Spreadname = new Mushroom();
 	SpreadTime = timeToFrames(0,3,0);
 
@@ -342,6 +343,7 @@ function PoiMushroom () : Item () constructor {
 
 	canDry = false;
 	canSpread = true;
+	cantype = 0;
 	//Spreadname = new Mushroom();
 	SpreadTime = timeToFrames(0,3,0);
 }
@@ -363,6 +365,7 @@ function BlueMushroom () : Item () constructor {
 
 	canDry = false;
 	canSpread = true;
+	cantype = 0;
 	//Spreadname = new Mushroom();
 	SpreadTime = timeToFrames(0,3,0);
 }
@@ -1343,7 +1346,10 @@ function Seaweed () : Item () constructor {
 	DryImage_id = 62;
 	DryTime = timeToFrames(0,8,0);
 	DryMult = 1;
-	canSpread = false;
+	canSpread = true;
+	cantype = 1;
+	//Spreadname = new Mushroom();
+	SpreadTime = timeToFrames(0,3,0);
 	
 }
 

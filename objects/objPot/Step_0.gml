@@ -228,7 +228,7 @@ if (item != noone)
 		{
 			switch(item.DROP.image_id)
 			{
-				case 26: //Juice Clay
+				case 68: //Juice Clay
 			
 					currenthold++;
 					addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
@@ -236,7 +236,7 @@ if (item != noone)
 					instance_destroy(item);
 				break;
 				
-				case 53: //Juice Wood
+				case 67: //Juice Wood
 			
 					currenthold++;
 					addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)

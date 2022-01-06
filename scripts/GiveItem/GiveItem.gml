@@ -113,6 +113,16 @@ function GiveItem(item_drop)
 			pitchRandomizer(sfxHeal,10,false);
 		break;
 		
+		case 67://Juice Wood
+			pitchRandomizer(sfxDrink,10,false);
+			addInventory(51,1,new WoodenBowl(),objInventory.inventory)
+		break;
+		
+		case 68://Juice Clay
+			pitchRandomizer(sfxDrink,10,false);
+			addInventory(26,1,new ClayBowl(),objInventory.inventory)
+		break;
+		
 		
 	}
 	

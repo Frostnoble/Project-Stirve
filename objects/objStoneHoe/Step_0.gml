@@ -6,7 +6,7 @@
 if(checktile == 1 && place_empty(x,y,all) && !action)
 {
 	
-	instance_create_layer(x-8, y-8, "Instances", objBetterSoil)
+	instance_create_layer(x-8, y-8, "Instances", objBetterSand)
 	action = true;
 
 }
@@ -18,9 +18,9 @@ if(checktile == 2 && place_empty(x,y,all) && !action)
 
 }
 
-if(checktile == 1 && place_meeting(x,y,objBetterSoil) && !action)
+if(checktile == 1 && place_meeting(x,y,objBetterSand) && !action)
 {
-	init = instance_place(x,y,objBetterSoil)
+	init = instance_place(x,y,objBetterSand)
 	instance_destroy(init);
 	action = true;
 

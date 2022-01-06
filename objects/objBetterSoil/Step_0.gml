@@ -18,7 +18,7 @@ if (item != noone)
 	}
 	
 	
-	if(!trans && item.DROP.canSpread)
+	if(!trans && item.DROP.canSpread && item.DROP.cantype == 0)
 	{
 		timeTillGrow = global.worldTime + item.DROP.SpreadTime;
 		trans = true;

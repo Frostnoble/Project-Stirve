@@ -5,6 +5,7 @@
 objectList = ds_list_create();
 ds_list_add(objectList,
 objBetterSoil,
+objBetterSand,
 objDryingRack,
 objGrass,
 objSmallGrass,

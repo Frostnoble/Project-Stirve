@@ -112,7 +112,7 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 		if(global.equip.amount > 0) //Drop
 		{
 
-			if(place_empty(global.inFront_x,global.inFront_y) || DropCheckerPot() || place_meeting(global.inFront_x,global.inFront_y,objDryingRack) || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil))// so shit's no stuck in trees for something
+			if(place_empty(global.inFront_x,global.inFront_y) || DropCheckerPot() || place_meeting(global.inFront_x,global.inFront_y,objDryingRack) || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil)|| place_meeting(global.inFront_x,global.inFront_y,objBetterSand))// so shit's no stuck in trees for something
 			{
 				canHit = false;
 				alarm[0] = global.equip.hitlag;

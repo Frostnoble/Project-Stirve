@@ -31,7 +31,7 @@ if(!global.pause || global.gamemode == 0)
 if(objPlayer.steps >= 40)
 {
 	objPlayer.steps = 0 
-	if(global.status.name != "Cozy")
+	if(global.status.name != "Cozy" && global.gamemode == 0)
 	{
 		if((global.weather == 1 || global.weather == 2) && !global.WearHat)
 		{
@@ -45,7 +45,7 @@ if(objPlayer.steps >= 40)
 	
 }
 //Body Consumes food and water
-if(minutes2 == 20 && seconds2 == 25)
+if(minutes2 == 20 && seconds2 == 25 && global.gamemode == 0)
 {
 	
 	global.HUNGER -= 5;
@@ -58,7 +58,7 @@ if(global.FATIGUE > 100){global.FATIGUE = 100;}
 
 
 //Health
-if((minutes2 == 20 || minutes2 == 40 || minutes2 == 0) && seconds2 == 25 && (global.HUNGER == 0 || global.WATER == 0 || global.FATIGUE == 100))
+if((minutes2 == 20 || minutes2 == 40 || minutes2 == 0) && seconds2 == 25 && (global.HUNGER == 0 || global.WATER == 0 || global.FATIGUE == 100) && global.gamemode == 0)
 {	
 	if(!global.inv)
 	{
@@ -68,7 +68,7 @@ if((minutes2 == 20 || minutes2 == 40 || minutes2 == 0) && seconds2 == 25 && (glo
 	}
 
 }
-else if((minutes2 == 20 || minutes2 == 40 || minutes2 == 0) && seconds2 == 25)
+else if((minutes2 == 20 || minutes2 == 40 || minutes2 == 0) && seconds2 == 25 && global.gamemode == 0)
 {
 	if(global.HEALTH + 5 > 100){global.HEALTH = 100}else{global.HEALTH += 5}
 }
@@ -147,7 +147,7 @@ if(MILhours2 == 2 && minutes2 == 0 && seconds2 == 0)
 //Status effects
 
 //SICK
-if(global.status.name == "Sick" && seconds2 == 0)
+if(global.status.name == "Sick" && seconds2 == 0 && global.gamemode == 0)
 {
 	if(global.HEALTH > 5){global.HEALTH--;}
     sick_timer++;
@@ -158,21 +158,21 @@ if(sick_timer == global.status.time){
 }
 
 //PAR
-if(global.status.name == "Par" && seconds2 == 0)
+if(global.status.name == "Par" && seconds2 == 0 && global.gamemode == 0)
 {
 	sick_timer++;
 }
-if(sick_timer == global.status.time){
+if(sick_timer == global.status.time && global.gamemode == 0){
 	global.status = new Normal();
 	sick_timer = 0;
 }
 
 //Woozy
-if(global.status.name == "Woozy" && seconds2 == 0)
+if(global.status.name == "Woozy" && seconds2 == 0 && global.gamemode == 0)
 {
 	sick_timer++;
 }
-if(sick_timer == global.status.time){
+if(sick_timer == global.status.time && global.gamemode == 0){
 	global.status = new Normal();
 	sick_timer = 0;
 }
