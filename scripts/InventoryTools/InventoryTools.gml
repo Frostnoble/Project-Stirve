@@ -9,12 +9,12 @@ var val = ID; // ID of item
 var next = 0;
 for(var i = 0; i < ds_list_size(inventory); i += 1)
 {
-	if(inventory[| i].image_id == val && inventory[| i].amount < 99)
+	if(inventory[| i].image_id == val && inventory[| i].amount < 999)
 	{
-		if(inventory[| i].amount + num > 99){
+		if(inventory[| i].amount + num > 999){
 			
 			var remain = (num + inventory[| i].amount) - 100;
-			inventory[| i].amount = 99;
+			inventory[| i].amount = 999;
 			addInventory(ID,remain,drop,inventory);
 			
 		}

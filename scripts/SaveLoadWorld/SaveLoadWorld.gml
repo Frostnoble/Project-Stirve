@@ -40,9 +40,7 @@ function SaveGame()
 		days: objTimeSystem.days,
 		unlocked: ds_map_write(global.unlocked),
 		weather: global.weather,
-		WearTunic: global.WearTunic,
-		WearHat: global.WearHat
-
+		defence: global.defence
 	
 
 
@@ -134,6 +132,25 @@ function SaveGame()
 		array_push(_saveData, _saveEntity);
 	
 	}
+	
+	for(var i = 0; i < ds_list_size(objWorld.OutfitList); i += 1)
+	{
+		with(objWorld.OutfitList[|i])
+		{
+			var _saveEntity = 
+			{
+				type: 6,
+				obj: object_get_name(object_index),
+				x: x,
+				y: y,
+				depth: depth,
+				image_index: image_index,
+				val: val
+			}
+			array_push(_saveData, _saveEntity);
+	
+		}
+	}
 
 	
 	
@@ -208,8 +225,7 @@ function LoadGame()
 				global.unlocked = ds_map_create;
 				ds_map_read(global.unlocked,_loadEntity.unlocked);
 				global.weather = _loadEntity.weather; 
-				global.WearTunic = _loadEntity.WearTunic; 
-				global.WearHat = _loadEntity.WearHat; 
+				global.defence = _loadEntity.defence;
 
 				
 			}
@@ -274,6 +290,16 @@ function LoadGame()
 					maxhold = _loadEntity.maxhold;
 					currenthold = _loadEntity.currenthold;
 					
+				}
+			
+			}
+			
+			if(_loadEntity.type == 6)
+			{
+				with(instance_create_layer(_loadEntity.x, _loadEntity.y, "Instances", asset_get_index(_loadEntity.obj)))
+				{
+					image_index = _loadEntity.image_index;
+					val = _loadEntity.val;
 				}
 			
 			}

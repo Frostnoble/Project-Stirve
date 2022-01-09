@@ -31,7 +31,13 @@ objPot,
 objTreeHive,
 objTreeHiveFull,
 objSplash,
-objPlayer)
+objPlayer);
+
+OutfitList = ds_list_create();
+ds_list_add(OutfitList,
+objBeastTunic,
+objBeastHat);
+
 
 
 global.craftable_item = [

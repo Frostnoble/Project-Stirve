@@ -20,7 +20,7 @@ new ClayBowlJuice());
 selected = recipes[| 0];
 
 
-
+Confirm = false;
 flipmode = false;
 candraw = false;
 instance_create_layer(0,0, "Instances", objAdvanceCrafting);

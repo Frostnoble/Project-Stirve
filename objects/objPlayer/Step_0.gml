@@ -36,6 +36,14 @@ if(keyboard_check_pressed(ord("S")))
 	
 }
 
+if(keyboard_check_pressed(ord("P")))
+{
+
+	instance_create_layer(x,y+16, "Instances", objPrePit);
+
+	
+}
+
 if(hurtFrames > 0)
 {
 	global.inv = true;
@@ -53,10 +61,13 @@ global.inFront_y = round((objPlayer.y+lengthdir_y(TILE_H*objPlayer.spd,objPlayer
 global.inFront_x_More = round((objPlayer.x+lengthdir_x(TILE_W*2*objPlayer.spd,objPlayer.move_dir)) / 16) * 16;
 global.inFront_y_More = round((objPlayer.y+lengthdir_y(TILE_H*2*objPlayer.spd,objPlayer.move_dir)) / 16) * 16;
 
-if(keyboard_check_pressed(Start_Key) && global.gamemode != 1  && global.gamemode != 4 && global.gamemode != 3  && global.gamemode != 5 && global.gamemode != 6 && global.gamemode != 7)
+if(keyboard_check_pressed(Start_Key) && ds_list_size(objInventory.inventory) > 0 && global.gamemode != 1  && global.gamemode != 4 && global.gamemode != 3  && global.gamemode != 5 && global.gamemode != 6 && global.gamemode != 7)
 {
 	
-	if(global.gamemode != 2 ){global.gamemode = 2}else{global.gamemode = 0}
+	if(global.gamemode != 2){
+		global.gamemode = 2
+		global.equip = objInventory.inventory[|0];
+		}else{global.gamemode = 0}
 }
 
 if(keyboard_check_pressed(B_Key) && global.gamemode != 2  && global.gamemode != 4 && global.gamemode != 3)
@@ -74,15 +85,29 @@ if(keyboard_check_pressed(B_Key) && global.gamemode != 2  && global.gamemode != 
 if(global.gamemode == 0 && global.status.name != "Par"){
 
 
-	if(keyboard_check_pressed(Select_Key) && keyboard_check(ord("P")) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && canHit = true && ds_list_size(objInventory.inventory) > 0)
+	if(keyboard_check_pressed(Select_Key) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && ds_list_size(objInventory.inventory) > 0)
 	{
 		if(global.equip.amount > 0) //Drop
 		{
-
-			if(place_empty(global.inFront_x,global.inFront_y) || place_meeting(global.inFront_x,global.inFront_y,objDryingRack) || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil))// so shit's no stuck in trees for something
+			if(checkIfSame())
 			{
-				canHit = false;
-				alarm[0] = global.equip.hitlag;
+				with(instance_position(global.inFront_x,global.inFront_y,objItem))
+				{				
+					NUM++;
+				}
+				removeInventory(global.equip.image_id,1,objInventory.inventory);
+	
+				if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)
+				{
+					global.equip = new PlaceHolder();
+				
+				}
+				
+			}
+
+			else if(place_empty(global.inFront_x,global.inFront_y) || DropCheckerPot() || place_meeting(global.inFront_x,global.inFront_y,objDryingRack) || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil) || place_meeting(global.inFront_x,global.inFront_y,objBetterSand))// so shit's no stuck in trees for something
+			{
+
 
 				with(instance_create_layer(global.inFront_x,global.inFront_y, "Instances", objItem))
 				{
@@ -95,40 +120,8 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 	
 				if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)
 				{
-				global.equip = new PlaceHolder();
-				
-			}
-		
-				
-			}
-			
-
-		}
-	}
-	
-	
-	if(keyboard_check_pressed(Select_Key) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && canHit = true && ds_list_size(objInventory.inventory) > 0)
-	{
-		if(global.equip.amount > 0) //Drop
-		{
-
-			if(place_empty(global.inFront_x,global.inFront_y) || DropCheckerPot() || place_meeting(global.inFront_x,global.inFront_y,objDryingRack) || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil)|| place_meeting(global.inFront_x,global.inFront_y,objBetterSand))// so shit's no stuck in trees for something
-			{
-				canHit = false;
-				alarm[0] = global.equip.hitlag;
-
-				with(instance_create_layer(global.inFront_x,global.inFront_y, "Instances", objItem))
-				{
-					ID = global.equip.image_id;
-					NUM = global.equip.amount;
-					DROP = global.equip;
-				
-				}
-				removeInventory(global.equip.image_id,global.equip.amount,objInventory.inventory);
-	
-				if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)
-				{
 					global.equip = new PlaceHolder();
+					
 				
 				}
 		
@@ -138,6 +131,8 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 
 		}
 	}
+	
+	
 
 
 	if(keyboard_check_pressed(A_Key) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && canHit = true && ds_list_size(objInventory.inventory) > 0)
@@ -219,12 +214,13 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 		
 		if(global.equip.type == 4) //Clothing
 		{
+			pitchRandomizer(sfxEquip, 10, false);
 			if(global.equip.image_id == 63) // BeastTunic
 			{	
 				if(!global.WearTunic)
 				{
 					global.equip.equiped = true;
-					with(instance_create_layer(0,0,"Instances",objBeastTunic))
+					with(instance_create_layer(room_width,room_height,"Instances",objBeastTunic))
 					{
 						val = global.equip;
 					}
@@ -241,12 +237,13 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 		
 		if(global.equip.type == 5) //Hats
 		{
+			pitchRandomizer(sfxEquip, 10, false);
 			if(global.equip.image_id == 64) // BeastHat
 			{	
 				if(!global.WearHat)
 				{
 					global.equip.equiped = true;
-					with(instance_create_layer(0,0,"Instances",objBeastHat))
+					with(instance_create_layer(room_width,room_height,"Instances",objBeastHat))
 					{
 						val = global.equip;
 					}

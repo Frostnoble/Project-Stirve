@@ -4,7 +4,7 @@ Render();
 KeyGet();
 
 
-if(!stunned && global.gamemode = 0)
+if(!stunned && !eating && global.gamemode = 0)
 {
 
 if(xTarg == x and yTarg == y){
@@ -101,9 +101,8 @@ var _inst = instance_place(x, y, objGrass);
 if (_inst != noone && irandom(100) <= 50)
 {
     if(HP < MHP){HP++;}else{HP = MHP;}
-	stunned = true;
-	waittime -= 10;
-	alarm[0] = 90;
+	eating = true;
+	alarm[2] = 90;
     instance_destroy(_inst);
 }
 

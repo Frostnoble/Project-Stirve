@@ -1,4 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-objPlayer.defence -= 3;
+global.defence -= 3;
 global.WearHat = false;

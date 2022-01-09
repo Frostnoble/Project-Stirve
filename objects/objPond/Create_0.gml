@@ -31,8 +31,10 @@ set_y = y;
 
 for(i = 0; i <= amount; i++)
 {
-	
-	if(place_empty(x_pos, y_pos,objWaterPond))
+	var lay_id = layer_get_id("Tileset");
+	var map_id = layer_tilemap_get_id(lay_id);
+	var checktile = tilemap_get_at_pixel(map_id, x_pos, y_pos);
+	if(place_empty(x_pos, y_pos,objWaterPond) && checktile == 2)
 	{
 
 		

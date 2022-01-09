@@ -15,7 +15,9 @@ function Render(){
 		instance_deactivate_object(objGrass);
 		instance_deactivate_object(objSmallGrass);
 		instance_deactivate_object(objDrop);
-		instance_deactivate_object(objItem);
+
+		//instance_deactivate_object(objItem);
+		
 		instance_deactivate_object(objCampFire);
 		instance_deactivate_object(objWorkStation);
 		instance_deactivate_object(objRabbit);

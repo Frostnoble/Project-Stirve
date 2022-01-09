@@ -14,9 +14,9 @@ if(global.gamemode != 1 && global.gamemode != 3)
 	draw_text(x+1, draw_y-2,"<");
 	draw_text(x+1, draw_y-1,"  "+string(global.HEALTH));
 
-	if(objPlayer.defence > 0){
+	if(global.defence > 0){
 		draw_sprite(sprArmor,0,x+125, draw_y);
-		draw_text(x+126, draw_y-1,"  "+string(objPlayer.defence));
+		draw_text(x+126, draw_y-1,"  "+string(global.defence));
 	}
 	//Health
 	draw_text(x+1, draw_y+7,"H");

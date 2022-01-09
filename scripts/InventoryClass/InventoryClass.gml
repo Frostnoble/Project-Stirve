@@ -161,24 +161,28 @@ function Rope () : Item () constructor {
 }
 
 
-function FireStarter () : Item () constructor {
+function FireStarter() : Item () constructor {
 	name = "FireStarter";
 	image_id = 8;
 	amount = 1;
-	type = 2;
+	type = 1;
 	hitlag = 100;
-	tool_id = 0;
-	Spawn = objCampFire;
 	crafting = ds_map_create();
 	KP_lock = 5;
 	yeald = 1;
-	ds_map_add(crafting, new Wood(), 5)
+	attackPow = 1;
+	cuttingPow = 1;
+	smashingPow = 1;
+	hitlag = 100;
+	tool_id = objFire;
+	ds_map_add(crafting, new Wood(), 4)
 	ds_map_add(crafting, new Rope(), 1)
+	ds_map_add(crafting, new TreeBark(), 1)
 	desc = "Place this on\nthe ground to\ncreate a\nCampFire.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
-	ds_list_add(craftHelper, 0,7)
+	ds_list_add(craftHelper, 0,7,59)
 }
 
 function WorkStation () : Item () constructor {

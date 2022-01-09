@@ -102,10 +102,10 @@ if(place_meeting(xTarg,yTarg,objPlayer) && !stunned){
 	xTarg = x; 
 	yTarg = y;
 	
-	if(!global.inv && objPlayer.defence < 65)
+	if(!global.inv && global.defence < 65)
 	{
 		pitchRandomizer(sfxHurt,10,false);
-		if(global.HEALTH - 65 + objPlayer.defence < 0){global.HEALTH = 0}else{global.HEALTH -= 65 + objPlayer.defence}
+		if(global.HEALTH - 65 + global.defence < 0){global.HEALTH = 0}else{global.HEALTH -= 65 + global.defence}
 		objPlayer.hurtFrames = 30;
 	}
 	

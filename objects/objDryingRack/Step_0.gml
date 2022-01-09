@@ -30,7 +30,8 @@ item = instance_position(x,y,objItem);
 
 if (item != noone)
 {
-	show_debug_message(string(timeTillDry) + " " + string(global.worldTime))
+	inUse = true;
+	//show_debug_message(string(timeTillDry) + " " + string(global.worldTime))
 	if(!trans && item.DROP.canDry)
 	{
 		timeTillDry = global.worldTime + item.DROP.DryTime;
@@ -73,6 +74,7 @@ else
 {
 	timeTillDry = 0;
 	trans = false;
+	inUse = false;
 }
 
 

@@ -10,3 +10,33 @@ function DropCheckerPot(){
 		return false
 	}
 }
+
+function checkIfSame(){
+
+	item = instance_position(global.inFront_x,global.inFront_y,objItem);
+	dry = instance_position(global.inFront_x,global.inFront_y,objDryingRack);
+
+	if(dry != noone)
+	{
+		if(dry.trans)
+		{
+			return false;
+			
+		}
+	}
+	
+	if(item != noone){
+		if (item.ID == global.equip.image_id)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}	
+	}
+	else
+	{
+		return false;
+	}
+}

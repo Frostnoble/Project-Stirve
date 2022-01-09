@@ -108,10 +108,10 @@ if(place_meeting(xTarg,yTarg,objPlayer) && !stunned  && HP != 5){
 	
 	if(!global.inv)
 	{
-		if(objPlayer.defence < 15)
+		if(global.defence < 15)
 		{
 			pitchRandomizer(sfxHurt,10,false);
-			if(global.HEALTH - 15 - objPlayer.defence < 0){global.HEALTH = 0}else{global.HEALTH -= 15 - objPlayer.defence}
+			if(global.HEALTH - 15 - global.defence < 0){global.HEALTH = 0}else{global.HEALTH -= 15 - global.defence}
 			objPlayer.hurtFrames = 30;
 		}
 		else
@@ -137,8 +137,8 @@ var _inst = instance_place(wolfinFront_x ,wolfinFront_y, objRabbit);
 if (_inst != noone && irandom(100) <= 50)
 {
     if(HP < MHP){HP++;}else{HP = MHP;}
-	attacking = true;
-	alarm[2] = 30;
+	eating = true;
+	alarm[3] = 30;
     with(_inst){HP -= 5;}
 }
 

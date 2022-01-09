@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-objPlayer.defence += 5;
+global.defence += 5;
 global.WearTunic = true;
-x = 0;
-y = 0;
+x = room_width;
+y = room_height;
 val = 0;
+check = 0;

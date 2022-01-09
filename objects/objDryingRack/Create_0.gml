@@ -7,7 +7,7 @@ trans = false;
 timeTillDry = 0;
 HP = 10;
 Hitable = true;
-
+inUse = false;
 wobbling = false;
 wobble = 0;
 

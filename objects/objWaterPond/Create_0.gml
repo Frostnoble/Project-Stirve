@@ -9,8 +9,7 @@ ds_list_add(addedRecipes, new RawClay());
 
 
 
-drop = instance_place(x, y,objItem)
-if(drop != noone){instance_destroy(drop)}
+
 
 
 

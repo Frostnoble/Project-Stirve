@@ -11,8 +11,8 @@ if(global.startType == 0){
 		randomize();
 
 
-		for(var i = 0; i < room_width; i++)
-		for(var j = 0; j < room_height; j++)
+		for(var i = 0; i < room_width/16; i++)
+		for(var j = 0; j < room_height/16; j++)
 		{
 		
 			//var index = map_value(FastNoise(i, j, 1), -1, 1, 0, 255);
@@ -115,11 +115,17 @@ if(global.startType == 0){
 		global.weather = 0;
 		global.WearTunic = false;
 		global.WearHat = false;
+		global.defence = 0;
 	}
 
 }
 else if(global.startType == 1){
 	if(!done){
+		
+		global.defence = 0;
+		global.WearTunic = false;
+		global.WearHat = false;
+		
 		
 		LoadGame();
 		global.equip = objInventory.inventory[|0];

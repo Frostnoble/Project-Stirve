@@ -4,6 +4,7 @@ dir = 0
 
 spd = 1;
 waittime = 10;
+
 HP = 2;
 MHP = 2;
 KP = 15;
@@ -15,7 +16,7 @@ yTarg = ystart
 
 
 
-
+eating = false;
 stunned = false;
 move_xinput = 0;
 move_yinput = 0;

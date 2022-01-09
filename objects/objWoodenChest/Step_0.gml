@@ -23,7 +23,8 @@ if((global.inFront_x == x && global.inFront_y == y) && keyboard_check_pressed(B_
 			
 		}	
 	}
-	storage_selector = objInventory.inventory[| 0];
+	if(modetype){storage_selector = objInventory.inventory[| 0];}
+	if(!modetype){storage_selector = storage[| 0];}
 	if(image_index != 1 ){image_index = 1}else{image_index = 0}
 
 }
@@ -93,7 +94,7 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 
 
 		}
-		show_debug_message(storage_selector)
+		//show_debug_message(storage_selector)
 		if(keyboard_check_pressed(A_Key) && (ds_list_size(storage) < 9 || checkInventory(storage_selector,storage)) && ds_list_size(storage) >= 0)
 		{
 			

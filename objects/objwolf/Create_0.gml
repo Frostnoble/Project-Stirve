@@ -15,7 +15,7 @@ yTarg = ystart
 
 
 
-
+eating = false;
 stunned = false;
 attacking = false;
 move_xinput = 0;

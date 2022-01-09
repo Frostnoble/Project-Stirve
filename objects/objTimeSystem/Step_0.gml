@@ -178,7 +178,7 @@ if(sick_timer == global.status.time && global.gamemode == 0){
 }
 
 //Calculate time of day
-if(objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && seconds2 == 0 && (minutes2 == 0 || minutes2 == 20 || minutes2 == 40))
+if(objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && seconds2 == 0 && (minutes2 == 0 || minutes2 == 20 || minutes2 == 40) && global.gamemode == 0)
 {
 	//sick_timer++;
 	if(global.FATIGUE - 2 < 0){global.FATIGUE = 0;}else{global.FATIGUE -= 2;}

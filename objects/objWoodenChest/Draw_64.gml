@@ -30,11 +30,14 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y)
 		{
 	
 			draw_sprite(sprItems,objInventory.inventory[| i].image_id,xx+1,yy+1);
+
 			if(objInventory.inventory[| i].amount != 1)
 			{
-				
-				draw_text(xx+2,yy,string(objInventory.inventory[| i].amount))
-				
+				draw_set_colour(c_white);
+				draw_set_font(font_add_sprite_ext(sprNumbers, "0123456789", true, 0));
+				draw_text(xx,yy,string(objInventory.inventory[| i].amount))
+				draw_set_colour(c_black);
+				draw_set_font(Gameboy);
 			}
 		}
 	}
@@ -69,9 +72,11 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y)
 			draw_sprite(sprItems,storage[| j].image_id,xx+1,yy+1);
 			if(storage[| j].amount != 1)
 			{
-				
-				draw_text(xx+2,yy,string(storage[| j].amount))
-				
+				draw_set_colour(c_white);
+				draw_set_font(font_add_sprite_ext(sprNumbers, "0123456789", true, 0));
+				draw_text(xx,yy,string(storage[| j].amount))
+				draw_set_colour(c_black);
+				draw_set_font(Gameboy);
 			}
 		}
 	}
