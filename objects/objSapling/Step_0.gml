@@ -29,15 +29,3 @@ if(growth >= timeToFrames(3,0,0))
 	instance_destroy();
 }
 
-if(global.light_times == "Day")
-{
-	sprite_index = sprSapling_Day;
-}
-else if(global.light_times == "Eve")
-{
-	sprite_index = sprSapling_Eve;
-}
-else if(global.light_times == "Night")
-{
-	sprite_index = sprSapling_Night;
-}

@@ -1,4 +1,4 @@
-//######################_==_YOYO_SHADER_MARKER_==_######################@~//
+//
 // Simple passthrough fragment shader
 //
 varying vec2 v_vTexcoord;

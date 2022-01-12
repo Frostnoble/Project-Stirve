@@ -1,5 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(global.light_times == "Day")
+{
+	shader_set(None);
+}
+else if(global.light_times == "Eve")
+{
+	shader_set(Evening);
+}
+else if(global.light_times == "Night")
+{
+	shader_set(Night);
+}
 var x_offset;
 
 // has wobbling been initiated?
@@ -35,3 +47,4 @@ if(currenthold != 0)
 	draw_set_colour(c_black);
 	draw_set_font(Gameboy);
 }
+shader_reset();

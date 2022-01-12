@@ -33,16 +33,3 @@ if(HP <= 0)
 	objPlayer.alarm[0] = 1;
 	instance_destroy();
 }
-
-if(global.light_times == "Day")
-{
-	sprite_index = sprGrass_Day;
-}
-else if(global.light_times == "Eve")
-{
-	sprite_index = sprGrass_Eve;
-}
-else if(global.light_times == "Night")
-{
-	sprite_index = sprGrass_Night;
-}

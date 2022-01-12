@@ -5,7 +5,7 @@
     "path": "folders/Shaders.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Night",
+  "name": "Evening",
   "tags": [],
   "resourceType": "GMShader",
 }

@@ -24,18 +24,6 @@ if(HP <= 0)
 }
 
 
-if(global.light_times == "Day")
-{
-	sprite_index = sprRock_Day;
-}
-else if(global.light_times == "Eve")
-{
-	sprite_index = sprRock_Eve;
-}
-else if(global.light_times == "Night")
-{
-	sprite_index = sprRock_Night;
-}
 
 
 

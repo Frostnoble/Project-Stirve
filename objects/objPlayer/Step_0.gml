@@ -172,6 +172,17 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 				if(global.FATIGUE + 1 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 1;}
 			}
 			
+			global.equip.dura--;
+			if(global.equip.dura <= 0)
+			{
+				global.equip.dura = global.equip.dura_max;
+				removeInventory(global.equip.image_id,1,objInventory.inventory);
+				if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)
+				{
+					global.equip = new PlaceHolder();
+				
+				}
+			}
 			alarm[0] = global.equip.hitlag;
 
 		}

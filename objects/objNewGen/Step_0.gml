@@ -110,6 +110,7 @@ if(global.startType == 0){
 		ds_map_add(global.unlocked,65,0) //Ash
 		ds_map_add(global.unlocked,67,5) //JuiceClay
 		ds_map_add(global.unlocked,68,5) //JuiceWood
+		ds_map_add(global.unlocked,69,0) //PrePit
 		audio_master_gain(1);
 		
 		global.weather = 0;

@@ -3,7 +3,7 @@
 if(!global.lightning){
 var old_color = draw_get_color();
 surface_set_target( application_surface );
-draw_set_alpha( 0.5 ); // 0 = transparent, 1 = opaque
+draw_set_alpha( 0.6 ); // 0 = transparent, 1 = opaque
 draw_set_color(c_black);
 draw_rectangle( 0, 0, window_get_width(), window_get_height() ,0);
 draw_set_alpha(1);

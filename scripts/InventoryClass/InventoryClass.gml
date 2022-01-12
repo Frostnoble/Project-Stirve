@@ -50,6 +50,8 @@ function Knife () : Item () constructor {
 	image_id = 2;
 	amount = 1;
 	type = 1;
+	dura = max;
+	dura_max = max;
 	attackPow = 1;
 	cuttingPow = 1;
 	smashingPow = 1;
@@ -166,6 +168,8 @@ function FireStarter() : Item () constructor {
 	image_id = 8;
 	amount = 1;
 	type = 1;
+	dura = 3;
+	dura_max = 3;
 	hitlag = 100;
 	crafting = ds_map_create();
 	KP_lock = 5;
@@ -210,6 +214,8 @@ function StoneAxe () : Item () constructor {
 	image_id = 10;
 	amount = 1;
 	type = 1;
+	dura = 50;
+	dura_max = 50;
 	attackPow = 3;
 	cuttingPow = 3;
 	smashingPow = 1;
@@ -379,6 +385,8 @@ function StoneSpade () : Item () constructor {
 	image_id = 18;
 	amount = 1;
 	type = 1;
+	dura = 50;
+	dura_max = 50;
 	attackPow = 2;
 	cuttingPow = 1;
 	smashingPow = 2;
@@ -444,6 +452,8 @@ function StonePickaxe () : Item () constructor {
 	image_id = 22;
 	amount = 1;
 	type = 1;
+	dura = 50;
+	dura_max = 50;
 	attackPow = 3;
 	cuttingPow = 1;
 	smashingPow = 3;
@@ -484,7 +494,9 @@ function ClayBowl () : Item () constructor {
 	name = "RedBowl";
 	image_id = 24;
 	amount = 1;
-	type = 1;
+	type = 10;
+	dura = 5;
+	dura_max = 5;
 	hitlag = 1;
 	tool_id = objBottle;
 	crafting = ds_map_create();
@@ -630,6 +642,8 @@ function FishingRod () : Item () constructor {
 	image_id = 31;
 	amount = 1;
 	type = 1;
+	dura = 50;
+	dura_max = 50;
 	attackPow = 0;
 	cuttingPow = 0;
 	smashingPow = 0;
@@ -996,6 +1010,8 @@ function StoneHoe () : Item () constructor {
 	image_id = 46;
 	amount = 1;
 	type = 1;
+	dura = 50;
+	dura_max = 50;
 	attackPow = 1;
 	cuttingPow = 1;
 	smashingPow = 1;
@@ -1040,6 +1056,8 @@ function Spear () : Item () constructor {
 	image_id = 48;
 	amount = 1;
 	type = 1;
+	dura = 50;
+	dura_max = 50;
 	attackPow = 4;
 	cuttingPow = 0;
 	smashingPow = 0;
@@ -1092,6 +1110,8 @@ function WoodenBowl() : Item () constructor {
 	image_id = 51;
 	amount = 1;
 	type = 1;
+	dura = 1;
+	dura_max = 1;
 	hitlag = 1;
 	tool_id = objBottleWood;
 	crafting = ds_map_create();
@@ -1517,3 +1537,22 @@ function ClayBowlJuice() : Item () constructor {
 
 }
 
+function PrePit () : Item () constructor {
+	name = "Fire Pit";
+	image_id = 69;
+	amount = 1;
+	type = 2;
+	hitlag = 100;
+	tool_id = 0;
+	Spawn = objPrePit;
+	crafting = ds_map_create();
+	KP_lock = 10;
+	yeald = 1;
+	ds_map_add(crafting, new Stone(), 3)
+	ds_map_add(crafting, new TreeBark(), 1)
+	desc = "Place this dow\nand use a\nFireStarter";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 1,59)
+}

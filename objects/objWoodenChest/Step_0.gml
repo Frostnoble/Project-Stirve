@@ -42,18 +42,6 @@ if(HP <= 0)
 	instance_destroy();
 }
 
-if(global.light_times == "Day")
-{
-	sprite_index = sprWoodenChest_Day;
-}
-else if(global.light_times == "Eve")
-{
-	sprite_index = sprWoodenChest_Eve;
-}
-else if(global.light_times == "Night")
-{
-	sprite_index = sprWoodenChest_Night;
-}
 
 if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 

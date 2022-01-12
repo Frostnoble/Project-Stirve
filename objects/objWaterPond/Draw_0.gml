@@ -1,6 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if(global.light_times == "Day")
+{
+	shader_set(None);
+}
+else if(global.light_times == "Eve")
+{
+	shader_set(Evening);
+}
+else if(global.light_times == "Night")
+{
+	shader_set(Night);
+}
 draw_self();
 
 if(!spawned)
@@ -143,4 +154,4 @@ if(!UP && !DOWN && !LEFT && !RIGHT)
 	
 }
 
-
+shader_reset();

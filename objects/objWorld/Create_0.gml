@@ -31,6 +31,7 @@ objPot,
 objTreeHive,
 objTreeHiveFull,
 objSplash,
+objPrePit,
 objPlayer);
 
 OutfitList = ds_list_create();
@@ -84,6 +85,7 @@ new BeastTunic(),
 new BeastHat(),
 new WoodBowlJuice(),
 new ClayBowlJuice(),
+new PrePit(),
 new Ash()];
 
 

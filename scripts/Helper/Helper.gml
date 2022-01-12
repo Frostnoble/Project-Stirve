@@ -51,6 +51,13 @@ function DAY()
 {
 	
 	global.light_times = "Day";
+	
+	var lay_id = layer_get_id("Tileset");
+	layer_shader(lay_id, None)
+	
+	var lay_id = layer_get_id("Water");
+	layer_shader(lay_id, None)
+	/*
 	var lay_id = layer_get_id("Tileset");
 	var tile_id = layer_tilemap_get_id(lay_id);
 	if tilemap_get_tileset(tile_id) != TileSet_Day
@@ -63,7 +70,7 @@ function DAY()
 	if tilemap_get_tileset(tile_id2) != TileSet_Day
 	{
 		 tilemap_tileset(tile_id2, TileSet_Day);
-	}
+	}*/
 }
 
 
@@ -71,6 +78,12 @@ function EVE()
 {
 	
 	global.light_times = "Eve";
+	var lay_id = layer_get_id("Tileset");
+	layer_shader(lay_id, Evening)
+	
+	var lay_id = layer_get_id("Water");
+	layer_shader(lay_id, Evening)
+	/*
 	var lay_id = layer_get_id("Tileset");
 	var tile_id = layer_tilemap_get_id(lay_id);
 	if tilemap_get_tileset(tile_id) != TileSet_Eve
@@ -83,7 +96,7 @@ function EVE()
 	if tilemap_get_tileset(tile_id2) != TileSet_Eve
 	{
 		 tilemap_tileset(tile_id2, TileSet_Eve);
-	}
+	}*/
 }
 
 
@@ -94,6 +107,12 @@ function NIGHT()
 {
 	
 	global.light_times = "Night";
+	var lay_id = layer_get_id("Tileset");
+	layer_shader(lay_id, Night)
+	
+	var lay_id = layer_get_id("Water");
+	layer_shader(lay_id, Night)
+	/*
 	var lay_id = layer_get_id("Tileset");
 	var tile_id = layer_tilemap_get_id(lay_id);
 	if tilemap_get_tileset(tile_id) != TileSet_Night
@@ -107,6 +126,7 @@ function NIGHT()
 	{
 		 tilemap_tileset(tile_id2, TileSet_Night);
 	}
+	*/
 }
 
 

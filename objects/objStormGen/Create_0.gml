@@ -11,8 +11,8 @@ part_type_shape(partRain,pt_shape_line);
 part_type_alpha2(partRain,1,1);
 part_type_size(partRain,0.1,0.1,0,0);
 part_type_color2(partRain,c_aqua,c_blue);
-part_type_direction(partRain,270,270,0,0);
-part_type_orientation(partRain,270,270,0,0,0);
+part_type_direction(partRain,250,250,0,0);
+part_type_orientation(partRain,250,250,0,0,0);
 part_type_speed(partRain,7,9,0,0);
 part_type_life(partRain,100,1200);
 
