@@ -24,3 +24,4 @@ if(growth >= timeToFrames(1,0,0))
 	instance_destroy();
 }
 
+killPlant(x,y);

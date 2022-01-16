@@ -11,6 +11,14 @@ function ReturnItem(image_id)
 		case 58://GrilledFish
 			addInventory(24,1,new ClayBowl(),objInventory.inventory)
 		break;
+		
+		case 63://BeastTunic
+			addInventory(70,1,new BoneNeedle(),objInventory.inventory)
+		break;
+		
+		case 64://BeastHat
+			addInventory(70,1,new BoneNeedle(),objInventory.inventory)
+		break;
 
 	}
 

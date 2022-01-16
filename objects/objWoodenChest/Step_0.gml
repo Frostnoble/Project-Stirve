@@ -58,28 +58,28 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 		var i = ds_list_find_index(objInventory.inventory, storage_selector);
 		var size = ds_list_size(objInventory.inventory);
 
-		if(keyboard_check_pressed(vk_right) && ds_list_find_value(objInventory.inventory, i+1)){
+		if((keyboard_check_pressed(RIGHT_Key) || keyboard_check_pressed(RIGHT_Key2)) && ds_list_find_value(objInventory.inventory, i+1)){
 
 		storage_selector = objInventory.inventory[| i+1];
-
+		audio_play_sound(sfxMoveSelect,10,false);
 
 		}
-		if(keyboard_check_pressed(vk_left) && ds_list_find_value(objInventory.inventory, i-1)){
+		if((keyboard_check_pressed(LEFT_Key) || keyboard_check_pressed(LEFT_Key2)) && ds_list_find_value(objInventory.inventory, i-1)){
 
 		storage_selector = objInventory.inventory[| i-1];
-
+		audio_play_sound(sfxMoveSelect,10,false);
 
 		}
-		if(keyboard_check_pressed(vk_down) && ds_list_find_value(objInventory.inventory, i+3)){
+		if((keyboard_check_pressed(DOWN_Key) || keyboard_check_pressed(DOWN_Key2)) && ds_list_find_value(objInventory.inventory, i+3)){
 
 		storage_selector = objInventory.inventory[| i+3];
-
+		audio_play_sound(sfxMoveSelect,10,false);
 
 		}
-		if(keyboard_check_pressed(vk_up) && ds_list_find_value(objInventory.inventory, i-3)){
+		if((keyboard_check_pressed(UP_Key) || keyboard_check_pressed(UP_Key2)) && ds_list_find_value(objInventory.inventory, i-3)){
 
 		storage_selector = objInventory.inventory[| i-3];
-
+		audio_play_sound(sfxMoveSelect,10,false);
 
 		}
 		//show_debug_message(storage_selector)
@@ -102,28 +102,28 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 		var i = ds_list_find_index(storage, storage_selector);
 		var size = ds_list_size(storage);
 
-		if(keyboard_check_pressed(vk_right) && ds_list_find_value(storage, i+1)){
+		if((keyboard_check_pressed(RIGHT_Key) || keyboard_check_pressed(RIGHT_Key2)) && ds_list_find_value(storage, i+1)){
 
 		storage_selector = storage[| i+1];
-
+		audio_play_sound(sfxMoveSelect,10,false);
 
 		}
-		if(keyboard_check_pressed(vk_left) && ds_list_find_value(storage, i-1)){
+		if((keyboard_check_pressed(LEFT_Key) || keyboard_check_pressed(LEFT_Key2)) && ds_list_find_value(storage, i-1)){
 
 		storage_selector = storage[| i-1];
-
+		audio_play_sound(sfxMoveSelect,10,false);
 
 		}
-		if(keyboard_check_pressed(vk_down) && ds_list_find_value(storage, i+3)){
+		if((keyboard_check_pressed(DOWN_Key) || keyboard_check_pressed(DOWN_Key2)) && ds_list_find_value(storage, i+3)){
 
 		storage_selector = storage[| i+3];
-
+		audio_play_sound(sfxMoveSelect,10,false);
 
 		}
-		if(keyboard_check_pressed(vk_up) && ds_list_find_value(storage, i-3)){
+		if((keyboard_check_pressed(UP_Key) || keyboard_check_pressed(UP_Key2)) && ds_list_find_value(storage, i-3)){
 
 		storage_selector = storage[| i-3];
-
+		audio_play_sound(sfxMoveSelect,10,false);
 
 		}
 		

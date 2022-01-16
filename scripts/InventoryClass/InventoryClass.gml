@@ -405,7 +405,7 @@ function StoneSpade () : Item () constructor {
 	ds_list_add(craftHelper, 0,7,1)
 }
 
-function Sand () : Item () constructor {
+function Sand() : Item () constructor {
 	name = "Sand";
 	image_id = 19;
 	amount = 1;
@@ -1421,12 +1421,13 @@ function BeastTunic() : Item () constructor {
 	crafting = ds_map_create();
 	ds_map_add(crafting, new BeastPelt(), 5)
 	ds_map_add(crafting, new Rope(), 2)
+	ds_map_add(crafting, new BoneNeedle(), 1)
 	KP_lock = 20;
 	desc = "Basic clothing\nthat raises\ndefence.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
-	ds_list_add(craftHelper, 39, 7)
+	ds_list_add(craftHelper, 39, 7, 70)
 }
 
 function BeastHat() : Item () constructor {
@@ -1441,12 +1442,13 @@ function BeastHat() : Item () constructor {
 	crafting = ds_map_create();
 	ds_map_add(crafting, new BeastPelt(), 3)
 	ds_map_add(crafting, new Rope(), 1)
+	ds_map_add(crafting, new BoneNeedle(), 1)
 	KP_lock = 20;
 	desc = "Basic hat\nthat raises\ndefence.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
-	ds_list_add(craftHelper, 39, 7)
+	ds_list_add(craftHelper, 39, 7, 70)
 }
 
 function Ash() : Item () constructor {
@@ -1556,3 +1558,22 @@ function PrePit () : Item () constructor {
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 1,59)
 }
+
+function BoneNeedle() : Item () constructor {
+	name = "BoneNeedle";
+	image_id = 70;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new Bone(), 1)
+	desc = "A needle used\nfor making\nclothing.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 6)
+}
+

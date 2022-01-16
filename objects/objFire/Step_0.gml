@@ -3,14 +3,29 @@
 timer++
 if(timer >= 100){instance_destroy();}
 
-PrePit = instance_position(x,y,objPrePit);
-
-if (PrePit != noone)
+var PrePit = instance_place(x, y, objPrePit);
+if  PrePit != noone
 {
-	with(PrePit)
-	{
-		instance_create_layer(x,y, "Instances", objCampFire);
-		instance_destroy();
-	}
-	instance_destroy();
+	instance_create_layer(x-8,y-8, "Instances", objCampFire);
+    instance_destroy(PrePit);
+	
+}
+
+var tree = instance_place(x, y, objTree);
+if  tree != noone
+{
+	spawnDrop(65,new Ash(),8,x-8,y-8);
+    instance_destroy(tree);
+	
+}
+
+
+
+var item = instance_place(x, y, objItem);
+if item != noone && (item.ID == 0)
+{
+	num = item.NUM;
+	instance_destroy(item);
+	spawnDrop(65,new Ash(),num,x-8,y-8);
+
 }

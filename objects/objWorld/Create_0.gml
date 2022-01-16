@@ -86,6 +86,7 @@ new BeastHat(),
 new WoodBowlJuice(),
 new ClayBowlJuice(),
 new PrePit(),
+new BoneNeedle(),
 new Ash()];
 
 

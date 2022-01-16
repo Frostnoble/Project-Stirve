@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+KeyGet()
 dir = 0
-movekeys = [vk_right,vk_up,vk_left,vk_down]
+movekeys = [RIGHT_Key,UP_Key,LEFT_Key,DOWN_Key]
+movekeys2 = [RIGHT_Key2,UP_Key2,LEFT_Key2,DOWN_Key2]
 spd = 1
 xTarg = xstart
 yTarg = ystart

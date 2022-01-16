@@ -3,23 +3,11 @@
 
 Render();
 
-
-
-if(keyboard_check_pressed(ord("S")))
-{
-	
-	SaveGame();
-}
-
-if(keyboard_check_pressed(ord("L")))
-{
-
-	LoadGame();
-}
+KeyGet();
 
 
 
-if(keyboard_check(vk_right) || keyboard_check(vk_left) || keyboard_check(vk_up) || keyboard_check(vk_down))
+if(keyboard_check(DOWN_Key) || keyboard_check(DOWN_Key2) || keyboard_check(UP_Key) || keyboard_check(UP_Key2) || keyboard_check(RIGHT_Key) || keyboard_check(RIGHT_Key2) || keyboard_check(LEFT_Key) || keyboard_check(LEFT_Key2))
 {
 	global.stepsSincePressed++;
 	//show_debug_message(global.stepsSincePressed);
@@ -28,6 +16,8 @@ else
 {
 	global.stepsSincePressed = 0;
 }
+
+
 
 if(global.TempoWater > 15){global.TempoWater = 0;}else{global.TempoWater++}
 

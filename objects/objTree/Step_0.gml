@@ -33,6 +33,8 @@ if(HP <= 0)
 
 
 
+killPlant(x,y);
+
 
 
 

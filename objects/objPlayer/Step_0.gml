@@ -24,7 +24,7 @@ if(keyboard_check_pressed(ord("R")))
 	
 }
 
-if(keyboard_check_pressed(ord("S")))
+if(keyboard_check_pressed(ord("I")))
 {
 
 	if(instance_exists(objStormGen))
@@ -32,14 +32,6 @@ if(keyboard_check_pressed(ord("S")))
 		instance_destroy(objStormGen);
 	}
 	else{instance_create_layer(0,0, "Instances", objStormGen);}
-
-	
-}
-
-if(keyboard_check_pressed(ord("P")))
-{
-
-	instance_create_layer(x,y+16, "Instances", objPrePit);
 
 	
 }
@@ -64,10 +56,16 @@ global.inFront_y_More = round((objPlayer.y+lengthdir_y(TILE_H*2*objPlayer.spd,ob
 if(keyboard_check_pressed(Start_Key) && ds_list_size(objInventory.inventory) > 0 && global.gamemode != 1  && global.gamemode != 4 && global.gamemode != 3  && global.gamemode != 5 && global.gamemode != 6 && global.gamemode != 7)
 {
 	
-	if(global.gamemode != 2){
+	if(global.gamemode != 2)
+	{
 		global.gamemode = 2
+		audio_play_sound(sfxMoveOpen,10,false);
 		global.equip = objInventory.inventory[|0];
-		}else{global.gamemode = 0}
+	}else
+	{
+		audio_play_sound(sfxMoveClose,10,false);
+		global.gamemode = 0
+	}
 }
 
 if(keyboard_check_pressed(B_Key) && global.gamemode != 2  && global.gamemode != 4 && global.gamemode != 3)
@@ -279,10 +277,12 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 		for ( var i = 0; i < array_length(movekeys); i++){
 			
 			var this_key = movekeys[i];
-			if keyboard_check(this_key) {
+			var this_key2 = movekeys2[i];
+			if keyboard_check(this_key) || keyboard_check(this_key2) {
 			    var this_angle = i*90;
 				steps++;
 				totalsteps++;
+				
 			    move_xinput += lengthdir_x(1, this_angle);
 			    move_yinput += lengthdir_y(1, this_angle);
 				if(global.status.name == "Woozy")
@@ -292,6 +292,9 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 				}
 			}
 		}
+		
+	
+		
 	
 		if(point_distance(0,0,move_xinput,move_yinput) > 0){
 		

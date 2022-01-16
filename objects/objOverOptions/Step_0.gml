@@ -6,12 +6,12 @@ if(global.gamemode == 5)
 	var i = ds_list_find_index(options, selected);
 	var size = ds_list_size(options);
 
-	if(keyboard_check_pressed(vk_down) &&  i < ds_list_size(options)-1)
+	if((keyboard_check_pressed(DOWN_Key) || keyboard_check_pressed(DOWN_Key2)) &&  i < ds_list_size(options)-1)
 	{
 		selected = options[| i+1];
 		audio_play_sound(sfxMenu,10,false);
 	}
-	if(keyboard_check_pressed(vk_up) &&  i > 0)
+	if((keyboard_check_pressed(UP_Key) || keyboard_check_pressed(UP_Key2)) &&  i > 0)
 	{
 		selected = options[| i-1];
 		audio_play_sound(sfxMenu,10,false);
@@ -37,6 +37,13 @@ if(global.gamemode == 5)
 		
 				instance_destroy();
 			break;	
+			
+			case "Controls":
+				global.gamemode = 8;
+				instance_create_layer(view_xport[0],view_yport[0] + 144/4, "Instances", objControls);
+				instance_destroy();
+			break;	
+			
 			case "Save/Quit":
 				
 				global.gamemode = 0;

@@ -30,7 +30,7 @@ if(global.startType == 0){
 			var index = global.world[# i, j];
 			if((index >= 10 && index <= 20) && checktile == 1){spawnDrop(60,new Seaweed(),1,x_spawn,y_spawn);}
 			if((index >= 30 && index <= 40) && checktile == 1){spawnDrop(61,new SeaShell(),1,x_spawn,y_spawn);}
-			if((x_spawn > 150 && x_spawn < room_width -150) && (y_spawn > 150 && y_spawn < room_height -150) && place_empty(x_spawn,y_spawn)){
+			if(checktile == 2 && (x_spawn > 150 && x_spawn < room_width -150) && (y_spawn > 150 && y_spawn < room_height -150) && place_empty(x_spawn,y_spawn)){
 			
 				
 			
@@ -42,7 +42,7 @@ if(global.startType == 0){
 				if(index <= 590 && index >= 580){instance_create_layer(x_spawn,y_spawn, "Instances", objRock);}
 				if(index <= 14 && index >= 11){instance_create_layer(x_spawn,y_spawn, "Instances", objBush);}
 				if(index <= 17 && index >= 15){instance_create_layer(x_spawn,y_spawn, "Instances", objBerryBush);}
-				if(index <= 23 && index >= 21){instance_create_layer(x_spawn,y_spawn, "Instances", objTreeHive);}
+				if(index <= 23 && index >= 22){instance_create_layer(x_spawn,y_spawn, "Instances", objTreeHive);}
 				if(index <= 26 && index >= 25){instance_create_layer(x_spawn,y_spawn, "Instances", objTreeHiveFull);}
 				if(index == 15){instance_create_layer(x_spawn,y_spawn, "Instances", objRabbit);}
 				if(index == 11){instance_create_layer(x_spawn,y_spawn, "Instances", objwolf);}
@@ -111,6 +111,7 @@ if(global.startType == 0){
 		ds_map_add(global.unlocked,67,5) //JuiceClay
 		ds_map_add(global.unlocked,68,5) //JuiceWood
 		ds_map_add(global.unlocked,69,0) //PrePit
+		ds_map_add(global.unlocked,70,20) //BoneNeedle
 		audio_master_gain(1);
 		
 		global.weather = 0;

@@ -7,25 +7,25 @@ if(global.gamemode == 6){
 		var i = ds_list_find_index(objInventory.inventory, res_selector);
 		var size = ds_list_size(objInventory.inventory);
 
-		if(keyboard_check_pressed(vk_right) && ds_list_find_value(objInventory.inventory, i+1)){
+		if((keyboard_check_pressed(RIGHT_Key) || keyboard_check_pressed(RIGHT_Key2)) && ds_list_find_value(objInventory.inventory, i+1)){
 
 		res_selector = objInventory.inventory[| i+1];
 
 
 		}
-		if(keyboard_check_pressed(vk_left) && ds_list_find_value(objInventory.inventory, i-1)){
+		if((keyboard_check_pressed(LEFT_Key) || keyboard_check_pressed(LEFT_Key2)) && ds_list_find_value(objInventory.inventory, i-1)){
 
 		res_selector = objInventory.inventory[| i-1];
 
 
 		}
-		if(keyboard_check_pressed(vk_down) && ds_list_find_value(objInventory.inventory, i+3)){
+		if((keyboard_check_pressed(DOWN_Key) || keyboard_check_pressed(DOWN_Key2)) && ds_list_find_value(objInventory.inventory, i+3)){
 
 		res_selector = objInventory.inventory[| i+3];
 
 
 		}
-		if(keyboard_check_pressed(vk_up) && ds_list_find_value(objInventory.inventory, i-3)){
+		if((keyboard_check_pressed(UP_Key) || keyboard_check_pressed(UP_Key2)) && ds_list_find_value(objInventory.inventory, i-3)){
 
 		res_selector = objInventory.inventory[| i-3];
 
@@ -72,12 +72,12 @@ if(global.gamemode == 6){
 			selected = Possible[| 0];
 		}
 
-		if(keyboard_check_pressed(vk_down) && ds_list_find_value(Possible, i+1))
+		if((keyboard_check_pressed(DOWN_Key) || keyboard_check_pressed(DOWN_Key2)) && ds_list_find_value(Possible, i+1))
 		{
 			selected = Possible[| i+1];
 
 		}
-		if(keyboard_check_pressed(vk_up) && ds_list_find_value(Possible, i-1))
+		if((keyboard_check_pressed(UP_Key) || keyboard_check_pressed(UP_Key2)) && ds_list_find_value(Possible, i-1))
 		{
 			selected = Possible[| i-1];
 

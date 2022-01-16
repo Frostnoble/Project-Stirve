@@ -152,4 +152,12 @@ function pitchRandomizer(sound,priority,loop)
 }
 
 
+function killPlant(x,y)
+{
+	var lay_id = layer_get_id("Tileset");
+	var map_id = layer_tilemap_get_id(lay_id);
+	var checktile = tilemap_get_at_pixel(map_id, x, y);
 
+	if(checktile == 1){instance_destroy();}
+	
+}

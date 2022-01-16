@@ -33,3 +33,4 @@ if(HP <= 0)
 	objPlayer.alarm[0] = 1;
 	instance_destroy();
 }
+killPlant(x,y);

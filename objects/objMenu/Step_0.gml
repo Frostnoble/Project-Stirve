@@ -5,12 +5,12 @@ KeyGet();
 var i = ds_list_find_index(options, selected);
 var size = ds_list_size(options);
 
-if(keyboard_check_pressed(vk_down) &&  i < ds_list_size(options)-1 && global.gamemode == 0)
+if((keyboard_check_pressed(DOWN_Key) || keyboard_check_pressed(DOWN_Key2)) &&  i < ds_list_size(options)-1 && global.gamemode == 0)
 {
 	selected = options[| i+1];
 	audio_play_sound(sfxMenu,10,false);
 }
-if(keyboard_check_pressed(vk_up) &&  i > 0 && global.gamemode == 0)
+if((keyboard_check_pressed(UP_Key) || keyboard_check_pressed(UP_Key2)) &&  i > 0 && global.gamemode == 0)
 {
 	selected = options[| i-1];
 	audio_play_sound(sfxMenu,10,false);

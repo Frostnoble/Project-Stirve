@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
 listCanCraft = ds_list_create();
 
 if(global.gamemode == 1 && global.gamemode != 3){
@@ -34,11 +35,11 @@ if(global.gamemode == 1 && global.gamemode != 3){
 		selected = listCanCraft[| 0];
 	}
 
-	if(keyboard_check_pressed(vk_down) && ds_list_find_value(listCanCraft, i+1))
+	if((keyboard_check_pressed(DOWN_Key) || keyboard_check_pressed(DOWN_Key2)) && ds_list_find_value(listCanCraft, i+1))
 	{
 		selected = listCanCraft[| i+1];
 	}
-	if(keyboard_check_pressed(vk_up) && ds_list_find_value(listCanCraft, i-1))
+	if((keyboard_check_pressed(UP_Key) || keyboard_check_pressed(UP_Key2)) && ds_list_find_value(listCanCraft, i-1))
 	{
 		selected = listCanCraft[| i-1];
 	}

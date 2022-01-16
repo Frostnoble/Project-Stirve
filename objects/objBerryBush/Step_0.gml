@@ -36,6 +36,5 @@ if(HP <= 0)
 	instance_destroy();
 }
 
-draw_self();
-shader_reset();
+killPlant(x,y);
 
