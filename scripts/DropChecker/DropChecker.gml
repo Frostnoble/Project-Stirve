@@ -40,3 +40,14 @@ function checkIfSame(){
 		return false;
 	}
 }
+
+function DropCheckerDryingRack(){
+	if(place_meeting(global.inFront_x,global.inFront_y,objDryingRack) && !place_meeting(global.inFront_x,global.inFront_y,objItem))
+	{
+		return true
+	}
+	else
+	{
+		return false
+	}
+}

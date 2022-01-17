@@ -143,11 +143,32 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 		}
 	}
 
-	if(keyboard_check_pressed(Start_Key))
+	//Switch to Inventroy
+	if(!modetype && keyboard_check_pressed(Start_Key) && ds_list_size(objInventory.inventory) > 0)
 	{
 		modetype = !modetype;
-		if(modetype){storage_selector = objInventory.inventory[| 0];}
-		if(!modetype){storage_selector = storage[| 0];}
+		storage_selector = objInventory.inventory[| 0];
+		
 	}
+	//Switch to Storage
+	else if(modetype && keyboard_check_pressed(Start_Key) && ds_list_size(storage) > 0)
+	{
+		modetype = !modetype;
+		storage_selector = storage[| 0];
+	}
+	
+	if(modetype && ds_list_size(objInventory.inventory) == 0)
+	{
+		modetype = !modetype;
+		storage_selector = storage[| 0];
+	}
+	if(!modetype && ds_list_size(storage) == 0)
+	{
+		modetype = !modetype;
+		storage_selector = objInventory.inventory[| 0];
+	}
+	
+	
+	
 
 }

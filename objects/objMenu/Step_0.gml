@@ -39,6 +39,12 @@ if(keyboard_check_pressed(A_Key) && global.gamemode == 0)
 		
 			//instance_destroy();
 		break;	
+		
+		case "Controls":
+			global.gamemode = 8;
+			instance_create_layer(view_xport[0],view_yport[0] + 144/4, "Instances", objControls);
+			
+		break;	
 		case "Quit":
 			game_end();
 		break;

@@ -102,8 +102,8 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 				}
 				
 			}
-
-			else if(place_empty(global.inFront_x,global.inFront_y) || DropCheckerPot() || place_meeting(global.inFront_x,global.inFront_y,objDryingRack) || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil) || place_meeting(global.inFront_x,global.inFront_y,objBetterSand))// so shit's no stuck in trees for something
+//place_meeting(global.inFront_x,global.inFront_y,objDryingRack)
+			else if(place_empty(global.inFront_x,global.inFront_y) || DropCheckerPot() || DropCheckerDryingRack() || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil) || place_meeting(global.inFront_x,global.inFront_y,objBetterSand))// so shit's no stuck in trees for something
 			{
 
 

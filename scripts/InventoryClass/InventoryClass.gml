@@ -1552,7 +1552,7 @@ function PrePit () : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new Stone(), 3)
 	ds_map_add(crafting, new TreeBark(), 1)
-	desc = "Place this dow\nand use a\nFireStarter";
+	desc = "Place this\ndown and use\na FireStarter";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
