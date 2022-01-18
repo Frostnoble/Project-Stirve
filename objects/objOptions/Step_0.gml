@@ -1,7 +1,7 @@
 KeyGet();
-timer++;
+
 if(global.gamemode == 7){
-	
+	timer++;	
 	
 	var i = ds_list_find_index(options, selected);
 	var size = ds_list_size(options);
@@ -21,7 +21,7 @@ if(global.gamemode == 7){
 	if(selected == options[| 0])//Full
 	{
 		
-		if(keyboard_check_pressed(A_Key) && timer > 60)
+		if(keyboard_check_pressed(A_Key) && timer > 10)
 		{
 			
 			if(window_get_fullscreen())

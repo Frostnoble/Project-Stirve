@@ -5,7 +5,7 @@ pitchRandomizer(sfxFire,10,false);
 depth = room_height - y
 HP = 10;
 Hitable = true;
-
+stunned = false;
 wobbling = false;
 wobble = 0;
 
@@ -26,5 +26,4 @@ new FriedFishS(),
 new FriedFishM(),
 new FriedFishL(),
 new Brick(),
-new Ash(),
 new ClayBowlWaterPure());

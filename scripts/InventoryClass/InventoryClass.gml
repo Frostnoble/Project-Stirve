@@ -1461,12 +1461,9 @@ function Ash() : Item () constructor {
 	crafting = ds_map_create();
 	KP_lock = 0;
 	yeald = 1;
-	ds_map_add(crafting, new Wood(), 5)
-	desc = "The burning\nremains\nof wood.";
 	canDry = false;
 	canSpread = false;
-	craftHelper = ds_list_create();
-	ds_list_add(craftHelper, 0)
+
 }
 
 function Honey() : Item () constructor {
@@ -1577,3 +1574,23 @@ function BoneNeedle() : Item () constructor {
 	ds_list_add(craftHelper, 6)
 }
 
+function BeeBox() : Item () constructor {
+	name = "BeeBox";
+	image_id = 71;
+	amount = 1;
+	type = 2;
+	hitlag = 100;
+	tool_id = 0;
+	Spawn = objBeeBoxEmpty;
+	crafting = ds_map_create();
+	KP_lock = 10;
+	yeald = 1;
+	ds_map_add(crafting, new Wood(), 30)
+	ds_map_add(crafting, new Rope(), 2)
+	ds_map_add(crafting, new Honey(), 10)
+	desc = "Bees will be\ndrawn to\nthis box.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,7,66)
+}

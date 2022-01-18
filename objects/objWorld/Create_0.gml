@@ -32,6 +32,8 @@ objTreeHive,
 objTreeHiveFull,
 objSplash,
 objPrePit,
+objBeeBoxEmpty,
+objBeeBoxFull,
 objPlayer);
 
 OutfitList = ds_list_create();
@@ -86,8 +88,8 @@ new BeastHat(),
 new WoodBowlJuice(),
 new ClayBowlJuice(),
 new PrePit(),
-new BoneNeedle(),
-new Ash()];
+new BeeBox(),
+new BoneNeedle()];
 
 
 

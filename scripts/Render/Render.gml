@@ -39,7 +39,7 @@ function Render(){
 		var wview = camera_get_view_width(view_camera[0]);
 		var hview = camera_get_view_height(view_camera[0]);
 
-		instance_activate_region(xview - 64, yview - 64, wview + 128, hview + 128, true);
+		instance_activate_region(xview - 164, yview - 164, wview + 228, hview + 228, true);
 	}
 
 

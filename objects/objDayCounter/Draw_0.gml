@@ -33,4 +33,10 @@ if(step == 3)
 	
 }
 
+if(global.DEMO && objTimeSystem.days == 5)
+{
+	room_goto(Demo);
+	audio_stop_sound(musTest);
+
+}
 

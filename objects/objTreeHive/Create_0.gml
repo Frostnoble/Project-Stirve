@@ -1,14 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 depth = room_height - y
-HP = 10;
+HP = 8;
 KP = 4;
 image_speed = 0;
 growth = 0;
 wobbling = false;
 wobble = 0;
 
-
+stunned = false;
 
 wobble_length = 1; // number of cycles to wobble the instance with
                    // only whole numbers are valid - ie: 1, 2, etc

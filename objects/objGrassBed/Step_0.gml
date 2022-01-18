@@ -3,10 +3,12 @@
 
 KeyGet();
 
-if(place_meeting(x,y,global.equip.tool_id) && keyboard_check_pressed(A_Key) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && global.equip.type == 1){
+if(!stunned && place_meeting(x,y,global.equip.tool_id) && keyboard_check_pressed(A_Key) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && global.equip.type == 1){
     pitchRandomizer(sfxHitTree,10,false);
 	HP = HP - global.equip.cuttingPow;
 	wobbling = true;
+	stunned = true;
+	alarm[1] = global.equip.hitlag;
 }
 
 if((global.inFront_x == x && global.inFront_y == y) && keyboard_check_pressed(B_Key))

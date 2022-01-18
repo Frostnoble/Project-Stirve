@@ -44,10 +44,15 @@ if(global.gamemode == 5)
 				instance_destroy();
 			break;	
 			
-			case "Save/Quit":
+			case "Save":
 				
 				global.gamemode = 0;
 				SaveGame();
+				
+			break;
+			case "Quit Game":
+				
+				global.gamemode = 0;
 				
 				audio_stop_sound(musTest);
 				room_goto(Menu);

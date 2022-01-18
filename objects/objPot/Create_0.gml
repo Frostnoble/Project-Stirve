@@ -3,7 +3,7 @@
 pitchRandomizer(sfxPlace,10,false);
 HP = 10;
 Hitable = true;
-
+stunned = false;
 depth = room_height - y
 
 image_speed = 0;

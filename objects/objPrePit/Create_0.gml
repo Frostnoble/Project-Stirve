@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 pitchRandomizer(sfxPlace,10,false);
-
+stunned = false;
 depth = room_height - y
 HP = 10;
 Hitable = true;

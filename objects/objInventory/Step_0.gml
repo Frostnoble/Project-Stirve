@@ -39,6 +39,16 @@ if(global.gamemode == 2){
 	audio_play_sound(sfxMoveSelect,10,false);
 
 	}
+	
+	
+	
+	if(!ds_list_find_index(inventory,global.equip))
+	{
+		global.equip = inventory[| 0];
+				
+	}
+	
+	
 
 }else{
 

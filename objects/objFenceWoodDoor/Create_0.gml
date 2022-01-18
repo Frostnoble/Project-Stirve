@@ -7,7 +7,7 @@ Hitable = true;
 
 wobbling = false;
 wobble = 0;
-
+stunned = false;
 wobble_length = 1; // number of cycles to wobble the instance with
                    // only whole numbers are valid - ie: 1, 2, etc
 wobble_speed = 2; // valid value range: 0 - 13 (decimals are ok)

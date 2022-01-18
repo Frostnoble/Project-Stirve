@@ -60,7 +60,7 @@ if(keyboard_check_pressed(Start_Key) && ds_list_size(objInventory.inventory) > 0
 	{
 		global.gamemode = 2
 		audio_play_sound(sfxMoveOpen,10,false);
-		global.equip = objInventory.inventory[|0];
+		
 	}else
 	{
 		audio_play_sound(sfxMoveClose,10,false);
@@ -160,8 +160,9 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 		if(global.equip.type == 1 && global.equip.amount > 0 && canHit) //Tool
 		{
 
-			canHit = false;
+			
 			instance_create_layer(global.inFront_x + 8,global.inFront_y + 8,"Instances",global.equip.tool_id);
+			canHit = false;
 			if(global.weather == 1 || global.weather == 2)
 			{
 				if(global.FATIGUE + 2 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 2;}
@@ -173,6 +174,7 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 			global.equip.dura--;
 			if(global.equip.dura <= 0)
 			{
+				audio_play_sound(sfxMenu,10,false);
 				global.equip.dura = global.equip.dura_max;
 				removeInventory(global.equip.image_id,1,objInventory.inventory);
 				if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)

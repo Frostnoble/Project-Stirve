@@ -89,6 +89,13 @@ if(step == 4)
 			else{instance_create_layer(0,0, "Instances", objStormGen);}
 		break;	
 	}
+	
+
+	
+	
+	
+	
+	
 	global.gamemode = 0;
 	instance_destroy();	
 }

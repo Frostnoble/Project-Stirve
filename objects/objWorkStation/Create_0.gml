@@ -4,7 +4,7 @@ pitchRandomizer(sfxPlace,10,false);
 depth = room_height - y
 HP = 10;
 Hitable = true;
-
+stunned = false;
 wobbling = false;
 wobble = 0;
 
@@ -29,6 +29,7 @@ new RawClayBowl(),
 new RawClayPot(),
 new UnFiredBrick(),
 new WoodenChest(),
+new BeeBox(),
 new DryingRack(),
 new FieldStove(),
 new BeastTunic(),

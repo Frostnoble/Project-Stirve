@@ -7,7 +7,7 @@ rowlength = 3;
 
 
 options = ds_list_create();
-ds_list_add(options, "Crafting","Research","Options","Controls","Save/Quit");
+ds_list_add(options, "Crafting","Research","Options","Controls","Save","Quit Game");
 selected = options[| 0];
 
 charSize = 0

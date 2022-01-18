@@ -31,6 +31,7 @@ global.TempoWater = 0;
 global.GoThrough = false;
 global.saving = false;
 global.pause = false;
+global.DEMO = true;
 
 
 
