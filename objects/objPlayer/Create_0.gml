@@ -22,6 +22,17 @@ image_speed = 0
 attackFrame = false;
 
 
+wobbling = false;
+wobble = 0;
+
+
+
+wobble_length = 1; // number of cycles to wobble the instance with
+                   // only whole numbers are valid - ie: 1, 2, etc
+wobble_speed = 2; // valid value range: 0 - 13 (decimals are ok)
+wobble_intensity = 1; // the distance multiplier (decimals are ok)
+
+
 global.light_times = "Day";
 global.stepsSincePressed = 0;
 global.inv = false;

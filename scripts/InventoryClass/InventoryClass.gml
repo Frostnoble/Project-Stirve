@@ -1044,11 +1044,11 @@ function Berries() : Item () constructor {
 	hitlag = 100;
 	crafting = ds_map_create();
 	foodLevel = 1;
-
 	canDry = false;
 	canSpread = false;
 
 	
+
 }
 
 function Spear () : Item () constructor {
@@ -1474,6 +1474,7 @@ function Honey() : Item () constructor {
 	hungerFill = 10;
 	waterFill = 0;
 	fatigueFill = 10;
+
 	effect = new Normal();
 	hitlag = 100;
 	tool_id = 0;

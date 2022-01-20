@@ -161,3 +161,5 @@ function killPlant(x,y)
 	if(checktile == 1){instance_destroy();}
 	
 }
+
+

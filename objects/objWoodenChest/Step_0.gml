@@ -27,6 +27,7 @@ if((global.inFront_x == x && global.inFront_y == y) && keyboard_check_pressed(B_
 	}
 	if(modetype){storage_selector = objInventory.inventory[| 0];}
 	if(!modetype){storage_selector = storage[| 0];}
+	
 	if(image_index != 1 ){image_index = 1}else{image_index = 0}
 
 }
@@ -87,14 +88,32 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 		//show_debug_message(storage_selector)
 		if(keyboard_check_pressed(A_Key) && (ds_list_size(storage) < 9 || checkInventory(storage_selector,storage)) && ds_list_size(storage) >= 0)
 		{
-			
+
 			NUM = storage_selector.amount;
-
+			if (storage_selector.type == 1)
+			{
+				predura = storage_selector.dura;
+				
+			//show_debug_message(string(predura) + " IN INVENTORY")
 			removeInventory(storage_selector.image_id,storage_selector.amount,objInventory.inventory);
+			
+			addInventory(storage_selector.image_id,storage_selector.amount * NUM,NewItem(storage_selector.image_id),storage,predura);
+			//show_debug_message(string(storage_selector.dura) + " IN TO STORAGE")			
+			
+			}else
+			{
+			
+			//show_debug_message(string(predura) + " IN INVENTORY")
+			removeInventory(storage_selector.image_id,storage_selector.amount,objInventory.inventory);
+			
+			addInventory(storage_selector.image_id,storage_selector.amount * NUM,NewItem(storage_selector.image_id),storage);
+			//show_debug_message(string(storage_selector.dura) + " IN TO STORAGE")			
+			
+			}
 
-
-			addInventory(storage_selector.image_id,storage_selector.amount * NUM,storage_selector,storage);
 			storage_selector = objInventory.inventory[| 0];
+			
+			
 			
 
 		}
@@ -133,11 +152,29 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 		
 		if(keyboard_check_pressed(A_Key) && (ds_list_size(objInventory.inventory) < 9 || checkInventory(storage_selector,objInventory.inventory)) && ds_list_size(objInventory.inventory) >= 0)
 		{
+			
 			NUM = storage_selector.amount;
-			removeInventory(storage_selector.image_id,storage_selector.amount,storage);
+			
+			if (storage_selector.type == 1)
+			{
+				predura = storage_selector.dura;
+				removeInventory(storage_selector.image_id,storage_selector.amount,storage);
+
+				addInventory(storage_selector.image_id,storage_selector.amount * NUM,NewItem(storage_selector.image_id),objInventory.inventory, predura);
+				
+				
+			}else
+			{
+				//show_debug_message(dura)
+				removeInventory(storage_selector.image_id,storage_selector.amount,storage);
+
+				//if(storage_selector.type == 1){storage_selector.dura = dura;}
+				addInventory(storage_selector.image_id,storage_selector.amount * NUM,NewItem(storage_selector.image_id),objInventory.inventory);
+				//show_debug_message(string(storage_selector.dura) + " OUT OF STORAGE")
+			}
+			//show_debug_message(string(predura) + " IN STORAGE")
 
 			
-			addInventory(storage_selector.image_id,storage_selector.amount * NUM,storage_selector,objInventory.inventory);
 			storage_selector = storage[| 0];
 			
 
@@ -173,4 +210,8 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 	
 	
 
+}
+else
+{
+image_index = 0;
 }

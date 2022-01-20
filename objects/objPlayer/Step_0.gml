@@ -102,11 +102,11 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 				}
 				
 			}
-//place_meeting(global.inFront_x,global.inFront_y,objDryingRack)
+
 			else if(place_empty(global.inFront_x,global.inFront_y) || DropCheckerPot() || DropCheckerDryingRack() || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil) || place_meeting(global.inFront_x,global.inFront_y,objBetterSand))// so shit's no stuck in trees for something
 			{
 
-
+				
 				with(instance_create_layer(global.inFront_x,global.inFront_y, "Instances", objItem))
 				{
 					ID = global.equip.image_id;
@@ -115,7 +115,7 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 				
 				}
 				removeInventory(global.equip.image_id,1,objInventory.inventory);
-	
+				
 				if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)
 				{
 					global.equip = new PlaceHolder();
@@ -171,10 +171,11 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 				if(global.FATIGUE + 1 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 1;}
 			}
 			
-			global.equip.dura--;
+			if(global.equip.image_id != 2){global.equip.dura--;}
 			if(global.equip.dura <= 0)
 			{
-				audio_play_sound(sfxMenu,10,false);
+				wobbling = true;
+				audio_play_sound(sfxToolBreak,10,false);
 				global.equip.dura = global.equip.dura_max;
 				removeInventory(global.equip.image_id,1,objInventory.inventory);
 				if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)

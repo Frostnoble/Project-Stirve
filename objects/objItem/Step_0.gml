@@ -8,6 +8,7 @@ if(place_meeting(x,y,objPlayer) && PICKUP = true)
 	if(ds_list_size(objInventory.inventory) < INVENT_SLOT)
 	{
 		PICKUP = false;
+		
 		addInventory(ID,NUM,DROP,objInventory.inventory);
 		//global.equip = objInventory.inventory[|0];
 		with(instance_create_layer(objPlayer.x, objPlayer.y, "Instances", objItemGot)){

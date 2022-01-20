@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 
-function addInventory(ID,num,drop,inventory)
+function addInventory(ID,num,drop,inventory,dura = 0)
 {
 	// && ds_list_size(inventory) + 1 <= 9
 var val = ID; // ID of item
@@ -15,13 +15,17 @@ for(var i = 0; i < ds_list_size(inventory); i += 1)
 			
 			var remain = (num + inventory[| i].amount) - 100;
 			inventory[| i].amount = 999;
+			if(dura > 0){inventory[| i].dura = dura;}
 			addInventory(ID,remain,drop,inventory);
 			
 		}
 		else{
 		
-
+			//show_debug_message(inventory[| i].amount)
+			
 			inventory[| i].amount += num;
+			if(dura > 0){inventory[| i].dura = dura;}
+			
 			//show_debug_message("Right");
 			
 		}
@@ -33,15 +37,20 @@ for(var i = 0; i < ds_list_size(inventory); i += 1)
 	}
 	
 }
-if(next == ds_list_size(inventory))
+if(next == ds_list_size(inventory))//New Item
 {
 
 	ds_list_add(inventory, drop);
 	if(num > 1){
 		for(var i = 0; i < ds_list_size(inventory); i += 1)
 		{
+			
 			if(inventory[| i].image_id == val)
 			{
+				if(dura > 0){inventory[| i].dura = dura;}
+				show_debug_message(string(dura) + " durability")
+				//show_debug_message(inventory[| i].amount)
+				
 				inventory[| i].amount = inventory[| i].amount + num - 1;
 			}
 		}
