@@ -48,7 +48,7 @@ if (item != noone)
 				if(currenthold < maxhold){currenthold++;}
 				image_index = 2;
 				liquid = "PureWater";
-				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+				addInventory(24,1,new ClayBowl(),objInventory.inventory)
 
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
@@ -58,7 +58,7 @@ if (item != noone)
 				if(currenthold < maxhold){currenthold++;}
 				image_index = 1;
 				liquid = "SaltWater";
-				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+				addInventory(24,1,new ClayBowl(),objInventory.inventory)
 
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
@@ -68,7 +68,7 @@ if (item != noone)
 				if(currenthold < maxhold){currenthold++;}
 				image_index = 2;
 				liquid = "PureWater";
-				addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
+				addInventory(51,1,new WoodenBowl(),objInventory.inventory)
 				
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
@@ -78,7 +78,7 @@ if (item != noone)
 				if(currenthold < maxhold){currenthold++;}
 				image_index = 1;
 				liquid = "SaltWater";
-				addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
+				addInventory(51,1,new WoodenBowl(),objInventory.inventory)
 
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
@@ -88,7 +88,7 @@ if (item != noone)
 				if(currenthold < maxhold){currenthold++;}
 				image_index = 3;
 				liquid = "AnimalFat";
-				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+				addInventory(24,1,new ClayBowl(),objInventory.inventory)
 
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
@@ -98,7 +98,7 @@ if (item != noone)
 				if(currenthold < maxhold){currenthold++;}
 				image_index = 4;
 				liquid = "Oil";
-				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+				addInventory(24,1,new ClayBowl(),objInventory.inventory)
 
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
@@ -108,7 +108,7 @@ if (item != noone)
 				if(currenthold < maxhold){currenthold++;}
 				image_index = 5;
 				liquid = "Juice";
-				addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
+				addInventory(51,1,new WoodenBowl(),objInventory.inventory)
 				
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
@@ -118,7 +118,7 @@ if (item != noone)
 				if(currenthold < maxhold){currenthold++;}
 				image_index = 5;
 				liquid = "Juice";
-				addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+				addInventory(24,1,new ClayBowl(),objInventory.inventory)
 
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
@@ -164,7 +164,7 @@ if (item != noone)
 				case 26: //PureWater Clay
 			
 					currenthold++;
-					addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+					addInventory(24,1,new ClayBowl(),objInventory.inventory)
 					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 					instance_destroy(item);
 				break;
@@ -172,7 +172,7 @@ if (item != noone)
 				case 53: //PureWater Wood
 			
 					currenthold++;
-					addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
+					addInventory(51,1,new WoodenBowl(),objInventory.inventory)
 					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 					instance_destroy(item);
 				break;
@@ -192,7 +192,7 @@ if (item != noone)
 				case 55: //Fat Clay
 			
 					currenthold++;
-					addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+					addInventory(24,1,new ClayBowl(),objInventory.inventory)
 					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 					instance_destroy(item);
 				break;
@@ -212,7 +212,7 @@ if (item != noone)
 				case 56: //Oil Clay
 			
 					currenthold++;
-					addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+					addInventory(24,1,new ClayBowl(),objInventory.inventory)
 					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 					instance_destroy(item);
 				break;
@@ -233,7 +233,7 @@ if (item != noone)
 				case 68: //Juice Clay
 			
 					currenthold++;
-					addInventory(24,item.DROP.amount,new ClayBowl(),objInventory.inventory)
+					addInventory(24,1,new ClayBowl(),objInventory.inventory)
 					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 					instance_destroy(item);
 				break;
@@ -241,7 +241,7 @@ if (item != noone)
 				case 67: //Juice Wood
 			
 					currenthold++;
-					addInventory(51,item.DROP.amount,new WoodenBowl(),objInventory.inventory)
+					addInventory(51,1,new WoodenBowl(),objInventory.inventory)
 					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 					instance_destroy(item);
 				break;

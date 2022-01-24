@@ -7,7 +7,7 @@ draw_x2 = 208;
 draw_y2 = 0;
 
 opmode = 1; //1 = FullScreen Toggle, 2 = Music Volume, 3 = SFX Volume
-
+wait = 0;
 options = ds_list_create();
 ds_list_add(options, "FullScreen","MusicCon","SoundCon","Quit");
 selected = options[| 0];

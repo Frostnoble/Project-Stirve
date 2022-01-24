@@ -50,6 +50,11 @@ if(global.gamemode == 1 && global.gamemode != 3){
 		if(ds_map_find_value(global.unlocked, listCanCraft[| i].image_id) == 0)
 		{
 			Crafting(listCanCraft[| i],objInventory.inventory);
+			if(!ds_list_find_index(objInventory.inventory,global.equip))
+			{
+				global.equip = objInventory.inventory[| ds_list_size(objInventory.inventory)-1];
+				
+			}
 		}
 		else
 		{

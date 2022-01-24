@@ -14,9 +14,9 @@ if(HP <= 0)
 {
 	pitchRandomizer(sfxBreak,11,false);
 	with(instance_create_layer(x, y, "Instances", objDrop)){
-		ID = 0;
-		NUM = 4;
-		DROP = new Wood();
+		ID = 71;
+		NUM = 1;
+		DROP = new BeeBox();
 	}
 	
 	

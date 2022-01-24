@@ -42,39 +42,54 @@ if(global.gamemode == 7){
 	}	
 	else if(selected == options[| 1])//Music
 	{
-		if((keyboard_check_pressed(LEFT_Key) || keyboard_check_pressed(LEFT_Key2)) && global.music_Volume >= 0)
+		var change = (keyboard_check(RIGHT_Key) || keyboard_check(RIGHT_Key2)) - (keyboard_check(LEFT_Key) || keyboard_check(LEFT_Key2))
+		//if left is held change will be -1, if right is held change will be 1
+		if(change != 0 && global.music_Volume >= 0 && wait == 0)
 		{
-			global.music_Volume -= 0.01;
-			global.music_Volume = clamp(global.music_Volume,0,1)
-			audio_group_set_gain(ag_Music,global.music_Volume,0);
+		    global.music_Volume += (0.01*change);
+		    global.music_Volume = clamp(global.music_Volume,0,1)
+		    audio_group_set_gain(ag_Music,global.music_Volume,0);
+		    wait = 5
+		}	
 		
-		}
-		if((keyboard_check_pressed(RIGHT_Key) || keyboard_check_pressed(RIGHT_Key2)) && global.music_Volume <= 1)
+		if(change != 0 && global.music_Volume <= 0 && wait == 0)
 		{
-			global.music_Volume += 0.01;
-			global.music_Volume = clamp(global.music_Volume,0,1)
-			audio_group_set_gain(ag_Music,global.music_Volume,0);
+		    global.music_Volume -= (0.01*change);
+		    global.music_Volume = clamp(global.music_Volume,0,1)
+		    audio_group_set_gain(ag_Music,global.music_Volume,0);
+		    wait = 5
+		}	
+
 		
+		if(wait > 0){
+			wait--
 		}
 
 	}
 	else if(selected == options[| 2])//Sound
 	{
-		if((keyboard_check_pressed(LEFT_Key) || keyboard_check_pressed(LEFT_Key2)) && global.sfx_Volume >= 0)
+		
+		var change = (keyboard_check(RIGHT_Key) || keyboard_check(RIGHT_Key2)) - (keyboard_check(LEFT_Key) || keyboard_check(LEFT_Key2))
+		//if left is held change will be -1, if right is held change will be 1
+		if(change != 0 && global.sfx_Volume >= 0 && wait == 0)
 		{
-			global.sfx_Volume -= 0.01;
-			global.sfx_Volume = clamp(global.sfx_Volume,0,1)
-			audio_group_set_gain(ag_SFX,global.sfx_Volume,0);
-			audio_play_sound(sfxMenu,10,false);
-		}
-		if((keyboard_check_pressed(RIGHT_Key) || keyboard_check_pressed(RIGHT_Key2)) && global.sfx_Volume <= 1)
+		    global.sfx_Volume += (0.01*change);
+		    global.sfx_Volume = clamp(global.sfx_Volume,0,1)
+		    audio_group_set_gain(ag_SFX,global.sfx_Volume,0);
+		    wait = 5
+		}	
+		
+		if(change != 0 && global.sfx_Volume <= 0 && wait == 0)
 		{
-			global.sfx_Volume += 0.01;
-			global.sfx_Volume = clamp(global.sfx_Volume,0,1)
-			audio_group_set_gain(ag_SFX,global.sfx_Volume,0);
-			audio_play_sound(sfxMenu,10,false);
+		    global.sfx_Volume -= (0.01*change);
+		    global.sfx_Volume = clamp(global.sfx_Volume,0,1)
+		    audio_group_set_gain(ag_SFX,global.sfx_Volume,0);
+		    wait = 5
+		}			
+		
+		if(wait > 0){
+			wait--
 		}
-
 	}	
 	
 	

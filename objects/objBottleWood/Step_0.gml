@@ -5,7 +5,7 @@
 if(position_meeting(global.inFront_x, global.inFront_y,objWater))
 {
 
-	
+	show_debug_message("hI")
 	ID = 52;
 	DROP = new WoodBowlWater();
 	NUM = 1;
@@ -38,7 +38,7 @@ if(position_meeting(global.inFront_x, global.inFront_y,objWater))
 				
 				if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)
 				{
-				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
+					global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 				
 				}			
 				

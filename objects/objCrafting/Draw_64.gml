@@ -135,7 +135,9 @@ if(global.gamemode == 1 && candraw)
 					//draw_sprite(sprItems,listCanCraft[|i].image_id,120,10);
 					draw_text_transformed(106, 72,"Press " +chr(34) + "Select" + chr(34) + "\nfor ingredients.",0.4,0.4,0)
 					draw_sprite_stretched(sprItems,listCanCraft[|i].image_id,114,10, 32, 32);
-					draw_text_transformed(106,50,string(listCanCraft[|i].desc),0.5,0.5,0) 
+					//draw_text_transformed(106,50,string(listCanCraft[|i].desc),0.5,0.5,0) 
+					//draw_text_ext(x, y, string, sep, w);
+					draw_text_ext_transformed(106,50,string(listCanCraft[|i].desc), 10, 106,0.5,0.5,0);
 					//draw_text(106,35,string(listCanCraft[|i].desc));
 				}
 			}

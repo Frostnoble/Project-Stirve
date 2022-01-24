@@ -17,9 +17,9 @@ if(HP <= 0)
 	
 	pitchRandomizer(sfxBreak,10,false);
 	with(instance_create_layer(x, y, "Instances", objDrop)){
-	ID = 0;
-	NUM = 2;
-	DROP = new Wood();
+	ID = 9;
+	NUM = 1;
+	DROP = new WorkStation();
 	}
 
 	instance_destroy();

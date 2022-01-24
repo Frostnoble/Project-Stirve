@@ -11,9 +11,9 @@ function Render(){
 	{
 		instance_deactivate_object(objTree);
 		instance_deactivate_object(objTreeSmol);
-		instance_deactivate_object(objSapling);
+		//instance_deactivate_object(objSapling);
 		instance_deactivate_object(objGrass);
-		instance_deactivate_object(objSmallGrass);
+		//instance_deactivate_object(objSmallGrass);
 		instance_deactivate_object(objDrop);
 
 		//instance_deactivate_object(objItem);
@@ -26,8 +26,8 @@ function Render(){
 		instance_deactivate_object(objWater);
 		//instance_deactivate_object(objPond);
 		instance_deactivate_object(objWaterPond);
-		instance_deactivate_object(objSmallBush);
-		instance_deactivate_object(objBush);
+		//instance_deactivate_object(objSmallBush);
+		//instance_deactivate_object(objBush);
 		instance_deactivate_object(objBerryBush);
 		instance_deactivate_object(objKiln);
 		instance_deactivate_object(objFieldStove);

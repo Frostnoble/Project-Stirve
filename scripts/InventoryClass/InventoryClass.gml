@@ -117,7 +117,7 @@ function CookedMeat () : Item () constructor {
 	yeald = 1;
 	foodLevel = 1;
 	ds_map_add(crafting, new RawMeat(), 1)
-	desc = "Finally, food\nthat isn't\nraw!";
+	desc = "Finally, food that isn't raw!";
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 4)
 
@@ -155,7 +155,7 @@ function Rope () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	ds_map_add(crafting, new Grass(), 10)
-	desc = "A thick handy\nrope.";
+	desc = "A thick handy rope.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -182,7 +182,7 @@ function FireStarter() : Item () constructor {
 	ds_map_add(crafting, new Wood(), 4)
 	ds_map_add(crafting, new Rope(), 1)
 	ds_map_add(crafting, new TreeBark(), 1)
-	desc = "Place this on\nthe ground to\ncreate a\nCampFire.";
+	desc = "Place this on the ground to create a CampFire.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -202,7 +202,7 @@ function WorkStation () : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new Wood(), 10)
 	ds_map_add(crafting, new Rope(), 2)
-	desc = "This bench\nwill greatly\nincreasethe\nitems you\ncan craft.";
+	desc = "Place this to craft new things.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -227,7 +227,7 @@ function StoneAxe () : Item () constructor {
 	ds_map_add(crafting, new Wood(), 3)
 	ds_map_add(crafting, new Rope(), 1)
 	ds_map_add(crafting, new Stone(), 2)
-	desc = "An axe made\nof stone, don't\nexpect much\nfrom it";
+	desc = "An axe made of stone, don't expect much from it";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -261,7 +261,7 @@ function GrassSeed() : Item () constructor {
 	ds_map_add(crafting, new Grass(), 1)
 	KP_lock = 10;
 	yeald = 3;
-	desc = "Place this on\nthe ground to\nplant new\ngrass.";
+	desc = "Place this on the ground to plant new grass.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -301,7 +301,7 @@ function FriedMush () : Item () constructor {
 	yeald = 1;
 	foodLevel = 1;
 	ds_map_add(crafting, new Mushroom(), 1)
-	desc = "Simple and\neasy to make.\nWon't give you\ngut pain.";
+	desc = "Simple and easy to make Won't give you gut pain.";
 
 	canDry = false;
 	canSpread = false;
@@ -398,7 +398,7 @@ function StoneSpade () : Item () constructor {
 	ds_map_add(crafting, new Wood(), 4)
 	ds_map_add(crafting, new Rope(), 1)
 	ds_map_add(crafting, new Stone(), 1)
-	desc = "A spade that's\nused for\ndigging up\nstuff.";
+	desc = "A spade that's used for digging up stuff.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -440,7 +440,7 @@ function RawClay () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	ds_map_add(crafting, new Soil(), 3)
-	desc = "A basic material\nfor building\nthings.";
+	desc = "A basic material for building things.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -465,7 +465,7 @@ function StonePickaxe () : Item () constructor {
 	ds_map_add(crafting, new Wood(), 10)
 	ds_map_add(crafting, new Rope(), 2)
 	ds_map_add(crafting, new Stone(), 5)
-	desc = "A pickace that\nsmashes stones\nto bits.";
+	desc = "A pickace that smashes stones to bits.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -483,7 +483,7 @@ function RawClayBowl () : Item () constructor {
 	KP_lock = 15;
 	yeald = 1;
 	ds_map_add(crafting, new RawClay(), 3)
-	desc = "Needs to be\nfired to be\nused.";
+	desc = "Needs to be fired to be used.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -494,7 +494,7 @@ function ClayBowl () : Item () constructor {
 	name = "RedBowl";
 	image_id = 24;
 	amount = 1;
-	type = 10;
+	type = 1;
 	dura = 5;
 	dura_max = 5;
 	hitlag = 1;
@@ -503,7 +503,7 @@ function ClayBowl () : Item () constructor {
 	KP_lock = 15;
 	yeald = 1;
 	ds_map_add(crafting, new RawClayBowl(), 1)
-	desc = "Can scoop up\nthings like water.";
+	desc = "Can scoop up things like water.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -525,7 +525,7 @@ function ClayBowlWater () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	ds_map_add(crafting, new  ClayBowl(), 1)
-	desc = "Gross Salt\nwater, can this\n be cleaned?";
+	desc = "Gross Salt nwater, can this be cleaned?";
 
 	canDry = false;
 	canSpread = false;
@@ -548,7 +548,7 @@ function ClayBowlWaterPure () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	ds_map_add(crafting, new ClayBowlWater(), 1)
-	desc = "Gross Salt\nwater, can this\n be cleaned?";
+	desc = "Gross Salt water, can this be cleaned?";
 
 	canDry = false;
 	canSpread = false;
@@ -568,7 +568,7 @@ function RawClayPot () : Item () constructor {
 	KP_lock = 10;
 	yeald = 1;
 	ds_map_add(crafting, new RawClay(), 10)
-	desc = "Needs to be\nfired to be\nused.";
+	desc = "Needs to be fired to be used.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -587,7 +587,7 @@ function ClayPot() : Item () constructor {
 	KP_lock = 15;
 	yeald = 1;
 	ds_map_add(crafting, new RawClayPot(), 1)
-	desc = "Can hold up\nto 9 items\nfor you.";
+	desc = "Can hold one type of fluid.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -609,7 +609,7 @@ function WoodenChest () : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new Wood(), 10)
 	ds_map_add(crafting, new Stone(), 1)
-	desc = "Can hold up\nto 9 items\nfor you.";
+	desc = "Can hold up to 9 items for you.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -630,7 +630,7 @@ function GrassBed () : Item () constructor {
 	ds_map_add(crafting, new Wood(), 15)
 	ds_map_add(crafting, new Rope(), 1)
 	ds_map_add(crafting, new Grass(), 20)
-	desc = "Interact with\nthis to\nsleep.";
+	desc = "Interact with this to sleep.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -654,7 +654,7 @@ function FishingRod () : Item () constructor {
 	crafting = ds_map_create();
 	ds_map_add(crafting, new Wood(), 2)
 	ds_map_add(crafting, new Rope(), 5)
-	desc = "A pickace that\nsmashes stones\nto bits.";
+	desc = "A pickace that smashes stones to bits.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -676,7 +676,7 @@ function SmallFish () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	foodLevel = 1;
-	desc = "A small\nocean fish.";
+	desc = "A small ocean fish.";
 
 	canDry = false;
 	canSpread = false;
@@ -698,7 +698,7 @@ function AverageFish () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	foodLevel = 1;
-	desc = "An average\nocean fish.";
+	desc = "An average ocean fish.";
 
 	canDry = false;
 	canSpread = false;
@@ -720,7 +720,7 @@ function LargeFish () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	foodLevel = 1;
-	desc = "A large\nocean fish.";
+	desc = "A large ocean fish.";
 
 	canDry = false;
 	canSpread = false;
@@ -743,7 +743,7 @@ function FriedFishS () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	foodLevel = 1;
-	desc = "Cooked fish\n,watch out\nfor bones.";
+	desc = "Cooked fish, watch out for bones.";
 
 	canDry = false;
 	canSpread = false;
@@ -768,7 +768,7 @@ function FriedFishM () : Item () constructor {
 	KP_lock = 0;
 	yeald = 3;
 	foodLevel = 1;
-	desc = "Cooked fish\n,watch out\nfor bones.";
+	desc = "Cooked fish, watch out for bones.";
 
 	canDry = false;
 	canSpread = false;
@@ -794,7 +794,7 @@ function FriedFishL () : Item () constructor {
 	KP_lock = 0;
 	yeald = 8;
 	foodLevel = 1;
-	desc = "Cooked fish\n,watch out\nfor bones.";
+	desc = "Cooked fish, watch out for bones.";
 
 	canDry = false;
 	canSpread = false;
@@ -815,7 +815,7 @@ function FenceWood () : Item () constructor {
 	KP_lock = 5;
 	yeald = 1;
 	ds_map_add(crafting, new Wood(), 2)
-	desc = "Fencing that\ncan protect you\n and your\nthings.";
+	desc = "Fencing that can protect you and your things.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -834,7 +834,7 @@ function FenceWoodDoor () : Item () constructor {
 	KP_lock = 5;
 	yeald = 1;
 	ds_map_add(crafting, new Wood(), 3)
-	desc = "Fencing that\ncan protect you\n and your\nthings.";
+	desc = "Fencing that can protect you and your things.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -852,9 +852,9 @@ function Kiln () : Item () constructor {
 	crafting = ds_map_create();
 	KP_lock = 100;
 	yeald = 1;
-	ds_map_add(crafting, new Brick(), 50)
+	ds_map_add(crafting, new Brick(), 30)
 	ds_map_add(crafting, new FireStarter(), 1)
-	desc = "Cook even\nbetter things\nwith this.";
+	desc = "Cook even better things with this.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -925,7 +925,7 @@ function DryingRack () : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new Wood(), 10)
 	ds_map_add(crafting, new Rope(), 5)
-	desc = "Place items\non this to\ndry them.";
+	desc = "Place items on this to dry them.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -966,7 +966,7 @@ function FishSoup () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	foodLevel = 1;
-	desc = "Tasty fish\n,soup. It's\ngood for you.";
+	desc = "Tasty fish, soup. It's good for you.";
 	crafting = ds_map_create();
 	ds_map_add(crafting, new Bone(), 1)
 	ds_map_add(crafting, new ClayBowlWaterPure(), 1)
@@ -980,7 +980,7 @@ function FishSoup () : Item () constructor {
 }
 
 function SchroomSoup () : Item () constructor {
-	name = "SchroomSoup";
+	name = "ShroomSoup";
 	image_id = 45;
 	amount = 1;
 	type = 3;
@@ -993,7 +993,7 @@ function SchroomSoup () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	foodLevel = 1;
-	desc = "Tasty fish\n,soup. It's\ngood for you.";
+	desc = "Tasty fish, soup. It's good for you.";
 	crafting = ds_map_create();
 	ds_map_add(crafting, new Bone(), 1)
 	ds_map_add(crafting, new ClayBowlWaterPure(), 1)
@@ -1023,7 +1023,7 @@ function StoneHoe () : Item () constructor {
 	ds_map_add(crafting, new Wood(), 4)
 	ds_map_add(crafting, new Rope(), 1)
 	ds_map_add(crafting, new Stone(), 1)
-	desc = "Can make\ndirt patches\nfor growing plants.";
+	desc = "Can make dirt patches for growing plants.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1079,7 +1079,7 @@ function UnFiredBrick() : Item () constructor {
 	KP_lock = 15;
 	yeald = 1;
 	ds_map_add(crafting, new RawClay(), 2)
-	desc = "Needs to be\nfired to be\nused.";
+	desc = "Needs to be fired to be used.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1098,7 +1098,7 @@ function Brick() : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new UnFiredBrick(), 1)
 	ds_map_add(crafting, new Sand(), 1)
-	desc = "Needs to be\nfired to be\nused.";
+	desc = "Needs to be fired to be used.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1117,7 +1117,7 @@ function WoodenBowl() : Item () constructor {
 	crafting = ds_map_create();
 	yeald = 1;
 	ds_map_add(crafting, new Wood(), 4)
-	desc = "Can scoop up\nthings like water.\nCan't be used/nfor cooking.";
+	desc = "Can scoop up water. Can't be used for cooking.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1138,7 +1138,7 @@ function WoodBowlWater () : Item () constructor {
 	crafting = ds_map_create();
 	yeald = 1;
 	ds_map_add(crafting, new  WoodenBowl(), 1)
-	desc = "Gross Salt\nwater, can this\n be cleaned?";
+	desc = "Gross Salt water, can this be cleaned?";
 
 	canDry = false;
 	canSpread = false;
@@ -1160,7 +1160,7 @@ function WoodBowlWaterPure () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	//ds_map_add(crafting, new ClayBowlWater(), 1)
-	desc = "Fresh water\n that's safe\nto drink.";
+	desc = "Fresh water that's safe to drink.";
 
 	canDry = false;
 	canSpread = false;
@@ -1180,7 +1180,7 @@ function FieldStove() : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new Stone(), 30)
 	ds_map_add(crafting, new FireStarter(), 1)
-	desc = "Place this on\nthe ground to\ncreate a\nFieldStove.";
+	desc = "Place this on the ground to create a FieldStove.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1199,7 +1199,7 @@ function ClayBowlAnimalFat() : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new ClayBowl(), 1)
 	ds_map_add(crafting, new RawMeat(), 1)
-	desc = "Can be used\nfor many\nthings.";
+	desc = "Can be used for many things.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1218,7 +1218,7 @@ function ClayBowlOil() : Item () constructor {
 	KP_lock = 15;
 	yeald = 1;
 	ds_map_add(crafting, new ClayBowlAnimalFat(), 1)
-	desc = "Oil used for\ncooking and\nother things.";
+	desc = "Oil used for cooking and other things.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1244,7 +1244,7 @@ function GrilledMeat () : Item () constructor {
 	foodLevel = 1;
 	ds_map_add(crafting, new RawMeat(), 1)
 	ds_map_add(crafting, new ClayBowlOil(), 1)
-	desc = "This is\nactually pretty\ngood.";
+	desc = "This is actually pretty good.";
 
 		//==========================
 	canDry = false;
@@ -1271,7 +1271,7 @@ function GrilledFishS () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	foodLevel = 1;
-	desc = "Grilled fish\n,watch out\nfor bones.";
+	desc = "Grilled fish, watch out for bones.";
 
 	canDry = false;
 	canSpread = false;
@@ -1296,7 +1296,7 @@ function GrilledFishM() : Item () constructor {
 	KP_lock = 0;
 	yeald = 2;
 	foodLevel = 1;
-	desc = "Grilled fish\n,watch out\nfor bones.";
+	desc = "Grilled fish, watch out for bones.";
 
 	canDry = false;
 	canSpread = false;
@@ -1322,7 +1322,7 @@ function GrilledFishL () : Item () constructor {
 	KP_lock = 0;
 	yeald = 3;
 	foodLevel = 1;
-	desc = "Grilled fish\n,watch out\nfor bones.";
+	desc = "Grilled fish, watch out for bones.";
 
 	canDry = false;
 	canSpread = false;
@@ -1342,7 +1342,7 @@ function TreeBark() : Item () constructor {
 	KP_lock = 0;
 	yeald = 2;
 	ds_map_add(crafting, new Wood(), 1)
-	desc = "The bark\nof a tree.";
+	desc = "The bark of a tree.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1423,7 +1423,7 @@ function BeastTunic() : Item () constructor {
 	ds_map_add(crafting, new Rope(), 2)
 	ds_map_add(crafting, new BoneNeedle(), 1)
 	KP_lock = 20;
-	desc = "Basic clothing\nthat raises\ndefence.";
+	desc = "Basic clothing that raises defence.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1444,7 +1444,7 @@ function BeastHat() : Item () constructor {
 	ds_map_add(crafting, new Rope(), 1)
 	ds_map_add(crafting, new BoneNeedle(), 1)
 	KP_lock = 20;
-	desc = "Basic hat\nthat raises\ndefence.";
+	desc = "Basic hat that raises defence.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1504,7 +1504,7 @@ function WoodBowlJuice() : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new WoodBowlWaterPure(), 1)
 	ds_map_add(crafting, new Berries(), 5)
-	desc = "Can be used\nfor many\nthings.";
+	desc = "Can be used for many things.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1529,7 +1529,7 @@ function ClayBowlJuice() : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new ClayBowlWaterPure(), 1)
 	ds_map_add(crafting, new Berries(), 5)
-	desc = "Can be used\nfor many\nthings.";
+	desc = "Can be used for many things.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1550,7 +1550,7 @@ function PrePit () : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new Stone(), 3)
 	ds_map_add(crafting, new TreeBark(), 1)
-	desc = "Place this\ndown and use\na FireStarter";
+	desc = "Place this down and use a FireStarter";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1568,7 +1568,7 @@ function BoneNeedle() : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	ds_map_add(crafting, new Bone(), 1)
-	desc = "A needle used\nfor making\nclothing.";
+	desc = "A needle used for making clothing.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1589,7 +1589,7 @@ function BeeBox() : Item () constructor {
 	ds_map_add(crafting, new Wood(), 30)
 	ds_map_add(crafting, new Rope(), 2)
 	ds_map_add(crafting, new Honey(), 10)
-	desc = "Bees will be\ndrawn to\nthis box.";
+	desc = "Bees will be drawn to this box.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();

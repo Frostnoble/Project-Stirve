@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 KeyGet();
-
+/*
 if(keyboard_check_pressed(ord("G")))
 {
 
@@ -35,7 +35,7 @@ if(keyboard_check_pressed(ord("I")))
 
 	
 }
-
+*/
 if(hurtFrames > 0)
 {
 	global.inv = true;
@@ -171,7 +171,7 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 				if(global.FATIGUE + 1 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 1;}
 			}
 			
-			if(global.equip.image_id != 2){global.equip.dura--;}
+			if(global.equip.image_id != 2 ||global.equip.image_id != 24 ||global.equip.image_id != 51 ){global.equip.dura--;}
 			if(global.equip.dura <= 0)
 			{
 				wobbling = true;
