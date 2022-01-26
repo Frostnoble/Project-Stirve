@@ -11,7 +11,7 @@ else
 	instance_destroy();
 }
 
-if (room == Menu && keyboard_check_pressed(B_Key))
+if (room == Menu && (keyboard_check_pressed(B_Key) || keyboard_check_pressed(B_Key2)))
 {
 
 	global.gamemode = 0;

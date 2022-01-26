@@ -7,8 +7,8 @@ surface_resize(application_surface, 160, 144);
 
 audio_group_load(ag_Music);
 audio_group_load(ag_SFX);
-global.music_Volume = 0.5;
-global.sfx_Volume = 0.5;
+global.music_Volume = 0.2;
+global.sfx_Volume = 0.2;
 global.fullscreen = false;
 if(file_exists("savedworld.save")){LoadGameWorld();}
 audio_group_set_gain(ag_Music,global.music_Volume,0);

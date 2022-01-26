@@ -33,7 +33,7 @@ if(step == 3)
 	
 }
 
-if(global.DEMO && objTimeSystem.days == 6)
+if(global.DEMO && objTimeSystem.days == 10)
 {
 	room_goto(Demo);
 	audio_stop_sound(musTest);

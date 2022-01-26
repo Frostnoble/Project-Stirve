@@ -15,10 +15,28 @@ else
 
 if (progress == room_speed && step != 3) {
 	step = 1;
+	
+	switch(global.weather)
+	{
+		case 0: //Clear
+			if(instance_exists(objRainGen)){instance_destroy(objRainGen)}
+			if(instance_exists(objStormGen)){instance_destroy(objStormGen)}
+		break;
+		case 1: //Rain
+			if(instance_exists(objStormGen)){instance_destroy(objStormGen)}
+			else{instance_create_layer(0,0, "Instances", objRainGen);}
+		break;
+		case 2: //Storm
+			if(instance_exists(objRainGen)){instance_destroy(objRainGen)}
+			else{instance_create_layer(0,0, "Instances", objStormGen);}
+		break;	
+	}
 }
 
 if (progress == room_speed*3 && step != 3) {
 	step = 2;
+		
+	
 }
 
 if (progress == room_speed*5 && step != 3) {
@@ -74,21 +92,7 @@ if(step == 4)
 	
 	}
 
-	switch(global.weather)
-	{
-		case 0: //Clear
-			if(instance_exists(objRainGen)){instance_destroy(objRainGen)}
-			if(instance_exists(objStormGen)){instance_destroy(objStormGen)}
-		break;
-		case 1: //Rain
-			if(instance_exists(objStormGen)){instance_destroy(objStormGen)}
-			else{instance_create_layer(0,0, "Instances", objRainGen);}
-		break;
-		case 2: //Storm
-			if(instance_exists(objRainGen)){instance_destroy(objRainGen)}
-			else{instance_create_layer(0,0, "Instances", objStormGen);}
-		break;	
-	}
+
 	
 
 	

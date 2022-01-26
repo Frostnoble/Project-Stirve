@@ -89,7 +89,8 @@ new WoodBowlJuice(),
 new ClayBowlJuice(),
 new PrePit(),
 new BeeBox(),
-new BoneNeedle()];
+new BoneNeedle(),
+new BoneHook()];
 
 
 

@@ -68,7 +68,7 @@ if(keyboard_check_pressed(Start_Key) && ds_list_size(objInventory.inventory) > 0
 	}
 }
 
-if(keyboard_check_pressed(B_Key) && global.gamemode != 2  && global.gamemode != 4 && global.gamemode != 3)
+if(!position_meeting(global.inFront_x, global.inFront_y,objWoodenChest) && !position_meeting(global.inFront_x, global.inFront_y,objGrassBed) && (keyboard_check_pressed(B_Key) || keyboard_check_pressed(B_Key2)) && global.gamemode != 2  && global.gamemode != 4 && global.gamemode != 3)
 {
 	//objCrafting.selected = objCrafting.recipes[| 0];
 	if(global.gamemode != 5){global.gamemode = 5}else{global.gamemode = 0}
@@ -133,7 +133,7 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 	
 
 
-	if(keyboard_check_pressed(A_Key) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && canHit = true && ds_list_size(objInventory.inventory) > 0)
+	if((keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && canHit = true && ds_list_size(objInventory.inventory) > 0)
 	{
 		/*
 		if(global.equip.type == 0 && global.equip.amount > 0) // Item
@@ -171,7 +171,7 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 				if(global.FATIGUE + 1 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 1;}
 			}
 			
-			if(global.equip.image_id != 2 ||global.equip.image_id != 24 ||global.equip.image_id != 51 ){global.equip.dura--;}
+			if(global.equip.image_id != 2 && global.equip.image_id != 24 && global.equip.image_id != 51 ){global.equip.dura--;}
 			if(global.equip.dura <= 0)
 			{
 				wobbling = true;

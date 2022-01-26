@@ -45,7 +45,7 @@ if(global.gamemode == 1 && global.gamemode != 3){
 	}
 
 
-	if(keyboard_check_pressed(A_Key))
+	if((keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)))
 	{
 		if(ds_map_find_value(global.unlocked, listCanCraft[| i].image_id) == 0)
 		{

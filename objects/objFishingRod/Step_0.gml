@@ -4,7 +4,7 @@
 KeyGet();
 
 
-if(keyboard_check_pressed(A_Key))
+if((keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)))
 {
 	objPlayer.sprite_index = sprBoi;
 	objPlayer.attackFrame = false;

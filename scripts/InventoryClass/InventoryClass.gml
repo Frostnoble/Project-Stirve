@@ -647,18 +647,19 @@ function FishingRod () : Item () constructor {
 	attackPow = 0;
 	cuttingPow = 0;
 	smashingPow = 0;
-	hitlag = 100;
+	hitlag = 0;
 	tool_id = objFishingRod;
 	KP_lock = 0;
 	yeald = 1;
 	crafting = ds_map_create();
 	ds_map_add(crafting, new Wood(), 2)
 	ds_map_add(crafting, new Rope(), 5)
-	desc = "A pickace that smashes stones to bits.";
+	ds_map_add(crafting, new BoneHook(), 1)
+	desc = "A basic fishing rod.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
-	ds_list_add(craftHelper, 0,7)
+	ds_list_add(craftHelper, 0,7,72)
 }
 
 function SmallFish () : Item () constructor {
@@ -854,7 +855,7 @@ function Kiln () : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new Brick(), 30)
 	ds_map_add(crafting, new FireStarter(), 1)
-	desc = "Cook even better things with this.";
+	desc = "Smelt and bake even better things with this.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -993,7 +994,7 @@ function SchroomSoup () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	foodLevel = 1;
-	desc = "Tasty fish, soup. It's good for you.";
+	desc = "Tasty mushroom, soup. It's also good for you.";
 	crafting = ds_map_create();
 	ds_map_add(crafting, new Bone(), 1)
 	ds_map_add(crafting, new ClayBowlWaterPure(), 1)
@@ -1079,7 +1080,7 @@ function UnFiredBrick() : Item () constructor {
 	KP_lock = 15;
 	yeald = 1;
 	ds_map_add(crafting, new RawClay(), 2)
-	desc = "Needs to be fired to be used.";
+	desc = "Needs to be fired in a Kiln to be used.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1098,7 +1099,7 @@ function Brick() : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new UnFiredBrick(), 1)
 	ds_map_add(crafting, new Sand(), 1)
-	desc = "Needs to be fired to be used.";
+	desc = "Needs to be fired in a Kiln to be used.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1568,11 +1569,12 @@ function BoneNeedle() : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	ds_map_add(crafting, new Bone(), 1)
+	ds_map_add(crafting, new Knife(), 1)
 	desc = "A needle used for making clothing.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
-	ds_list_add(craftHelper, 6)
+	ds_list_add(craftHelper, 6,2)
 }
 
 function BeeBox() : Item () constructor {
@@ -1594,4 +1596,23 @@ function BeeBox() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,7,66)
+}
+
+function BoneHook() : Item () constructor {
+	name = "BoneHook";
+	image_id = 72;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new Bone(), 1)
+	ds_map_add(crafting, new Knife(), 1)
+	desc = "A basic hook used to make a fishing rod.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 6,2)
 }

@@ -21,7 +21,7 @@ if(global.gamemode == 7){
 	if(selected == options[| 0])//Full
 	{
 		
-		if(keyboard_check_pressed(A_Key) && timer > 10)
+		if((keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) && timer > 10)
 		{
 			
 			if(window_get_fullscreen())
@@ -94,7 +94,7 @@ if(global.gamemode == 7){
 	
 	
 	
-	if (room == Menu && keyboard_check_pressed(B_Key))
+	if (room == Menu && (keyboard_check_pressed(B_Key) || keyboard_check_pressed(B_Key2)))
 	{
 		SaveGameWorld();
 		timer = 0;

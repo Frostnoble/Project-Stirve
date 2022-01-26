@@ -32,7 +32,7 @@ if(global.gamemode == 6){
 
 		}
 		
-		if(keyboard_check_pressed(A_Key))
+		if((keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)))
 		{
 			
 			//Geneate list of Crafable things

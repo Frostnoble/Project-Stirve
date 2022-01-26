@@ -219,6 +219,9 @@ function NewItem(id){
 		case 71: 
 			return new BeeBox();
 		break;
+		case 72: 
+			return new BoneHook();
+		break;
 
 	}
 

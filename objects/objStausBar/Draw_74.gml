@@ -44,9 +44,16 @@ if(global.gamemode != 1 && global.gamemode != 3)
 
 	//alarm[0] = 60;
 
-	draw_sprite(sprSlot,0,143,draw_y-9);
+	
 
-
+	if((global.equip.type == 4 || global.equip.type == 5) && global.equip.equiped)
+	{
+		draw_sprite(sprSlotDark,0,143,draw_y-9);
+	}
+	else
+	{
+		draw_sprite(sprSlot,0,143,draw_y-9);
+	}
 
 	draw_sprite(sprItems,global.equip.image_id,144,draw_y-8);
 

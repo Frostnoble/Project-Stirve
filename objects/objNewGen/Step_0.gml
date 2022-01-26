@@ -113,6 +113,7 @@ if(global.startType == 0){
 		ds_map_add(global.unlocked,69,0) //PrePit
 		ds_map_add(global.unlocked,70,20) //BoneNeedle
 		ds_map_add(global.unlocked,71,30) //BeeBox
+		ds_map_add(global.unlocked,72,20) //BoneNeedle
 		audio_master_gain(1);
 		
 		global.weather = 0;

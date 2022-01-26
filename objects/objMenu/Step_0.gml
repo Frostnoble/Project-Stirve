@@ -17,7 +17,7 @@ if((keyboard_check_pressed(UP_Key) || keyboard_check_pressed(UP_Key2)) &&  i > 0
 }
 
 
-if(keyboard_check_pressed(A_Key) && global.gamemode == 0)
+if((keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) && global.gamemode == 0)
 {
 	audio_play_sound(sfxConfirm,10,false);
 	switch(selected){

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 KeyGet();
 
-if(!stunned && place_meeting(x,y,global.equip.tool_id) && keyboard_check_pressed(A_Key) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && global.equip.type == 1){
+if(!stunned && place_meeting(x,y,global.equip.tool_id) && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && global.equip.type == 1){
     pitchRandomizer(sfxHitTree,10,false);
 	HP = HP - global.equip.smashingPow;
 	wobbling = true;
@@ -10,14 +10,16 @@ if(!stunned && place_meeting(x,y,global.equip.tool_id) && keyboard_check_pressed
 	alarm[0] = global.equip.hitlag;
 }
 
-if((global.inFront_x == x && global.inFront_y == y) && keyboard_check_pressed(B_Key))
+if((global.inFront_x == x && global.inFront_y == y) && (keyboard_check_pressed(B_Key) || keyboard_check_pressed(B_Key2)))
 {
 	if(global.gamemode != 4 )
 	{
+		audio_play_sound(sfxChest,10,false);
 		global.gamemode = 4;
 	}
 	else
 	{
+		audio_play_sound(sfxChest,10,false);
 		global.gamemode = 0;
 		if(!ds_list_find_index(objInventory.inventory,global.equip) && global.equip.amount >= 1)
 		{
@@ -86,7 +88,7 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 
 		}
 		//show_debug_message(storage_selector)
-		if(keyboard_check_pressed(A_Key) && (ds_list_size(storage) < 9 || checkInventory(storage_selector,storage)) && ds_list_size(storage) >= 0)
+		if((keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) && (ds_list_size(storage) < 9 || checkInventory(storage_selector,storage)) && ds_list_size(storage) >= 0)
 		{
 
 			NUM = storage_selector.amount;
@@ -150,7 +152,7 @@ if(global.gamemode == 4 && global.inFront_x == x && global.inFront_y == y){
 		
 		
 		
-		if(keyboard_check_pressed(A_Key) && (ds_list_size(objInventory.inventory) < 9 || checkInventory(storage_selector,objInventory.inventory)) && ds_list_size(objInventory.inventory) >= 0)
+		if((keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) && (ds_list_size(objInventory.inventory) < 9 || checkInventory(storage_selector,objInventory.inventory)) && ds_list_size(objInventory.inventory) >= 0)
 		{
 			
 			NUM = storage_selector.amount;

@@ -4,6 +4,11 @@ function KeyGet(){
 //Set Keys
 A_Key = ord("Z");
 B_Key = ord("X");
+
+A_Key2 = ord("J");
+B_Key2 = ord("K");
+
+
 Start_Key = vk_space;
 Select_Key = vk_backspace;
 

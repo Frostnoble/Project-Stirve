@@ -50,7 +50,10 @@ if(global.gamemode == 6)
 		var yy = 0 + (i div rowlength) * 18 + 3 +84;
 		if (objInventory.inventory[| i] != -1)
 		{
-	
+			if((objInventory.inventory[| i].type == 4 || objInventory.inventory[| i].type == 5) && objInventory.inventory[| i].equiped)
+			{
+				draw_sprite(sprSlotDark,0,xx,yy);
+			}
 			draw_sprite(sprItems,objInventory.inventory[| i].image_id,xx+1,yy+1);
 			if(objInventory.inventory[| i].amount != 1)
 			{
