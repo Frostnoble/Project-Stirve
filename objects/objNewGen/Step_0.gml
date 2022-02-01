@@ -36,6 +36,7 @@ if(global.startType == 0){
 			
 
 				///show_debug_message(index);
+				//if(index >= 100 && index <= 300){instance_create_layer(x_spawn,y_spawn, "Instances", objUnderground_Stone);}
 				if(index >= 750){instance_create_layer(x_spawn,y_spawn, "Instances", objTree);}
 				if(index <= 740 && index >= 700){instance_create_layer(x_spawn,y_spawn, "Instances", objTreeSmol);}
 				if(index <= 690 && index >= 600){instance_create_layer(x_spawn,y_spawn, "Instances", objGrass);}
@@ -59,7 +60,7 @@ if(global.startType == 0){
 		}
 		//show_debug_message("DONE")
 		done = true;
-		audio_play_sound(musTest, 1, true);
+		audio_play_sound(musOverworld_Clear, 1, true);
 		ds_grid_destroy(global.world);
 		
 		
@@ -138,19 +139,22 @@ else if(global.startType == 1){
 			case 0: //Clear
 				if(instance_exists(objRainGen)){instance_destroy(objRainGen)}
 				if(instance_exists(objStormGen)){instance_destroy(objStormGen)}
+				audio_play_sound(musOverworld_Clear, 1, true);
 			break;
 			case 1: //Rain
 				if(instance_exists(objStormGen)){instance_destroy(objStormGen)}
 				else{instance_create_layer(0,0, "Instances", objRainGen);}
+				audio_play_sound(musOverworld_Rain, 1, true);
 			break;
 			case 2: //Storm
 				if(instance_exists(objRainGen)){instance_destroy(objRainGen)}
 				else{instance_create_layer(0,0, "Instances", objStormGen);}
+				audio_play_sound(musOverworld_Storm, 1, true);
 			break;	
 		}
 	}
 	done = true;
-	audio_play_sound(musTest, 1, true);
+	
 }
 
 global.startType = -1;

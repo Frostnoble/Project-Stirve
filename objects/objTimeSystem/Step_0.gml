@@ -210,10 +210,22 @@ else if(MILhours2 >= 22 && MILhours2 >= 6)
 
 	global.light_times = "Night";
 	NIGHT();
+
 }
 
+if(MILhours2 == 21 && minutes2 == 50 && seconds2 == 0)
+{
+
+	alarm[1] = 1;
+
+}
+
+if(MILhours2 == 22 && minutes2 == 0 && seconds2 == 0)
+{
 
 
+	audio_play_sound(musOverworld_Night, 1, true);
+}
 
 //New Time system 
 /*

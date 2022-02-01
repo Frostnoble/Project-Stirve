@@ -34,7 +34,7 @@ function Wood () : Item () constructor {
 }
 
 function Stone () : Item () constructor {
-	name = "Stone";
+	name = "Flint";
 	image_id = 1;
 	amount = 1;
 	type = 0;
@@ -210,7 +210,7 @@ function WorkStation () : Item () constructor {
 }
 
 function StoneAxe () : Item () constructor {
-	name = "StoneAxe";
+	name = "FlintAxe";
 	image_id = 10;
 	amount = 1;
 	type = 1;
@@ -381,7 +381,7 @@ function BlueMushroom () : Item () constructor {
 }
 
 function StoneSpade () : Item () constructor {
-	name = "StoneSpade";
+	name = "FlintSpade";
 	image_id = 18;
 	amount = 1;
 	type = 1;
@@ -448,7 +448,7 @@ function RawClay () : Item () constructor {
 }
 
 function StonePickaxe () : Item () constructor {
-	name = "StonePick";
+	name = "FlintPick";
 	image_id = 22;
 	amount = 1;
 	type = 1;
@@ -1007,7 +1007,7 @@ function SchroomSoup () : Item () constructor {
 }
 
 function StoneHoe () : Item () constructor {
-	name = "StoneHoe";
+	name = "FlintHoe";
 	image_id = 46;
 	amount = 1;
 	type = 1;

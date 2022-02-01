@@ -4,7 +4,7 @@
 
 if(position_meeting(global.inFront_x, global.inFront_y,objWater))
 {
-	show_debug_message("hI")
+	
 	
 	ID = 25;
 	DROP = new ClayBowlWater();

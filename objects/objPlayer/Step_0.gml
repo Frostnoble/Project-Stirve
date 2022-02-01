@@ -184,8 +184,16 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 				
 				}
 			}
-			alarm[0] = global.equip.hitlag;
+			if(global.equip.hitlag == 0)
+			{
+				alarm[0] = 50;
 
+			}
+			else
+			{
+				alarm[0] = global.equip.hitlag;
+			}
+			
 		}
 		
 		if(global.equip.type == 2 && ds_list_find_index(objInventory.inventory,global.equip) && (place_empty(global.inFront_x,global.inFront_y)  || place_meeting(global.inFront_x,global.inFront_y,objBetterSoil)) ) //Placeable

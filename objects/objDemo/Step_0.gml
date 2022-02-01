@@ -7,6 +7,7 @@ timer++;
 
 if(timer > 150 && ((keyboard_check_pressed(B_Key) || keyboard_check_pressed(B_Key2)) || (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) || keyboard_check_pressed(Select_Key) || keyboard_check_pressed(Start_Key)))
 {
+	audio_stop_sound(musTitle);
 	global.gamemode = 0;
 	room_goto(Menu);
 	instance_destroy();

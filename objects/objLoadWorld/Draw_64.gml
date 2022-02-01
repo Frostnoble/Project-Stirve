@@ -17,7 +17,7 @@ draw_rectangle(x1,y1,x1+(x2-x1)*(percent/(iMax*jMax)),y2,0);
 
 if(rungame){
 	draw_set_halign(fa_left);
-	
+	audio_stop_sound(musTitle)
 	
 	
 	room_goto(OverWorld);

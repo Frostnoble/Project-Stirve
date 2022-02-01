@@ -51,10 +51,13 @@ if(global.gamemode == 5)
 				
 			break;
 			case "Quit Game":
-				
+					
 				global.gamemode = 0;
 				
-				audio_stop_sound(musTest);
+				audio_stop_sound(musOverworld_Clear);
+				audio_stop_sound(musOverworld_Rain);
+				audio_stop_sound(musOverworld_Storm);
+				audio_stop_sound(musOverworld_Night);
 				room_goto(Menu);
 			break;
 	

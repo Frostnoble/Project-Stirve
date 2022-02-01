@@ -8,6 +8,8 @@ global.startType = -1;
 fadedone = false;
 a = 1;
 fade = 1;
+wait = 0;
+alarm[0] = 10
 
 options = ds_list_create();
 ds_list_add(options, "New Game","Continue","Options","Controls", "Quit");

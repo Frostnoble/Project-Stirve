@@ -25,6 +25,7 @@ if(step == 2)
 	draw_set_color(c_black);
 	draw_set_font(Bell)
 	draw_text(_xx+80 -25,_yy+45,"DAY " + string(objTimeSystem.days + 1))
+	if(!noise){audio_play_sound(sfxDay,10,false); noise = true;}
 }
 
 if(step == 3)
@@ -33,10 +34,13 @@ if(step == 3)
 	
 }
 
-if(global.DEMO && objTimeSystem.days == 10)
+if(global.DEMO && objTimeSystem.days == 6)
 {
 	room_goto(Demo);
-	audio_stop_sound(musTest);
+	audio_stop_sound(musOverworld_Clear);
+	audio_stop_sound(musOverworld_Rain);
+	audio_stop_sound(musOverworld_Storm);
+	audio_stop_sound(musOverworld_Night);
 
 }
 
