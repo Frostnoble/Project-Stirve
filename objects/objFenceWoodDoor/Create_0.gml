@@ -3,6 +3,7 @@
 pitchRandomizer(sfxPlace,10,false);
 depth = room_height - y
 HP = 4;
+MHP = 4;
 Hitable = true;
 
 wobbling = false;

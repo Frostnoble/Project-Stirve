@@ -3,6 +3,7 @@
 
 depth = room_height - y
 HP = 8;
+MHP = 8
 KP = 10;
 image_speed = 0;
 

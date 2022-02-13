@@ -3,6 +3,7 @@
 depth = room_height - y
 HP = 15;
 KP = 4;
+MHP = 15;
 image_speed = 0;
 
 wobbling = false;

@@ -28,6 +28,28 @@ if(global.startType == 0){
 			var map_id = layer_tilemap_get_id(lay_id);
 			var checktile = tilemap_get_at_pixel(map_id, x_spawn, y_spawn);
 			var index = global.world[# i, j];
+			
+			//SpawnOne
+			while(!ShellFlute)
+			{
+				xs = irandom(room_width/16)* 16;
+				ys = irandom(room_width/16)* 16;
+				var lay_id_s = layer_get_id("Tileset");
+				var map_id_s = layer_tilemap_get_id(lay_id_s);
+				var checktile_s = tilemap_get_at_pixel(map_id_s, xs, ys);
+				if(checktile_s == 1)
+				{
+					spawnDrop(74,new ShellMusic(),1,xs,ys); 
+					ShellFlute = true;
+				}
+			}
+			
+			
+			
+			
+			
+			//if(checktile == 1 && !ShellFlute){spawnDrop(74,new ShellMusic(),1,x_spawn,y_spawn); ShellFlute = true;}
+			
 			if((index >= 10 && index <= 20) && checktile == 1){spawnDrop(60,new Seaweed(),1,x_spawn,y_spawn);}
 			if((index >= 30 && index <= 40) && checktile == 1){spawnDrop(61,new SeaShell(),1,x_spawn,y_spawn);}
 			if(checktile == 2 && (x_spawn > 150 && x_spawn < room_width -150) && (y_spawn > 150 && y_spawn < room_height -150) && place_empty(x_spawn,y_spawn)){
@@ -36,11 +58,13 @@ if(global.startType == 0){
 			
 
 				///show_debug_message(index);
-				//if(index >= 100 && index <= 300){instance_create_layer(x_spawn,y_spawn, "Instances", objUnderground_Stone);}
+				//if(index >= 100 && index <= 300){instance_create_layer(x_spawn,y_spawn, "Instances_Underground", objUnderground_Stone);}
 				if(index >= 750){instance_create_layer(x_spawn,y_spawn, "Instances", objTree);}
 				if(index <= 740 && index >= 700){instance_create_layer(x_spawn,y_spawn, "Instances", objTreeSmol);}
 				if(index <= 690 && index >= 600){instance_create_layer(x_spawn,y_spawn, "Instances", objGrass);}
+
 				if(index <= 590 && index >= 580){instance_create_layer(x_spawn,y_spawn, "Instances", objRock);}
+				if(index <= 579 && index >= 560){instance_create_layer(x_spawn,y_spawn, "Instances", objFlowers);}
 				if(index <= 14 && index >= 11){instance_create_layer(x_spawn,y_spawn, "Instances", objBush);}
 				if(index <= 17 && index >= 15){instance_create_layer(x_spawn,y_spawn, "Instances", objBerryBush);}
 				if(index <= 23 && index >= 22){instance_create_layer(x_spawn,y_spawn, "Instances", objTreeHive);}
@@ -56,12 +80,17 @@ if(global.startType == 0){
 				//show_debug_message(index);
 			}
 		
+
 			
 		}
 		//show_debug_message("DONE")
 		done = true;
 		audio_play_sound(musOverworld_Clear, 1, true);
 		ds_grid_destroy(global.world);
+		
+		//var lay_id = layer_get_id("Instances_Underground");
+		//instance_deactivate_layer(lay_id);
+		//layer_set_visible(lay_id, false)
 		
 		
 		global.unlocked = ds_map_create();
@@ -115,6 +144,13 @@ if(global.startType == 0){
 		ds_map_add(global.unlocked,70,20) //BoneNeedle
 		ds_map_add(global.unlocked,71,30) //BeeBox
 		ds_map_add(global.unlocked,72,20) //BoneNeedle
+		ds_map_add(global.unlocked,73,10) //Torch
+	
+		ds_map_add(global.unlocked,80,0) //HibP
+		ds_map_add(global.unlocked,81,0) //HibY
+		ds_map_add(global.unlocked,82,0) //HibPu
+		ds_map_add(global.unlocked,83,0) //HibO
+		ds_map_add(global.unlocked,84,0) //HibR
 		audio_master_gain(1);
 		
 		global.weather = 0;

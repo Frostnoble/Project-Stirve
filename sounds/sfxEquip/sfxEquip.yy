@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/ag_SFX",
   },
   "soundFile": "sfxEquip.wav",
-  "duration": 0.517823,
+  "duration": 0.139478,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",

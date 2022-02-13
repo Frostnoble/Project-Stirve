@@ -47,4 +47,5 @@ if(currenthold != 0)
 	draw_set_colour(c_black);
 	draw_set_font(Gameboy);
 }
+HPBar(HP,MHP);
 shader_reset();

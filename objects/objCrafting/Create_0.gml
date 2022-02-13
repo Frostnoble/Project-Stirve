@@ -9,6 +9,7 @@ draw_y2 = 0;
 recipes = ds_list_create();
 ds_list_add(recipes, 
 new Rope(),
+new Torch(),
 new FireStarter(), 
 new WorkStation(), 
 new GrassBed(),
@@ -16,6 +17,11 @@ new PrePit(),
 new FenceWood(), 
 new FenceWoodDoor(), 
 new GrassSeed(), 
+new HibiscusSeedP(),
+new HibiscusSeedY(),
+new HibiscusSeedPu(),
+new HibiscusSeedO(),
+new HibiscusSeedR(),
 new WoodBowlJuice(),
 new ClayBowlJuice());
 selected = recipes[| 0];

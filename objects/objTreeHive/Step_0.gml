@@ -28,7 +28,22 @@ if(HP <= 0)
 
 growth++;
 
-if(growth >= timeToFrames(1,0,0))
+for(i = -16; i <= 16; i += 16)
+{
+	for(j = -16; j <= 16; j += 16)
+	{
+		item = instance_position(x,y,objFlowers);
+
+		if (item != noone)
+		{
+			minusTime += 1800;
+		}
+	}
+}
+
+
+
+if(growth >= timeToFrames(1,0,0) - minusTime)
 {
 	instance_create_layer(x, y, "Instances", objTreeHiveFull)
 	instance_destroy();

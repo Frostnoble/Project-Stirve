@@ -3,11 +3,12 @@
 depth = room_height - y
 HP = 8;
 KP = 4;
+MHP = 8;
 image_speed = 0;
 growth = 0;
 wobbling = false;
 wobble = 0;
-
+minusTime = 0;
 stunned = false;
 
 wobble_length = 1; // number of cycles to wobble the instance with

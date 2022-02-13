@@ -162,4 +162,24 @@ function killPlant(x,y)
 	
 }
 
+function HPBar(HP,MHP)
+{
+	if(stunned)
+	{
+		x1 = x;
+		x2 = x+16;
+		y1 = y+8;
+		y2 = y+5;
+		//draw_set_colour(c_black);
+		//draw_rectangle(x1+1,y1+1,x1+1+(x2-1-x1+1)*(1),y2-1,0);
+		draw_set_colour(c_gray);
+		draw_rectangle(x1,y1,x1+(x2-x1)*(1),y2,0);
+		draw_set_colour(c_yellow);
+		draw_rectangle(x1,y1,x1+(x2-x1)*(HP/(MHP)),y2,0);
+	}
+
+}
+
+
+
 

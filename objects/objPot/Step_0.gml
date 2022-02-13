@@ -122,6 +122,53 @@ if (item != noone)
 
 				global.equip = objInventory.inventory[|ds_list_size(objInventory.inventory)-1];
 			break;
+			
+			case 75: //Pink
+				with(instance_create_layer(x,y, "Instances", objFlowerPot))
+				{
+					image_index = 0;
+				}
+				
+
+			break;
+
+			case 76: //Yellow
+				with(instance_create_layer(x,y, "Instances", objFlowerPot))
+				{
+					image_index = 1;
+					
+				}
+				
+
+			break;
+
+			case 77: //Purple
+				with(instance_create_layer(x,y, "Instances", objFlowerPot))
+				{
+					image_index = 2;
+					
+				}
+				
+
+			break;
+		
+			case 78: //Orange
+				with(instance_create_layer(x,y, "Instances", objFlowerPot))
+				{
+					image_index = 3;
+				}
+				
+
+			break;
+		
+			case 79: //Red
+				with(instance_create_layer(x,y, "Instances", objFlowerPot))
+				{
+					image_index = 4;
+				}
+				
+
+			break;
 		}
 
 	

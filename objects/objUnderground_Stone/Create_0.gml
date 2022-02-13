@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-pitchRandomizer(sfxPlace,10,false);
+//pitchRandomizer(sfxPlace,10,false);
 depth = room_height - y
 HP = 4;
 Hitable = true;
@@ -15,7 +15,5 @@ wobble_intensity = 1; // the distance multiplier (decimals are ok)
 
 //ds_grid_add(global.WorkLoc,x,y,1);
 
-UP = false;
-DOWN = false;
-LEFT = false;
-RIGHT = false;
+image_index = irandom(2);
+image_speed = 0;

@@ -21,6 +21,25 @@ if(!stunned && place_meeting(x,y,global.equip.tool_id) && (keyboard_check_presse
 		instance_destroy();
 
 	}
+	else
+	{
+		//show_debug_message(DROP.name)
+		for(var i = 0; i < ds_list_size(objInventory.inventory); i++)
+		{
+			if(DROP.name == objInventory.inventory[|i].name && objInventory.inventory[|i].amount < 99)
+			{
+				
+				PICKUP = false;
+				addInventory(ID,NUM,DROP,objInventory.inventory);
+				with(instance_create_layer(objPlayer.x, objPlayer.y, "Instances", objItemGot)){
+					IDG = 47;
+				}
+
+				//global.equip = objInventory.inventory[|0];
+			    instance_destroy();
+			}
+		}
+	}
 }
 
 if(HP <= 0)

@@ -2,6 +2,7 @@
 // You can write your code in this editor
 depth = room_height - y
 HP = 20;
+MHP = 20;
 KP = 20;
 image_speed = 0;
 

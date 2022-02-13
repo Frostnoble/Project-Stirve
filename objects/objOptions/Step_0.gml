@@ -94,7 +94,7 @@ if(global.gamemode == 7){
 	
 	
 	
-	if (room == Menu && (keyboard_check_pressed(B_Key) || keyboard_check_pressed(B_Key2)))
+	if ((keyboard_check_pressed(B_Key) || keyboard_check_pressed(B_Key2)))
 	{
 		SaveGameWorld();
 		timer = 0;

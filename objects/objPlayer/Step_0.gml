@@ -6,9 +6,7 @@ KeyGet();
 if(keyboard_check_pressed(ord("G")))
 {
 
-	addInventory(63,1,new BeastTunic(),objInventory.inventory);
-	addInventory(64,1,new BeastHat(),objInventory.inventory);
-	addInventory(26,1,new ClayBowlWaterPure(),objInventory.inventory);
+	instance_create_layer(x,y, "Instances", objPot);
 }
 
 
@@ -310,7 +308,7 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 		if(point_distance(0,0,move_xinput,move_yinput) > 0){
 		
 			move_dir = point_direction(0,0,move_xinput,move_yinput);
-			if(global.stepsSincePressed > 4)
+			if(global.stepsSincePressed > 2)
 			{
 				xTarg = round((x+lengthdir_x(TILE_W,move_dir)) / 16) * 16
 				yTarg = round((y+lengthdir_y(TILE_H,move_dir)) / 16) * 16

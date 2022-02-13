@@ -120,6 +120,7 @@ function CookedMeat () : Item () constructor {
 	desc = "Finally, food that isn't raw!";
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 4)
+	madeWith = 2 // CampFire
 
 		//==========================
 	canDry = true;
@@ -307,6 +308,7 @@ function FriedMush () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 15)
+	madeWith = 2 // CampFire
 	
 }
 
@@ -525,7 +527,7 @@ function ClayBowlWater () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	ds_map_add(crafting, new  ClayBowl(), 1)
-	desc = "Gross Salt nwater, can this be cleaned?";
+	desc = "Gross dirty nwater, can this be cleaned?";
 
 	canDry = false;
 	canSpread = false;
@@ -548,13 +550,13 @@ function ClayBowlWaterPure () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	ds_map_add(crafting, new ClayBowlWater(), 1)
-	desc = "Gross Salt water, can this be cleaned?";
+	desc = "Gross dirty water, can this be cleaned?";
 
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 5)
-
+	madeWith = 2 // CampFire
 }
 
 function RawClayPot () : Item () constructor {
@@ -750,7 +752,7 @@ function FriedFishS () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 32)
-	
+	madeWith = 2 // CampFire
 }
 
 function FriedFishM () : Item () constructor {
@@ -775,7 +777,7 @@ function FriedFishM () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 33)
-	
+	madeWith = 2 // CampFire
 }
 
 
@@ -801,7 +803,7 @@ function FriedFishL () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 34)
-	
+	madeWith = 2 // CampFire
 }
 
 function FenceWood () : Item () constructor {
@@ -1036,7 +1038,7 @@ function Berries() : Item () constructor {
 	image_id = 47
 	amount = 1;
 	type = 3;
-	hungerFill = 2;
+	hungerFill = 1;
 	waterFill = 1;
 	fatigueFill = 0;
 	effect = new Normal();
@@ -1080,7 +1082,7 @@ function UnFiredBrick() : Item () constructor {
 	KP_lock = 15;
 	yeald = 1;
 	ds_map_add(crafting, new RawClay(), 2)
-	desc = "Needs to be fired in a Kiln to be used.";
+	desc = "Needs to be baked to be used.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1099,11 +1101,12 @@ function Brick() : Item () constructor {
 	yeald = 1;
 	ds_map_add(crafting, new UnFiredBrick(), 1)
 	ds_map_add(crafting, new Sand(), 1)
-	desc = "Needs to be fired in a Kiln to be used.";
+	desc = "Needs to be baked to be used.";
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 49,19)
+	madeWith = 2 // CampFire
 }
 
 function WoodenBowl() : Item () constructor {
@@ -1453,7 +1456,7 @@ function BeastHat() : Item () constructor {
 }
 
 function Ash() : Item () constructor {
-	name = "Ash";
+	name = "Charcoal";
 	image_id = 65;
 	amount = 1;
 	type = 0;
@@ -1615,4 +1618,202 @@ function BoneHook() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 6,2)
+}
+
+function Torch() : Item () constructor {
+	name = "Torch";
+	image_id = 73;
+	amount = 1;
+	type = 2;
+	hitlag = 100;
+	tool_id = 0;
+	Spawn = objTorch;
+	crafting = ds_map_create();
+	KP_lock = 10;
+	yeald = 1;
+	ds_map_add(crafting, new Wood(), 2)
+	ds_map_add(crafting, new Ash(), 1)
+	desc = "Place these to find your way around/";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0, 65)
+}
+
+function ShellMusic () : Item () constructor {
+	name = "ShellFlute";
+	image_id = 74;
+	amount = 1;
+	type = 1;
+	dura = max;
+	dura_max = max;
+	attackPow = 0;
+	cuttingPow = 0;
+	smashingPow = 0;
+	hitlag = 100;
+	tool_id = objShellMusic
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function Hibiscus_Pink() : Item () constructor {
+	name = "Pink Hibiscus";
+	image_id = 75;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	hitlag = 100;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function Hibiscus_Yellow() : Item () constructor {
+	name = "Yellow Hibiscus";
+	image_id = 76;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	hitlag = 100;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function Hibiscus_Purple() : Item () constructor {
+	name = "Purple Hibiscus";
+	image_id = 77;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	hitlag = 100;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function Hibiscus_Orange() : Item () constructor {
+	name = "Orange Hibiscus";
+	image_id = 78;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	hitlag = 100;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function Hibiscus_Red() : Item () constructor {
+	name = "Red Hibiscus";
+	image_id = 79;
+	amount = 1;
+	type = 0;
+	hitlag = 100;
+	tool_id = 0;
+	hitlag = 100;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function HibiscusSeedP() : Item () constructor {
+	name = "Hibis Seed";
+	image_id = 80;
+	amount = 1;
+	type = 2;
+	hitlag = 100;
+	tool_id = 0;
+	Spawn = objSmallHibiscusPink;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new Hibiscus_Pink(), 1)
+	KP_lock = 0;
+	yeald = 3;
+	desc = "Place this on the ground to plant new flowers.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 75)
+
+}
+
+function HibiscusSeedY() : Item () constructor {
+	name = "Hibis Seed";
+	image_id = 81;
+	amount = 1;
+	type = 2;
+	hitlag = 100;
+	tool_id = 0;
+	Spawn = objSmallHibiscusYellow;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new Hibiscus_Yellow(), 1)
+	KP_lock = 0;
+	yeald = 3;
+	desc = "Place this on the ground to plant new flowers.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 76)
+}
+
+function HibiscusSeedPu() : Item () constructor {
+	name = "Hibis Seed";
+	image_id = 82;
+	amount = 1;
+	type = 2;
+	hitlag = 100;
+	tool_id = 0;
+	Spawn = objSmallHibiscusPurple;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new Hibiscus_Purple(), 1)
+	KP_lock = 0;
+	yeald = 3;
+	desc = "Place this on the ground to plant new flowers.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 77)
+}
+
+function HibiscusSeedO() : Item () constructor {
+	name = "Hibis Seed";
+	image_id = 83;
+	amount = 1;
+	type = 2;
+	hitlag = 100;
+	tool_id = 0;
+	Spawn = objSmallHibiscusOrange;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new Hibiscus_Orange(), 1)
+	KP_lock = 0;
+	yeald = 3;
+	desc = "Place this on the ground to plant new flowers.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 78)
+}
+
+function HibiscusSeedR() : Item () constructor {
+	name = "Hibis Seed";
+	image_id = 84;
+	amount = 1;
+	type = 2;
+	hitlag = 100;
+	tool_id = 0;
+	Spawn = objSmallHibiscusRed;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new Hibiscus_Red(), 1)
+	KP_lock = 0;
+	yeald = 3;
+	desc = "Place this on the ground to plant new flowers.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 79)
 }

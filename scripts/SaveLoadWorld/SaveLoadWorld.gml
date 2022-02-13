@@ -159,8 +159,9 @@ function SaveGame()
 	buffer_write(_buffer,buffer_string,_string);
 	buffer_save(_buffer,"savedgame.save");
 	buffer_delete(_buffer);
-
-
+	
+	
+	instance_create_layer(0, 0, "Instances", objSaved);
 	
 }
 

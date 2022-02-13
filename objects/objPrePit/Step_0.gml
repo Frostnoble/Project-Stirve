@@ -3,7 +3,7 @@
 KeyGet();
 
 if(!stunned && place_meeting(x,y,global.equip.tool_id) && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && global.equip.type == 1){
-    
+    pitchRandomizer(sfxSplash,10,false);    
 	HP = HP - global.equip.smashingPow;
 	wobbling = true;
 	stunned = true;

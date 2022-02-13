@@ -3,10 +3,7 @@
 KeyGet();
 
 
-UP = false;
-DOWN = false;
-LEFT = false;
-RIGHT = false;
+
 
 if(!stunned && place_meeting(x,y,global.equip.tool_id) && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && global.equip.type == 1){
     pitchRandomizer(sfxHitTree,10,false);
@@ -31,97 +28,6 @@ if(HP <= 0)
 	instance_destroy();
 }
 
-
-
-
-if(place_meeting(x, y - 16, objUnderground_Stone) || place_meeting(x, y - 16, objUnderground_Stone))
-{
-	UP = true;
-}
-if(place_meeting(x, y + 16, objUnderground_Stone) || place_meeting(x, y + 16, objUnderground_Stone))
-{
-	DOWN = true;
-}
-
-if(place_meeting(x - 16, y, objUnderground_Stone) || place_meeting(x  - 16, y, objUnderground_Stone))
-{
-	LEFT = true;
-}
-
-if(place_meeting(x + 16, y, objUnderground_Stone) || place_meeting(x  + 16, y, objUnderground_Stone))
-{
-	RIGHT = true;
-}
-
-
-
-
-//AutoTile
-
-if(UP && DOWN && LEFT && RIGHT)
-{
-	image_index = 8;
-}
-if(UP && !DOWN && LEFT && RIGHT)
-{
-	image_index = 11;
-}
-if(UP && DOWN && !LEFT && RIGHT)
-{
-	image_index = 10;
-}
-if(UP && DOWN && LEFT && !RIGHT)
-{
-	image_index = 9;
-}
-if(!UP && !DOWN && LEFT && RIGHT)
-{
-	image_index = 2;
-}
-if(UP && DOWN && !LEFT && !RIGHT)
-{
-	image_index = 1;
-}
-if(!UP && DOWN && LEFT && !RIGHT)
-{
-	image_index = 4;
-}
-if(UP && !DOWN && !LEFT && RIGHT)
-{
-	image_index = 5;
-}
-if(!UP && DOWN && !LEFT && RIGHT)
-{
-	image_index = 3;
-}
-if(UP && !DOWN && LEFT && !RIGHT)
-{
-	image_index = 6;
-}
-if(!UP && DOWN && LEFT && RIGHT)
-{
-	image_index = 7;
-}
-if(!UP && !DOWN && LEFT && !RIGHT)
-{
-	image_index = 13;
-}
-if(!UP && DOWN && !LEFT && !RIGHT)
-{
-	image_index = 12;
-}
-if(!UP && !DOWN && !LEFT && RIGHT)
-{
-	image_index = 14;
-}
-if(UP && !DOWN && !LEFT && !RIGHT)
-{
-	image_index = 15;
-}
-if(!UP && !DOWN && !LEFT && !RIGHT)
-{
-	image_index = 0;
-}
 
 
 

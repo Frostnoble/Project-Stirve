@@ -106,6 +106,17 @@ if (_inst != noone && irandom(100) <= 50)
     instance_destroy(_inst);
 }
 
+
+var _inst = instance_place(x, y, objFlowers);
+if (_inst != noone && irandom(100) <= 50)
+{
+    if(HP < MHP){HP++;}else{HP = MHP;}
+	eating = true;
+	alarm[2] = 90;
+    instance_destroy(_inst);
+}
+
+
 if(place_meeting(xTarg,yTarg,objPlayer)){
 	if(!place_meeting(xTarg,y,objPlayer)){yTarg = y}
 	else if(!place_meeting(x,yTarg,objPlayer)){xTarg = x}

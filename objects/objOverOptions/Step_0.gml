@@ -26,7 +26,7 @@ if(global.gamemode == 5)
 				if(ds_list_size(objInventory.inventory)){global.gamemode = 1; instance_destroy();}
 				
 			break;	
-			case "Research":
+			case "Recipes":
 				if(ds_list_size(objInventory.inventory)){global.gamemode = 6; instance_destroy();}
 				
 		
@@ -48,6 +48,7 @@ if(global.gamemode == 5)
 				
 				global.gamemode = 0;
 				SaveGame();
+			
 				
 			break;
 			case "Quit Game":

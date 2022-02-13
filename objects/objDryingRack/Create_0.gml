@@ -6,6 +6,7 @@ readyToGo = 0;
 trans = false;
 timeTillDry = 0;
 HP = 10;
+MHP = 10;
 Hitable = true;
 inUse = false;
 wobbling = false;

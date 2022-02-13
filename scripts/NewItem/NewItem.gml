@@ -222,6 +222,42 @@ function NewItem(id){
 		case 72: 
 			return new BoneHook();
 		break;
+		case 73: 
+			return new Torch();
+		break;
+		case 74: 
+			return new ShellMusic();
+		break;
+		case 75: 
+			return new Hibiscus_Pink()
+		break;		
+		case 76: 
+			return new Hibiscus_Yellow()
+		break;		
+		case 77: 
+			return new Hibiscus_Purple()
+		break;		
+		case 78: 
+			return new Hibiscus_Orange()
+		break;		
+		case 79: 
+			return new Hibiscus_Red()
+		break;		
+		case 80: 
+			return new HibiscusSeedP()
+		break;		
+		case 81: 
+			return new HibiscusSeedY()
+		break;		
+		case 82: 
+			return new HibiscusSeedPu()
+		break;
+		case 83: 
+			return new HibiscusSeedO()
+		break;
+		case 84: 
+			return new HibiscusSeedR()
+		break;
 
 	}
 

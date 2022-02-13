@@ -13,6 +13,7 @@ function Render(){
 		instance_deactivate_object(objTreeSmol);
 		//instance_deactivate_object(objSapling);
 		instance_deactivate_object(objGrass);
+		instance_deactivate_object(objFlowers);
 		//instance_deactivate_object(objSmallGrass);
 		instance_deactivate_object(objDrop);
 

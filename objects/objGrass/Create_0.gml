@@ -4,6 +4,7 @@ depth = room_height - y
 image_index = 0;
 image_speed = 0;
 HP = 1;
+MHP = 1;
 KP = 1;
 Hitable = true;
 wobbling = false;

@@ -2,13 +2,14 @@
 // You can write your code in this editor
 depth = room_height - y
 HP = 10;
+MHP = 10;
 KP = 4;
 image_speed = 0;
 image_index = 0
 growth = 0;
 wobbling = false;
 wobble = 0;
-
+minusTime = 0;
 stunned = false;
 
 wobble_length = 1; // number of cycles to wobble the instance with
