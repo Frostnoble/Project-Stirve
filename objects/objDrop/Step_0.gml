@@ -13,7 +13,7 @@ if(place_meeting(x,y,objPlayer) && sprite_index != sprPoof && PICKUP = true)
 			IDG = other.ID;
 		}
 
-		//global.equip = objInventory.inventory[|0];
+		if(!ds_list_size(objInventory.inventory)){global.equip = objInventory.inventory[|0];}
 	    instance_destroy();
 	}
 	else
@@ -30,7 +30,7 @@ if(place_meeting(x,y,objPlayer) && sprite_index != sprPoof && PICKUP = true)
 					IDG = other.ID;
 				}
 
-				//global.equip = objInventory.inventory[|0];
+				if(!ds_list_size(objInventory.inventory)){global.equip = objInventory.inventory[|0];}
 			    instance_destroy();
 			}
 		}

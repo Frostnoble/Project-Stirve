@@ -8,7 +8,7 @@
 if(position_meeting(global.inFront_x, global.inFront_y,objCampFire))
 {
 	objCrafting.recipes = objCampFire.addedRecipes;
-	
+	 
 	
 }
 
@@ -28,7 +28,7 @@ else if(position_meeting(global.inFront_x, global.inFront_y,objWorkStation))
 {
 	
 	objCrafting.recipes = objWorkStation.addedRecipes;
-		
+
 }
 else if(position_meeting(global.inFront_x, global.inFront_y,objWater))
 {

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 KeyGet();
-if(global.gamemode == 2)
+if(global.gamemode == 2 || global.gamemode == 5)
 {
 draw_y = 128;
 }

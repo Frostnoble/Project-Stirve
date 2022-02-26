@@ -40,7 +40,10 @@ function SaveGame()
 		days: objTimeSystem.days,
 		unlocked: ds_map_write(global.unlocked),
 		weather: global.weather,
-		defence: global.defence
+		defence: global.defence,
+		tree: global.TreeCheck,
+		grass: global.GrassCheck,
+		rock: global.RockCheck
 	
 
 
@@ -89,7 +92,7 @@ function SaveGame()
 	
 	}
 	
-	with(objWoodenChest)
+	with(objBasket)
 	{
 		var _saveEntity = 
 		{
@@ -227,7 +230,9 @@ function LoadGame()
 				ds_map_read(global.unlocked,_loadEntity.unlocked);
 				global.weather = _loadEntity.weather; 
 				global.defence = _loadEntity.defence;
-
+				global.TreeCheck = _loadEntity.tree;
+				global.GrassCheck = _loadEntity.grass;
+				global.RockCheck = _loadEntity.rock;
 				
 			}
 			

@@ -96,67 +96,71 @@ if(global.startType == 0){
 		global.unlocked = ds_map_create();
 		ds_map_add(global.unlocked,5,0) //Cooked Meat
 		ds_map_add(global.unlocked,7,0) //Rope
-		ds_map_add(global.unlocked,8,5) //FireStarter
-		ds_map_add(global.unlocked,9,10) //WorkStation
+		ds_map_add(global.unlocked,8,0) //FireStarter
+		ds_map_add(global.unlocked,9,0) //WorkStation
 		ds_map_add(global.unlocked,10,0) //StoneAxe
-		ds_map_add(global.unlocked,12,10) //GrassSeed
+		ds_map_add(global.unlocked,12,0) //GrassSeed
 		ds_map_add(global.unlocked,14,0) //FriedMush
 		ds_map_add(global.unlocked,18,0) //StoneSpade
 		ds_map_add(global.unlocked,21,0) //RawClay
 		ds_map_add(global.unlocked,22,0) //StonePick
-		ds_map_add(global.unlocked,23,15) //UnFiredBowl
-		ds_map_add(global.unlocked,24,12) //RedBowl
+		ds_map_add(global.unlocked,23,0) //UnFiredBowl
+		ds_map_add(global.unlocked,24,0) //RedBowl
 		ds_map_add(global.unlocked,25,0) //SaltWater
 		ds_map_add(global.unlocked,26,0) //PureWater
-		ds_map_add(global.unlocked,27,5) //UnfiredPot
-		ds_map_add(global.unlocked,28,10) //ClayPot
-		ds_map_add(global.unlocked,29,15) //WoodenChest
-		ds_map_add(global.unlocked,30,20) //GrassBed
+		ds_map_add(global.unlocked,27,0) //UnfiredPot
+		ds_map_add(global.unlocked,28,0) //ClayPot
+		ds_map_add(global.unlocked,29,0) //WoodenChest
+		ds_map_add(global.unlocked,30,0) //GrassBed
 		ds_map_add(global.unlocked,31,0) //FishingRod
 		ds_map_add(global.unlocked,32,0) //SmallFish
 		ds_map_add(global.unlocked,33,0) //AverageFish
 		ds_map_add(global.unlocked,34,0) //LargeFish
 		ds_map_add(global.unlocked,35,0) //FriedFish
-		ds_map_add(global.unlocked,36,5) //WoodenFence
-		ds_map_add(global.unlocked,37,5) //FenceDoor
-		ds_map_add(global.unlocked,38,100) //Kiln
-		ds_map_add(global.unlocked,42,25) //DryingRack
+		ds_map_add(global.unlocked,36,0) //WoodenFence
+		ds_map_add(global.unlocked,37,0) //FenceDoor
+		ds_map_add(global.unlocked,38,0) //Kiln
+		ds_map_add(global.unlocked,42,0) //DryingRack
 		ds_map_add(global.unlocked,44,0) //FishSoup
 		ds_map_add(global.unlocked,45,0) //SchroomSoup
 		ds_map_add(global.unlocked,46,0) //StoneHoe
-		ds_map_add(global.unlocked,48,20) //Spear
-		ds_map_add(global.unlocked,49,15) //UnFiredBrick
-		ds_map_add(global.unlocked,50,10) //Brick
-		ds_map_add(global.unlocked,51,5) //WoodenBowl
+		ds_map_add(global.unlocked,48,0) //Spear
+		ds_map_add(global.unlocked,49,0) //UnFiredBrick
+		ds_map_add(global.unlocked,50,0) //Brick
+		ds_map_add(global.unlocked,51,0) //WoodenBowl
 		ds_map_add(global.unlocked,52,0) //WoodenBowlWater
-		ds_map_add(global.unlocked,54,30) //FieldStove
-		ds_map_add(global.unlocked,55,5) //Bowl of Fat
-		ds_map_add(global.unlocked,56,5) //Bowl of Oil
+		ds_map_add(global.unlocked,54,0) //FieldStove
+		ds_map_add(global.unlocked,55,0) //Bowl of Fat
+		ds_map_add(global.unlocked,56,0) //Bowl of Oil
 		ds_map_add(global.unlocked,57,0) //Grilled Meat
 		ds_map_add(global.unlocked,58,0) //Grilled Fish
 		ds_map_add(global.unlocked,59,0) //TreeBark
-		ds_map_add(global.unlocked,63,20) //BeastTunic
-		ds_map_add(global.unlocked,64,20) //BeastHat
+		ds_map_add(global.unlocked,63,0) //BeastTunic
+		ds_map_add(global.unlocked,64,0) //BeastHat
 		ds_map_add(global.unlocked,65,0) //Ash
-		ds_map_add(global.unlocked,67,5) //JuiceClay
-		ds_map_add(global.unlocked,68,5) //JuiceWood
+		ds_map_add(global.unlocked,67,0) //JuiceClay
+		ds_map_add(global.unlocked,68,0) //JuiceWood
 		ds_map_add(global.unlocked,69,0) //PrePit
-		ds_map_add(global.unlocked,70,20) //BoneNeedle
-		ds_map_add(global.unlocked,71,30) //BeeBox
-		ds_map_add(global.unlocked,72,20) //BoneNeedle
-		ds_map_add(global.unlocked,73,10) //Torch
+		ds_map_add(global.unlocked,70,0) //BoneNeedle
+		ds_map_add(global.unlocked,71,0) //BeeBox
+		ds_map_add(global.unlocked,72,0) //BoneNeedle
+		ds_map_add(global.unlocked,73,0) //Torch
 	
 		ds_map_add(global.unlocked,80,0) //HibP
 		ds_map_add(global.unlocked,81,0) //HibY
 		ds_map_add(global.unlocked,82,0) //HibPu
 		ds_map_add(global.unlocked,83,0) //HibO
 		ds_map_add(global.unlocked,84,0) //HibR
+		ds_map_add(global.unlocked,85,0) //Basket
 		audio_master_gain(1);
 		
 		global.weather = 0;
 		global.WearTunic = false;
 		global.WearHat = false;
 		global.defence = 0;
+		global.TreeCheck = 0;
+		global.GrassCheck = 0;
+		global.RockCheck = 0;
 	}
 
 }
@@ -169,6 +173,13 @@ else if(global.startType == 1){
 		
 		
 		LoadGame();
+		
+		if(global.TreeCheck > 0 && global.GrassCheck > 0)
+		{
+			instance_destroy(objHelp);
+		}
+		
+		
 		global.equip = objInventory.inventory[|0];
 		switch(global.weather)
 		{

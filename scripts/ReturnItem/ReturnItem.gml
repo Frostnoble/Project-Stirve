@@ -27,6 +27,10 @@ function ReturnItem(image_id)
 		case 72://BoneHook
 			addInventory(2,1,new Knife(),objInventory.inventory)
 		break;
+		
+		case 85://Basket
+			addInventory(2,1,new Knife(),objInventory.inventory)
+		break;
 
 
 	}

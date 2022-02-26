@@ -33,13 +33,13 @@ objSmallBush,
 objRabbit,
 objwolf,
 objBee,
-objPot,
 objTreeHive,
 objTreeHiveFull,
 objSplash,
 objPrePit,
 objBeeBoxEmpty,
 objBeeBoxFull,
+objFlowerPot,
 objPlayer);
 
 OutfitList = ds_list_create();
@@ -102,6 +102,7 @@ new PrePit(),
 new BeeBox(),
 new BoneNeedle(),
 new BoneHook(),
+new Basket(),
 new Torch()];
 
 

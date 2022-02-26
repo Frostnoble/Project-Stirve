@@ -258,6 +258,9 @@ function NewItem(id){
 		case 84: 
 			return new HibiscusSeedR()
 		break;
+		case 85: 
+			return new Basket();
+		break;
 
 	}
 

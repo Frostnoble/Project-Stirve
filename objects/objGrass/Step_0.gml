@@ -14,7 +14,7 @@ onGrass = false;
 image_index = 0;
 }
 
-if(!stunned && place_meeting(x,y,global.equip.tool_id) && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && global.equip.type == 1){
+if(!stunned && place_meeting(x,y,ToolChecker(global.equip.tool_id)) && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && global.equip.type == 1){
     audio_play_sound(sfxGrass,10,false);
 	HP = HP - global.equip.cuttingPow;
 	wobbling = true;
@@ -24,6 +24,7 @@ if(!stunned && place_meeting(x,y,global.equip.tool_id) && (keyboard_check_presse
 
 if(HP <= 0)
 {
+	global.GrassCheck += 1;
 	with(instance_create_layer(x, y, "Instances", objDrop))
 	{
 	ID = 3;

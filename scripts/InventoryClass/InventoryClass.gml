@@ -56,7 +56,7 @@ function Knife () : Item () constructor {
 	cuttingPow = 1;
 	smashingPow = 1;
 	hitlag = 100;
-	tool_id = objDullKnife;
+	tool_id = 1;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -179,7 +179,7 @@ function FireStarter() : Item () constructor {
 	cuttingPow = 1;
 	smashingPow = 1;
 	hitlag = 100;
-	tool_id = objFire;
+	tool_id = 11;
 	ds_map_add(crafting, new Wood(), 4)
 	ds_map_add(crafting, new Rope(), 1)
 	ds_map_add(crafting, new TreeBark(), 1)
@@ -221,7 +221,7 @@ function StoneAxe () : Item () constructor {
 	cuttingPow = 3;
 	smashingPow = 1;
 	hitlag = 100;
-	tool_id = objStoneAxe;
+	tool_id = 2;
 	KP_lock = 0;
 	yeald = 1;
 	crafting = ds_map_create();
@@ -393,7 +393,7 @@ function StoneSpade () : Item () constructor {
 	cuttingPow = 1;
 	smashingPow = 2;
 	hitlag = 20;
-	tool_id = objStoneSpade;
+	tool_id = 3;
 	KP_lock = 0;
 	yeald = 1;
 	crafting = ds_map_create();
@@ -460,7 +460,7 @@ function StonePickaxe () : Item () constructor {
 	cuttingPow = 1;
 	smashingPow = 3;
 	hitlag = 100;
-	tool_id = objStonePickaxe;
+	tool_id = 4;
 	KP_lock = 0;
 	yeald = 1;
 	crafting = ds_map_create();
@@ -500,7 +500,7 @@ function ClayBowl () : Item () constructor {
 	dura = 5;
 	dura_max = 5;
 	hitlag = 1;
-	tool_id = objBottle;
+	tool_id = 5;
 	crafting = ds_map_create();
 	KP_lock = 15;
 	yeald = 1;
@@ -650,7 +650,7 @@ function FishingRod () : Item () constructor {
 	cuttingPow = 0;
 	smashingPow = 0;
 	hitlag = 0;
-	tool_id = objFishingRod;
+	tool_id = 6;
 	KP_lock = 0;
 	yeald = 1;
 	crafting = ds_map_create();
@@ -1019,7 +1019,7 @@ function StoneHoe () : Item () constructor {
 	cuttingPow = 1;
 	smashingPow = 1;
 	hitlag = 10;
-	tool_id = objStoneHoe;
+	tool_id = 7;
 	KP_lock = 0;
 	yeald = 1;
 	crafting = ds_map_create();
@@ -1065,7 +1065,7 @@ function Spear () : Item () constructor {
 	cuttingPow = 0;
 	smashingPow = 0;
 	hitlag = 100;
-	tool_id = objSpear;
+	tool_id = 8;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -1117,7 +1117,7 @@ function WoodenBowl() : Item () constructor {
 	dura = 1;
 	dura_max = 1;
 	hitlag = 1;
-	tool_id = objBottleWood;
+	tool_id = 9;
 	crafting = ds_map_create();
 	yeald = 1;
 	ds_map_add(crafting, new Wood(), 4)
@@ -1419,7 +1419,7 @@ function BeastTunic() : Item () constructor {
 	amount = 1;
 	type = 4;
 	hitlag = 100;
-	tool_id = objBeastTunic;
+	tool_id = 10;
 	equiped = false;
 	yeald = 1;
 	crafting = ds_map_create();
@@ -1440,7 +1440,7 @@ function BeastHat() : Item () constructor {
 	amount = 1;
 	type = 5;
 	hitlag = 100;
-	tool_id = objBeastHat;
+	tool_id = 12;
 	equiped = false;
 	yeald = 1;
 	crafting = ds_map_create();
@@ -1651,7 +1651,7 @@ function ShellMusic () : Item () constructor {
 	cuttingPow = 0;
 	smashingPow = 0;
 	hitlag = 100;
-	tool_id = objShellMusic
+	tool_id = 13;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -1816,4 +1816,24 @@ function HibiscusSeedR() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 79)
+}
+
+function Basket() : Item () constructor {
+	name = "Basket";
+	image_id = 85;
+	amount = 1;
+	type = 2;
+	hitlag = 100;
+	tool_id = 0;
+	Spawn = objBasket;
+	crafting = ds_map_create();
+	KP_lock = 20;
+	yeald = 1;
+	ds_map_add(crafting, new TreeBark(), 10)
+	ds_map_add(crafting, new Knife(), 1)
+	desc = "Can hold up to 9 items for you.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 59,2)
 }

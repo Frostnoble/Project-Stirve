@@ -2,13 +2,13 @@
 // You can write your code in this editor
 
 KeyGet();
-/*
+
 if(keyboard_check_pressed(ord("G")))
 {
 
 	instance_create_layer(x,y, "Instances", objPot);
 }
-
+/*
 
 if(keyboard_check_pressed(ord("R")))
 {
@@ -66,7 +66,7 @@ if(keyboard_check_pressed(Start_Key) && ds_list_size(objInventory.inventory) > 0
 	}
 }
 
-if(!position_meeting(global.inFront_x, global.inFront_y,objWoodenChest) && !position_meeting(global.inFront_x, global.inFront_y,objGrassBed) && (keyboard_check_pressed(B_Key) || keyboard_check_pressed(B_Key2)) && global.gamemode != 2  && global.gamemode != 4 && global.gamemode != 3)
+if(!position_meeting(global.inFront_x, global.inFront_y,objBasket) && !position_meeting(global.inFront_x, global.inFront_y,objWoodenChest) && !position_meeting(global.inFront_x, global.inFront_y,objGrassBed) && (keyboard_check_pressed(B_Key) || keyboard_check_pressed(B_Key2)) && global.gamemode != 2  && global.gamemode != 4 && global.gamemode != 3)
 {
 	//objCrafting.selected = objCrafting.recipes[| 0];
 	if(global.gamemode != 5){global.gamemode = 5}else{global.gamemode = 0}
@@ -159,7 +159,7 @@ if(global.gamemode == 0 && global.status.name != "Par"){
 		{
 
 			
-			instance_create_layer(global.inFront_x + 8,global.inFront_y + 8,"Instances",global.equip.tool_id);
+			instance_create_layer(global.inFront_x + 8,global.inFront_y + 8,"Instances",ToolChecker(global.equip.tool_id));
 			canHit = false;
 			if(global.weather == 1 || global.weather == 2)
 			{

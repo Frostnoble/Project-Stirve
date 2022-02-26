@@ -25,3 +25,4 @@ HPBar(HP,MHP);
 // draw sprite with the x_offset value added relatively
 draw_sprite(sprite_index, image_index, x + x_offset, y);
 
+Outline(sprFieldStoveFlash);

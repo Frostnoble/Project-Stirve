@@ -4,6 +4,9 @@ function ToolChecker(tool_id)
 {
 	switch (tool_id)
 	{
+		case 0: //Nothing
+			return false;
+		break;
 		case 1: //DullKnife
 			return objDullKnife;
 		break;
@@ -31,8 +34,17 @@ function ToolChecker(tool_id)
 		case 9: //BottleWood
 			return objBottleWood;
 		break;
-		case 10: //StoneHoe
-			return objStoneHoe;
+		case 10: //BeastTunic
+			return objBeastTunic;
+		break;
+		case 11: //FireStarter
+			return objFire;
+		break;		
+		case 12: //BeastHat
+			return objBeastHat;
+		break;
+		case 13: //ShellFlute
+			return objShellMusic;
 		break;
 	}
 

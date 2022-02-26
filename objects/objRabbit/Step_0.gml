@@ -84,7 +84,7 @@ image_index = (dir) + floor(frame)
 
 
 
-if(place_meeting(x,y,global.equip.tool_id) && global.equip.type == 1 && !stunned){
+if(place_meeting(x,y,ToolChecker(global.equip.tool_id)) && global.equip.type == 1 && !stunned){
     pitchRandomizer(sfxHurtBeast,10,false);
 	HP = HP - global.equip.attackPow;
 	wobbling = true;

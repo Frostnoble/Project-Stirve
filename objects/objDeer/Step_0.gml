@@ -89,7 +89,7 @@ image_index = (dir) + floor(frame)
 deerinFront_x = round((x+lengthdir_x(TILE_W*spd,move_dir)) / 16) * 16;
 deerinFront_y = round((y+lengthdir_y(TILE_H*spd,move_dir)) / 16) * 16;
 
-if(place_meeting(x,y,global.equip.tool_id) && global.equip.type == 1 && !stunned){
+if(place_meeting(x,y,ToolChecker(global.equip.tool_id)) && global.equip.type == 1 && !stunned){
     pitchRandomizer(sfxHurtBeast,10,false);
 	
 	HP = HP - global.equip.attackPow;

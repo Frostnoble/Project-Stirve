@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+
+
 if(global.light_times == "Day")
 {
 	shader_set(None);
@@ -34,7 +38,12 @@ if wobble > round(wobble_length) * (pi*2) {
 // pixels it will wobble on a horizontal axis
 x_offset = sin(wobble) * wobble_intensity;
 
+
+
 // draw sprite with the x_offset value added relatively
 draw_sprite(sprite_index, image_index, x + x_offset, y);
 HPBar(HP,MHP);
 shader_reset();
+
+Outline(sprWorkStationFlash);
+

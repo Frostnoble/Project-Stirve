@@ -157,3 +157,4 @@ if(!UP && !DOWN && !LEFT && !RIGHT)
 
 
 shader_reset();
+Outline(sprWaterFlash);

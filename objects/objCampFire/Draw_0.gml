@@ -26,3 +26,5 @@ x_offset = sin(wobble) * wobble_intensity;
 draw_sprite(sprite_index, image_index, x + x_offset, y);
 
 HPBar(HP,MHP);
+
+Outline(sprCampFireFlash);

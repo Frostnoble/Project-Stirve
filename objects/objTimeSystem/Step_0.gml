@@ -108,6 +108,12 @@ else
 }
 
 
+if(global.gamemode == 2 || global.gamemode == 5)
+{
+draw_y = 0;
+}
+
+
 if((objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0)){
 	
 	
