@@ -2,13 +2,13 @@
 // You can write your code in this editor
 
 KeyGet();
-
+/*
 if(keyboard_check_pressed(ord("G")))
 {
 
 	instance_create_layer(x,y, "Instances", objPot);
 }
-/*
+
 
 if(keyboard_check_pressed(ord("R")))
 {

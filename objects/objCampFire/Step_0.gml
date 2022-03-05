@@ -40,3 +40,12 @@ if(distance_to_object(objPlayer) <= 16)
 	
 
 }
+
+
+if((global.weather == 1 || global.weather == 2))
+{
+	audio_play_sound(sfxPtss,10,false);
+	instance_create_layer(x,y,"Instances",objPrePit);
+	instance_destroy();
+
+}

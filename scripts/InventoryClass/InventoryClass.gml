@@ -13,7 +13,7 @@ function Item () constructor {
 	static constructorname = Item;
 	name = "";
 	image_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	
 }
@@ -27,7 +27,7 @@ function Wood () : Item () constructor {
 	amount = 1;
 	type = 0;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -39,7 +39,7 @@ function Stone () : Item () constructor {
 	amount = 1;
 	type = 0;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -55,7 +55,7 @@ function Knife () : Item () constructor {
 	attackPow = 1;
 	cuttingPow = 1;
 	smashingPow = 1;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 1;
 	crafting = ds_map_create();
 	canDry = false;
@@ -67,9 +67,9 @@ function Grass () : Item () constructor {
 	image_id = 3;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -84,9 +84,9 @@ function RawMeat () : Item () constructor {
 	waterFill = 5;
 	fatigueFill = 0;
 	effect = new Sick();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	foodLevel = 1;
 
@@ -109,9 +109,9 @@ function CookedMeat () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	KP_lock = 0;
 	yeald = 1;
@@ -137,9 +137,9 @@ function Bone () : Item () constructor {
 	image_id = 6;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -150,7 +150,7 @@ function Rope () : Item () constructor {
 	image_id = 7;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 0;
@@ -171,14 +171,14 @@ function FireStarter() : Item () constructor {
 	type = 1;
 	dura = 3;
 	dura_max = 3;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	KP_lock = 5;
 	yeald = 1;
 	attackPow = 1;
 	cuttingPow = 1;
 	smashingPow = 1;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 11;
 	ds_map_add(crafting, new Wood(), 4)
 	ds_map_add(crafting, new Rope(), 1)
@@ -195,7 +195,7 @@ function WorkStation () : Item () constructor {
 	image_id = 9;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objWorkStation;
 	crafting = ds_map_create();
@@ -220,7 +220,7 @@ function StoneAxe () : Item () constructor {
 	attackPow = 3;
 	cuttingPow = 3;
 	smashingPow = 1;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 2;
 	KP_lock = 0;
 	yeald = 1;
@@ -241,7 +241,7 @@ function PlaceHolder () : Item () constructor {
 	amount = 0;
 	type = 0;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -255,7 +255,7 @@ function GrassSeed() : Item () constructor {
 	image_id = 12;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objSmallGrass;
 	crafting = ds_map_create();
@@ -275,7 +275,7 @@ function Pinecone() : Item () constructor {
 	image_id = 13;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objSapling;
 	crafting = ds_map_create();
@@ -294,9 +294,9 @@ function FriedMush () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	KP_lock = 0;
 	yeald = 1;
@@ -323,9 +323,9 @@ function Mushroom () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	foodLevel = 1;
 
@@ -347,9 +347,9 @@ function PoiMushroom () : Item () constructor {
 	waterFill = 10;
 	fatigueFill = 0;
 	effect = new Paralyzed();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	foodLevel = 1;
 
@@ -369,9 +369,9 @@ function BlueMushroom () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 5;
 	effect = new Woozy();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	foodLevel = 1;
 
@@ -413,7 +413,7 @@ function Sand() : Item () constructor {
 	amount = 1;
 	type = 0;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -425,7 +425,7 @@ function Soil () : Item () constructor {
 	amount = 1;
 	type = 0;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -436,7 +436,7 @@ function RawClay () : Item () constructor {
 	image_id = 21;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 0;
@@ -459,7 +459,7 @@ function StonePickaxe () : Item () constructor {
 	attackPow = 3;
 	cuttingPow = 1;
 	smashingPow = 3;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 4;
 	KP_lock = 0;
 	yeald = 1;
@@ -479,7 +479,7 @@ function RawClayBowl () : Item () constructor {
 	image_id = 23;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 15;
@@ -564,7 +564,7 @@ function RawClayPot () : Item () constructor {
 	image_id = 27;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 10;
@@ -582,7 +582,7 @@ function ClayPot() : Item () constructor {
 	image_id = 28;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objPot;
 	crafting = ds_map_create();
@@ -603,7 +603,7 @@ function WoodenChest () : Item () constructor {
 	image_id = 29;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objWoodenChest;
 	crafting = ds_map_create();
@@ -623,7 +623,7 @@ function GrassBed () : Item () constructor {
 	image_id = 30;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objGrassBed;
 	crafting = ds_map_create();
@@ -673,7 +673,7 @@ function SmallFish () : Item () constructor {
 	waterFill = 5;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 0;
@@ -695,7 +695,7 @@ function AverageFish () : Item () constructor {
 	waterFill = 5;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 0;
@@ -717,7 +717,7 @@ function LargeFish () : Item () constructor {
 	waterFill = 10;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 0;
@@ -739,7 +739,7 @@ function FriedFishS () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	ds_map_add(crafting, new SmallFish(), 1)
@@ -764,7 +764,7 @@ function FriedFishM () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	ds_map_add(crafting, new AverageFish(), 1)
@@ -790,7 +790,7 @@ function FriedFishL () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	ds_map_add(crafting, new LargeFish(), 1)
@@ -811,7 +811,7 @@ function FenceWood () : Item () constructor {
 	image_id = 36;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objFenceWood;
 	crafting = ds_map_create();
@@ -830,7 +830,7 @@ function FenceWoodDoor () : Item () constructor {
 	image_id = 37;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objFenceWoodDoor;
 	crafting = ds_map_create();
@@ -849,7 +849,7 @@ function Kiln () : Item () constructor {
 	image_id = 38;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objKiln;
 	crafting = ds_map_create();
@@ -870,7 +870,7 @@ function BeastPelt() : Item () constructor {
 	amount = 1;
 	type = 0;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -884,7 +884,7 @@ function RawPelt () : Item () constructor {
 	amount = 1;
 	type = 0;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = true;
 	//==========================
@@ -905,9 +905,9 @@ function RottenFood() : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 0;
 	effect = new Sick();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	foodLevel = 1;
 	crafting = ds_map_create();
 
@@ -920,7 +920,7 @@ function DryingRack () : Item () constructor {
 	image_id = 42;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objDryingRack;
 	crafting = ds_map_create();
@@ -944,9 +944,9 @@ function BeastJerky () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	foodLevel = 1;
 	crafting = ds_map_create();
 
@@ -964,7 +964,7 @@ function FishSoup () : Item () constructor {
 	waterFill = 30;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	KP_lock = 0;
 	yeald = 1;
@@ -991,7 +991,7 @@ function SchroomSoup () : Item () constructor {
 	waterFill = 30;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	KP_lock = 0;
 	yeald = 1;
@@ -1042,9 +1042,9 @@ function Berries() : Item () constructor {
 	waterFill = 1;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	foodLevel = 1;
 	canDry = false;
@@ -1064,7 +1064,7 @@ function Spear () : Item () constructor {
 	attackPow = 4;
 	cuttingPow = 0;
 	smashingPow = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 8;
 	crafting = ds_map_create();
 	canDry = false;
@@ -1076,7 +1076,7 @@ function UnFiredBrick() : Item () constructor {
 	image_id = 49;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 15;
@@ -1094,7 +1094,7 @@ function Brick() : Item () constructor {
 	image_id = 50;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 10;
@@ -1176,7 +1176,7 @@ function FieldStove() : Item () constructor {
 	image_id = 54;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objFieldStove;
 	crafting = ds_map_create();
@@ -1239,9 +1239,9 @@ function GrilledMeat () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 10;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	KP_lock = 0;
 	yeald = 1;
@@ -1267,7 +1267,7 @@ function GrilledFishS () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 5;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	ds_map_add(crafting, new SmallFish(), 1)
@@ -1292,7 +1292,7 @@ function GrilledFishM() : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 5;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	ds_map_add(crafting, new AverageFish(), 1)
@@ -1318,7 +1318,7 @@ function GrilledFishL () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 5;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	ds_map_add(crafting, new LargeFish(), 1)
@@ -1340,7 +1340,7 @@ function TreeBark() : Item () constructor {
 	image_id = 59;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 0;
@@ -1362,9 +1362,9 @@ function Seaweed () : Item () constructor {
 	waterFill = 5;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	foodLevel = 1;
 
@@ -1387,7 +1387,7 @@ function SeaShell () : Item () constructor {
 	amount = 1;
 	type = 0;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -1402,9 +1402,9 @@ function DriedSeaWeed () : Item () constructor {
 	waterFill = 0;
 	fatigueFill = 0;
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	foodLevel = 1;
 	crafting = ds_map_create();
 
@@ -1418,7 +1418,7 @@ function BeastTunic() : Item () constructor {
 	image_id = 63;
 	amount = 1;
 	type = 4;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 10;
 	equiped = false;
 	yeald = 1;
@@ -1439,7 +1439,7 @@ function BeastHat() : Item () constructor {
 	image_id = 64;
 	amount = 1;
 	type = 5;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 12;
 	equiped = false;
 	yeald = 1;
@@ -1460,7 +1460,7 @@ function Ash() : Item () constructor {
 	image_id = 65;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 0;
@@ -1480,9 +1480,9 @@ function Honey() : Item () constructor {
 	fatigueFill = 10;
 
 	effect = new Normal();
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	foodLevel = 1;
 
@@ -1546,7 +1546,7 @@ function PrePit () : Item () constructor {
 	image_id = 69;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objPrePit;
 	crafting = ds_map_create();
@@ -1566,7 +1566,7 @@ function BoneNeedle() : Item () constructor {
 	image_id = 70;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 0;
@@ -1585,7 +1585,7 @@ function BeeBox() : Item () constructor {
 	image_id = 71;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objBeeBoxEmpty;
 	crafting = ds_map_create();
@@ -1606,7 +1606,7 @@ function BoneHook() : Item () constructor {
 	image_id = 72;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	crafting = ds_map_create();
 	KP_lock = 0;
@@ -1625,7 +1625,7 @@ function Torch() : Item () constructor {
 	image_id = 73;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objTorch;
 	crafting = ds_map_create();
@@ -1650,7 +1650,7 @@ function ShellMusic () : Item () constructor {
 	attackPow = 0;
 	cuttingPow = 0;
 	smashingPow = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 13;
 	crafting = ds_map_create();
 	canDry = false;
@@ -1662,9 +1662,9 @@ function Hibiscus_Pink() : Item () constructor {
 	image_id = 75;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -1675,9 +1675,9 @@ function Hibiscus_Yellow() : Item () constructor {
 	image_id = 76;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -1688,9 +1688,9 @@ function Hibiscus_Purple() : Item () constructor {
 	image_id = 77;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -1701,9 +1701,9 @@ function Hibiscus_Orange() : Item () constructor {
 	image_id = 78;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -1714,9 +1714,9 @@ function Hibiscus_Red() : Item () constructor {
 	image_id = 79;
 	amount = 1;
 	type = 0;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
-	hitlag = 100;
+	hitlag = 75;
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
@@ -1727,7 +1727,7 @@ function HibiscusSeedP() : Item () constructor {
 	image_id = 80;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objSmallHibiscusPink;
 	crafting = ds_map_create();
@@ -1747,7 +1747,7 @@ function HibiscusSeedY() : Item () constructor {
 	image_id = 81;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objSmallHibiscusYellow;
 	crafting = ds_map_create();
@@ -1766,7 +1766,7 @@ function HibiscusSeedPu() : Item () constructor {
 	image_id = 82;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objSmallHibiscusPurple;
 	crafting = ds_map_create();
@@ -1785,7 +1785,7 @@ function HibiscusSeedO() : Item () constructor {
 	image_id = 83;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objSmallHibiscusOrange;
 	crafting = ds_map_create();
@@ -1804,7 +1804,7 @@ function HibiscusSeedR() : Item () constructor {
 	image_id = 84;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objSmallHibiscusRed;
 	crafting = ds_map_create();
@@ -1823,7 +1823,7 @@ function Basket() : Item () constructor {
 	image_id = 85;
 	amount = 1;
 	type = 2;
-	hitlag = 100;
+	hitlag = 75;
 	tool_id = 0;
 	Spawn = objBasket;
 	crafting = ds_map_create();

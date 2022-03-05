@@ -7,5 +7,5 @@ draw_set_font(Gameboy);
 
 if(global.DEMO)
 {
-	draw_text_transformed(110, 2,"demo V:0.0.2",0.5,0.5,0);
+	draw_text_transformed(130, 2,"V:0.1.0",0.5,0.5,0);
 }

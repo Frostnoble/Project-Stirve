@@ -25,6 +25,11 @@ if(!stunned && place_meeting(x,y,ToolChecker(global.equip.tool_id)) && (keyboard
 			instance_create_layer(x, y, "Instances", objTreeHive)
 			instance_destroy();
 		}
+		else if(place_meeting(x,y+16,objFieldStove))
+		{
+			instance_create_layer(x, y, "Instances", objTreeHive)
+			instance_destroy();
+		}
 		else
 		{
 			pitchRandomizer(sfxBuzzing,10,false);

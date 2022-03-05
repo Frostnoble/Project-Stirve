@@ -160,7 +160,7 @@ function SaveGame()
 	var _string = json_stringify(_saveData);
 	var _buffer = buffer_create(string_byte_length(_string) + 1, buffer_fixed,1)
 	buffer_write(_buffer,buffer_string,_string);
-	buffer_save(_buffer,"savedgame.save");
+	buffer_save(_buffer,"StriveSaveSlot1");
 	buffer_delete(_buffer);
 	
 	
@@ -185,13 +185,13 @@ function LoadGame()
 	//clear Inventory
 
 	
-	if(file_exists("savedgame.save"))
+	if(file_exists("StriveSaveSlot1"))
 	{
 		
 		
 		
 		
-		var _buffer = buffer_load("savedgame.save");
+		var _buffer = buffer_load("StriveSaveSlot1");
 		var _string = buffer_read(_buffer,buffer_string);
 		buffer_delete(_buffer);
 		

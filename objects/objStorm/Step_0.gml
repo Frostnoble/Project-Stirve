@@ -4,7 +4,12 @@ timer++;
 
 if(timer >= 190){image_index = 1;}
 
-if(timer == 200){pitchRandomizer(sfxLightning,10,false);}
+if(timer == 200)
+{
+	pitchRandomizer(sfxLightning,10,false);
+	instance_create_layer(x,y, "Instances", objFire);
+	
+}
 if(timer >= 200)
 {
 	

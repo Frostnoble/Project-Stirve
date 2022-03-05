@@ -22,7 +22,12 @@ wobble_intensity = 1; // the distance multiplier (decimals are ok)
 addedRecipes = ds_list_create();
 ds_list_add(addedRecipes, 
 new CookedMeat(),
+new FriedMush(),
+new Brick(),
 new GrilledMeat(),
+new FriedFishS(),
+new FriedFishM(),
+new FriedFishL(),
 new GrilledFishS(),
 new GrilledFishM(),
 new GrilledFishL(),
@@ -31,3 +36,9 @@ new ClayBowlAnimalFat(),
 new ClayBowlOil(),
 new FishSoup(),
 new SchroomSoup());
+
+
+
+
+
+

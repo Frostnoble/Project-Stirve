@@ -18,9 +18,6 @@ wobble_intensity = 1; // the distance multiplier (decimals are ok)
 
 addedRecipes = ds_list_create();
 ds_list_add(addedRecipes,
-new TreeBark(),
-new BoneNeedle(),
-new BoneHook(),
 new StoneAxe(),
 new StoneSpade(),
 new StonePickaxe(),

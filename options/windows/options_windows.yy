@@ -1,5 +1,5 @@
 {
-  "option_windows_display_name": "Strive V0.0.2",
+  "option_windows_display_name": "Strive V0.1.0",
   "option_windows_executable_name": "STRIVE.exe",
   "option_windows_version": "1.0.0.0",
   "option_windows_company_info": "YoYo Games Ltd",

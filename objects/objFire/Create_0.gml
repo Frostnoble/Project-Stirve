@@ -3,3 +3,4 @@
 pitchRandomizer(sfxFire,10,false);
 depth = room_height - y + 2
 timer = 0;
+

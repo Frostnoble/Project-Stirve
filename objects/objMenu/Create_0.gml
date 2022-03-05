@@ -13,7 +13,7 @@ alarm[0] = 10
 
 options = ds_list_create();
 ds_list_add(options, "New Game","Continue","Options","Controls", "Quit");
-if(file_exists("savedgame.save"))
+if(file_exists("StriveSaveSlot1"))
 {
 	selected = options[| 1];
 }

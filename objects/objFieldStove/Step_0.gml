@@ -22,9 +22,9 @@ if(HP <= 0)
 	
 	
 	with(instance_create_layer(x, y, "Instances", objDrop)){
-	ID = 0;
-	NUM = 2;
-	DROP = new Wood();
+	ID = 54;
+	NUM = 1;
+	DROP = new FieldStove();
 	}
 
 	instance_destroy();

@@ -23,12 +23,12 @@ if(wait > 25 && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)
 	switch(selected){
 		
 		case "New Game":
-			room_goto(Loading);
+			room_goto(NameInput);
 			global.startType = 0;
 			
 		break;	
 		case "Continue":
-			if(file_exists("savedgame.save"))
+			if(file_exists("StriveSaveSlot1"))
 			{
 				room_goto(Loading);
 				global.startType = 1;
