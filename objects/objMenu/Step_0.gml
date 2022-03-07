@@ -23,7 +23,7 @@ if(wait > 25 && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)
 	switch(selected){
 		
 		case "New Game":
-			room_goto(NameInput);
+			room_goto(Character);
 			global.startType = 0;
 			
 		break;	

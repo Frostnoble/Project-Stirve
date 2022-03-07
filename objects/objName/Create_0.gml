@@ -4,7 +4,7 @@ grid_x = 0;
 grid_y = 0;
 wait = 0;
 xLetters = 18;
-
+nameLimit = 7;
 yLetters = 4;
 
 letterString = "ABCDEFGHIJKLM 0123NOPQRSTUVWXYZ 4567abcdefghijklm 89!?nopqrstuvwxyz ,': ";
@@ -31,3 +31,4 @@ for(var yy = 0; yy < yLetters; yy++;)
 	}
 
 }
+global.Gender = 0
