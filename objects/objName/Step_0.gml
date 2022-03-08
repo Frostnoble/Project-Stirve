@@ -66,6 +66,11 @@ if((keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)))
 	{
 		currentName += newLetter;
 	}
+	else
+	{
+		global.name = currentName;
+		room_goto(Loading);
+	}
 
 }
 

@@ -19,7 +19,7 @@ if(rungame){
 	draw_set_halign(fa_left);
 	audio_stop_sound(musTitle)
 	
-	
+	global.gamemode = 0;
 	room_goto(OverWorld);
 	
 

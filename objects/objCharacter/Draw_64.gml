@@ -50,7 +50,7 @@ for(var yy = 0; yy < ySize; yy++;)
 		
 
 		
-		if(xx == grid_x && yy == grid_y) draw_sprite(sprWordSelect,image_index/10,draw_x+1,draw_y-1);
+		if(xx == grid_x && yy == grid_y) draw_sprite(sprAvatarSelect,image_index/15,draw_x,draw_y+2);
 		
 	}
 	

@@ -47,7 +47,18 @@ if(global.gamemode == 5)
 			case "Save":
 				
 				global.gamemode = 0;
-				SaveGame();
+				switch (global.slot)
+				{
+					case 1:
+						SaveGame1();
+					break;
+					case 2:
+						SaveGame2();
+					break;	
+					case 3:
+						SaveGame3();
+					break;
+				}
 			
 				
 			break;

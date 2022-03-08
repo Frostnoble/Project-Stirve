@@ -68,8 +68,27 @@ for(var yy = 0; yy < yLetters; yy++;)
 	
 }
 
-if(global.Gender == 0)
+switch(global.Avatar)
 {
-	draw_sprite(sprBoiMenu,image_index/15,10,12);
-	draw_sprite(sprGender,0,25,20);
+	case 0:
+		draw_sprite(sprBoiMenu,image_index/15,10,12);
+		draw_sprite(sprGender,0,25,20);
+	break;
+	
+	case 1:
+		draw_sprite(sprGurlMenu,image_index/15,10,12);
+		draw_sprite(sprGender,1,25,20);
+	break;
+	
+	case 2:
+		draw_sprite(sprBoiMenu2,image_index/15,10,12);
+		draw_sprite(sprGender,0,25,20);
+	break;
+	
+	case 3:
+		draw_sprite(sprGurlMenu2,image_index/15,10,12);
+		draw_sprite(sprGender,1,25,20);
+	break;
 }
+
+

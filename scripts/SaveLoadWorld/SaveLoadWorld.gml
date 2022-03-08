@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SaveGame()
+function SaveGame1()
 {
 	
 	instance_activate_all();
@@ -29,6 +29,9 @@ function SaveGame()
 	var _saveEntity =
 	{
 		type: 1,//Status and time
+		name: global.name,
+		slot: global.slot,
+		avatar: global.Avatar,
 		HEALTH: global.HEALTH,
 		FATIGUE: global.FATIGUE,
 		WATER: global.WATER,
@@ -168,7 +171,7 @@ function SaveGame()
 	
 }
 
-function LoadGame()
+function LoadGame1()
 {
 	
 	clearInventory();
@@ -215,6 +218,9 @@ function LoadGame()
 			{
 				
 				//.equip = _loadEntity.equip;
+				global.name = _loadEntity.name;
+				global.Avatar = _loadEntity.avatar;
+				global.slot = _loadEntity.slot;
 				global.HEALTH = _loadEntity.HEALTH;
 				global.FATIGUE = _loadEntity.FATIGUE;
 				global.WATER = _loadEntity.WATER;

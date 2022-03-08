@@ -59,8 +59,28 @@ if(wait > 0){
 
 if((keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)))
 {
-	audio_play_sound(sfxDay,10,false);
+	if(grid_x == 0 && grid_y == 0)
+	{
+		global.Avatar = 0;
 
+	}
+	if(grid_x == 1 && grid_y == 0)
+	{
+		global.Avatar = 1;
+
+	}
+	if(grid_x == 0 && grid_y == 1)
+	{
+		global.Avatar = 2;
+	
+	}
+	if(grid_x == 1 && grid_y == 1)
+	{
+		global.Avatar = 3;
+	
+	}
+	audio_play_sound(sfxDay,10,false);
+	room_goto(NameInput)
 
 }
 

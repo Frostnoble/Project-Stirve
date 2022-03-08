@@ -31,4 +31,3 @@ for(var yy = 0; yy < yLetters; yy++;)
 	}
 
 }
-global.Gender = 0

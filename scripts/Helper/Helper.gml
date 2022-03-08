@@ -180,6 +180,25 @@ function HPBar(HP,MHP)
 
 }
 
+function Avatar(num)
+{
+	switch(num)
+	{
+		case 0:
+			return sprBoiMenu
+		break;
+		case 1:
+			return sprGurlMenu
+		break;
+		case 2:
+			return sprBoiMenu2
+		break;
+		case 3:
+			return sprGurlMenu2
+		break;
+								
+	}
 
+}
 
 

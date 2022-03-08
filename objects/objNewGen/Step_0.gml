@@ -172,7 +172,18 @@ else if(global.startType == 1){
 		global.WearHat = false;
 		
 		
-		LoadGame();
+		switch (global.slot)
+		{
+			case 1:
+				LoadGame1();
+			break;
+			case 2:
+				LoadGame2();
+			break;	
+			case 3:
+				LoadGame3();
+			break;
+		}
 		
 		if(global.TreeCheck > 0 && global.GrassCheck > 0)
 		{
