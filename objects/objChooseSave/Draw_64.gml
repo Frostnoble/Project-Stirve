@@ -31,8 +31,8 @@ if(global.gamemode == 9)
 	
 	if(file_exists("StriveSaveSlot1"))
 	{
-		draw_text(draw_x+20,draw_y+45,"SLOT 1 D:"+ string(days_1) +"\n"+name_1);
-		draw_sprite(Avatar(Avatar_1),image_index/25,draw_x+100,draw_y+47)
+		draw_text(draw_x+20,draw_y+45,"SLOT 1 D:"+ string(objWorld.days_1) +"\n"+objWorld.name_1);
+		draw_sprite(Avatar(objWorld.Avatar_1),image_index/25,draw_x+100,draw_y+47)
 	}
 	else
 	{
@@ -41,8 +41,8 @@ if(global.gamemode == 9)
 	
 	if(file_exists("StriveSaveSlot2"))
 	{
-		draw_text(draw_x+20,draw_y+75,"SLOT 2 D:"+ string(days_2) +"\n"+name_2);
-		draw_sprite(Avatar(Avatar_2),image_index/25,draw_x+100,draw_y+77)
+		draw_text(draw_x+20,draw_y+75,"SLOT 2 D:"+ string(objWorld.days_2) +"\n"+objWorld.name_2);
+		draw_sprite(Avatar(objWorld.Avatar_2),image_index/25,draw_x+100,draw_y+77)
 	}
 	else
 	{
@@ -51,8 +51,8 @@ if(global.gamemode == 9)
 	
 	if(file_exists("StriveSaveSlot3"))
 	{
-		draw_text(draw_x+20,draw_y+105,"SLOT 3 D:"+ string(days_3) +"\n"+name_3);
-		draw_sprite(Avatar(Avatar_3),image_index/25,draw_x+100,draw_y+107)
+		draw_text(draw_x+20,draw_y+105,"SLOT 3 D:"+ string(objWorld.days_3) +"\n"+objWorld.name_3);
+		draw_sprite(Avatar(objWorld.Avatar_3),image_index/25,draw_x+100,draw_y+107)
 	}
 	else
 	{

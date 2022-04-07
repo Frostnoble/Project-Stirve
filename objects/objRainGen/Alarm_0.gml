@@ -10,8 +10,14 @@ var y_spawn = round(irandom_range(yview,yview+hview)/16) * 16;
 
 part_emitter_burst(rain_system,emitterRain,partRain,30);
 alarm[0] = 1;
-
-if(position_empty(x_spawn,y_spawn))
+if(!global.underground){
+	if(position_empty(x_spawn,y_spawn))
+	{
+		instance_create_layer(x_spawn,y_spawn, "Instances", objSplash);
+	}
+	
+}else
 {
-	instance_create_layer(x_spawn,y_spawn, "Instances", objSplash);
+	part_emitter_clear(rain_system,emitterRain);
 }
+

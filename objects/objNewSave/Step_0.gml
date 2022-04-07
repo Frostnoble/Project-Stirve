@@ -23,14 +23,30 @@ if(global.gamemode == 10){
 	if(selected == options[| 0])//Save1
 	{
 		
-		if(timerload >= 30 && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)))
+		if(timerload >= 10 && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)))
 		{
-			show_debug_message(timerload)
+			
 			if(file_exists("StriveSaveSlot1"))
 			{
-				global.startType = 0;
-				global.slot = 1;
-				room_goto(Character);
+				global.gamemode = 13;
+				objYesNo.othermode = 10;
+				if(objYesNo.ty == 0)
+				{
+					global.startType = 0;
+					global.slot = 1;
+					objYesNo.ty = 2;
+					room_goto(Character);			
+				}
+				else if(objYesNo.ty == 1)
+				{
+				
+					objYesNo.ty = 2;
+					selected = options[| 0];
+					global.gamemode = 0;
+					timerload = 0;
+				}
+				
+
 			}
 			else
 			{
@@ -44,14 +60,30 @@ if(global.gamemode == 10){
 	else if(selected == options[| 1])//Save2
 	{
 		
-		if(timerload >= 30 && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)))
+		if(timerload >= 10 && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)))
 		{
-			show_debug_message(timerload)
+			
 			if(file_exists("StriveSaveSlot2"))
 			{
-				global.startType = 0;
-				global.slot = 2;
-				room_goto(Character);
+				global.gamemode = 13;
+				objYesNo.othermode = 10;
+				if(objYesNo.ty == 0)
+				{
+					global.startType = 0;
+					global.slot = 2;
+					objYesNo.ty = 2;
+					room_goto(Character);			
+				}
+				else if(objYesNo.ty == 1)
+				{
+				
+					objYesNo.ty = 2;
+					selected = options[| 0];
+					global.gamemode = 0;
+					timerload = 0;
+				}
+				
+
 			}
 			else
 			{
@@ -67,19 +99,35 @@ if(global.gamemode == 10){
 		
 		if(timerload >= 30 && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)))
 		{
-			show_debug_message(timerload)
+			
 			if(file_exists("StriveSaveSlot3"))
 			{
-				global.startType = 0;
-				global.slot = 3;
-				room_goto(Character);
+				global.gamemode = 13;
+				objYesNo.othermode = 10;
+				if(objYesNo.ty == 0)
+				{
+					global.startType = 0;
+					global.slot = 3;
+					objYesNo.ty = 2;
+					room_goto(Character);			
+				}
+				else if(objYesNo.ty == 1)
+				{
+				
+					objYesNo.ty = 2;
+					selected = options[| 0];
+					global.gamemode = 0;
+					timerload = 0;
+				}
+				
+
 			}
 			else
 			{
 				global.startType = 0;
 				global.slot = 3;
 				room_goto(Character);
-			}	
+			}
 		}
 	}
 	

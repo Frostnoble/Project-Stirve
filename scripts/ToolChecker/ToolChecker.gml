@@ -46,6 +46,9 @@ function ToolChecker(tool_id)
 		case 13: //ShellFlute
 			return objShellMusic;
 		break;
+		case 14: //BaseBallBat
+			return objDullKnife;
+		break;
 	}
 
 

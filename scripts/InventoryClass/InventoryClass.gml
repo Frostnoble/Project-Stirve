@@ -161,6 +161,7 @@ function Rope () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 3)
+	madeWith = 0 // Hand
 }
 
 
@@ -188,6 +189,7 @@ function FireStarter() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,7,59)
+	madeWith = 0 // Hand
 }
 
 function WorkStation () : Item () constructor {
@@ -208,6 +210,7 @@ function WorkStation () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,7)
+	madeWith = 0 // Hand
 }
 
 function StoneAxe () : Item () constructor {
@@ -233,6 +236,7 @@ function StoneAxe () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,7,1)
+	madeWith = 1 // Work
 }
 
 function PlaceHolder () : Item () constructor {
@@ -267,7 +271,7 @@ function GrassSeed() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 3)
-
+	madeWith = 0 // Hand
 }
 
 function Pinecone() : Item () constructor {
@@ -405,6 +409,7 @@ function StoneSpade () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,7,1)
+	madeWith = 1 // Work
 }
 
 function Sand() : Item () constructor {
@@ -447,6 +452,7 @@ function RawClay () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 20)
+	madeWith = 4 // Water
 }
 
 function StonePickaxe () : Item () constructor {
@@ -472,6 +478,7 @@ function StonePickaxe () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,7,1)
+	madeWith = 1 // Work
 }
 
 function RawClayBowl () : Item () constructor {
@@ -490,6 +497,7 @@ function RawClayBowl () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 21)
+	madeWith = 1 // Work
 }
 
 function ClayBowl () : Item () constructor {
@@ -510,6 +518,7 @@ function ClayBowl () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 23)
+	madeWith = 5 // Kiln
 }
 
 function ClayBowlWater () : Item () constructor {
@@ -575,6 +584,7 @@ function RawClayPot () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 21)
+	madeWith = 1 // Work
 }
 
 function ClayPot() : Item () constructor {
@@ -594,6 +604,7 @@ function ClayPot() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 27)
+	madeWith = 5 // Kiln
 }
 
 
@@ -616,6 +627,7 @@ function WoodenChest () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,1)
+	madeWith = 1 // Work
 }
 
 function GrassBed () : Item () constructor {
@@ -637,6 +649,7 @@ function GrassBed () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,7,3)
+	madeWith = 1 // Work
 }
 
 function FishingRod () : Item () constructor {
@@ -662,6 +675,7 @@ function FishingRod () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,7,72)
+	madeWith = 1 // Work
 }
 
 function SmallFish () : Item () constructor {
@@ -823,6 +837,7 @@ function FenceWood () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0)
+	madeWith = 0 // Hand
 }
 
 function FenceWoodDoor () : Item () constructor {
@@ -842,6 +857,7 @@ function FenceWoodDoor () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0)
+	madeWith = 0 // Hand
 }
 
 function Kiln () : Item () constructor {
@@ -862,6 +878,7 @@ function Kiln () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 50,8)
+	madeWith = 1 // Work
 }
 
 function BeastPelt() : Item () constructor {
@@ -933,6 +950,7 @@ function DryingRack () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,7)
+	madeWith = 1 // Work
 }
 
 function BeastJerky () : Item () constructor {
@@ -979,6 +997,7 @@ function FishSoup () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 6,26,35)
+	madeWith = 3 // FieldStove
 	
 }
 
@@ -1001,7 +1020,7 @@ function SchroomSoup () : Item () constructor {
 	ds_map_add(crafting, new Bone(), 1)
 	ds_map_add(crafting, new ClayBowlWaterPure(), 1)
 	ds_map_add(crafting, new FriedMush(), 3)
-
+	madeWith = 3 // FieldStove
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1031,6 +1050,7 @@ function StoneHoe () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,7,1)
+	madeWith = 1 // Work
 }
 
 function Berries() : Item () constructor {
@@ -1069,6 +1089,7 @@ function Spear () : Item () constructor {
 	crafting = ds_map_create();
 	canDry = false;
 	canSpread = false;
+	madeWith = 1 // Work
 }
 
 function UnFiredBrick() : Item () constructor {
@@ -1087,6 +1108,7 @@ function UnFiredBrick() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 21)
+	madeWith = 1 // Work
 }
 
 function Brick() : Item () constructor {
@@ -1126,6 +1148,7 @@ function WoodenBowl() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0)
+	madeWith = 1 // Work
 }
 
 function WoodBowlWater () : Item () constructor {
@@ -1189,6 +1212,7 @@ function FieldStove() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 1,8)
+	madeWith = 1 // Work
 }
 
 function ClayBowlAnimalFat() : Item () constructor {
@@ -1208,6 +1232,7 @@ function ClayBowlAnimalFat() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 24, 4)
+	madeWith = 3 // FieldStove
 
 }
 
@@ -1227,7 +1252,7 @@ function ClayBowlOil() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 55)
-
+	madeWith = 3 // FieldStove
 }
 
 function GrilledMeat () : Item () constructor {
@@ -1246,10 +1271,11 @@ function GrilledMeat () : Item () constructor {
 	KP_lock = 0;
 	yeald = 1;
 	foodLevel = 1;
+	madeWith = 3 // FieldStove
 	ds_map_add(crafting, new RawMeat(), 1)
 	ds_map_add(crafting, new ClayBowlOil(), 1)
 	desc = "This is actually pretty good.";
-
+	madeWith = 3 // FieldStove
 		//==========================
 	canDry = false;
 	canSpread = false;
@@ -1276,7 +1302,7 @@ function GrilledFishS () : Item () constructor {
 	yeald = 1;
 	foodLevel = 1;
 	desc = "Grilled fish, watch out for bones.";
-
+	madeWith = 3 // FieldStove
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1301,7 +1327,7 @@ function GrilledFishM() : Item () constructor {
 	yeald = 2;
 	foodLevel = 1;
 	desc = "Grilled fish, watch out for bones.";
-
+	madeWith = 3 // FieldStove
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1327,7 +1353,7 @@ function GrilledFishL () : Item () constructor {
 	yeald = 3;
 	foodLevel = 1;
 	desc = "Grilled fish, watch out for bones.";
-
+	madeWith = 3 // FieldStove
 	canDry = false;
 	canSpread = false;
 	craftHelper = ds_list_create();
@@ -1351,6 +1377,7 @@ function TreeBark() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0)
+	madeWith = 0 // Hand
 }
 
 function Seaweed () : Item () constructor {
@@ -1432,6 +1459,7 @@ function BeastTunic() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 39, 7, 70)
+	madeWith = 1 // Work
 }
 
 function BeastHat() : Item () constructor {
@@ -1453,6 +1481,7 @@ function BeastHat() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 39, 7, 70)
+	madeWith = 1 // Work
 }
 
 function Ash() : Item () constructor {
@@ -1513,7 +1542,7 @@ function WoodBowlJuice() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 53, 47)
-
+	madeWith = 1 // Work
 }
 
 
@@ -1538,7 +1567,7 @@ function ClayBowlJuice() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 26, 47)
-
+	madeWith = 1 // Work
 }
 
 function PrePit () : Item () constructor {
@@ -1559,6 +1588,7 @@ function PrePit () : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 1,59)
+	madeWith = 0 // Hand
 }
 
 function BoneNeedle() : Item () constructor {
@@ -1578,6 +1608,7 @@ function BoneNeedle() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 6,2)
+	madeWith = 0 // Hand
 }
 
 function BeeBox() : Item () constructor {
@@ -1599,6 +1630,7 @@ function BeeBox() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0,7,66)
+	madeWith = 1 // Work
 }
 
 function BoneHook() : Item () constructor {
@@ -1618,6 +1650,7 @@ function BoneHook() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 6,2)
+	madeWith = 0 // Hand
 }
 
 function Torch() : Item () constructor {
@@ -1638,6 +1671,7 @@ function Torch() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 0, 65)
+	madeWith = 0 // Hand
 }
 
 function ShellMusic () : Item () constructor {
@@ -1739,7 +1773,7 @@ function HibiscusSeedP() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 75)
-
+	madeWith = 0 // Hand
 }
 
 function HibiscusSeedY() : Item () constructor {
@@ -1759,6 +1793,7 @@ function HibiscusSeedY() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 76)
+	madeWith = 0 // Hand
 }
 
 function HibiscusSeedPu() : Item () constructor {
@@ -1778,6 +1813,7 @@ function HibiscusSeedPu() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 77)
+	madeWith = 0 // Hand
 }
 
 function HibiscusSeedO() : Item () constructor {
@@ -1797,6 +1833,7 @@ function HibiscusSeedO() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 78)
+	madeWith = 0 // Hand
 }
 
 function HibiscusSeedR() : Item () constructor {
@@ -1816,6 +1853,7 @@ function HibiscusSeedR() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 79)
+	madeWith = 0 // Hand
 }
 
 function Basket() : Item () constructor {
@@ -1836,4 +1874,359 @@ function Basket() : Item () constructor {
 	canSpread = false;
 	craftHelper = ds_list_create();
 	ds_list_add(craftHelper, 59,2)
+	madeWith = 0 // Hand
+}
+
+function BrokenRadio () : Item () constructor {
+	name = "BrokenRadio";
+	image_id = 86;
+	amount = 1;
+	type = 0;
+	tool_id = 0;
+	hitlag = 75;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function Radio() : Item () constructor {
+	name = "Radio";
+	image_id = 87;
+	amount = 1;
+	type = 0;
+	tool_id = 0;
+	hitlag = 75;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function RawCopper() : Item () constructor {
+	name = "Raw Copper";
+	image_id = 88;
+	amount = 1;
+	type = 0;
+	tool_id = 0;
+	hitlag = 75;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function RawTin() : Item () constructor {
+	name = "Raw Tin";
+	image_id = 89;
+	amount = 1;
+	type = 0;
+	tool_id = 0;
+	hitlag = 75;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function RawIron() : Item () constructor {
+	name = "Raw Iron";
+	image_id = 90;
+	amount = 1;
+	type = 0;
+	tool_id = 0;
+	hitlag = 75;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function RawGold() : Item () constructor {
+	name = "Raw Gold";
+	image_id = 91;
+	amount = 1;
+	type = 0;
+	tool_id = 0;
+	hitlag = 75;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function Lodestone() : Item () constructor {
+	name = "LodeStone";
+	image_id = 92;
+	amount = 1;
+	type = 0;
+	tool_id = 0;
+	hitlag = 75;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function Copper() : Item () constructor {
+	name = "Copper";
+	image_id = 93;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new RawCopper(), 1)
+	ds_map_add(crafting, new Limedust(), 1)
+	desc = "A smelted bar of copper.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 88,97)
+	madeWith = 6 // Kiln 2
+}
+
+function Tin() : Item () constructor {
+	name = "Tin";
+	image_id = 94;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new RawTin(), 1)
+	ds_map_add(crafting, new Limedust(), 1)
+	desc = "A smelted bar of tin.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 89,97)
+	madeWith = 6 // Kiln 2
+}
+
+function Iron() : Item () constructor {
+	name = "Iron";
+	image_id = 95;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new RawIron(), 1)
+	ds_map_add(crafting, new Limedust(), 1)
+	desc = "A smelted bar of tin.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 90,97)
+	madeWith = 6 // Kiln 2
+}
+
+function Gold() : Item () constructor {
+	name = "Gold";
+	image_id = 96;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new RawGold(), 1)
+	ds_map_add(crafting, new Limedust(), 1)
+	desc = "A smelted bar of tin.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 91,97)
+	madeWith = 6 // Kiln 2
+}
+
+function Limedust() : Item () constructor {
+	name = "Limedust";
+	image_id = 97;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 3;
+	ds_map_add(crafting, new SeaShell(), 1)
+	desc = "A powder used for smelting things in a Kiln.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 61)
+	madeWith = 0 // Hand
+}
+
+function Bellows() : Item () constructor {
+	name = "Bellows";
+	image_id = 98;
+	amount = 1;
+	type = 2;
+	hitlag = 75;
+	tool_id = 0;
+	Spawn = objBellows;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new ClayPot(), 1)
+	ds_map_add(crafting, new BeastPelt(), 10)
+	desc = "Can be placed left of a Kiln to upgrade it.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 27,39)
+	madeWith = 1 // Work
+}
+
+function Compass () : Item () constructor {
+	name = "Compass";
+	image_id = 99;
+	amount = 1;
+	type = 0;
+	tool_id = 0;
+	hitlag = 75;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function BaseballBat() : Item () constructor {
+	name = "Baseball Bat";
+	image_id = 100;
+	amount = 1;
+	type = 1;
+	dura = 1000;
+	dura_max = 1000;
+	attackPow = 1;
+	cuttingPow = 1;
+	smashingPow = 1;
+	hitlag = 75;
+	tool_id = 14;
+	crafting = ds_map_create();
+	canDry = false;
+	canSpread = false;
+}
+
+function Medication() : Item () constructor {
+	name = "Medication";
+	image_id = 101;
+	amount = 1;
+	type = 3;
+	hungerFill = 0;
+	waterFill = 0;
+	fatigueFill = -50;
+	effect = new Normal();
+	hitlag = 75;
+	tool_id = 0;
+	hitlag = 75;
+	crafting = ds_map_create();
+	foodLevel = 1;
+
+	canDry = false;
+	canSpread = false;
+	cantype = 0;
+	
+}
+
+function Suitcase() : Item () constructor {
+	name = "Suitcase";
+	image_id = 102;
+	amount = 1;
+	type = 2;
+	hitlag = 75;
+	tool_id = 0;
+	Spawn = objGrassBed;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	desc = "Interact with this to sleep.";
+	canDry = false;
+	canSpread = false;
+}
+
+function Brass() : Item () constructor {
+	name = "Brass";
+	image_id = 103;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new RawCopper(), 2)
+	ds_map_add(crafting, new RawTin(), 1)
+	ds_map_add(crafting, new Limedust(), 4)
+	desc = "A smelted bar of copper.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 88,89,97)
+	madeWith = 6 // Kiln 2
+}
+
+function LightningRod() : Item () constructor {
+	name = "LightningRod";
+	image_id = 104;
+	amount = 1;
+	type = 2;
+	hitlag = 75;
+	tool_id = 0;
+	Spawn = objLightningRod;
+	crafting = ds_map_create();
+	KP_lock = 100;
+	yeald = 1;
+	ds_map_add(crafting, new Copper(), 5)
+	ds_map_add(crafting, new Hammer(), 1)
+	desc = "Attracts lighting. Can turn Flint into Loadestone.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 93)
+	madeWith = 7 // SmithingTable
+}
+
+function SmithingTable () : Item () constructor {
+	name = "SmithingTable";
+	image_id = 105;
+	amount = 1;
+	type = 2;
+	hitlag = 75;
+	tool_id = 0;
+	Spawn = objSmithingTable;
+	crafting = ds_map_create();
+	KP_lock = 10;
+	yeald = 1;
+	ds_map_add(crafting, new WorkStation(), 1)
+	ds_map_add(crafting, new Brass(), 3)
+	desc = "Place this to craft new things.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 9,103)
+	madeWith = 1 // Work
+}
+
+function Hammer() : Item () constructor {
+	name = "SmithHammer";
+	image_id = 106;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new Brass(), 1)
+	ds_map_add(crafting, new Wood(), 3)
+	ds_map_add(crafting, new Rope(), 1)
+	desc = "A basic material for building things.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper,103,0,7)
+	madeWith = 7 // SmithingTable
 }

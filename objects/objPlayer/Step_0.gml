@@ -2,38 +2,36 @@
 // You can write your code in this editor
 
 KeyGet();
-/*
-if(keyboard_check_pressed(ord("G")))
-{
 
-	instance_create_layer(x,y, "Instances", objPot);
-}
-
-
-if(keyboard_check_pressed(ord("R")))
-{
-
-	if(instance_exists(objRainGen))
-	{
-		instance_destroy(objRainGen);
-	}
-	else{instance_create_layer(0,0, "Instances", objRainGen);}
-
-	
-}
 
 if(keyboard_check_pressed(ord("I")))
 {
 
-	if(instance_exists(objStormGen))
+	if(y >= 4320)
 	{
-		instance_destroy(objStormGen);
+		global.underground = false;
+		y = y - 4320;
 	}
-	else{instance_create_layer(0,0, "Instances", objStormGen);}
+	else
+	{
+		global.underground = true;
+		y = y + 4320;
 
+	}
+	xTarg = x; 
+	yTarg = y;
+	global.inFront_x = round((objPlayer.x+lengthdir_x(TILE_W*objPlayer.spd,objPlayer.move_dir)) / 16) * 16;
+	global.inFront_y = round((objPlayer.y+lengthdir_y(TILE_H*objPlayer.spd,objPlayer.move_dir)) / 16) * 16;
 	
 }
-*/
+
+if(keyboard_check_pressed(ord("G")))
+{
+
+	instance_create_layer(0,0, "Instances", objStormGen);
+	addInventory(97,40,new LightningRod(),objInventory.inventory);
+}
+
 if(hurtFrames > 0)
 {
 	global.inv = true;

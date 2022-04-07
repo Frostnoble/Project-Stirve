@@ -197,6 +197,7 @@ if(global.gamemode == 1 && candraw)
 							}
 						}
 					}
+
 				}
 				
 				

@@ -2,6 +2,37 @@
 // You can write your code in this editor
 KeyGet();
 
+/*
+switch(level)
+{
+	case 1:
+		addedRecipes = ds_list_create();
+		ds_list_add(addedRecipes, 
+		new ClayBowl(),
+		new ClayPot());
+		
+	break;
+	case 2:
+		addedRecipes = ds_list_create();
+		ds_list_add(addedRecipes, 
+		new ClayBowl(),
+		new ClayPot(),
+		new Copper(),
+		new Tin());
+	break;
+	case 3:
+		addedRecipes = ds_list_create();
+		ds_list_add(addedRecipes, 
+		new ClayBowl(),
+		new ClayPot(),
+		new Copper(),
+		new Tin());
+	break;
+}
+
+*/
+
+
 if(!stunned && place_meeting(x,y,ToolChecker(global.equip.tool_id)) && (keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)) && objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && global.equip.type == 1){
     pitchRandomizer(sfxSplash,10,false);
 	HP = HP - global.equip.cuttingPow;
@@ -39,4 +70,14 @@ if(distance_to_object(objPlayer) <= 16)
 	}
 	
 
+}
+
+item = instance_place(x-16,y,objBellows);
+
+if (item != noone)
+{
+	
+	instance_create_layer(x-16,y,"Instances",objKiln2);
+	instance_destroy();
+	with(item){instance_destroy();}
 }

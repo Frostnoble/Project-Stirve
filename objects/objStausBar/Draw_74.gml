@@ -69,5 +69,7 @@ if(global.gamemode != 1 && global.gamemode != 3)
 		draw_set_colour(c_black);
 		draw_set_font(Gameboy);
 	}
+	
+	
 
 }

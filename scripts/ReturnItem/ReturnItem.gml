@@ -32,6 +32,9 @@ function ReturnItem(image_id)
 			addInventory(2,1,new Knife(),objInventory.inventory)
 		break;
 
+		case 104://LightningRod
+			addInventory(106,1,new Hammer(),objInventory.inventory)
+		break;
 
 	}
 

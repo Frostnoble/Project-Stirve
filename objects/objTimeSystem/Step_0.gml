@@ -33,7 +33,7 @@ if(objPlayer.steps >= 40)
 	objPlayer.steps = 0 
 	if(global.status.name != "Cozy" && global.gamemode == 0)
 	{
-		if((global.weather == 1 || global.weather == 2) && !global.WearHat)
+		if((global.weather == 1 || global.weather == 2) && !global.WearHat && !global.underground)
 		{
 			if(global.FATIGUE + 2 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 2;}
 		}else
@@ -41,6 +41,7 @@ if(objPlayer.steps >= 40)
 			if(global.FATIGUE + 1 > 100){global.FATIGUE = 100;}else{global.FATIGUE += 1;}
 		}
 	}
+
 	
 	
 }
@@ -187,8 +188,27 @@ if(sick_timer == global.status.time && global.gamemode == 0){
 if(objPlayer.move_xinput == 0 && objPlayer.move_yinput == 0 && seconds2 == 0 && (minutes2 == 0 || minutes2 == 20 || minutes2 == 40) && global.gamemode == 0)
 {
 	//sick_timer++;
-	if(global.FATIGUE - 2 < 0){global.FATIGUE = 0;}else{global.FATIGUE -= 2;}
+	if(global.status.name != "Cozy")
+	{
+		if(global.FATIGUE - 5 < 0){global.FATIGUE = 0;}else{global.FATIGUE -= 5;}
+	}
+	else
+	{
+		if(global.FATIGUE - 2 < 0){global.FATIGUE = 0;}else{global.FATIGUE -= 2;}
+	}
+	
+	
 }
+
+if(MILhours2 == 15 && minutes2 == 0 && seconds2 == 0 && instance_exists(objLightningRod))
+{
+	with(objLightningRod)
+	{
+		pitchRandomizer(sfxThunder,10,false);
+		instance_create_layer(x,y, "Instances", objStorm);
+	}
+
+}	
 
 
 

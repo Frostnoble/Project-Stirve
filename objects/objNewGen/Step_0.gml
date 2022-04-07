@@ -9,10 +9,10 @@ if(global.startType == 0){
 
 
 		randomize();
-
+		//Spawn Overworld
 
 		for(var i = 0; i < room_width/16; i++)
-		for(var j = 0; j < room_height/16; j++)
+		for(var j = 0; j < (room_height/2)/16; j++)
 		{
 		
 			//var index = map_value(FastNoise(i, j, 1), -1, 1, 0, 255);
@@ -33,7 +33,7 @@ if(global.startType == 0){
 			while(!ShellFlute)
 			{
 				xs = irandom(room_width/16)* 16;
-				ys = irandom(room_width/16)* 16;
+				ys = irandom(room_height/16)* 16;
 				var lay_id_s = layer_get_id("Tileset");
 				var map_id_s = layer_tilemap_get_id(lay_id_s);
 				var checktile_s = tilemap_get_at_pixel(map_id_s, xs, ys);
@@ -44,7 +44,15 @@ if(global.startType == 0){
 				}
 			}
 			
-			
+			while(!Helli)
+			{
+				xh = ((room_width/16)* 16) / 2;
+				yh = ((room_height/16)* 16) / 2;
+				instance_create_layer(xh-16,yh, "Instances", objHelli);
+				spawnDrop(74,new BrokenRadio(),1,xh,yh); 
+				Helli = true;
+				
+			}			
 			
 			
 			
@@ -78,11 +86,52 @@ if(global.startType == 0){
 				if(index == 3){spawnDrop(17,new BlueMushroom(),1,x_spawn,y_spawn);}
 				//instance_deactivate_all(true);
 				//show_debug_message(index);
+			}		
+		}
+		//Spawn UnderWorld
+		
+		for(var i = 0; i < room_width/16; i++)	
+		for(var j = 4320/16; j < room_height/16; j++)
+		{
+		
+			
+		
+		
+			//show_debug_message(map_value(perlin_noise(i, j), -1, 1, 0, 255))
+			var x_spawn = (i * 16);
+			var y_spawn = (j * 16);
+			//show_debug_message(string(x_spawn) +" "+ string(y_spawn));
+			//INSIDE FOREST
+			
+			var lay_id = layer_get_id("Tileset");
+			var map_id = layer_tilemap_get_id(lay_id);
+			var checktile = tilemap_get_at_pixel(map_id, x_spawn, y_spawn);
+			var index = global.world[# i, j];
+			//var index = map_value(FastNoise(i, j, 1), -1, 1, 0, 255);
+		
+			
+			
+			
+			//if(checktile == 1 && !ShellFlute){spawnDrop(74,new ShellMusic(),1,x_spawn,y_spawn); ShellFlute = true;}
+			
+			if(place_empty(x_spawn,y_spawn)){
+			
+				
+				 
+
+				///show_debug_message(index);
+				//if(index >= 100 && index <= 300){instance_create_layer(x_spawn,y_spawn, "Instances_Underground", objUnderground_Stone);}
+				if(index >= 650){instance_create_layer(x_spawn,y_spawn, "Instances", objUnderground_Stone);}
+				if(index <= 26 && index >= 25){spawnDrop(1,new Stone(),1,x_spawn,y_spawn);}
+				//instance_deactivate_all(true);
+				//show_debug_message(index);
 			}
 		
 
 			
-		}
+		}		
+		
+		
 		//show_debug_message("DONE")
 		done = true;
 		audio_play_sound(musOverworld_Clear, 1, true);
@@ -155,6 +204,7 @@ if(global.startType == 0){
 		audio_master_gain(1);
 		
 		global.weather = 0;
+		global.underground = false;
 		global.WearTunic = false;
 		global.WearHat = false;
 		global.defence = 0;

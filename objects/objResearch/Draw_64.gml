@@ -145,6 +145,31 @@ if(global.gamemode == 6)
 							}
 						}
 					}
+					
+					//draw station
+					var xx2 = 144 + (11 mod rowlength) * 18 - 41;
+					var yy2 = -78 + (10 div rowlength) * 18 + 3 +84;
+					switch(selected.madeWith)
+					{
+						case 0: //Nothing
+						
+						break;
+						case 1: //WorkStation
+							draw_sprite(sprWorkStation,0,xx2,yy2);
+						break;
+						case 2: //Campfire
+							draw_sprite(sprCampFire,0,xx2,yy2);
+						break;
+						case 3: //FieldStove
+							draw_sprite(sprFieldStove,0,xx2,yy2);
+						break;
+						case 4: //Water
+							draw_sprite(sprWaterCraft,0,xx2,yy2);
+						break;
+						case 5: //Kiln 1
+							draw_sprite(sprKiln,0,xx2,yy2);
+						break;
+					}
 			
 			
 			

@@ -46,7 +46,8 @@ function SaveGame1()
 		defence: global.defence,
 		tree: global.TreeCheck,
 		grass: global.GrassCheck,
-		rock: global.RockCheck
+		rock: global.RockCheck,
+		underground: global.underground
 	
 
 
@@ -239,7 +240,7 @@ function LoadGame1()
 				global.TreeCheck = _loadEntity.tree;
 				global.GrassCheck = _loadEntity.grass;
 				global.RockCheck = _loadEntity.rock;
-				
+				global.underground = _loadEntity.underground;
 			}
 			
 			if(_loadEntity.type == 2)

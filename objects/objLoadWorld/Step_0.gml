@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(global.startType == 0){
 	if(i < iMax){
-		for(var j = 0; j < jMax; j++)
+		for(j = 0; j < jMax; j++)
 		{
 			rand = irandom(1000);
 			ds_grid_add(global.world, i, j, rand);

@@ -261,7 +261,69 @@ function NewItem(id){
 		case 85: 
 			return new Basket();
 		break;
-
+		case 86: 
+			return new BrokenRadio()
+		break;
+		case 87: 
+			return new Radio();
+		break;
+		case 88: 
+			return new RawCopper();
+		break;
+		case 89: 
+			return new RawTin();
+		break;
+		case 90: 
+			return new RawIron();
+		break;
+		case 91: 
+			return new RawGold();
+		break;
+		case 92: 
+			return new Lodestone();
+		break;
+		case 93: 
+			return new Copper();
+		break;
+		case 94: 
+			return new Tin();
+		break;
+		case 95: 
+			return new Iron();
+		break;
+		case 96: 
+			return new Gold();
+		break;
+		case 97: 
+			return new Limedust();
+		break;
+		case 98: 
+			return new Bellows();
+		break;
+		case 99: 
+			return new Compass();
+		break;
+		case 100: 
+			return new BaseballBat();
+		break;
+		case 101: 
+			return new Medication();
+		break;
+		case 102: 
+			return new Suitcase();
+		break;
+		case 103: 
+			return new Brass();
+		break;
+		case 104: 
+			return new LightningRod();
+		break;
+		case 105: 
+			return new SmithingTable();
+		break;
+		case 106: 
+			return new Hammer();
+		break;
 	}
 
 }

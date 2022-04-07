@@ -22,6 +22,7 @@ new StoneAxe(),
 new StoneSpade(),
 new StonePickaxe(),
 new StoneHoe(),
+new Hammer(),
 new WoodenBowl(),
 new FishingRod(),
 new RawClayBowl(),
@@ -32,5 +33,7 @@ new DryingRack(),
 new FieldStove(),
 new BeastTunic(),
 new BeastHat(),
-new Kiln());
+new Bellows(),
+new Kiln(),
+new SmithingTable());
 

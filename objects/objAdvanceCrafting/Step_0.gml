@@ -18,12 +18,23 @@ else if(position_meeting(global.inFront_x, global.inFront_y,objFieldStove))
 	
 	
 }
-
+else if(position_meeting(global.inFront_x, global.inFront_y,objSmithingTable))
+{
+	objCrafting.recipes = objSmithingTable.addedRecipes;
+	
+	
+}
 else if(position_meeting(global.inFront_x, global.inFront_y,objKiln))
 {
 	objCrafting.recipes = objKiln.addedRecipes;
 	
 }
+else if(position_meeting(global.inFront_x, global.inFront_y,objKiln2))
+{
+	objCrafting.recipes = objKiln2.addedRecipes;
+	
+}
+
 else if(position_meeting(global.inFront_x, global.inFront_y,objWorkStation))
 {
 	

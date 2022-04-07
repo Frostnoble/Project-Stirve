@@ -27,7 +27,8 @@ new HibiscusSeedPu(),
 new HibiscusSeedO(),
 new HibiscusSeedR(),
 new WoodBowlJuice(),
-new ClayBowlJuice());
+new ClayBowlJuice(),
+new Limedust());
 selected = recipes[| 0];
 
 

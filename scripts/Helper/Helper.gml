@@ -201,4 +201,11 @@ function Avatar(num)
 
 }
 
+function checkUnder()
+{
+	if(y <= 4320){ return true;}
+	else{ return false;}
+
+}
+
 

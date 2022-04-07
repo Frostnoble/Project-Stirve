@@ -40,6 +40,8 @@ objPrePit,
 objBeeBoxEmpty,
 objBeeBoxFull,
 objFlowerPot,
+objUnderground_Stone,
+objBellows,
 objPlayer);
 
 OutfitList = ds_list_create();
@@ -103,7 +105,17 @@ new BeeBox(),
 new BoneNeedle(),
 new BoneHook(),
 new Basket(),
-new Torch()];
+new Torch(),
+new	Copper(),
+new Tin(),
+new Iron(),
+new Gold(),
+new Limedust(),
+new Bellows(),
+new Brass(),
+new LightningRod(),
+new SmithingTable(),
+new Hammer()];
 
 
 

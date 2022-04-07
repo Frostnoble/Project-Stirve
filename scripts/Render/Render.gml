@@ -31,9 +31,12 @@ function Render(){
 		//instance_deactivate_object(objBush);
 		instance_deactivate_object(objBerryBush);
 		instance_deactivate_object(objKiln);
+		instance_deactivate_object(objBellows);
 		instance_deactivate_object(objFieldStove);
 		instance_deactivate_object(objGrassBed);
-		
+		instance_deactivate_object(objUnderground_Stone);
+		instance_deactivate_object(objSmithingTable);
+		instance_deactivate_object(objLightningRod);
 		
 		var xview = camera_get_view_x(view_camera[0]);
 		var yview = camera_get_view_y(view_camera[0]);

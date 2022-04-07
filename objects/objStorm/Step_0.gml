@@ -14,13 +14,19 @@ if(timer >= 200)
 {
 	
 	
-	if(place_meeting(x,y,objPlayer)){
+	if(place_meeting(x,y,objPlayer))
+	{
 		if(!global.inv)
 		{
 			pitchRandomizer(sfxHurt,10,false);
 			if(global.HEALTH - 90 < 0){global.HEALTH = 0}else{global.HEALTH -= 90}
 			objPlayer.hurtFrames = 30;
 		}
+	}
+	
+	if(place_meeting(x,y,objLightningRod))
+	{
+		objLightningRod.struck = true;
 	}
 	instance_destroy();
 	
