@@ -47,8 +47,26 @@ function ToolChecker(tool_id)
 			return objShellMusic;
 		break;
 		case 14: //BaseBallBat
-			return objDullKnife;
+			return objBaseballBat;
 		break;
+		
+		case 15: //BronzeAxe
+			return objBronzeAxe
+		break;		
+		case 16: //BronzePickAxe
+			return objBronzePickaxe
+		break;		
+		case 17: //BronzeSpade
+			return objBronzeSpade
+		break;		
+		case 18: //BronzeHoe
+			return objBronzeHoe
+		break;		
+		case 19: //BronzeFishing
+			return objBronzeFishingRod;
+		break;
+		
+		
 	}
 
 

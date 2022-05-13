@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprReticle","path":"sprites/sprReticle/sprReticle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprReticle",
     "tags": [],
     "resourceType": "GMSequence",

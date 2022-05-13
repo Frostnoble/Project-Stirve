@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprCampFire","path":"sprites/sprCampFire/sprCampFire.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprCampFire",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprGender","path":"sprites/sprGender/sprGender.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprGender",
     "tags": [],
     "resourceType": "GMSequence",

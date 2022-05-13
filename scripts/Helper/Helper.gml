@@ -158,7 +158,7 @@ function killPlant(x,y)
 	var map_id = layer_tilemap_get_id(lay_id);
 	var checktile = tilemap_get_at_pixel(map_id, x, y);
 
-	if(checktile == 1){instance_destroy();}
+	if(checktile == 1 || checktile == 5 ){instance_destroy();}
 	
 }
 
@@ -168,8 +168,8 @@ function HPBar(HP,MHP)
 	{
 		x1 = x;
 		x2 = x+16;
-		y1 = y+8;
-		y2 = y+5;
+		y1 = y+7;
+		y2 = y+8;
 		//draw_set_colour(c_black);
 		//draw_rectangle(x1+1,y1+1,x1+1+(x2-1-x1+1)*(1),y2-1,0);
 		draw_set_colour(c_gray);
@@ -207,5 +207,7 @@ function checkUnder()
 	else{ return false;}
 
 }
+
+
 
 

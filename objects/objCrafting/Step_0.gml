@@ -47,25 +47,25 @@ if(global.gamemode == 1 && global.gamemode != 3){
 
 	if((keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2)))
 	{
-		if(ds_map_find_value(global.unlocked, listCanCraft[| i].image_id) == 0)
-		{
+		//if(ds_map_find_value(global.unlocked, listCanCraft[| i].image_id) == 0)
+		//{
 			Crafting(listCanCraft[| i],objInventory.inventory);
 			if(!ds_list_find_index(objInventory.inventory,global.equip))
 			{
 				global.equip = objInventory.inventory[| ds_list_size(objInventory.inventory)-1];
 				
 			}
-		}
-		else
-		{
-			if(global.KP >= ds_map_find_value(global.unlocked, listCanCraft[| i].image_id))
-			{
-				global.KP = global.KP - ds_map_find_value(global.unlocked, listCanCraft[| i].image_id);
-				ds_map_set(global.unlocked, listCanCraft[| i].image_id, 0)
+		//}
+		//else
+		//{
+			//if(global.KP >= ds_map_find_value(global.unlocked, listCanCraft[| i].image_id))
+			//{
+			//	global.KP = global.KP - ds_map_find_value(global.unlocked, listCanCraft[| i].image_id);
+			//	ds_map_set(global.unlocked, listCanCraft[| i].image_id, 0)
 				
-			}
+			//}
 		
-		}
+		//}
 	}
 	
 	if(keyboard_check_pressed(Select_Key))

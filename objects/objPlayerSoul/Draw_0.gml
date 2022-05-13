@@ -10,7 +10,7 @@ if(timer > 100 && !startfade)
 		with(objPlayer)
 		{
 			depth = room_height - y
-			sprite_index = sprBoi;
+			sprite_index = playerMove();
 		
 		}
 		global.death = false;

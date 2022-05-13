@@ -13,7 +13,7 @@ hit = false;
 with (objPlayer)
 {
 	attackFrame = true;
-	sprite_index = sprBoiAttack;
+	sprite_index = playerAttack();
 	//show_debug_message(dir)
 	image_index = dir;
 	

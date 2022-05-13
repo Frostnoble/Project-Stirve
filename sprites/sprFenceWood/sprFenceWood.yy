@@ -119,7 +119,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprFenceWood","path":"sprites/sprFenceWood/sprFenceWood.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprFenceWood",
     "tags": [],
     "resourceType": "GMSequence",

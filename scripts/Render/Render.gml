@@ -19,6 +19,9 @@ function Render(){
 		instance_deactivate_object(objBasket);
 		//instance_deactivate_object(objItem);
 		
+		//instance_deactivate_object(objCaveDown);
+		//instance_deactivate_object(objCaveUp);
+		
 		instance_deactivate_object(objCampFire);
 		instance_deactivate_object(objWorkStation);
 		instance_deactivate_object(objRabbit);

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprTiles2","path":"sprites/sprTiles2/sprTiles2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprTiles2",
     "tags": [],
     "resourceType": "GMSequence",

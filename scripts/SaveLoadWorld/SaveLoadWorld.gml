@@ -47,7 +47,10 @@ function SaveGame1()
 		tree: global.TreeCheck,
 		grass: global.GrassCheck,
 		rock: global.RockCheck,
-		underground: global.underground
+		underground: global.underground,
+		sstorage0: global.SuitcaseStorage[|0],
+		sstorage1: global.SuitcaseStorage[|1],
+		sstorage2: global.SuitcaseStorage[|2]
 	
 
 
@@ -121,6 +124,9 @@ function SaveGame1()
 	
 	}
 	
+	
+
+	
 	with(objPot)
 	{
 		var _saveEntity = 
@@ -158,9 +164,11 @@ function SaveGame1()
 	
 		}
 	}
+	
+
 
 	
-	
+	Render();
 	var _string = json_stringify(_saveData);
 	var _buffer = buffer_create(string_byte_length(_string) + 1, buffer_fixed,1)
 	buffer_write(_buffer,buffer_string,_string);
@@ -241,6 +249,12 @@ function LoadGame1()
 				global.GrassCheck = _loadEntity.grass;
 				global.RockCheck = _loadEntity.rock;
 				global.underground = _loadEntity.underground;
+				
+								
+				global.SuitcaseStorage = ds_list_create();
+				if(_loadEntity.sstorage0 != pointer_null){global.SuitcaseStorage[|0] = _loadEntity.sstorage0;}
+				if(_loadEntity.sstorage1 != pointer_null){global.SuitcaseStorage[|1] = _loadEntity.sstorage1;}
+				if(_loadEntity.sstorage2 != pointer_null){global.SuitcaseStorage[|2] = _loadEntity.sstorage2;}
 			}
 			
 			if(_loadEntity.type == 2)
@@ -316,6 +330,9 @@ function LoadGame1()
 				}
 			
 			}
+			
+			
+
 
 		}
 	}

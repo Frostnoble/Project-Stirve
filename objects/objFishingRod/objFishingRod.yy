@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Tools",
-    "path": "folders/Objects/Tools.yy",
+    "name": "Flint",
+    "path": "folders/Objects/Tools/Flint.yy",
   },
   "resourceVersion": "1.0",
   "name": "objFishingRod",

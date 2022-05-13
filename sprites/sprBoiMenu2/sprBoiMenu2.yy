@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprBoiMenu2","path":"sprites/sprBoiMenu2/sprBoiMenu2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprBoiMenu2",
     "tags": [],
     "resourceType": "GMSequence",

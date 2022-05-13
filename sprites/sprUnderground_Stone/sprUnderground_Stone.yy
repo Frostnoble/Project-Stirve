@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprUnderground_Stone","path":"sprites/sprUnderground_Stone/sprUnderground_Stone.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprUnderground_Stone",
     "tags": [],
     "resourceType": "GMSequence",

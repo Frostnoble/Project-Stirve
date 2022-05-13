@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprOK","path":"sprites/sprOK/sprOK.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprOK",
     "tags": [],
     "resourceType": "GMSequence",

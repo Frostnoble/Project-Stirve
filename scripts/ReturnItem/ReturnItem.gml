@@ -35,7 +35,34 @@ function ReturnItem(image_id)
 		case 104://LightningRod
 			addInventory(106,1,new Hammer(),objInventory.inventory)
 		break;
-
+		
+		case 107://crudecompas
+			addInventory(106,1,new Hammer(),objInventory.inventory)
+		break;
+		
+		case 109://AxeMold
+			addInventory(10,1,new StoneAxe(),objInventory.inventory)
+		break;
+		
+		case 110://HookMold
+			addInventory(72,1,new BoneHook(),objInventory.inventory)
+		break;
+		
+		case 111://HoeMold
+			addInventory(46,1,new StoneHoe(),objInventory.inventory)
+		break;
+		
+		case 112://SpadeMold
+			addInventory(18,1,new StoneSpade(),objInventory.inventory)
+		break;
+		
+		case 113://PickAxeMold
+			addInventory(22,1,new StonePickaxe(),objInventory.inventory)
+		break;
+		
+		case 114://RodMold
+			addInventory(6,1,new Bone(),objInventory.inventory)
+		break;
 	}
 
 

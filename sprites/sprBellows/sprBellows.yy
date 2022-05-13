@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprBellows","path":"sprites/sprBellows/sprBellows.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprBellows",
     "tags": [],
     "resourceType": "GMSequence",

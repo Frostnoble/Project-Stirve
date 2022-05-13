@@ -35,5 +35,12 @@ new BeastTunic(),
 new BeastHat(),
 new Bellows(),
 new Kiln(),
-new SmithingTable());
+new SmithingTable(),
+new BlankMold(),
+new AxeMold(),
+new HookMold(),
+new HoeMold(),
+new SpadeMold(),
+new PickAxeMold(),
+new RodMold());
 

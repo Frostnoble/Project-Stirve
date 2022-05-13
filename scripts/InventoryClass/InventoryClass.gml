@@ -393,9 +393,9 @@ function StoneSpade () : Item () constructor {
 	type = 1;
 	dura = 50;
 	dura_max = 50;
-	attackPow = 2;
-	cuttingPow = 1;
-	smashingPow = 2;
+	attackPow = 0;
+	cuttingPow = 0;
+	smashingPow = 0;
 	hitlag = 20;
 	tool_id = 3;
 	KP_lock = 0;
@@ -462,8 +462,8 @@ function StonePickaxe () : Item () constructor {
 	type = 1;
 	dura = 50;
 	dura_max = 50;
-	attackPow = 3;
-	cuttingPow = 1;
+	attackPow = 1;
+	cuttingPow = 0;
 	smashingPow = 3;
 	hitlag = 75;
 	tool_id = 4;
@@ -1034,9 +1034,9 @@ function StoneHoe () : Item () constructor {
 	type = 1;
 	dura = 50;
 	dura_max = 50;
-	attackPow = 1;
-	cuttingPow = 1;
-	smashingPow = 1;
+	attackPow = 0;
+	cuttingPow = 0;
+	smashingPow = 0;
 	hitlag = 10;
 	tool_id = 7;
 	KP_lock = 0;
@@ -2100,10 +2100,10 @@ function BaseballBat() : Item () constructor {
 	type = 1;
 	dura = 1000;
 	dura_max = 1000;
-	attackPow = 1;
-	cuttingPow = 1;
-	smashingPow = 1;
-	hitlag = 75;
+	attackPow = 5;
+	cuttingPow = 0;
+	smashingPow = 0;
+	hitlag = 50;
 	tool_id = 14;
 	crafting = ds_map_create();
 	canDry = false;
@@ -2117,7 +2117,7 @@ function Medication() : Item () constructor {
 	type = 3;
 	hungerFill = 0;
 	waterFill = 0;
-	fatigueFill = -50;
+	fatigueFill = 50;
 	effect = new Normal();
 	hitlag = 75;
 	tool_id = 0;
@@ -2138,7 +2138,7 @@ function Suitcase() : Item () constructor {
 	type = 2;
 	hitlag = 75;
 	tool_id = 0;
-	Spawn = objGrassBed;
+	Spawn = objSuitcase;
 	crafting = ds_map_create();
 	KP_lock = 0;
 	yeald = 1;
@@ -2147,8 +2147,8 @@ function Suitcase() : Item () constructor {
 	canSpread = false;
 }
 
-function Brass() : Item () constructor {
-	name = "Brass";
+function Bronze() : Item () constructor {
+	name = "Bronze";
 	image_id = 103;
 	amount = 1;
 	type = 0;
@@ -2201,7 +2201,7 @@ function SmithingTable () : Item () constructor {
 	KP_lock = 10;
 	yeald = 1;
 	ds_map_add(crafting, new WorkStation(), 1)
-	ds_map_add(crafting, new Brass(), 3)
+	ds_map_add(crafting, new Bronze(), 3)
 	desc = "Place this to craft new things.";
 	canDry = false;
 	canSpread = false;
@@ -2220,7 +2220,7 @@ function Hammer() : Item () constructor {
 	crafting = ds_map_create();
 	KP_lock = 0;
 	yeald = 1;
-	ds_map_add(crafting, new Brass(), 1)
+	ds_map_add(crafting, new Bronze(), 1)
 	ds_map_add(crafting, new Wood(), 3)
 	ds_map_add(crafting, new Rope(), 1)
 	desc = "A basic material for building things.";
@@ -2230,3 +2230,336 @@ function Hammer() : Item () constructor {
 	ds_list_add(craftHelper,103,0,7)
 	madeWith = 7 // SmithingTable
 }
+
+function CrudeCompass() : Item () constructor {
+	name = "CrudeCompass";
+	image_id = 107;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new Bronze(), 2)
+	ds_map_add(crafting, new Lodestone(), 1)
+	ds_map_add(crafting, new Hammer(), 1)
+	desc = "Let's you know where you are at all times.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper,103,92,106)
+	madeWith = 7 // SmithingTable
+}
+
+function BlankMold() : Item () constructor {
+	name = "BlankMold";
+	image_id = 108;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new Wood(), 4)
+	ds_map_add(crafting, new RawClay(), 3)
+	ds_map_add(crafting, new Limedust(), 1)
+	desc = "A basic blank mold, can be used to craft tool molds.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper,0,21,97)
+	madeWith = 1 // Work
+}
+
+function AxeMold() : Item () constructor {
+	name = "AxeMold";
+	image_id = 109;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new StoneAxe(), 1)
+	ds_map_add(crafting, new BlankMold(), 1)
+	desc = "Craft this with metals to make an advanced axe.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper,10,108)
+	madeWith = 1 // Work
+}
+
+function HookMold() : Item () constructor {
+	name = "HookMold";
+	image_id = 110;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new BoneHook(), 1)
+	ds_map_add(crafting, new BlankMold(), 1)
+	desc = "Craft this with metals to make an advanced hook.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper,72,108)
+	madeWith = 1 // Work
+}
+
+function HoeMold() : Item () constructor {
+	name = "HoeMold";
+	image_id = 111;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new StoneHoe(), 1)
+	ds_map_add(crafting, new BlankMold(), 1)
+	desc = "Craft this with metals to make an advanced hoe.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper,46,108)
+	madeWith = 1 // Work
+}
+
+function SpadeMold() : Item () constructor {
+	name = "SpadeMold";
+	image_id = 112;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new StoneSpade(), 1)
+	ds_map_add(crafting, new BlankMold(), 1)
+	desc = "Craft this with metals to make an advanced spade.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper,18,108)
+	madeWith = 1 // Work
+}
+
+function PickAxeMold() : Item () constructor {
+	name = "PickAxeMold";
+	image_id = 113;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new StonePickaxe(), 1)
+	ds_map_add(crafting, new BlankMold(), 1)
+	desc = "Craft this with metals to make an advanced spade.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper,22,108)
+	madeWith = 1 // Work
+}
+
+function RodMold() : Item () constructor {
+	name = "RodMold";
+	image_id = 114;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new Bone(), 1)
+	ds_map_add(crafting, new BlankMold(), 1)
+	desc = "Craft this with metals to make an advanced spade.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper,6,108)
+	madeWith = 1 // Work
+}
+
+function BronzeAxe () : Item () constructor {
+	name = "BronzeAxe";
+	image_id = 115;
+	amount = 1;
+	type = 1;
+	dura = 300;
+	dura_max = 300;
+	attackPow = 4;
+	cuttingPow = 4;
+	smashingPow = 0;
+	hitlag = 75;
+	tool_id = 15;
+	KP_lock = 0;
+	yeald = 1;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new Wood(), 3)
+	ds_map_add(crafting, new AxeMold(), 1)
+	ds_map_add(crafting, new Bronze(), 2)
+	desc = "A better and stronger axe that last longer.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,109,103)
+	madeWith = 7 // SmithingTable
+}
+
+function BronzeHook() : Item () constructor {
+	name = "BronzeHook";
+	image_id = 116;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new Bronze(), 1)
+	ds_map_add(crafting, new HookMold(), 1)
+	desc = "A Bronze hook used to make a Bronze fishing rod.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper,103,110)
+	madeWith = 7 // SmithingTable
+}
+
+function BronzeHoe () : Item () constructor {
+	name = "BronzeHoe";
+	image_id = 117;
+	amount = 1;
+	type = 1;
+	dura = 300;
+	dura_max = 300;
+	attackPow = 0;
+	cuttingPow = 0;
+	smashingPow = 0;
+	hitlag = 75;
+	tool_id = 18;
+	KP_lock = 0;
+	yeald = 1;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new Wood(), 3)
+	ds_map_add(crafting, new HoeMold(), 1)
+	ds_map_add(crafting, new Bronze(), 1)
+	desc = "A better and stronger hoe that last longer.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,111,103)
+	madeWith = 7 // SmithingTable
+}
+
+function BronzeSpade() : Item () constructor {
+	name = "BronzeSpade";
+	image_id = 118;
+	amount = 1;
+	type = 1;
+	dura = 300;
+	dura_max = 300;
+	attackPow = 0;
+	cuttingPow = 0;
+	smashingPow = 0;
+	hitlag = 75;
+	tool_id = 17;
+	KP_lock = 0;
+	yeald = 1;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new Wood(), 3)
+	ds_map_add(crafting, new SpadeMold(), 1)
+	ds_map_add(crafting, new Bronze(), 1)
+	desc = "A better and stronger spade that last longer.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,112,103)
+	madeWith = 7 // SmithingTable
+}
+
+function BronzePick() : Item () constructor {
+	name = "BronzePick";
+	image_id = 119;
+	amount = 1;
+	type = 1;
+	dura = 300;
+	dura_max = 300;
+	attackPow = 1;
+	cuttingPow = 0;
+	smashingPow = 4;
+	hitlag = 75;
+	tool_id = 16;
+	KP_lock = 0;
+	yeald = 1;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new Wood(), 3)
+	ds_map_add(crafting, new PickAxeMold(), 1)
+	ds_map_add(crafting, new Bronze(), 3)
+	desc = "A better and stronger PickAxe that last longer.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 0,113,103)
+	madeWith = 7 // SmithingTable
+}
+
+function BronzeRod() : Item () constructor {
+	name = "BronzeRod";
+	image_id = 120;
+	amount = 1;
+	type = 0;
+	hitlag = 75;
+	tool_id = 0;
+	crafting = ds_map_create();
+	KP_lock = 0;
+	yeald = 1;
+	ds_map_add(crafting, new Bronze(), 2)
+	ds_map_add(crafting, new RodMold(), 1)
+	desc = "A Bronze rod used for crafting.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper,103,114)
+	madeWith = 7 // SmithingTable
+}
+
+function BronzeFishingRod() : Item () constructor {
+	name = "B-FishingRod";
+	image_id = 121;
+	amount = 1;
+	type = 1;
+	dura = 300;
+	dura_max = 300;
+	attackPow = 0;
+	cuttingPow = 0;
+	smashingPow = 0;
+	hitlag = 0;
+	tool_id = 19;
+	KP_lock = 0;
+	yeald = 1;
+	crafting = ds_map_create();
+	ds_map_add(crafting, new BronzeRod(), 1)
+	ds_map_add(crafting, new Rope(), 5)
+	ds_map_add(crafting, new BronzeHook(), 1)
+	desc = "A bronze plated fishing rod.";
+	canDry = false;
+	canSpread = false;
+	craftHelper = ds_list_create();
+	ds_list_add(craftHelper, 120,7,106)
+	madeWith = 7 // SmithingTable
+}
+

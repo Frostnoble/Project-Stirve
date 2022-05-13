@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprBoiSoul",
-    "path": "sprites/sprBoiSoul/sprBoiSoul.yy",
+    "name": "sprBoy1Soul",
+    "path": "sprites/sprBoy1Soul/sprBoy1Soul.yy",
   },
   "solid": false,
   "visible": true,

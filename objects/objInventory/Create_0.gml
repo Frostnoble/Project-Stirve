@@ -9,12 +9,29 @@ draw_y = 0;
 
 
 addInventory(2,1,new Knife(),inventory);
-//addInventory(31,1,new FishingRod(), inventory);
-//addInventory(29,1,new WoodenChest(), inventory);
-//addInventory(38,1,new Kiln(), inventory);
-//addInventory(48,1,new Spear(), inventory);
-//addInventory(48,1,new StoneHoe(), inventory);
-//addInventory(26,1,new ClayBowlWaterPure(), inventory);
-//addInventory(38,1,new Kiln(), inventory);
-//addInventory(42,2,new DryingRack(), inventory);
+switch(global.Avatar)
+{
+	case 0:
+		//"Terry";
+		addInventory(101,10,new Medication(),inventory);
+	break;
+	
+	case 1:
+		//"Amber";
+		addInventory(99,1,new Compass(),inventory);
+	break;
+	
+	case 2:
+		//"Zackary";
+		addInventory(100,1,new BaseballBat(),inventory);
+	break;
+	
+	case 3:
+		//"Lucia";
+		addInventory(102,1,new Suitcase(),inventory);
+	break;
+}
+
+
+
 global.equip = inventory[| 0];

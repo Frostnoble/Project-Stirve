@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprGrassBedFlash","path":"sprites/sprGrassBedFlash/sprGrassBedFlash.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprGrassBedFlash",
     "tags": [],
     "resourceType": "GMSequence",

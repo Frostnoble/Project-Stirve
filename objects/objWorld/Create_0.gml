@@ -39,10 +39,14 @@ objSplash,
 objPrePit,
 objBeeBoxEmpty,
 objBeeBoxFull,
+objSmithingTable,
 objFlowerPot,
 objUnderground_Stone,
 objBellows,
+objCaveDown,
+objCaveUp,
 objPlayer);
+
 
 OutfitList = ds_list_create();
 ds_list_add(OutfitList,
@@ -112,10 +116,25 @@ new Iron(),
 new Gold(),
 new Limedust(),
 new Bellows(),
-new Brass(),
+new Bronze(),
 new LightningRod(),
 new SmithingTable(),
-new Hammer()];
+new Hammer(),
+new CrudeCompass(),
+new BlankMold(),
+new AxeMold(),
+new HoeMold(),
+new HookMold(),
+new SpadeMold(),
+new PickAxeMold(),
+new RodMold(),
+new BronzeAxe(),
+new BronzeFishingRod(),
+new BronzeHoe(),
+new BronzeHook(),
+new BronzePick(),
+new BronzeRod(),
+new BronzeSpade()];
 
 
 

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprBasket","path":"sprites/sprBasket/sprBasket.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprBasket",
     "tags": [],
     "resourceType": "GMSequence",

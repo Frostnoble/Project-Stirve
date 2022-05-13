@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprContols","path":"sprites/sprContols/sprContols.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprContols",
     "tags": [],
     "resourceType": "GMSequence",

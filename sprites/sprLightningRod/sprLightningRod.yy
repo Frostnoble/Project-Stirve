@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprLightningRod","path":"sprites/sprLightningRod/sprLightningRod.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprLightningRod",
     "tags": [],
     "resourceType": "GMSequence",

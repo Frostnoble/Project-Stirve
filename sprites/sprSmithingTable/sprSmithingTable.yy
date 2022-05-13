@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprSmithingTable","path":"sprites/sprSmithingTable/sprSmithingTable.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprSmithingTable",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprSmithingTableFlash","path":"sprites/sprSmithingTableFlash/sprSmithingTableFlash.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprSmithingTableFlash",
     "tags": [],
     "resourceType": "GMSequence",

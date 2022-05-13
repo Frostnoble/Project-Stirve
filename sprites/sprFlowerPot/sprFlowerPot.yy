@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprFlowerPot","path":"sprites/sprFlowerPot/sprFlowerPot.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprFlowerPot",
     "tags": [],
     "resourceType": "GMSequence",

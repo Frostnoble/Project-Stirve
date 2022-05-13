@@ -4,23 +4,28 @@ function SaveGame3()
 {
 	
 	instance_activate_all();
+	
 	var _saveData = array_create(0);
 	
 	for(var i = 0; i < ds_list_size(objWorld.objectList); i += 1)
 	{
-		with(objWorld.objectList[|i])
+		if(instance_exists(objWorld.objectList[|i]))
 		{
-			var _saveEntity = 
+			with(objWorld.objectList[|i])
 			{
-				type: 0,
-				obj: object_get_name(object_index),
-				x: x,
-				y: y,
-				depth: depth,
-				image_index: image_index
+				var _saveEntity = 
+				{
+					type: 0,
+					obj: object_get_name(object_index),
+					x: x,
+					y: y,
+					depth: depth,
+					image_index: image_index
+				}
+			
+				array_push(_saveData, _saveEntity);
+			
 			}
-			array_push(_saveData, _saveEntity);
-	
 		}
 	}
 	
@@ -47,8 +52,10 @@ function SaveGame3()
 		tree: global.TreeCheck,
 		grass: global.GrassCheck,
 		rock: global.RockCheck,
-		underground: global.underground
-
+		underground: global.underground,
+		sstorage0: global.SuitcaseStorage[|0],
+		sstorage1: global.SuitcaseStorage[|1],
+		sstorage2: global.SuitcaseStorage[|2]
 
 
 
@@ -157,8 +164,7 @@ function SaveGame3()
 	
 		}
 	}
-
-	
+	Render();
 	
 	var _string = json_stringify(_saveData);
 	var _buffer = buffer_create(string_byte_length(_string) + 1, buffer_fixed,1)
@@ -240,6 +246,12 @@ function LoadGame3()
 				global.GrassCheck = _loadEntity.grass;
 				global.RockCheck = _loadEntity.rock;
 				global.underground = _loadEntity.underground;
+				
+				global.SuitcaseStorage = ds_list_create();
+				if(_loadEntity.sstorage0 != pointer_null){global.SuitcaseStorage[|0] = _loadEntity.sstorage0;}
+				if(_loadEntity.sstorage1 != pointer_null){global.SuitcaseStorage[|1] = _loadEntity.sstorage1;}
+				if(_loadEntity.sstorage2 != pointer_null){global.SuitcaseStorage[|2] = _loadEntity.sstorage2;}
+				
 			}
 			
 			if(_loadEntity.type == 2)

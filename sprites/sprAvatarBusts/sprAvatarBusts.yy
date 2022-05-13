@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprAvatarBusts","path":"sprites/sprAvatarBusts/sprAvatarBusts.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprAvatarBusts",
     "tags": [],
     "resourceType": "GMSequence",

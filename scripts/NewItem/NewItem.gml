@@ -313,7 +313,7 @@ function NewItem(id){
 			return new Suitcase();
 		break;
 		case 103: 
-			return new Brass();
+			return new Bronze();
 		break;
 		case 104: 
 			return new LightningRod();
@@ -323,6 +323,54 @@ function NewItem(id){
 		break;
 		case 106: 
 			return new Hammer();
+		break;
+		case 107: 
+			return new CrudeCompass();
+		break;
+		
+		case 108: 
+			return new BlankMold();
+		break;		
+		case 109: 
+			return new AxeMold();
+		break;		
+	
+		case 110: 
+			return new HookMold();
+		break;		
+		case 111: 
+			return new HoeMold();
+		break;
+		case 112: 
+			return new SpadeMold();
+		break;
+		case 113: 
+			return new PickAxeMold();
+		break;
+		case 114: 
+			return new RodMold();
+		break;
+		
+		case 115: 
+			return new BronzeAxe();
+		break;
+		case 116: 
+			return new BronzeHook();
+		break;
+		case 117: 
+			return new BronzeHoe();
+		break;
+		case 118: 
+			return new BronzeSpade();
+		break;
+		case 119: 
+			return new BronzePick();
+		break;
+		case 120: 
+			return new BronzeRod();
+		break;
+		case 121: 
+			return new BronzeFishingRod();
 		break;
 	}
 

@@ -10,8 +10,26 @@ yLetters = 4;
 letterString = "ABCDEFGHIJKLM 0123NOPQRSTUVWXYZ 4567abcdefghijklm 89!?nopqrstuvwxyz ,': ";
 
 charcount = 1;
-
 currentName = "";
+switch(global.Avatar)
+{
+	case 0:
+		currentName = "Terry";
+	break;
+	
+	case 1:
+		currentName = "Amber";
+	break;
+	
+	case 2:
+		currentName = "Zackary";
+	break;
+	
+	case 3:
+		currentName = "Lucia";
+	break;
+}
+
 
 for(var yy = 0; yy < yLetters; yy++;)
 {

@@ -135,7 +135,7 @@ if(MILhours2 == 2 && minutes2 == 0 && seconds2 == 0)
 	
 	with(objPlayer)
 	{
-		sprite_index = sprBoiExtra;
+		sprite_index = playerExtra();
 		image_index = 1
 		frame = 1;
 		

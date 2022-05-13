@@ -16,7 +16,7 @@ audio_stop_sound(musOverworld_Storm);
 audio_stop_sound(musOverworld_Night);
 step = 0;
 death_timer = 0;
-objPlayer.sprite_index = sprBoiDeath;
+objPlayer.sprite_index = playerDeath();
 objPlayer.dir = 5;
 spin = objPlayer.move_dir;
 

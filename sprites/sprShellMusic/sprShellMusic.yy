@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprShellMusic","path":"sprites/sprShellMusic/sprShellMusic.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprShellMusic",
     "tags": [],
     "resourceType": "GMSequence",

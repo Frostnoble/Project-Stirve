@@ -10,7 +10,7 @@ if(objTimeSystem.MILhours2 >= 22 && objTimeSystem.MILhours2 <= 24)
 	
 	with(objPlayer)
 	{
-		sprite_index = sprBoiExtra;
+		sprite_index = playerExtra();
 		image_index = 1
 		frame = 1;
 		x = other.x;
@@ -33,7 +33,7 @@ else if(objTimeSystem.MILhours2 >= 1 && objTimeSystem.MILhours2 <= 2)
 	with(objPlayer)
 	{
 			
-		sprite_index = sprBoiExtra;
+		sprite_index = playerExtra();
 		image_index = 1;
 		frame = 1;
 		x = other.x;

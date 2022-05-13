@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprSapling_Day","path":"sprites/sprSapling_Day/sprSapling_Day.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprSapling_Day",
     "tags": [],
     "resourceType": "GMSequence",

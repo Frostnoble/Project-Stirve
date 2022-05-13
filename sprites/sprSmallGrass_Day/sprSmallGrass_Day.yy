@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprSmallGrass_Day","path":"sprites/sprSmallGrass_Day/sprSmallGrass_Day.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprSmallGrass_Day",
     "tags": [],
     "resourceType": "GMSequence",

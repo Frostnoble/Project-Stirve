@@ -23,7 +23,7 @@ if(death_timer > 60 && death_timer < 260)
 {
 	with(objPlayer)
 	{
-		sprite_index = sprBoiExtra;
+		sprite_index = playerExtra();
 		image_index = 0
 		frame = 1;	
 	}
@@ -32,7 +32,7 @@ if(death_timer >= 340 && death_timer < 460)
 {
 	with(objPlayer)
 	{
-		sprite_index = sprBoiExtra;
+		sprite_index = playerExtra();
 		image_index = 0
 		frame = 1;	
 	}

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprAvatarSelect","path":"sprites/sprAvatarSelect/sprAvatarSelect.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprAvatarSelect",
     "tags": [],
     "resourceType": "GMSequence",

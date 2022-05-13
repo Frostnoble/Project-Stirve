@@ -36,3 +36,7 @@ wobble_intensity = 1; // the distance multiplier (decimals are ok)
 global.light_times = "Day";
 global.stepsSincePressed = 0;
 global.inv = false;
+
+
+sprite_index = playerMove();
+

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprTiles_Day","path":"sprites/sprTiles_Day/sprTiles_Day.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprTiles_Day",
     "tags": [],
     "resourceType": "GMSequence",

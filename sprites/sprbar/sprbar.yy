@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprbar","path":"sprites/sprbar/sprbar.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprbar",
     "tags": [],
     "resourceType": "GMSequence",

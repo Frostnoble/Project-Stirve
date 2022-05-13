@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_HelliTop","path":"sprites/spr_HelliTop/spr_HelliTop.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_HelliTop",
     "tags": [],
     "resourceType": "GMSequence",

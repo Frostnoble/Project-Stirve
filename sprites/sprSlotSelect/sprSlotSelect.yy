@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprSlotSelect","path":"sprites/sprSlotSelect/sprSlotSelect.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprSlotSelect",
     "tags": [],
     "resourceType": "GMSequence",

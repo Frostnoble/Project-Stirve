@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprPrePit","path":"sprites/sprPrePit/sprPrePit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprPrePit",
     "tags": [],
     "resourceType": "GMSequence",

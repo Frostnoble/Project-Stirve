@@ -28,7 +28,7 @@ if(objPlayer.move_dir == 270)
 with (objPlayer)
 {
 	attackFrame = true;
-	sprite_index = sprBoiAttack;
+	sprite_index = playerattack();
 	image_index = dir;
 	
 	

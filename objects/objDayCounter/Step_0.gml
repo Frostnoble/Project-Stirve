@@ -105,7 +105,7 @@ if(step == 4)
 
 	with(objPlayer)
 	{
-		sprite_index = sprBoi;
+		sprite_index = playerMove();
 		image_index = 0;
 
 	

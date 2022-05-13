@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if(global.startType == 0){
-	
+	show_debug_message("Hi")
 
 	if(!done)
 	{
@@ -78,6 +78,11 @@ if(global.startType == 0){
 				if(index <= 23 && index >= 22){instance_create_layer(x_spawn,y_spawn, "Instances", objTreeHive);}
 				if(index <= 26 && index >= 25){instance_create_layer(x_spawn,y_spawn, "Instances", objTreeHiveFull);}
 				if(index == 15){instance_create_layer(x_spawn,y_spawn, "Instances", objRabbit);}
+				if(index == 20)
+				{
+					instance_create_layer(x_spawn,y_spawn, "Instances", objCaveDown);
+					instance_create_layer(x_spawn,y_spawn + 4320, "Instances", objCaveUp);
+				}
 				if(index == 11){instance_create_layer(x_spawn,y_spawn, "Instances", objwolf);}
 				if(index == 9){instance_create_layer(x_spawn,y_spawn, "Instances", objPond);}
 				if(index == 4){spawnDrop(1,new Stone(),1,x_spawn,y_spawn);}
@@ -201,6 +206,21 @@ if(global.startType == 0){
 		ds_map_add(global.unlocked,83,0) //HibO
 		ds_map_add(global.unlocked,84,0) //HibR
 		ds_map_add(global.unlocked,85,0) //Basket
+		
+		ds_map_add(global.unlocked,93,0) //Copper
+		ds_map_add(global.unlocked,94,0) //Tin
+		ds_map_add(global.unlocked,95,0) //Iron
+		ds_map_add(global.unlocked,96,0) //Gold
+		ds_map_add(global.unlocked,97,0) //LimeDust
+		ds_map_add(global.unlocked,98,0) //Bellows
+		ds_map_add(global.unlocked,103,0) //Bronze
+		ds_map_add(global.unlocked,104,0) //LightningRod
+		ds_map_add(global.unlocked,105,0) //SmithingTable
+		ds_map_add(global.unlocked,106,0) //Hammer
+		ds_map_add(global.unlocked,107,0) //CrudeCompass
+		
+		
+		
 		audio_master_gain(1);
 		
 		global.weather = 0;
@@ -211,6 +231,8 @@ if(global.startType == 0){
 		global.TreeCheck = 0;
 		global.GrassCheck = 0;
 		global.RockCheck = 0;
+		global.SuitcaseStorage = ds_list_create();
+		global.trasfer = false;
 	}
 
 }

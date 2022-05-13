@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprKiln2Flash","path":"sprites/sprKiln2Flash/sprKiln2Flash.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprKiln2Flash",
     "tags": [],
     "resourceType": "GMSequence",

@@ -25,11 +25,13 @@ if(keyboard_check_pressed(ord("I")))
 	
 }
 
-if(keyboard_check_pressed(ord("G")))
+
+
+if(keyboard_check_pressed(ord("P")))
 {
 
-	instance_create_layer(0,0, "Instances", objStormGen);
-	addInventory(97,40,new LightningRod(),objInventory.inventory);
+	instance_create_layer(0,0, "Instances", objDebug);
+	global.gamemode = 99;
 }
 
 if(hurtFrames > 0)

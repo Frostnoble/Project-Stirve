@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprTree_Day","path":"sprites/sprTree_Day/sprTree_Day.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprTree_Day",
     "tags": [],
     "resourceType": "GMSequence",

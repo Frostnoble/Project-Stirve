@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprWoodenChest_Day","path":"sprites/sprWoodenChest_Day/sprWoodenChest_Day.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprWoodenChest_Day",
     "tags": [],
     "resourceType": "GMSequence",

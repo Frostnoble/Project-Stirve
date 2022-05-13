@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprboarders","path":"sprites/sprboarders/sprboarders.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprboarders",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprBeeBox","path":"sprites/sprBeeBox/sprBeeBox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprBeeBox",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprWordSelect","path":"sprites/sprWordSelect/sprWordSelect.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprWordSelect",
     "tags": [],
     "resourceType": "GMSequence",

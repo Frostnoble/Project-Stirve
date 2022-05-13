@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprPot","path":"sprites/sprPot/sprPot.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprPot",
     "tags": [],
     "resourceType": "GMSequence",

@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprFieldStove","path":"sprites/sprFieldStove/sprFieldStove.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprFieldStove",
     "tags": [],
     "resourceType": "GMSequence",

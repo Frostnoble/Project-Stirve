@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprJunkHouse","path":"sprites/sprJunkHouse/sprJunkHouse.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprJunkHouse",
     "tags": [],
     "resourceType": "GMSequence",

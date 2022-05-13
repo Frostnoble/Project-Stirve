@@ -7,7 +7,7 @@ KeyGet();
 
 if(keyboard_check_pressed(A_Key) || keyboard_check_pressed(A_Key2))
 {
-	objPlayer.sprite_index = sprBoi;
+	objPlayer.sprite_index = playerMove()
 	objPlayer.attackFrame = false;
 	startPlaying = false;
 	global.gamemode = 0;
@@ -115,7 +115,7 @@ if(equal)
 	instance_create_layer(objPlayer.x,objPlayer.y, "Instances", objStorm2);
 	equal = false;
 	ds_list_clear(notes);
-	objPlayer.sprite_index = sprBoi;
+	objPlayer.sprite_index = playerMove()
 	objPlayer.attackFrame = false;
 	startPlaying = false;
 	global.gamemode = 0;

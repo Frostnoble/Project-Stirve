@@ -25,4 +25,4 @@ new ClayBowl(),
 new ClayPot(),
 new Copper(),
 new Tin(),
-new Brass());
+new Bronze());

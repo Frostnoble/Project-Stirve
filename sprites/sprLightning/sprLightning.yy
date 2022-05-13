@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprLightning","path":"sprites/sprLightning/sprLightning.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprLightning",
     "tags": [],
     "resourceType": "GMSequence",

@@ -6,3 +6,5 @@ fadedone = false;
 a = 0;
 fade = 1;
 startfade = false;
+
+sprite_index = playerSoul();

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprWorkStation","path":"sprites/sprWorkStation/sprWorkStation.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprWorkStation",
     "tags": [],
     "resourceType": "GMSequence",

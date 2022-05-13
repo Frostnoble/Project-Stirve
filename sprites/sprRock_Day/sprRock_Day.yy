@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprRock_Day","path":"sprites/sprRock_Day/sprRock_Day.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprRock_Day",
     "tags": [],
     "resourceType": "GMSequence",

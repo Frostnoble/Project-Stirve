@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_Helli","path":"sprites/spr_Helli/spr_Helli.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_Helli",
     "tags": [],
     "resourceType": "GMSequence",
